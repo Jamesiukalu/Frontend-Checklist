@@ -1,5 +1,6 @@
 [
   {
+    "id": "css-avoid-embedded-and-inline-css",
     "title": "Éviter le CSS intégré et en ligne",
     "priority": "High",
     "description": "Évitez le CSS intégré et en ligne, sauf pour le CSS critique et l'optimisation des performances.",
@@ -26,6 +27,7 @@
     ]
   },
   {
+    "id": "css-inline-critical-css-for-faster-rendering",
     "title": "Intégrer le CSS critique pour accélérer le rendu",
     "priority": "High",
     "description": "Le CSS critique (contenu visible sans défilement) est intégré dans le head pour accélérer le premier rendu.",
@@ -52,6 +54,7 @@
     ]
   },
   {
+    "id": "css-keep-css-specificity-low-and-flat",
     "title": "Limiter et aplanir la spécificité CSS",
     "priority": "High",
     "description": "Écrivez des sélecteurs avec la spécificité la plus faible possible, en évitant les sélecteurs d'ID et l'imbrication profonde, afin que les styles puissent être remplacés proprement sans recourir à !important.",
@@ -81,6 +84,7 @@
     ]
   },
   {
+    "id": "css-load-css-without-blocking-render",
     "title": "Charger le CSS sans bloquer le rendu",
     "priority": "High",
     "description": "Le CSS non critique est chargé de manière asynchrone pour éviter de bloquer le rendu du DOM.",
@@ -107,6 +111,7 @@
     ]
   },
   {
+    "id": "css-minify-all-css-files",
     "title": "Minifier tous les fichiers CSS",
     "priority": "High",
     "description": "Tous les fichiers CSS sont minifiés afin de réduire leur taille et d'améliorer les performances de chargement des pages.",
@@ -133,6 +138,7 @@
     ]
   },
   {
+    "id": "css-provide-visible-custom-focus-indicators",
     "title": "Fournir des indicateurs de focus personnalisés visibles",
     "priority": "High",
     "description": "Assurez-vous que tous les éléments interactifs ont un indicateur de focus clairement visible pour la navigation au clavier — ne supprimez jamais simplement le contour par défaut sans proposer une meilleure alternative.",
@@ -162,6 +168,7 @@
     ]
   },
   {
+    "id": "css-remove-unused-css-rules",
     "title": "Supprimer les règles CSS inutilisées",
     "priority": "High",
     "description": "Le CSS inutilisé est supprimé afin de réduire la taille du bundle et d'améliorer les performances.",
@@ -188,6 +195,7 @@
     ]
   },
   {
+    "id": "css-use-css-custom-properties-for-design-tokens",
     "title": "Utiliser des propriétés personnalisées CSS pour les jetons de design",
     "priority": "High",
     "description": "Définissez les valeurs du système de design (couleurs, espacements, typographie) sous forme de propriétés personnalisées CSS sur :root afin d'assurer une thématisation cohérente, des mises à jour dynamiques et la prise en charge du mode sombre.",
@@ -213,6 +221,7 @@
     ]
   },
   {
+    "id": "css-use-relative-units-for-responsive-layouts",
     "title": "Utiliser des unités relatives pour les mises en page adaptatives",
     "priority": "High",
     "description": "Utilisez rem, em, %, vw, vh et clamp() plutôt que des valeurs px fixes pour créer des mises en page qui s'adaptent aux préférences de taille de police et aux dimensions de la fenêtre d'affichage.",
@@ -242,6 +251,7 @@
     ]
   },
   {
+    "id": "css-use-transform-and-opacity-for-animations",
     "title": "Utiliser transform et opacity pour les animations",
     "priority": "High",
     "description": "Animez avec les propriétés CSS transform et opacity afin que les animations s'exécutent sur le thread du compositeur GPU à 60 images par seconde, en évitant les propriétés qui déclenchent une mise en page, comme top, left, width et height.",
@@ -271,6 +281,7 @@
     ]
   },
   {
+    "id": "css-apply-flexbox-best-practices",
     "title": "Appliquer les bonnes pratiques Flexbox",
     "priority": "Medium",
     "description": "Utilisez Flexbox pour les mises en page unidimensionnelles avec les propriétés adaptées, en évitant les erreurs courantes comme l'usage excessif de flex:1, l'oubli de min-width:0 et une mauvaise compréhension de flex-basis.",
@@ -300,6 +311,7 @@
     ]
   },
   {
+    "id": "css-avoid-intrusive-interstitials",
     "title": "Éviter les interstitiels intrusifs",
     "priority": "Medium",
     "description": "Les interstitiels plein écran (fenêtres pop-up, superpositions, bannières de cookies) qui bloquent le contenu principal sur mobile sont un signal pénalisant pour le classement et un obstacle à l'accessibilité.",
@@ -334,6 +346,7 @@
     ]
   },
   {
+    "id": "css-include-a-print-stylesheet",
     "title": "Inclure une feuille de style pour l'impression",
     "priority": "Medium",
     "description": "Une feuille de style pour l'impression est fournie et correctement optimisée pour les pages imprimées.",
@@ -360,6 +373,7 @@
     ]
   },
   {
+    "id": "css-lint-css-and-scss-files",
     "title": "Analyser les fichiers CSS et SCSS avec un linter",
     "priority": "Medium",
     "description": "Tous les fichiers CSS/SCSS sont analysés avec Stylelint pour détecter les erreurs et faire respecter les normes.",
@@ -385,6 +399,7 @@
     ]
   },
   {
+    "id": "css-optimize-web-font-formats",
     "title": "Optimiser les formats de polices web",
     "priority": "Medium",
     "description": "Les polices web utilisent des formats modernes (WOFF2, WOFF), avec des polices de remplacement et des stratégies de chargement adaptées.",
@@ -411,6 +426,7 @@
     ]
   },
   {
+    "id": "css-order-css-files-correctly",
     "title": "Charger les fichiers CSS dans le bon ordre",
     "priority": "Medium",
     "description": "Tous les fichiers CSS sont chargés avant les fichiers JavaScript afin d'éviter de bloquer le rendu.",
@@ -437,6 +453,7 @@
     ]
   },
   {
+    "id": "css-prevent-horizontal-scrolling",
     "title": "Éviter le défilement horizontal",
     "priority": "Medium",
     "description": "Les pages web ne doivent pas nécessiter de défilement horizontal aux largeurs de fenêtre d'affichage standard.",
@@ -471,6 +488,7 @@
     ]
   },
   {
+    "id": "css-support-dark-mode-with-prefers-color-scheme",
     "title": "Prendre en charge le mode sombre avec prefers-color-scheme",
     "priority": "Medium",
     "description": "Mettez en œuvre le mode sombre à l'aide de la requête média prefers-color-scheme et des propriétés personnalisées CSS afin que le site s'adapte automatiquement aux préférences du système de l'utilisateur.",
@@ -500,6 +518,7 @@
     ]
   },
   {
+    "id": "css-use-a-css-reset-or-normalize-stylesheet",
     "title": "Utiliser une feuille de style de réinitialisation ou de normalisation CSS",
     "priority": "Medium",
     "description": "Utilisez une feuille de style de réinitialisation ou de normalisation CSS pour garantir un style cohérent entre les navigateurs.",
@@ -529,6 +548,7 @@
     ]
   },
   {
+    "id": "css-use-consistent-css-naming-conventions",
     "title": "Adopter des conventions de nommage CSS cohérentes",
     "priority": "Medium",
     "description": "Adoptez une méthodologie cohérente de nommage des classes (BEM, CUBE CSS ou une convention convenue par l'équipe) afin que les noms de classes soient explicites et que les conflits de styles soient évités.",
@@ -558,6 +578,7 @@
     ]
   },
   {
+    "id": "css-use-container-queries-for-component-level-responsiveness",
     "title": "Utiliser les requêtes de conteneur pour l'adaptabilité des composants",
     "priority": "Medium",
     "description": "Utilisez les requêtes de conteneur CSS pour que les composants s'adaptent à la taille de leur propre conteneur plutôt qu'à celle de la fenêtre d'affichage, ce qui permet de créer des composants véritablement réutilisables et adaptatifs.",
@@ -587,6 +608,7 @@
     ]
   },
   {
+    "id": "css-use-css-containment-to-limit-repaint-scope",
     "title": "Utiliser le confinement CSS pour limiter la zone de repeinture",
     "priority": "Medium",
     "description": "Appliquez la propriété contain aux composants pour indiquer au navigateur qu'ils sont indépendants du reste de la page, ce qui optimise le rendu et limite la zone de repeinture et de recalcul de mise en page.",
@@ -616,6 +638,7 @@
     ]
   },
   {
+    "id": "css-use-css-grid-for-two-dimensional-layouts",
     "title": "Utiliser CSS Grid pour les mises en page bidimensionnelles",
     "priority": "Medium",
     "description": "Utilisez CSS Grid lorsque vous devez contrôler simultanément les lignes et les colonnes, par exemple pour les mises en page, les grilles de cartes et les compositions de composants complexes.",
@@ -645,6 +668,7 @@
     ]
   },
   {
+    "id": "css-use-css-logical-properties-for-i18n-and-rtl-support",
     "title": "Utiliser les propriétés logiques CSS pour la prise en charge de l'i18n et du RTL",
     "priority": "Medium",
     "description": "Utilisez les propriétés logiques CSS (margin-inline, padding-block, border-inline-start) plutôt que les propriétés physiques (margin-left, padding-top) afin de prendre automatiquement en charge les langues de droite à gauche.",
@@ -674,6 +698,7 @@
     ]
   },
   {
+    "id": "css-use-readable-font-sizes-on-mobile",
     "title": "Utiliser des tailles de police lisibles sur mobile",
     "priority": "Medium",
     "description": "Le texte doit être suffisamment grand pour être lu sur les appareils mobiles sans zoom.",
@@ -708,6 +733,7 @@
     ]
   },
   {
+    "id": "css-register-css-custom-properties-with-property-for-animation-a",
     "title": "Enregistrer les propriétés personnalisées CSS avec @property pour l'animation et la sécurité des types",
     "priority": "Low",
     "description": "Utilisez @property pour enregistrer les propriétés personnalisées CSS avec un type, une valeur initiale et un contrôle de l'héritage — cela permet de les animer et de valider les jetons de design à la compilation.",
@@ -731,6 +757,7 @@
     ]
   },
   {
+    "id": "css-use-has-to-style-parent-elements-based-on-their-descendants",
     "title": "Utiliser :has() pour styliser les éléments parents selon leurs descendants",
     "priority": "Low",
     "description": "Utilisez la pseudo-classe relationnelle CSS :has() pour sélectionner et styliser un élément en fonction de son contenu, remplaçant ainsi la manipulation du DOM en JavaScript dans de nombreux cas courants.",
@@ -754,6 +781,7 @@
     ]
   },
   {
+    "id": "css-use-layer-to-manage-css-cascade-order-explicitly",
     "title": "Utiliser @layer pour gérer explicitement l'ordre de la cascade CSS",
     "priority": "Low",
     "description": "Utilisez les couches de cascade CSS (@layer) pour contrôler explicitement et de façon prévisible la spécificité et l'ordre de la cascade du code, sans devoir lutter contre la spécificité avec !important.",
@@ -777,6 +805,7 @@
     ]
   },
   {
+    "id": "css-use-css-subgrid-to-align-nested-grid-items-to-parent-tracks",
     "title": "Utiliser CSS subgrid pour aligner les éléments de grille imbriqués sur les pistes parentes",
     "priority": "Low",
     "description": "Utilisez grid-template-columns: subgrid (ou subgrid pour les lignes) afin que les éléments de grille imbriqués participent aux pistes de la grille parente, résolvant ainsi l'alignement du contenu des cartes sans égaliser les hauteurs avec JavaScript.",
@@ -800,6 +829,7 @@
     ]
   },
   {
+    "id": "css-use-oklch-and-oklab-for-perceptually-uniform-colour-palettes",
     "title": "Utiliser oklch() et oklab() pour des palettes de couleurs uniformes en perception",
     "priority": "Low",
     "description": "Les valeurs de couleur du système de design utilisent les fonctions de couleur oklch() ou oklab() pour produire des palettes uniformes en perception, où des incréments numériques égaux correspondent à des variations égales de luminosité perçue.",
@@ -829,6 +859,7 @@
     ]
   },
   {
+    "id": "css-use-the-view-transitions-api-for-smooth-page-and-component-t",
     "title": "Utiliser l'API View Transitions pour des transitions fluides entre pages et composants",
     "priority": "Low",
     "description": "Utilisez l'API View Transitions pour animer les changements d'état ou les navigations entre pages avec un fondu enchaîné ou des animations personnalisées, afin d'obtenir des transitions de qualité native sans bibliothèque d'animation JavaScript.",

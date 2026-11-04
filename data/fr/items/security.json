@@ -1,5 +1,6 @@
 [
   {
+    "id": "security-leaked-environment-variables",
     "title": "Variables d’environnement exposées",
     "priority": "High",
     "description": "Repérez les clés d’API, jetons, mots de passe et autres secrets exposés dans le code source HTML, les bundles JavaScript ou les fichiers accessibles côté client.",
@@ -29,6 +30,7 @@
     ]
   },
   {
+    "id": "security-redirect-http-to-https",
     "title": "Rediriger HTTP vers HTTPS",
     "priority": "High",
     "description": "Redirigez de manière permanente (301) toutes les requêtes HTTP vers HTTPS afin d’empêcher les utilisateurs d’accéder à votre site par une connexion non sécurisée.",
@@ -58,6 +60,7 @@
     ]
   },
   {
+    "id": "security-serve-all-pages-over-https",
     "title": "Servir toutes les pages en HTTPS",
     "priority": "High",
     "description": "Servez chaque page et chaque ressource de votre site en HTTPS afin de protéger les données des utilisateurs en transit et d’activer les fonctionnalités modernes des navigateurs.",
@@ -87,6 +90,7 @@
     ]
   },
   {
+    "id": "security-submit-forms-over-https",
     "title": "Envoyer les formulaires en HTTPS",
     "priority": "High",
     "description": "Faites pointer toutes les actions des formulaires HTML vers des URL HTTPS afin que les données soient chiffrées pendant leur transfert et ne puissent pas être interceptées par des attaquants sur le réseau.",
@@ -116,6 +120,7 @@
     ]
   },
   {
+    "id": "security-audit-dependencies-for-known-vulnerabilities",
     "title": "Auditer les dépendances pour détecter les vulnérabilités connues",
     "priority": "High",
     "description": "Analysez régulièrement les dépendances à l’aide d’outils automatisés pour détecter les vulnérabilités connues et corrigez les problèmes critiques avant le déploiement.",
@@ -149,6 +154,7 @@
     ]
   },
   {
+    "id": "security-avoid-mixed-content-on-https-pages",
     "title": "Éviter le contenu mixte sur les pages HTTPS",
     "priority": "High",
     "description": "Une page HTTPS qui charge des ressources en HTTP contient du contenu mixte : les navigateurs bloquent ces requêtes ou affichent un avertissement, ce qui peut rompre des fonctionnalités et compromettre la sécurité du transport.",
@@ -178,6 +184,7 @@
     ]
   },
   {
+    "id": "security-implement-a-content-security-policy",
     "title": "Mettre en place une Content Security Policy",
     "priority": "High",
     "description": "Mettez en place une Content Security Policy pour prévenir les attaques XSS et contrôler le chargement des ressources.",
@@ -203,6 +210,7 @@
     ]
   },
   {
+    "id": "security-prevent-stack-trace-exposure-in-production-error-responses",
     "title": "Empêcher l’exposition de traces de pile dans les réponses d’erreur en production",
     "priority": "High",
     "description": "En production, les réponses d’erreur ne doivent jamais inclure de traces de pile, de chemins de fichiers internes, de détails sur le framework ni d’autres informations de débogage susceptibles d’aider un attaquant (OWASP A09).",
@@ -222,6 +230,7 @@
     ]
   },
   {
+    "id": "security-secure-password-input-fields",
     "title": "Sécuriser les champs de saisie de mot de passe",
     "priority": "High",
     "description": "Appliquez les bonnes pratiques de sécurité aux champs de mot de passe, notamment un autocomplete approprié, une option d’affichage/masquage et des indicateurs de robustesse.",
@@ -249,6 +258,7 @@
     ]
   },
   {
+    "id": "security-set-an-hsts-header",
     "title": "Définir un en-tête HSTS",
     "priority": "High",
     "description": "L’en-tête de réponse Strict-Transport-Security indique aux navigateurs d’utiliser systématiquement HTTPS pour votre domaine, empêchant les attaques par rétrogradation de protocole et le détournement de cookies.",
@@ -278,6 +288,7 @@
     ]
   },
   {
+    "id": "security-set-an-x-frame-options-header",
     "title": "Définir un en-tête X-Frame-Options",
     "priority": "High",
     "description": "L’en-tête X-Frame-Options détermine si votre page peut être intégrée dans un iframe, un frame ou un object, et prévient ainsi les attaques par clickjacking.",
@@ -307,6 +318,7 @@
     ]
   },
   {
+    "id": "security-set-secure-httponly-and-samesite-flags-on-session-cookies",
     "title": "Définir les attributs Secure, HttpOnly et SameSite sur les cookies de session",
     "priority": "High",
     "description": "Émettez tous les cookies de session et d’authentification avec les attributs Secure et HttpOnly ainsi qu’une valeur SameSite appropriée, afin d’éviter leur interception, leur extraction par JavaScript et les attaques CSRF.",
@@ -326,6 +338,7 @@
     ]
   },
   {
+    "id": "security-set-x-content-type-options-nosniff",
     "title": "Définir X-Content-Type-Options: nosniff",
     "priority": "High",
     "description": "L’en-tête X-Content-Type-Options: nosniff empêche les navigateurs de déduire un type MIME différent du Content-Type déclaré, bloquant ainsi certaines attaques de téléchargement furtif et XSS.",
@@ -355,6 +368,7 @@
     ]
   },
   {
+    "id": "security-store-authentication-tokens-securely",
     "title": "Stocker les jetons d’authentification de manière sécurisée",
     "priority": "High",
     "description": "Stockez les jetons d’authentification sensibles dans des cookies httpOnly plutôt que dans localStorage ou sessionStorage afin d’éviter leur vol par des attaques XSS (OWASP A07).",
@@ -378,6 +392,7 @@
     ]
   },
   {
+    "id": "security-external-link-security",
     "title": "Sécuriser les liens externes",
     "priority": "Medium",
     "description": "Les liens qui s’ouvrent dans un nouvel onglet avec target='_blank' doivent inclure rel='noopener noreferrer' afin d’empêcher la page ouverte d’accéder au contexte window de la page d’origine.",
@@ -407,6 +422,7 @@
     ]
   },
   {
+    "id": "security-link-to-your-terms-of-service-in-the-footer",
     "title": "Ajouter un lien vers vos conditions d’utilisation dans le pied de page",
     "priority": "Medium",
     "description": "Les sites web qui proposent des services aux utilisateurs doivent publier leurs conditions d’utilisation et y renvoyer depuis chaque page : elles définissent l’accord juridique régissant l’utilisation du service.",
@@ -433,6 +449,7 @@
     ]
   },
   {
+    "id": "security-protect-public-forms-with-captcha",
     "title": "Protéger les formulaires publics avec un CAPTCHA",
     "priority": "Medium",
     "description": "Les formulaires publics qui acceptent des saisies sans authentification doivent intégrer une protection contre les robots afin de prévenir le spam, le credential stuffing et les abus automatisés.",
@@ -462,6 +479,7 @@
     ]
   },
   {
+    "id": "security-set-a-permissions-policy-header",
     "title": "Définir un en-tête Permissions-Policy",
     "priority": "Medium",
     "description": "L’en-tête Permissions-Policy permet aux serveurs de restreindre les fonctionnalités du navigateur (caméra, microphone, géolocalisation, etc.) utilisables dans une page ou ses iframes intégrées.",
@@ -491,6 +509,7 @@
     ]
   },
   {
+    "id": "security-set-a-referrer-policy-header",
     "title": "Définir un en-tête Referrer-Policy",
     "priority": "Medium",
     "description": "L’en-tête Referrer-Policy contrôle la quantité d’informations de provenance transmise lorsque l’utilisateur quitte votre site, protégeant sa confidentialité et évitant la fuite de paramètres d’URL sensibles.",
@@ -520,6 +539,7 @@
     ]
   },
   {
+    "id": "security-use-coop-coep-and-corp-for-cross-origin-isolation-when-neede",
     "title": "Utiliser COOP, COEP et CORP pour l’isolation inter-origines si nécessaire",
     "priority": "Medium",
     "description": "Dans les applications sensibles ou dotées de fonctionnalités avancées, utilisez COOP, COEP et CORP de manière délibérée, auditez les intégrations tierces et vérifiez l’isolation inter-origines dans le navigateur avant de vous y fier.",
@@ -554,6 +574,7 @@
     ]
   },
   {
+    "id": "security-adblock-element-hiding",
     "title": "Masquage d’éléments par les bloqueurs de publicité",
     "priority": "Low",
     "description": "Repérez les éléments HTML et les classes CSS que les bloqueurs de publicité courants pourraient masquer, entraînant des problèmes de mise en page ou des fonctionnalités manquantes pour les utilisateurs qui en activent un.",
@@ -583,6 +604,7 @@
     ]
   },
   {
+    "id": "security-blocked-tracking-links",
     "title": "Liens de suivi bloqués",
     "priority": "Low",
     "description": "Les liens et ressources qui pointent vers des domaines connus de suivi ou de publicité peuvent être bloqués par les bloqueurs de publicité, ce qui rompt la navigation et certaines fonctionnalités pour une part importante des utilisateurs.",

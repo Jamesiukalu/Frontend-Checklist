@@ -1,5 +1,6 @@
 [
   {
+    "id": "javascript-never-use-eval-or-unsafe-dynamic-code-execution",
     "title": "Ne jamais utiliser eval() ni l’exécution dynamique de code non sécurisée",
     "priority": "High",
     "description": "Évitez eval(), new Function(), setTimeout/setInterval avec des arguments sous forme de chaîne, ainsi que innerHTML avec du contenu non fiable : ces mécanismes exécutent du code arbitraire et créent de graves vulnérabilités XSS.",
@@ -29,6 +30,7 @@
     ]
   },
   {
+    "id": "javascript-avoid-inline-javascript",
     "title": "Éviter le JavaScript intégré",
     "priority": "High",
     "description": "Évitez le JavaScript intégré directement dans le HTML.",
@@ -60,6 +62,7 @@
     ]
   },
   {
+    "id": "javascript-debounce-and-throttle-event-handlers",
     "title": "Appliquer debounce et throttle aux gestionnaires d’événements",
     "priority": "High",
     "description": "Utilisez debounce ou throttle pour les événements fréquents comme scroll, resize et input afin d’améliorer les performances.",
@@ -86,6 +89,7 @@
     ]
   },
   {
+    "id": "javascript-enable-typescript-strict-mode-in-tsconfig-json",
     "title": "Activer le mode strict de TypeScript dans tsconfig.json",
     "priority": "High",
     "description": "Activez \"strict\": true dans tsconfig.json pour utiliser l’ensemble des options de vérification de types de TypeScript et détecter à la compilation les erreurs d’exécution les plus courantes.",
@@ -109,6 +113,7 @@
     ]
   },
   {
+    "id": "javascript-handle-cross-origin-requests-securely",
     "title": "Gérer les requêtes inter-origines de manière sécurisée",
     "priority": "High",
     "description": "Utilisez correctement CORS, validez les origines des messages avec postMessage et comprenez la Same-Origin Policy afin de prévenir les attaques inter-origines.",
@@ -138,6 +143,7 @@
     ]
   },
   {
+    "id": "javascript-implement-proper-error-handling",
     "title": "Mettre en place une gestion appropriée des erreurs",
     "priority": "High",
     "description": "Utilisez des blocs try-catch et des limites d’erreur pour gérer proprement les erreurs dans les opérations asynchrones et les composants d’interface.",
@@ -163,6 +169,7 @@
     ]
   },
   {
+    "id": "javascript-minify-all-javascript-files",
     "title": "Minifier tous les fichiers JavaScript",
     "priority": "High",
     "description": "Minifiez tous les fichiers JavaScript afin de réduire leur taille et d’accélérer le chargement.",
@@ -189,6 +196,7 @@
     ]
   },
   {
+    "id": "javascript-minimize-costly-dom-read-write-operations",
     "title": "Réduire les opérations coûteuses de lecture/écriture du DOM",
     "priority": "High",
     "description": "Regroupez séparément les lectures et les écritures du DOM pour éviter les recalculs de mise en page répétés, causés par l’alternance entre lecture et écriture des propriétés de mise en page.",
@@ -218,6 +226,7 @@
     ]
   },
   {
+    "id": "javascript-prefer-const-and-let-over-var",
     "title": "Préférer const et let à var",
     "priority": "High",
     "description": "Utilisez les déclarations const et let, dont la portée est limitée au bloc, plutôt que var, dont la portée est limitée à la fonction, afin d’éviter les problèmes de hoisting et les modifications involontaires de variables.",
@@ -243,6 +252,7 @@
     ]
   },
   {
+    "id": "javascript-prevent-common-memory-leak-patterns",
     "title": "Prévenir les fuites de mémoire courantes",
     "priority": "High",
     "description": "Repérez et évitez les sources courantes de fuite de mémoire en JavaScript : écouteurs d’événements oubliés, références au DOM conservées, closures retenant de gros objets et temporisateurs non effacés.",
@@ -268,6 +278,7 @@
     ]
   },
   {
+    "id": "javascript-split-large-javascript-bundles",
     "title": "Fractionner les grands bundles JavaScript",
     "priority": "High",
     "description": "Utilisez les imports dynamiques et le fractionnement du code par route pour diviser les grands bundles en morceaux chargés à la demande et réduire le temps de chargement initial.",
@@ -301,6 +312,7 @@
     ]
   },
   {
+    "id": "javascript-use-es-modules-import-export",
     "title": "Utiliser les modules ES (import/export)",
     "priority": "High",
     "description": "Utilisez la syntaxe native des modules ES pour les imports et les exports plutôt que CommonJS require(), afin de permettre l’analyse statique, le tree-shaking et une meilleure prise en charge par les outils.",
@@ -330,6 +342,7 @@
     ]
   },
   {
+    "id": "javascript-validate-external-data-at-runtime-with-a-schema-library",
     "title": "Valider les données externes à l’exécution avec une bibliothèque de schémas",
     "priority": "High",
     "description": "Utilisez Zod ou Valibot pour valider les données des réponses d’API, des champs de formulaire, de localStorage et des variables d’environnement : les types TypeScript sont supprimés à l’exécution et ne protègent pas contre les structures inattendues.",
@@ -353,6 +366,7 @@
     ]
   },
   {
+    "id": "javascript-avoid-implicit-type-coercion",
     "title": "Éviter la coercition implicite des types",
     "priority": "Medium",
     "description": "Utilisez l’égalité stricte (===), les conversions de type explicites et les constructeurs Number/String/Boolean afin d’éviter les résultats inattendus de la coercition implicite des types en JavaScript.",
@@ -378,6 +392,7 @@
     ]
   },
   {
+    "id": "javascript-avoid-the-any-type-use-unknown-generics-or-type-guards-inste",
     "title": "Éviter le type any : préférer unknown, les génériques ou les gardes de type",
     "priority": "Medium",
     "description": "Remplacez le type any de TypeScript par unknown, des génériques adaptés ou des assertions de type affinées afin de préserver la sûreté des types sans sacrifier l’expressivité.",
@@ -401,6 +416,7 @@
     ]
   },
   {
+    "id": "javascript-enable-nouncheckedindexedaccess-to-catch-out-of-bounds-array",
     "title": "Activer noUncheckedIndexedAccess pour détecter les accès aux tableaux hors limites",
     "priority": "Medium",
     "description": "Activez noUncheckedIndexedAccess dans tsconfig.json afin que l’accès aux indices de tableaux et d’objets renvoie T | undefined et impose des vérifications explicites contre les valeurs nulles, prévenant ainsi les erreurs d’exécution dues aux dépassements d’indices.",
@@ -424,6 +440,7 @@
     ]
   },
   {
+    "id": "javascript-lint-javascript-code",
     "title": "Analyser le code JavaScript avec un linter",
     "priority": "Medium",
     "description": "Analysez le code JavaScript avec ESLint afin de détecter les erreurs et de faire respecter les conventions de codage.",
@@ -447,6 +464,7 @@
     ]
   },
   {
+    "id": "javascript-parse-json-safely-with-error-handling",
     "title": "Analyser le JSON de manière sécurisée avec une gestion des erreurs",
     "priority": "Medium",
     "description": "Encadrez toujours JSON.parse() d’un bloc try/catch et validez la structure obtenue avant de l’utiliser, car un JSON invalide ou une structure inattendue peut provoquer des erreurs d’exécution.",
@@ -476,6 +494,7 @@
     ]
   },
   {
+    "id": "javascript-prefer-immutable-data-patterns",
     "title": "Privilégier les modèles de données immuables",
     "priority": "Medium",
     "description": "Utilisez les opérateurs spread, Object.assign et les méthodes de tableau qui renvoient de nouvelles valeurs plutôt que de modifier les objets et tableaux sur place, afin de rendre le flux de données prévisible et le débogage plus facile.",
@@ -501,6 +520,7 @@
     ]
   },
   {
+    "id": "javascript-remove-console-statements-in-production",
     "title": "Supprimer les instructions console en production",
     "priority": "Medium",
     "description": "Supprimez ou désactivez console.log, console.debug et les autres instructions console avant le déploiement en production.",
@@ -527,6 +547,7 @@
     ]
   },
   {
+    "id": "javascript-use-event-delegation-for-dynamic-content",
     "title": "Utiliser la délégation d’événements pour le contenu dynamique",
     "priority": "Medium",
     "description": "Attachez les écouteurs d’événements à des éléments parents stables plutôt qu’à chaque enfant dynamique afin de réduire l’utilisation de la mémoire et de gérer les éléments ajoutés au DOM après le chargement de la page.",
@@ -552,6 +573,7 @@
     ]
   },
   {
+    "id": "javascript-use-modern-array-and-object-methods",
     "title": "Utiliser les méthodes modernes des tableaux et des objets",
     "priority": "Medium",
     "description": "Utilisez les méthodes de tableau ES2015+ (map, filter, reduce, find, flatMap) et les méthodes d’objet (Object.entries, Object.fromEntries, structuredClone) pour écrire un code plus clair et expressif.",
@@ -577,6 +599,7 @@
     ]
   },
   {
+    "id": "javascript-use-scheduler-yield-to-keep-the-main-thread-responsive-durin",
     "title": "Utiliser scheduler.yield() pour préserver la réactivité du thread principal pendant les tâches longues",
     "priority": "Medium",
     "description": "Découpez les tâches de plus de 50 ms en cédant la main au navigateur avec scheduler.yield() ou une solution de repli basée sur MessageChannel, afin que les saisies de l’utilisateur ne soient jamais bloquées.",
@@ -606,6 +629,7 @@
     ]
   },
   {
+    "id": "javascript-use-web-storage-api-safely",
     "title": "Utiliser l’API Web Storage de manière sécurisée",
     "priority": "Medium",
     "description": "Utilisez localStorage et sessionStorage avec une sérialisation appropriée, une gestion des erreurs et les précautions de sécurité nécessaires afin d’éviter la corruption des données et les erreurs de quota de stockage.",
@@ -631,6 +655,7 @@
     ]
   },
   {
+    "id": "javascript-write-internationalisation-friendly-translation-strings",
     "title": "Rédiger des chaînes de traduction adaptées à l’internationalisation",
     "priority": "Medium",
     "description": "Utilisez des modèles de format de message (ICU ou équivalent) plutôt que la concaténation de chaînes, et gérez correctement le pluriel, le genre et l’interpolation des variables.",
@@ -654,6 +679,7 @@
     ]
   },
   {
+    "id": "javascript-use-import-type-for-type-only-imports",
     "title": "Utiliser import type pour les imports réservés aux types",
     "priority": "Low",
     "description": "Utilisez la syntaxe import type pour les imports nécessaires uniquement comme types TypeScript, afin qu’ils soient entièrement supprimés à la compilation et n’entraînent aucun coût à l’exécution.",

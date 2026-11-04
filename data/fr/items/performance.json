@@ -1,5 +1,6 @@
 [
   {
+    "id": "performance-optimize-largest-contentful-paint",
     "title": "Optimiser le Largest Contentful Paint",
     "priority": "High",
     "description": "Pour offrir une bonne expérience, l’élément de contenu le plus grand se charge en moins de 2,5 secondes.",
@@ -25,6 +26,7 @@
     ]
   },
   {
+    "id": "performance-enable-browser-caching",
     "title": "Activer la mise en cache du navigateur",
     "priority": "High",
     "description": "Configurez correctement les en-têtes Cache-Control et ETag pour les ressources statiques.",
@@ -50,6 +52,7 @@
     ]
   },
   {
+    "id": "performance-enable-http-2-or-http-3",
     "title": "Activer HTTP/2 ou HTTP/3",
     "priority": "High",
     "description": "Utilisez les protocoles HTTP modernes pour permettre le multiplexage des requêtes et réduire la latence du réseau.",
@@ -75,6 +78,7 @@
     ]
   },
   {
+    "id": "performance-enable-text-based-compression",
     "title": "Activer la compression des ressources textuelles",
     "priority": "High",
     "description": "Compressez les ressources textuelles (HTML, CSS, JS) avec Gzip ou Brotli afin de réduire le volume de données transférées.",
@@ -104,6 +108,7 @@
     ]
   },
   {
+    "id": "performance-implement-google-consent-mode-v2",
     "title": "Mettre en œuvre Google Consent Mode v2",
     "priority": "High",
     "description": "Adaptez le comportement de Google Tag en fonction du consentement de l’utilisateur afin de respecter les réglementations sur la confidentialité et de conserver des données analytiques.",
@@ -129,6 +134,7 @@
     ]
   },
   {
+    "id": "performance-implement-lazy-loading-for-offscreen-content",
     "title": "Mettre en place le chargement différé du contenu hors écran",
     "priority": "High",
     "description": "Chargez les images et les ressources lourdes situées sous la ligne de flottaison uniquement lorsqu’elles sont nécessaires, afin d’améliorer les performances initiales.",
@@ -159,6 +165,7 @@
     ]
   },
   {
+    "id": "performance-keep-page-load-time-under-3-seconds",
     "title": "Maintenir le temps de chargement de la page sous 3 secondes",
     "priority": "High",
     "description": "La page se charge entièrement en moins de 3 secondes sur une connexion standard.",
@@ -184,6 +191,7 @@
     ]
   },
   {
+    "id": "performance-keep-page-weight-under-1500kb",
     "title": "Maintenir le poids de la page sous 1500 Ko",
     "priority": "High",
     "description": "Le poids total de la page, toutes ressources comprises, reste inférieur à 1500 Ko (idéalement à 500 Ko).",
@@ -209,6 +217,7 @@
     ]
   },
   {
+    "id": "performance-load-non-critical-code-on-user-interaction",
     "title": "Charger le code non essentiel lors d’une interaction",
     "priority": "High",
     "description": "Différez le chargement des modules JavaScript, widgets et scripts tiers jusqu’à ce que l’utilisateur manifeste son intention par un clic, une prise de focus, un survol ou une interaction similaire.",
@@ -238,6 +247,7 @@
     ]
   },
   {
+    "id": "performance-load-non-critical-code-when-content-approaches-the-viewport",
     "title": "Charger le code non essentiel à l’approche du contenu dans la fenêtre d’affichage",
     "priority": "High",
     "description": "Utilisez un chargement tenant compte de la fenêtre d’affichage pour récupérer les composants, intégrations et fonctionnalités peu avant leur apparition, au lieu de tout envoyer au chargement initial.",
@@ -267,6 +277,7 @@
     ]
   },
   {
+    "id": "performance-minimize-critical-request-chains",
     "title": "Réduire les chaînes de requêtes critiques",
     "priority": "High",
     "description": "Réduisez le nombre et la profondeur des requêtes de ressources dépendantes qui bloquent le rendu initial de la page.",
@@ -292,6 +303,7 @@
     ]
   },
   {
+    "id": "performance-minimize-cumulative-layout-shift",
     "title": "Réduire le décalage cumulatif de mise en page",
     "priority": "High",
     "description": "La page reste visuellement stable, avec un score CLS inférieur à 0,1, et évite les déplacements inattendus du contenu pendant le chargement.",
@@ -317,6 +329,7 @@
     ]
   },
   {
+    "id": "performance-minimize-http-requests",
     "title": "Réduire le nombre de requêtes HTTP",
     "priority": "High",
     "description": "Réduisez les requêtes HTTP en regroupant les fichiers, en utilisant des sprites et en adoptant HTTP/2.",
@@ -342,6 +355,7 @@
     ]
   },
   {
+    "id": "performance-optimize-and-compress-web-videos",
     "title": "Optimiser et compresser les vidéos web",
     "priority": "High",
     "description": "Compressez les vidéos, adaptez leur taille à chaque appareil et utilisez des codecs efficaces (H.264, HEVC, VP9/AV1) pour réduire le poids de la page et la consommation de bande passante.",
@@ -376,6 +390,7 @@
     ]
   },
   {
+    "id": "performance-optimize-first-contentful-paint",
     "title": "Optimiser le First Contentful Paint",
     "priority": "High",
     "description": "Le premier contenu s’affiche en moins de 1,8 seconde et indique rapidement que la page est en cours de chargement.",
@@ -401,6 +416,7 @@
     ]
   },
   {
+    "id": "performance-optimize-interaction-to-next-paint",
     "title": "Optimiser l’Interaction to Next Paint",
     "priority": "High",
     "description": "La page répond aux interactions de l’utilisateur en moins de 200 ms, pour garantir une bonne réactivité.",
@@ -426,6 +442,7 @@
     ]
   },
   {
+    "id": "performance-optimize-pages-for-back-forward-cache",
     "title": "Optimiser les pages pour le cache de navigation précédent/suivant",
     "priority": "High",
     "description": "Évitez les éléments qui empêchent l’utilisation du cache de navigation précédent/suivant, comme les écouteurs unload, et restaurez correctement l’état lorsque le navigateur rétablit une page depuis la mémoire.",
@@ -456,6 +473,7 @@
     ]
   },
   {
+    "id": "performance-optimize-third-party-script-loading",
     "title": "Optimiser le chargement des scripts tiers",
     "priority": "High",
     "description": "Chargez les scripts tiers de façon asynchrone afin d’éviter de bloquer le thread principal et d’améliorer les performances de la page.",
@@ -490,6 +508,7 @@
     ]
   },
   {
+    "id": "performance-optimize-web-font-loading",
     "title": "Optimiser le chargement des polices web",
     "priority": "High",
     "description": "Utilisez des formats de police et des stratégies de chargement efficaces pour éviter les décalages de mise en page et le texte invisible.",
@@ -515,6 +534,7 @@
     ]
   },
   {
+    "id": "performance-show-loading-indicators",
     "title": "Afficher des indicateurs de chargement",
     "priority": "High",
     "description": "Les indicateurs de chargement renseignent les utilisateurs sur l’avancement des opérations asynchrones.",
@@ -541,6 +561,7 @@
     ]
   },
   {
+    "id": "performance-use-a-content-delivery-network",
     "title": "Utiliser un réseau de diffusion de contenu",
     "priority": "High",
     "description": "Servez les ressources statiques depuis un CDN afin de réduire la latence et d’accélérer leur distribution.",
@@ -566,6 +587,7 @@
     ]
   },
   {
+    "id": "performance-use-resource-hints-for-faster-loading",
     "title": "Utiliser des indications de ressources pour accélérer le chargement",
     "priority": "High",
     "description": "Mettez en place les indications preload, prefetch et preconnect afin d’optimiser la priorité de chargement des ressources.",
@@ -604,6 +626,7 @@
     ]
   },
   {
+    "id": "performance-virtualize-long-lists-and-tables",
     "title": "Virtualiser les longues listes et les tableaux",
     "priority": "High",
     "description": "Dans les grandes collections, n’affichez que les lignes ou cartes visibles afin de réduire la taille du DOM, l’utilisation de la mémoire et le travail de rendu pendant le défilement.",
@@ -629,6 +652,7 @@
     ]
   },
   {
+    "id": "performance-avoid-javascript-based-redirects",
     "title": "Éviter les redirections basées sur JavaScript",
     "priority": "Medium",
     "description": "Repérez les ressources JavaScript qui renvoient des redirections 3XX afin de réduire la latence.",
@@ -654,6 +678,7 @@
     ]
   },
   {
+    "id": "performance-avoid-serving-legacy-javascript-to-modern-browsers",
     "title": "Éviter de servir du JavaScript ancien aux navigateurs modernes",
     "priority": "Medium",
     "description": "Repérez les polyfills ES5 et le code JavaScript ancien afin de réduire la taille des bundles et d’améliorer l’exécution.",
@@ -679,6 +704,7 @@
     ]
   },
   {
+    "id": "performance-convert-animated-gifs-to-video",
     "title": "Convertir les GIF animés en vidéo",
     "priority": "Medium",
     "description": "Remplacez les GIF animés volumineux par des formats vidéo plus efficaces, comme MP4 ou WebM, afin de réduire le poids de la page.",
@@ -704,6 +730,7 @@
     ]
   },
   {
+    "id": "performance-disable-lazy-loading-for-above-the-fold-content",
     "title": "Désactiver le chargement différé du contenu au-dessus de la ligne de flottaison",
     "priority": "Medium",
     "description": "Repérez le chargement différé appliqué aux images probablement situées au-dessus de la ligne de flottaison afin d’améliorer le Largest Contentful Paint (LCP).",
@@ -729,6 +756,7 @@
     ]
   },
   {
+    "id": "performance-eliminate-render-blocking-resources",
     "title": "Éliminer les ressources qui bloquent le rendu",
     "priority": "Medium",
     "description": "Repérez les fichiers CSS et JavaScript qui bloquent le rendu initial de la page.",
@@ -754,6 +782,7 @@
     ]
   },
   {
+    "id": "performance-optimize-css-file-size",
     "title": "Optimiser la taille des fichiers CSS",
     "priority": "Medium",
     "description": "Gardez les fichiers CSS individuels légers et supprimez les styles inutilisés afin d’accélérer le chemin critique de rendu.",
@@ -779,6 +808,7 @@
     ]
   },
   {
+    "id": "performance-optimize-google-tag-manager-implementation",
     "title": "Optimiser la mise en œuvre de Google Tag Manager",
     "priority": "Medium",
     "description": "Configurez Google Tag Manager efficacement afin de limiter son impact sur le temps de chargement de la page et le blocage du thread principal.",
@@ -804,6 +834,7 @@
     ]
   },
   {
+    "id": "performance-optimize-javascript-bundle-size",
     "title": "Optimiser la taille des bundles JavaScript",
     "priority": "Medium",
     "description": "Repérez les fichiers JavaScript qui dépassent les limites de taille recommandées afin de garantir des interactions rapides.",
@@ -829,6 +860,7 @@
     ]
   },
   {
+    "id": "performance-perform-browser-based-performance-audits",
     "title": "Réaliser des audits de performance dans un navigateur",
     "priority": "Medium",
     "description": "Effectuez les audits de performance dans un navigateur complet afin de recueillir des mesures d’exécution et des décalages de mise en page fiables.",
@@ -854,6 +886,7 @@
     ]
   },
   {
+    "id": "performance-provide-source-maps-for-production-debugging",
     "title": "Fournir des source maps pour le débogage en production",
     "priority": "Medium",
     "description": "Vérifiez la disponibilité et la configuration des source maps afin de faciliter le débogage.",
@@ -879,6 +912,7 @@
     ]
   },
   {
+    "id": "performance-reduce-dom-size-and-complexity",
     "title": "Réduire la taille et la complexité du DOM",
     "priority": "Medium",
     "description": "Gardez l’arbre DOM petit et peu profond afin d’améliorer l’utilisation de la mémoire et les performances de rendu.",
@@ -908,6 +942,7 @@
     ]
   },
   {
+    "id": "performance-reduce-time-to-first-byte-ttfb",
     "title": "Réduire le Time to First Byte (TTFB)",
     "priority": "Medium",
     "description": "Mesurez et optimisez le temps de réponse du serveur (TTFB) afin d’obtenir une réponse initiale rapide.",
@@ -933,6 +968,7 @@
     ]
   },
   {
+    "id": "performance-register-a-service-worker-for-caching-and-offline-support",
     "title": "Enregistrer un service worker pour la mise en cache et la prise en charge hors ligne",
     "priority": "Medium",
     "description": "Un service worker intercepte les requêtes réseau, met en cache les ressources essentielles et permet à votre application web de fonctionner hors ligne.",
@@ -962,6 +998,7 @@
     ]
   },
   {
+    "id": "performance-remove-duplicate-javascript-libraries",
     "title": "Supprimer les bibliothèques JavaScript en double",
     "priority": "Medium",
     "description": "Repérez et regroupez les bibliothèques JavaScript dupliquées afin de réduire la taille des bundles et d’éviter les conflits de versions.",
@@ -987,6 +1024,7 @@
     ]
   },
   {
+    "id": "performance-stream-html-to-the-browser-before-the-full-response-is-ready",
     "title": "Transmettre le HTML au navigateur avant la fin de la réponse",
     "priority": "Medium",
     "description": "Utilisez le transfert HTTP par blocs et React renderToPipeableStream (ou ReadableStream) pour commencer à transmettre le HTML au navigateur dès que les premiers octets sont disponibles, et ainsi réduire le Time to First Byte et le First Contentful Paint.",
@@ -1024,6 +1062,7 @@
     ]
   },
   {
+    "id": "performance-use-fetchpriority-to-hint-resource-loading-priority",
     "title": "Utiliser fetchpriority pour indiquer la priorité de chargement des ressources",
     "priority": "Medium",
     "description": "Appliquez l’attribut fetchpriority aux images, scripts et liens preload essentiels pour aider le navigateur à privilégier les ressources importantes et à différer celles qui le sont moins.",
@@ -1043,6 +1082,7 @@
     ]
   },
   {
+    "id": "performance-use-preconnect-for-critical-third-party-origins",
     "title": "Utiliser preconnect pour les origines tierces essentielles",
     "priority": "Medium",
     "description": "Vérifiez la présence d’indications preconnect vers les origines tierces essentielles afin de réduire la latence de connexion.",
@@ -1068,6 +1108,7 @@
     ]
   },
   {
+    "id": "performance-use-secure-and-up-to-date-js-libraries",
     "title": "Utiliser des bibliothèques JS sécurisées et à jour",
     "priority": "Medium",
     "description": "Repérez les bibliothèques JavaScript et vérifiez si elles présentent des vulnérabilités connues.",
@@ -1093,6 +1134,7 @@
     ]
   },
   {
+    "id": "performance-provide-an-offline-fallback-page",
     "title": "Fournir une page de secours hors ligne",
     "priority": "Low",
     "description": "Lorsque le réseau est indisponible, affichez aux utilisateurs une page de secours hors ligne personnalisée plutôt que l’écran d’erreur générique du navigateur.",
@@ -1112,6 +1154,7 @@
     ]
   },
   {
+    "id": "performance-use-the-speculation-rules-api-to-prefetch-and-prerender-navi",
     "title": "Utiliser l’API Speculation Rules pour précharger et prérendre les navigations",
     "priority": "Low",
     "description": "Utilisez l’API Speculation Rules pour précharger ou prérendre de manière déclarative les pages susceptibles d’être consultées ensuite, afin de rendre la navigation quasi instantanée sans la surcharge d’un routeur entièrement côté client.",

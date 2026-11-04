@@ -1,5 +1,6 @@
 [
   {
+    "id": "javascript-never-use-eval-or-unsafe-dynamic-code-execution",
     "title": "Never use eval() or unsafe dynamic code execution",
     "priority": "High",
     "description": "Avoid eval(), new Function(), setTimeout/setInterval with string arguments, and innerHTML with untrusted content — they execute arbitrary code and create critical XSS vulnerabilities.",
@@ -29,6 +30,7 @@
     ]
   },
   {
+    "id": "javascript-avoid-inline-javascript",
     "title": "Avoid inline JavaScript",
     "priority": "High",
     "description": "Inline JavaScript is avoided.",
@@ -60,6 +62,7 @@
     ]
   },
   {
+    "id": "javascript-debounce-and-throttle-event-handlers",
     "title": "Debounce and throttle event handlers",
     "priority": "High",
     "description": "Use debounce or throttle for high-frequency events like scroll, resize, and input to improve performance.",
@@ -86,6 +89,7 @@
     ]
   },
   {
+    "id": "javascript-enable-typescript-strict-mode-in-tsconfig-json",
     "title": "Enable TypeScript strict mode in tsconfig.json",
     "priority": "High",
     "description": "Enable \"strict\": true in tsconfig.json to activate the full suite of TypeScript type-checking flags and catch the most common runtime bugs at compile time.",
@@ -109,6 +113,7 @@
     ]
   },
   {
+    "id": "javascript-handle-cross-origin-requests-securely",
     "title": "Handle cross-origin requests securely",
     "priority": "High",
     "description": "Use CORS correctly, validate message origins with postMessage, and understand the Same-Origin Policy to prevent cross-origin attacks.",
@@ -138,6 +143,7 @@
     ]
   },
   {
+    "id": "javascript-implement-proper-error-handling",
     "title": "Implement proper error handling",
     "priority": "High",
     "description": "Use try-catch blocks and error boundaries to gracefully handle errors in async operations and UI components.",
@@ -163,6 +169,7 @@
     ]
   },
   {
+    "id": "javascript-minify-all-javascript-files",
     "title": "Minify all JavaScript files",
     "priority": "High",
     "description": "All JavaScript files are minified to reduce file size and improve loading performance.",
@@ -189,6 +196,7 @@
     ]
   },
   {
+    "id": "javascript-minimize-costly-dom-read-write-operations",
     "title": "Minimize costly DOM read/write operations",
     "priority": "High",
     "description": "Batch DOM reads and writes separately to avoid layout thrashing — the performance problem caused by alternating between reading and writing layout properties.",
@@ -218,6 +226,7 @@
     ]
   },
   {
+    "id": "javascript-prefer-const-and-let-over-var",
     "title": "Prefer const and let over var",
     "priority": "High",
     "description": "Use block-scoped const and let declarations instead of function-scoped var to avoid hoisting bugs and unintended variable mutations.",
@@ -243,6 +252,7 @@
     ]
   },
   {
+    "id": "javascript-prevent-common-memory-leak-patterns",
     "title": "Prevent common memory leak patterns",
     "priority": "High",
     "description": "Identify and avoid the most common JavaScript memory leak sources: forgotten event listeners, retained DOM references, closures holding large objects, and uncleared timers.",
@@ -268,6 +278,7 @@
     ]
   },
   {
+    "id": "javascript-split-large-javascript-bundles",
     "title": "Split large JavaScript bundles",
     "priority": "High",
     "description": "Use dynamic imports and route-based code splitting to break large bundles into smaller chunks that load on demand, reducing initial page load time.",
@@ -301,6 +312,7 @@
     ]
   },
   {
+    "id": "javascript-use-es-modules-import-export",
     "title": "Use ES modules (import/export)",
     "priority": "High",
     "description": "Use native ES module syntax for imports and exports instead of CommonJS require() to enable static analysis, tree-shaking, and better tooling support.",
@@ -330,6 +342,7 @@
     ]
   },
   {
+    "id": "javascript-validate-external-data-at-runtime-with-a-schema-library",
     "title": "Validate external data at runtime with a schema library",
     "priority": "High",
     "description": "Use Zod or Valibot to validate data from API responses, form inputs, localStorage, and environment variables — TypeScript types are erased at runtime and cannot protect against unexpected shapes.",
@@ -353,6 +366,7 @@
     ]
   },
   {
+    "id": "javascript-avoid-implicit-type-coercion",
     "title": "Avoid implicit type coercion",
     "priority": "Medium",
     "description": "Use strict equality (===), explicit type conversion, and Number/String/Boolean constructors to avoid JavaScript's implicit type coercion producing unexpected results.",
@@ -378,6 +392,7 @@
     ]
   },
   {
+    "id": "javascript-avoid-the-any-type-use-unknown-generics-or-type-guards-inste",
     "title": "Avoid the any type — use unknown, generics, or type guards instead",
     "priority": "Medium",
     "description": "Replace TypeScript's any type with unknown, proper generics, or narrowed type assertions to preserve type safety without sacrificing expressiveness.",
@@ -401,6 +416,7 @@
     ]
   },
   {
+    "id": "javascript-enable-nouncheckedindexedaccess-to-catch-out-of-bounds-array",
     "title": "Enable noUncheckedIndexedAccess to catch out-of-bounds array bugs",
     "priority": "Medium",
     "description": "Enable noUncheckedIndexedAccess in tsconfig.json to make array and object index access return T | undefined, forcing explicit null checks that prevent out-of-bounds runtime errors.",
@@ -424,6 +440,7 @@
     ]
   },
   {
+    "id": "javascript-lint-javascript-code",
     "title": "Lint JavaScript code",
     "priority": "Medium",
     "description": "JavaScript code is linted with ESLint to detect errors and enforce coding standards.",
@@ -447,6 +464,7 @@
     ]
   },
   {
+    "id": "javascript-parse-json-safely-with-error-handling",
     "title": "Parse JSON safely with error handling",
     "priority": "Medium",
     "description": "Always wrap JSON.parse() in try/catch and validate the parsed structure before use, as invalid JSON or unexpected data shapes cause runtime errors.",
@@ -476,6 +494,7 @@
     ]
   },
   {
+    "id": "javascript-prefer-immutable-data-patterns",
     "title": "Prefer immutable data patterns",
     "priority": "Medium",
     "description": "Use spread operators, Object.assign, and array methods that return new values instead of mutating objects and arrays in place, to make data flow predictable and debugging easier.",
@@ -501,6 +520,7 @@
     ]
   },
   {
+    "id": "javascript-remove-console-statements-in-production",
     "title": "Remove console statements in production",
     "priority": "Medium",
     "description": "Remove or disable console.log, console.debug, and other console statements before deploying to production.",
@@ -527,6 +547,7 @@
     ]
   },
   {
+    "id": "javascript-use-event-delegation-for-dynamic-content",
     "title": "Use event delegation for dynamic content",
     "priority": "Medium",
     "description": "Attach event listeners to stable parent elements rather than individual dynamic children to reduce memory usage and handle elements added to the DOM after page load.",
@@ -552,6 +573,7 @@
     ]
   },
   {
+    "id": "javascript-use-modern-array-and-object-methods",
     "title": "Use modern array and object methods",
     "priority": "Medium",
     "description": "Use ES2015+ array methods (map, filter, reduce, find, flatMap) and object methods (Object.entries, Object.fromEntries, structuredClone) for cleaner, more expressive code.",
@@ -577,6 +599,7 @@
     ]
   },
   {
+    "id": "javascript-use-scheduler-yield-to-keep-the-main-thread-responsive-durin",
     "title": "Use scheduler.yield() to keep the main thread responsive during long tasks",
     "priority": "Medium",
     "description": "Break up tasks longer than 50 ms by yielding to the browser with scheduler.yield() or a MessageChannel fallback so that user input is never blocked.",
@@ -606,6 +629,7 @@
     ]
   },
   {
+    "id": "javascript-use-web-storage-api-safely",
     "title": "Use Web Storage API safely",
     "priority": "Medium",
     "description": "Use localStorage and sessionStorage with proper serialization, error handling, and security awareness to avoid data corruption and storage quota errors.",
@@ -631,6 +655,7 @@
     ]
   },
   {
+    "id": "javascript-write-internationalisation-friendly-translation-strings",
     "title": "Write internationalisation-friendly translation strings",
     "priority": "Medium",
     "description": "Translation strings use message format patterns (ICU or similar) rather than string concatenation, and correctly handle pluralisation, gender, and variable interpolation.",
@@ -654,6 +679,7 @@
     ]
   },
   {
+    "id": "javascript-use-import-type-for-type-only-imports",
     "title": "Use import type for type-only imports",
     "priority": "Low",
     "description": "Use the import type syntax for imports that are only needed as TypeScript types, ensuring they are fully erased at compile time with zero runtime cost.",

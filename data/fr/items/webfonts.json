@@ -1,5 +1,6 @@
 [
   {
+    "id": "webfonts-webfont-format",
     "title": "Format des polices Web",
     "priority": "High",
     "description": "Les formats WOFF, WOFF2 et TTF sont pris en charge par tous les navigateurs modernes.",
@@ -27,6 +28,7 @@
     ]
   },
   {
+    "id": "webfonts-webfont-size",
     "title": "Taille des polices Web",
     "priority": "High",
     "description": "La taille des polices Web ne dépasse pas 2 MB (toutes les variantes comprises).",
@@ -36,6 +38,7 @@
     ]
   },
   {
+    "id": "webfonts-webfont-loader",
     "title": "Chargeur de polices Web",
     "priority": "Low",
     "description": "Contrôlez le comportement de chargement à l’aide d’un chargeur de polices Web.",

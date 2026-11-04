@@ -1,5 +1,6 @@
 [
   {
+    "id": "html-declare-utf-8-character-encoding",
     "title": "Declare UTF-8 character encoding",
     "priority": "High",
     "description": "The charset (UTF-8) is declared correctly as the first element in the head.",
@@ -26,6 +27,7 @@
     ]
   },
   {
+    "id": "html-set-the-responsive-viewport-meta-tag",
     "title": "Set the responsive viewport meta tag",
     "priority": "High",
     "description": "The viewport meta tag is declared correctly for responsive design.",
@@ -53,6 +55,7 @@
     ]
   },
   {
+    "id": "html-use-the-html5-doctype",
     "title": "Use the HTML5 doctype",
     "priority": "High",
     "description": "The HTML5 doctype declaration must appear as the first line of every HTML document to trigger standards mode rendering in all browsers.",
@@ -83,6 +86,7 @@
     ]
   },
   {
+    "id": "html-add-subresource-integrity-to-external-scripts",
     "title": "Add Subresource Integrity to external scripts",
     "priority": "High",
     "description": "Use Subresource Integrity (SRI) hash attributes on external scripts and stylesheets loaded from CDNs to ensure the content hasn't been tampered with.",
@@ -112,6 +116,7 @@
     ]
   },
   {
+    "id": "html-analyze-performance-with-webpagetest",
     "title": "Analyze performance with WebPageTest",
     "priority": "High",
     "description": "Page performance is analyzed with WebPageTest to identify loading bottlenecks and optimization opportunities.",
@@ -138,6 +143,7 @@
     ]
   },
   {
+    "id": "html-ensure-all-ids-are-unique",
     "title": "Ensure all IDs are unique",
     "priority": "High",
     "description": "All ID attributes are unique within the document.",
@@ -165,6 +171,7 @@
     ]
   },
   {
+    "id": "html-load-scripts-with-defer-async-or-type-module",
     "title": "Load scripts with defer, async, or type=module",
     "priority": "High",
     "description": "Prevent JavaScript from blocking HTML parsing by using defer, async, or type=module attributes on script tags so the browser can continue building the DOM while scripts download.",
@@ -194,6 +201,7 @@
     ]
   },
   {
+    "id": "html-make-notifications-accessible",
     "title": "Make notifications accessible",
     "priority": "High",
     "description": "Toast notifications and alerts are announced to screen readers using ARIA live regions and appropriate roles.",
@@ -220,6 +228,7 @@
     ]
   },
   {
+    "id": "html-make-videos-accessible-with-captions",
     "title": "Make videos accessible with captions",
     "priority": "High",
     "description": "Videos have captions, audio descriptions, transcripts, pause controls, and avoid autoplay for users with hearing, vision, or cognitive impairments.",
@@ -258,6 +267,7 @@
     ]
   },
   {
+    "id": "html-set-the-page-lang-attribute",
     "title": "Set the page lang attribute",
     "priority": "High",
     "description": "The <html> element must have a lang attribute with a valid BCP 47 language code so screen readers, translation tools, and search engines know the primary language of the page.",
@@ -303,6 +313,7 @@
     ]
   },
   {
+    "id": "html-use-navigation-landmark-regions",
     "title": "Use navigation landmark regions",
     "priority": "High",
     "description": "Page navigation uses nav elements with proper ARIA labels to distinguish multiple navigation regions.",
@@ -329,6 +340,7 @@
     ]
   },
   {
+    "id": "html-use-semantic-html-elements",
     "title": "Use semantic HTML elements",
     "priority": "High",
     "description": "HTML5 Semantic Elements are used appropriately (header, section, footer, main, article, aside...).",
@@ -356,6 +368,7 @@
     ]
   },
   {
+    "id": "html-use-semantic-input-type-attributes",
     "title": "Use semantic input type attributes",
     "priority": "High",
     "description": "Set the correct type attribute on input elements to trigger the right mobile keyboard, enable browser validation, and improve autofill accuracy.",
@@ -385,6 +398,7 @@
     ]
   },
   {
+    "id": "html-validate-forms-accessibly",
     "title": "Validate forms accessibly",
     "priority": "High",
     "description": "Forms provide clear validation feedback with accessible error messages and proper ARIA attributes.",
@@ -411,6 +425,7 @@
     ]
   },
   {
+    "id": "html-validate-html-against-w3c-standards",
     "title": "Validate HTML against W3C standards",
     "priority": "High",
     "description": "HTML markup is validated against W3C standards for cross-browser compatibility.",
@@ -436,6 +451,7 @@
     ]
   },
   {
+    "id": "html-add-thumbnail-images-to-videos",
     "title": "Add thumbnail images to videos",
     "priority": "Medium",
     "description": "HTML5 video elements should have a poster attribute providing a thumbnail image displayed before the video loads or is played.",
@@ -469,6 +485,7 @@
     ]
   },
   {
+    "id": "html-check-for-broken-links",
     "title": "Check for broken links",
     "priority": "Medium",
     "description": "All links are tested and none are broken.",
@@ -496,6 +513,7 @@
     ]
   },
   {
+    "id": "html-create-a-custom-404-error-page",
     "title": "Create a custom 404 error page",
     "priority": "Medium",
     "description": "A custom 404 error page is designed with helpful navigation options for lost users.",
@@ -521,6 +539,7 @@
     ]
   },
   {
+    "id": "html-create-accessible-tooltips",
     "title": "Create accessible tooltips",
     "priority": "Medium",
     "description": "Tooltips are accessible to keyboard users and screen readers with proper ARIA attributes and focus handling.",
@@ -547,6 +566,7 @@
     ]
   },
   {
+    "id": "html-implement-accessible-breadcrumb-navigation",
     "title": "Implement accessible breadcrumb navigation",
     "priority": "Medium",
     "description": "Breadcrumb navigation is implemented with proper semantic markup and ARIA attributes for accessibility.",
@@ -574,6 +594,7 @@
     ]
   },
   {
+    "id": "html-implement-favicons-for-all-devices",
     "title": "Implement favicons for all devices",
     "priority": "Medium",
     "description": "All necessary favicon formats are implemented for browsers, devices, and PWA support.",
@@ -599,6 +620,7 @@
     ]
   },
   {
+    "id": "html-link-a-web-app-manifest-for-installability",
     "title": "Link a Web App Manifest for installability",
     "priority": "Medium",
     "description": "Include a Web App Manifest (manifest.json) linked from the HTML head to enable Progressive Web App features like home screen installation, standalone display, and splash screens.",
@@ -628,6 +650,7 @@
     ]
   },
   {
+    "id": "html-make-accordions-keyboard-navigable",
     "title": "Make accordions keyboard navigable",
     "priority": "Medium",
     "description": "Accordion components use proper ARIA attributes and keyboard interactions for screen reader accessibility.",
@@ -654,6 +677,7 @@
     ]
   },
   {
+    "id": "html-make-carousels-accessible",
     "title": "Make carousels accessible",
     "priority": "Medium",
     "description": "Carousels and sliders are accessible with pause controls, keyboard navigation, and proper ARIA attributes.",
@@ -680,6 +704,7 @@
     ]
   },
   {
+    "id": "html-make-custom-elements-and-web-components-accessible",
     "title": "Make custom elements and Web Components accessible",
     "priority": "Medium",
     "description": "Custom elements must implement ARIA reflection via ElementInternals, keyboard interaction, and form association so that screen readers and assistive technologies can interpret them correctly.",
@@ -718,6 +743,7 @@
     ]
   },
   {
+    "id": "html-make-drag-and-drop-accessible",
     "title": "Make drag and drop accessible",
     "priority": "Medium",
     "description": "Drag and drop interfaces provide keyboard alternatives and proper ARIA attributes for accessibility.",
@@ -744,6 +770,7 @@
     ]
   },
   {
+    "id": "html-make-file-uploads-accessible",
     "title": "Make file uploads accessible",
     "priority": "Medium",
     "description": "File upload components are accessible with proper labels, file type restrictions, and progress feedback.",
@@ -770,6 +797,7 @@
     ]
   },
   {
+    "id": "html-make-pagination-accessible",
     "title": "Make pagination accessible",
     "priority": "Medium",
     "description": "Pagination controls are accessible with proper ARIA labels, keyboard navigation, and current page indication.",
@@ -796,6 +824,7 @@
     ]
   },
   {
+    "id": "html-make-search-inputs-accessible",
     "title": "Make search inputs accessible",
     "priority": "Medium",
     "description": "Search functionality is accessible with proper input type, label, role, and autocomplete suggestions.",
@@ -822,6 +851,7 @@
     ]
   },
   {
+    "id": "html-make-tabs-keyboard-navigable",
     "title": "Make tabs keyboard navigable",
     "priority": "Medium",
     "description": "Tab components implement the ARIA tabs pattern with proper roles, states, and keyboard navigation.",
@@ -848,6 +878,7 @@
     ]
   },
   {
+    "id": "html-provide-noscript-fallback-content",
     "title": "Provide noscript fallback content",
     "priority": "Medium",
     "description": "A noscript tag provides fallback content for users with JavaScript disabled.",
@@ -874,6 +905,7 @@
     ]
   },
   {
+    "id": "html-remove-comments-and-debug-code-in-production",
     "title": "Remove comments and debug code in production",
     "priority": "Medium",
     "description": "Unnecessary code, comments, and debug elements are removed before deploying to production.",
@@ -900,6 +932,7 @@
     ]
   },
   {
+    "id": "html-set-text-direction-for-rtl-languages",
     "title": "Set text direction for RTL languages",
     "priority": "Medium",
     "description": "The dir attribute is used for languages that read right-to-left (RTL) or mixed content.",
@@ -934,6 +967,7 @@
     ]
   },
   {
+    "id": "html-meet-pwa-installability-criteria",
     "title": "Meet PWA installability criteria",
     "priority": "Low",
     "description": "The web app satisfies the browser's minimum PWA installability requirements: a valid web app manifest, a registered service worker, HTTPS, and maskable icons.",

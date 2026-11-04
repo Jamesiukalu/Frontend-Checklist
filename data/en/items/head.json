@@ -1,5 +1,6 @@
 [
   {
+    "id": "head-doctype",
     "title": "Doctype",
     "priority": "High",
     "description": "The Doctype is HTML5 and is at the top of all your HTML pages.",
@@ -10,16 +11,24 @@
         "url": "https://www.w3.org/TR/html5/syntax.html#determining-the-character-encoding"
       }
     ],
-    "tags": ["all", "Meta tag"]
+    "tags": [
+      "all",
+      "Meta tag"
+    ]
   },
   {
+    "id": "head-charset",
     "title": "Charset",
     "priority": "High",
     "description": "The charset declared (UTF-8) is declared correctly.",
     "code": "https://gist.github.com/thedaviddias/7074c2b93faf1ad1f0c2792258a9b060.js",
-    "tags": ["all", "Meta tag"]
+    "tags": [
+      "all",
+      "Meta tag"
+    ]
   },
   {
+    "id": "head-x-ua-compatible",
     "title": "X-UA-Compatible",
     "priority": "Medium",
     "description": "The X-UA-Compatible Meta tag is present.",
@@ -30,16 +39,24 @@
         "url": "https://msdn.microsoft.com/en-us/library/jj676915(v=vs.85).aspx"
       }
     ],
-    "tags": ["all", "Meta tag"]
+    "tags": [
+      "all",
+      "Meta tag"
+    ]
   },
   {
+    "id": "head-viewport",
     "title": "Viewport",
     "priority": "High",
     "description": "The viewport is declared correctly.",
     "code": "https://gist.github.com/thedaviddias/0e25ffd442512c79af684b5042366a3c.js",
-    "tags": ["all", "Meta tag"]
+    "tags": [
+      "all",
+      "Meta tag"
+    ]
   },
   {
+    "id": "head-title",
     "title": "Title",
     "priority": "High",
     "description": "A title is used on all pages",
@@ -57,9 +74,13 @@
         "url": "https://www.sistrix.com/serp-snippet-generator/"
       }
     ],
-    "tags": ["all", "Meta tag"]
+    "tags": [
+      "all",
+      "Meta tag"
+    ]
   },
   {
+    "id": "head-description",
     "title": "Description",
     "priority": "High",
     "description": "A meta description is provided, it is unique and doesn't possess more than 150 characters.",
@@ -70,9 +91,13 @@
         "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#Adding_an_author_and_description"
       }
     ],
-    "tags": ["all", "Meta tag"]
+    "tags": [
+      "all",
+      "Meta tag"
+    ]
   },
   {
+    "id": "head-favicons",
     "title": "Favicons",
     "priority": "Medium",
     "description": "Each favicon has been created and displays correctly.",
@@ -102,9 +127,13 @@
         "url": "https://realfavicongenerator.net/"
       }
     ],
-    "tags": ["all", "Meta tag"]
+    "tags": [
+      "all",
+      "Meta tag"
+    ]
   },
   {
+    "id": "head-apple-web-app-meta",
     "title": "Apple Web App Meta",
     "priority": "Low",
     "description": "Apple meta-tags are present.",
@@ -119,9 +148,13 @@
         "url": "https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html"
       }
     ],
-    "tags": ["all", "Meta tag"]
+    "tags": [
+      "all",
+      "Meta tag"
+    ]
   },
   {
+    "id": "head-windows-tiles",
     "title": "Windows Tiles",
     "priority": "Low",
     "description": "Windows tiles are present and linked.",
@@ -132,9 +165,13 @@
         "url": "https://msdn.microsoft.com/en-us/library/dn320426(v=vs.85).aspx"
       }
     ],
-    "tags": ["all", "Meta tag"]
+    "tags": [
+      "all",
+      "Meta tag"
+    ]
   },
   {
+    "id": "head-canonical",
     "title": "Canonical",
     "priority": "Medium",
     "description": "Use rel=\"canonical\" to avoid duplicate content.",
@@ -149,30 +186,46 @@
         "url": "https://webmasters.googleblog.com/2013/04/5-common-mistakes-with-relcanonical.html"
       }
     ],
-    "tags": ["all", "Meta tag"]
+    "tags": [
+      "all",
+      "Meta tag"
+    ]
   },
   {
+    "id": "head-language-attribute",
     "title": "Language attribute",
     "priority": "High",
     "description": "The <code>lang</code> attribute of your website is specified and related to the language of the current page.",
     "code": "",
-    "tags": ["all", "HTML tag"]
+    "tags": [
+      "all",
+      "HTML tag"
+    ]
   },
   {
+    "id": "head-direction-attribute",
     "title": "Direction attribute",
     "priority": "Medium",
     "description": "The direction of lecture is specified on the html tag (It can be used on another HTML tag).",
     "code": "",
-    "tags": ["all", "HTML tag"]
+    "tags": [
+      "all",
+      "HTML tag"
+    ]
   },
   {
+    "id": "head-alternate-language",
     "title": "Alternate language",
     "priority": "Low",
     "description": "The language tag of your website is specified and related to the language of the current page.",
     "code": "",
-    "tags": ["all", "HTML tag"]
+    "tags": [
+      "all",
+      "HTML tag"
+    ]
   },
   {
+    "id": "head-conditional-comments",
     "title": "Conditional comments",
     "priority": "Low",
     "description": "Conditional comments are present for IE if needed.",
@@ -182,15 +235,23 @@
         "url": "https://msdn.microsoft.com/en-us/library/ms537512(v=vs.85).aspx"
       }
     ],
-    "tags": ["all", "HTML tag"]
+    "tags": [
+      "all",
+      "HTML tag"
+    ]
   },
   {
+    "id": "head-rss-feed",
     "title": "RSS feed",
     "priority": "Low",
     "description": "If your project is a blog or has articles, an RSS link was provided.",
-    "tags": ["all", "HTML tag"]
+    "tags": [
+      "all",
+      "HTML tag"
+    ]
   },
   {
+    "id": "head-inline-critical-css",
     "title": "Inline critical CSS",
     "priority": "Medium",
     "description": "The inline critical CSS is correctly injected in the HEAD.",
@@ -201,16 +262,26 @@
         "url": "https://github.com/addyosmani/critical"
       }
     ],
-    "tags": ["all", "HTML tag", "CSS", "Performance"]
+    "tags": [
+      "all",
+      "HTML tag",
+      "CSS",
+      "Performance"
+    ]
   },
   {
+    "id": "head-css-order",
     "title": "CSS order",
     "priority": "High",
     "description": "All CSS files are loaded before any JavaScript files in the HEAD",
     "detail": "(Except the case where sometimes JS files are loaded asynchronously on top of your page)",
-    "tags": ["all", "HTML tag"]
+    "tags": [
+      "all",
+      "HTML tag"
+    ]
   },
   {
+    "id": "head-facebook-open-graph",
     "title": "Facebook Open Graph",
     "priority": "Low",
     "description": "",
@@ -232,9 +303,14 @@
         "url": "https://developers.facebook.com/tools/debug/"
       }
     ],
-    "tags": ["all", "Social meta", "testing"]
+    "tags": [
+      "all",
+      "Social meta",
+      "testing"
+    ]
   },
   {
+    "id": "head-twitter-card",
     "title": "Twitter Card",
     "priority": "Low",
     "description": "",
@@ -250,6 +326,10 @@
         "url": "https://cards-dev.twitter.com/validator"
       }
     ],
-    "tags": ["all", "Social meta", "testing"]
+    "tags": [
+      "all",
+      "Social meta",
+      "testing"
+    ]
   }
 ]

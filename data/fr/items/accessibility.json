@@ -1,5 +1,6 @@
 [
   {
+    "id": "accessibility-associate-labels-with-form-controls",
     "title": "Associer des étiquettes aux champs de formulaire",
     "priority": "High",
     "description": "Les champs de formulaire doivent être associés à des étiquettes de manière programmatique.",
@@ -25,6 +26,7 @@
     ]
   },
   {
+    "id": "accessibility-do-not-use-aria-hidden-on-the-document-body",
     "title": "Ne pas utiliser aria-hidden sur le corps du document",
     "priority": "High",
     "description": "Vérifiez que le corps du document n'a pas aria-hidden, ce qui masquerait toute la page aux lecteurs d'écran.",
@@ -50,6 +52,7 @@
     ]
   },
   {
+    "id": "accessibility-enable-keyboard-navigation-for-all-elements",
     "title": "Permettre la navigation au clavier pour tous les éléments",
     "priority": "High",
     "description": "Tous les éléments interactifs sont accessibles au clavier, avec un ordre de focus logique et les éléments masqués exclus de la séquence de tabulation.",
@@ -75,6 +78,7 @@
     ]
   },
   {
+    "id": "accessibility-ensure-all-input-fields-have-accessible-names",
     "title": "Donner un nom accessible à tous les champs de saisie",
     "priority": "High",
     "description": "Vérifiez que les champs de saisie ont un nom accessible afin que les personnes utilisant un lecteur d'écran sachent quelles données chaque champ attend.",
@@ -112,6 +116,7 @@
     ]
   },
   {
+    "id": "accessibility-prevent-seizure-triggering-flashing-content",
     "title": "Éviter les contenus clignotants susceptibles de déclencher des crises",
     "priority": "High",
     "description": "Le contenu ne clignote pas plus de trois fois par seconde afin de prévenir les crises chez les personnes atteintes d'épilepsie photosensible.",
@@ -142,6 +147,7 @@
     ]
   },
   {
+    "id": "accessibility-provide-accessible-names-for-buttons",
     "title": "Donner un nom accessible aux boutons",
     "priority": "High",
     "description": "Tous les boutons doivent avoir un nom accessible explicite et descriptif pour les lecteurs d'écran.",
@@ -167,6 +173,7 @@
     ]
   },
   {
+    "id": "accessibility-provide-alt-text-for-image-buttons",
     "title": "Fournir un texte alternatif aux boutons image",
     "priority": "High",
     "description": "Les éléments input de type='image' doivent avoir un attribut alt descriptif.",
@@ -196,6 +203,7 @@
     ]
   },
   {
+    "id": "accessibility-support-content-reflow-at-400-zoom",
     "title": "Permettre la redistribution du contenu à un zoom de 400 %",
     "priority": "High",
     "description": "Le contenu se redistribue à un zoom de 400 % sans défilement horizontal ni perte de fonctionnalité.",
@@ -222,6 +230,7 @@
     ]
   },
   {
+    "id": "accessibility-use-logical-heading-hierarchy",
     "title": "Utiliser une hiérarchie logique de titres",
     "priority": "High",
     "description": "Les titres suivent une structure séquentielle (h1 à h6) qui reflète la hiérarchie du contenu sans sauter de niveaux.",
@@ -249,6 +258,7 @@
     ]
   },
   {
+    "id": "accessibility-announce-dynamic-content-with-aria-live-regions",
     "title": "Annoncer le contenu dynamique avec les régions live ARIA",
     "priority": "High",
     "description": "Les mises à jour du contenu dynamique sont annoncées aux lecteurs d'écran à l'aide de régions live ARIA appropriées.",
@@ -274,6 +284,7 @@
     ]
   },
   {
+    "id": "accessibility-avoid-autoplaying-media",
     "title": "Éviter la lecture automatique des médias",
     "priority": "High",
     "description": "Les contenus audio et vidéo ne se lancent pas automatiquement ou proposent des commandes immédiates pour mettre la lecture en pause ou l'arrêter.",
@@ -300,6 +311,7 @@
     ]
   },
   {
+    "id": "accessibility-avoid-redundant-entry-in-the-same-process",
     "title": "Éviter de saisir plusieurs fois les mêmes informations dans un même processus",
     "priority": "High",
     "description": "Les informations déjà fournies plus tôt dans un parcours à plusieurs étapes sont préremplies ou proposées à la sélection, au lieu de devoir être saisies à nouveau.",
@@ -327,6 +339,7 @@
     ]
   },
   {
+    "id": "accessibility-avoid-sensory-only-instructions",
     "title": "Éviter les consignes reposant uniquement sur les sens",
     "priority": "High",
     "description": "Les consignes ne reposent pas uniquement sur des caractéristiques sensorielles telles que la couleur, la forme, la taille, l'emplacement ou le son.",
@@ -353,6 +366,7 @@
     ]
   },
   {
+    "id": "accessibility-do-not-disable-pinch-zoom",
     "title": "Ne pas désactiver le zoom par pincement",
     "priority": "High",
     "description": "La balise meta viewport ne doit pas définir user-scalable=no ni maximum-scale=1, car ces valeurs empêchent les personnes d'agrandir le contenu pour le lire, en violation du critère WCAG 2.1 1.4.4 (Redimensionner le texte).",
@@ -387,6 +401,7 @@
     ]
   },
   {
+    "id": "accessibility-ensure-aria-attributes-are-valid",
     "title": "Vérifier la validité des attributs ARIA",
     "priority": "High",
     "description": "Tous les attributs ARIA doivent être valides et définis dans la spécification WAI-ARIA.",
@@ -412,6 +427,7 @@
     ]
   },
   {
+    "id": "accessibility-ensure-aria-roles-contain-required-child-roles",
     "title": "Vérifier que les rôles ARIA contiennent les rôles enfants requis",
     "priority": "High",
     "description": "Les éléments portant certains rôles ARIA doivent contenir les rôles enfants requis, sans quoi la structure du composant sera défaillante pour les technologies d'assistance.",
@@ -445,6 +461,7 @@
     ]
   },
   {
+    "id": "accessibility-ensure-content-remains-usable-without-css",
     "title": "Garantir que le contenu reste utilisable sans CSS",
     "priority": "High",
     "description": "La structure du contenu, les consignes et les tâches principales restent compréhensibles et utilisables lorsque le CSS de l'auteur est désactivé ou remplacé par les styles de l'utilisateur.",
@@ -480,6 +497,7 @@
     ]
   },
   {
+    "id": "accessibility-ensure-logical-focus-order",
     "title": "Garantir un ordre de focus logique",
     "priority": "High",
     "description": "L'ordre de focus lors de la tabulation suit la disposition visuelle et l'ordre logique de lecture de la page.",
@@ -506,6 +524,7 @@
     ]
   },
   {
+    "id": "accessibility-include-a-skip-navigation-link",
     "title": "Inclure un lien pour ignorer la navigation",
     "priority": "High",
     "description": "Un lien permettant d'ignorer la navigation est fourni afin que les personnes utilisant le clavier puissent passer le contenu répétitif et accéder directement au contenu principal.",
@@ -531,6 +550,7 @@
     ]
   },
   {
+    "id": "accessibility-keep-focused-elements-unobscured",
     "title": "Garder les éléments focalisés visibles",
     "priority": "High",
     "description": "Les en-têtes et pieds de page fixes, les bannières et les superpositions ne doivent pas masquer entièrement l'élément qui a actuellement le focus clavier.",
@@ -562,6 +582,7 @@
     ]
   },
   {
+    "id": "accessibility-make-modal-dialogs-keyboard-accessible",
     "title": "Rendre les boîtes de dialogue modales accessibles au clavier",
     "priority": "High",
     "description": "Les boîtes de dialogue modales sont accessibles grâce à une gestion appropriée du focus, aux attributs ARIA et à la fermeture au clavier.",
@@ -588,6 +609,7 @@
     ]
   },
   {
+    "id": "accessibility-manage-focus-during-dynamic-interactions",
     "title": "Gérer le focus lors des interactions dynamiques",
     "priority": "High",
     "description": "Le focus est géré de manière programmatique lors d'interactions dynamiques comme les modales, les transitions de page et les mises à jour du contenu.",
@@ -613,6 +635,7 @@
     ]
   },
   {
+    "id": "accessibility-meet-minimum-color-contrast-ratios",
     "title": "Respecter les ratios minimaux de contraste des couleurs",
     "priority": "High",
     "description": "Les couleurs du texte et de l'arrière-plan doivent offrir un contraste suffisant pour être lisibles par les personnes malvoyantes ou daltoniennes.",
@@ -650,6 +673,7 @@
     ]
   },
   {
+    "id": "accessibility-prevent-data-loss-from-session-timeouts",
     "title": "Éviter la perte de données à l'expiration d'une session",
     "priority": "High",
     "description": "Les utilisateurs sont avertis avant l'expiration de leur session, peuvent la prolonger si nécessaire et peuvent se réauthentifier ou reprendre leur travail sans perdre les données saisies.",
@@ -675,6 +699,7 @@
     ]
   },
   {
+    "id": "accessibility-provide-accessible-authentication-methods",
     "title": "Proposer des méthodes d'authentification accessibles",
     "priority": "High",
     "description": "Les parcours d'authentification évitent les tests cognitifs inutiles et prennent en charge les outils d'assistance, notamment les gestionnaires de mots de passe, le collage, le remplissage automatique des OTP et les passkeys.",
@@ -706,6 +731,7 @@
     ]
   },
   {
+    "id": "accessibility-provide-accessible-names-for-all-interactive-elements",
     "title": "Donner un nom accessible à tous les éléments interactifs",
     "priority": "High",
     "description": "Vérifiez que les éléments interactifs ont un nom accessible pour faciliter la navigation.",
@@ -731,6 +757,7 @@
     ]
   },
   {
+    "id": "accessibility-provide-captions-for-video-content",
     "title": "Fournir des sous-titres aux vidéos",
     "priority": "High",
     "description": "Les vidéos préenregistrées avec audio doivent comporter des sous-titres synchronisés.",
@@ -769,6 +796,7 @@
     ]
   },
   {
+    "id": "accessibility-respect-reduced-motion-preferences",
     "title": "Respecter les préférences de réduction des animations",
     "priority": "High",
     "description": "Les animations respectent les préférences de mouvement des utilisateurs, évitent les clignotements susceptibles de déclencher des crises et incluent des avertissements en cas de mouvement excessif.",
@@ -795,6 +823,7 @@
     ]
   },
   {
+    "id": "accessibility-support-both-portrait-and-landscape-orientation",
     "title": "Prendre en charge les orientations portrait et paysage",
     "priority": "High",
     "description": "Le contenu et les fonctionnalités sont utilisables en orientation portrait comme paysage, sauf si une orientation précise est indispensable à l'activité.",
@@ -825,6 +854,7 @@
     ]
   },
   {
+    "id": "accessibility-support-text-resizing-to-200",
     "title": "Permettre d'agrandir le texte jusqu'à 200 %",
     "priority": "High",
     "description": "Le texte peut être agrandi jusqu'à 200 % à l'aide des paramètres du navigateur, sans perte de contenu ni de fonctionnalité.",
@@ -855,6 +885,7 @@
     ]
   },
   {
+    "id": "accessibility-test-with-screen-readers",
     "title": "Tester avec des lecteurs d'écran",
     "priority": "High",
     "description": "Les pages doivent être testées avec de véritables logiciels de lecture d'écran (NVDA, JAWS, VoiceOver, TalkBack) afin de vérifier les annonces, l'ordre de focus et le comportement des composants, au-delà de ce que les outils automatisés peuvent détecter.",
@@ -892,6 +923,7 @@
     ]
   },
   {
+    "id": "accessibility-use-descriptive-link-text",
     "title": "Utiliser des textes de lien descriptifs",
     "priority": "High",
     "description": "Le texte du lien décrit clairement sa destination ou son objectif, sans dépendre du contexte environnant.",
@@ -918,6 +950,7 @@
     ]
   },
   {
+    "id": "accessibility-use-unique-ids-for-active-elements",
     "title": "Utiliser des ID uniques pour les éléments actifs",
     "priority": "High",
     "description": "Tous les éléments focalisables ou actifs doivent avoir un attribut ID unique.",
@@ -943,6 +976,7 @@
     ]
   },
   {
+    "id": "accessibility-use-unique-ids-for-aria-references",
     "title": "Utiliser des ID uniques pour les références ARIA",
     "priority": "High",
     "description": "Les ID référencés par les attributs ARIA doivent être uniques afin de garantir des relations d'accessibilité correctes.",
@@ -968,6 +1002,7 @@
     ]
   },
   {
+    "id": "accessibility-align-visible-labels-with-accessible-names",
     "title": "Faire correspondre les libellés visibles aux noms accessibles",
     "priority": "Medium",
     "description": "Le nom accessible d'un contrôle doit contenir le texte de son libellé visible.",
@@ -997,6 +1032,7 @@
     ]
   },
   {
+    "id": "accessibility-allow-pasting-into-form-inputs",
     "title": "Autoriser le collage dans les champs de formulaire",
     "priority": "Medium",
     "description": "Les utilisateurs doivent pouvoir coller du contenu dans les champs de formulaire afin de faciliter leur utilisation et de réduire les erreurs.",
@@ -1026,6 +1062,7 @@
     ]
   },
   {
+    "id": "accessibility-avoid-focusable-descendants-in-role-text-elements",
     "title": "Éviter les descendants focalisables dans les éléments role=\"text\"",
     "priority": "Medium",
     "description": "Vérifiez que les éléments avec role='text' n'ont aucun descendant focalisable.",
@@ -1051,6 +1088,7 @@
     ]
   },
   {
+    "id": "accessibility-avoid-meta-refresh-redirects",
     "title": "Éviter les redirections avec meta refresh",
     "priority": "Medium",
     "description": "Les redirections meta refresh peuvent désorienter les utilisateurs et poser des problèmes d'accessibilité en actualisant la page de manière inattendue.",
@@ -1080,6 +1118,7 @@
     ]
   },
   {
+    "id": "accessibility-avoid-scrolljacking-and-custom-scroll-behavior",
     "title": "Éviter le scrolljacking et les comportements de défilement personnalisés",
     "priority": "Medium",
     "description": "Le défilement naturel est préservé, sans vitesse ni direction personnalisée et sans interception des événements de défilement.",
@@ -1106,6 +1145,7 @@
     ]
   },
   {
+    "id": "accessibility-avoid-using-deprecated-aria-roles",
     "title": "Éviter les rôles ARIA obsolètes",
     "priority": "Medium",
     "description": "Vérifiez l'absence de rôles ARIA obsolètes ou abstraits afin de garantir une compatibilité à long terme.",
@@ -1131,6 +1171,7 @@
     ]
   },
   {
+    "id": "accessibility-define-proper-table-headers",
     "title": "Définir correctement les en-têtes de tableau",
     "priority": "Medium",
     "description": "Vérifiez que les tableaux de données ont des en-têtes appropriés.",
@@ -1156,6 +1197,7 @@
     ]
   },
   {
+    "id": "accessibility-ensure-accesskey-values-are-unique",
     "title": "Garantir l'unicité des valeurs accesskey",
     "priority": "Medium",
     "description": "Vérifiez que les valeurs accesskey sont uniques afin d'éviter les conflits de raccourcis.",
@@ -1181,6 +1223,7 @@
     ]
   },
   {
+    "id": "accessibility-ensure-aria-roles-are-contained-by-required-parent-roles",
     "title": "Vérifier que les rôles ARIA sont contenus dans les rôles parents requis",
     "priority": "Medium",
     "description": "Vérifiez que les éléments portant certains rôles ont les rôles parents requis.",
@@ -1206,6 +1249,7 @@
     ]
   },
   {
+    "id": "accessibility-ensure-dialogs-have-an-accessible-name",
     "title": "Donner un nom accessible aux boîtes de dialogue",
     "priority": "Medium",
     "description": "Vérifiez que les éléments de dialogue ont un nom accessible pour aider les personnes utilisant un lecteur d'écran à s'orienter.",
@@ -1231,6 +1275,7 @@
     ]
   },
   {
+    "id": "accessibility-ensure-headings-contain-text",
     "title": "S'assurer que les titres contiennent du texte",
     "priority": "Medium",
     "description": "Tous les éléments de titre (h1-h6) doivent contenir un texte visible et descriptif.",
@@ -1256,6 +1301,7 @@
     ]
   },
   {
+    "id": "accessibility-ensure-identical-links-have-consistent-destinations",
     "title": "Donner des destinations cohérentes aux liens identiques",
     "priority": "Medium",
     "description": "Les liens ayant le même texte doivent mener à la même destination ou être différenciables.",
@@ -1285,6 +1331,7 @@
     ]
   },
   {
+    "id": "accessibility-ensure-table-headers-associate-with-data-cells",
     "title": "Associer les en-têtes de tableau aux cellules de données",
     "priority": "Medium",
     "description": "Vérifiez que les en-têtes de tableau sont associés aux cellules de données.",
@@ -1310,6 +1357,7 @@
     ]
   },
   {
+    "id": "accessibility-ensure-tables-have-unique-accessible-names",
     "title": "Donner un nom accessible unique à chaque tableau",
     "priority": "Medium",
     "description": "Vérifiez que les tableaux de données ont chacun un nom accessible unique.",
@@ -1335,6 +1383,7 @@
     ]
   },
   {
+    "id": "accessibility-fix-empty-and-broken-links",
     "title": "Corriger les liens vides ou rompus",
     "priority": "Medium",
     "description": "Tous les liens contiennent un texte accessible et ne mènent pas à des destinations inaccessibles.",
@@ -1361,6 +1410,7 @@
     ]
   },
   {
+    "id": "accessibility-hide-decorative-elements-from-assistive-technology",
     "title": "Masquer les éléments décoratifs aux technologies d'assistance",
     "priority": "Medium",
     "description": "Les images et éléments visuels décoratifs sont masqués aux lecteurs d'écran à l'aide de aria-hidden ou d'attributs alt vides.",
@@ -1387,6 +1437,7 @@
     ]
   },
   {
+    "id": "accessibility-implement-skip-to-content-links",
     "title": "Ajouter des liens « Aller au contenu »",
     "priority": "Medium",
     "description": "Vérifiez la présence de mécanismes permettant de contourner des blocs pour la navigation au clavier.",
@@ -1412,6 +1463,7 @@
     ]
   },
   {
+    "id": "accessibility-include-required-aria-attributes-for-roles",
     "title": "Inclure les attributs ARIA requis pour les rôles",
     "priority": "Medium",
     "description": "Vérifiez que les éléments possèdent les attributs ARIA requis par leurs rôles.",
@@ -1437,6 +1489,7 @@
     ]
   },
   {
+    "id": "accessibility-keep-repeated-help-mechanisms-in-a-consistent-location",
     "title": "Garder les mécanismes d'aide répétés à un emplacement cohérent",
     "priority": "Medium",
     "description": "Lorsque des mécanismes d'aide ou d'assistance apparaissent sur plusieurs pages d'un même parcours, ils conservent le même ordre relatif afin que les utilisateurs puissent les trouver facilement.",
@@ -1463,6 +1516,7 @@
     ]
   },
   {
+    "id": "accessibility-link-table-cells-to-headers-using-ids",
     "title": "Associer les cellules de tableau aux en-têtes à l'aide d'ID",
     "priority": "Medium",
     "description": "Vérifiez que l'attribut headers des éléments td référence des ID th valides.",
@@ -1488,6 +1542,7 @@
     ]
   },
   {
+    "id": "accessibility-maintain-logical-heading-order",
     "title": "Maintenir un ordre logique des titres",
     "priority": "Medium",
     "description": "Les niveaux de titre doivent suivre un ordre séquentiel et hiérarchique.",
@@ -1513,6 +1568,7 @@
     ]
   },
   {
+    "id": "accessibility-make-links-in-text-blocks-visually-distinguishable",
     "title": "Distinguer visuellement les liens dans les blocs de texte",
     "priority": "Medium",
     "description": "Les liens au sein des blocs de texte doivent se distinguer du texte environnant autrement que par la couleur.",
@@ -1550,6 +1606,7 @@
     ]
   },
   {
+    "id": "accessibility-match-lang-and-xml-lang-attributes",
     "title": "Faire correspondre les attributs lang et xml:lang",
     "priority": "Medium",
     "description": "Les attributs lang et xml:lang de l'élément html doivent avoir des valeurs identiques afin d'éviter des indications de langue contradictoires pour les analyseurs HTML et XML.",
@@ -1587,6 +1644,7 @@
     ]
   },
   {
+    "id": "accessibility-place-list-items-within-list-containers",
     "title": "Placer les éléments de liste dans des conteneurs de liste",
     "priority": "Medium",
     "description": "Les éléments li doivent toujours être des enfants directs d'un conteneur de liste (ul, ol ou menu) afin de conserver une structure HTML valide et des annonces correctes par les lecteurs d'écran.",
@@ -1620,6 +1678,7 @@
     ]
   },
   {
+    "id": "accessibility-provide-accessible-names-for-aria-command-elements",
     "title": "Donner un nom accessible aux éléments de commande ARIA",
     "priority": "Medium",
     "description": "Vérifiez que les éléments de commande, comme les boutons et les liens, ont un nom accessible pour les lecteurs d'écran.",
@@ -1645,6 +1704,7 @@
     ]
   },
   {
+    "id": "accessibility-provide-accessible-names-for-meter-elements",
     "title": "Donner un nom accessible aux éléments meter",
     "priority": "Medium",
     "description": "Vérifiez que les éléments meter ont un nom accessible qui fournit un contexte aux mesures.",
@@ -1670,6 +1730,7 @@
     ]
   },
   {
+    "id": "accessibility-provide-accessible-names-for-progress-bars",
     "title": "Donner un nom accessible aux barres de progression",
     "priority": "Medium",
     "description": "Vérifiez que les éléments progressbar ont un nom accessible.",
@@ -1695,6 +1756,7 @@
     ]
   },
   {
+    "id": "accessibility-provide-accessible-names-for-select-elements",
     "title": "Donner un nom accessible aux éléments select",
     "priority": "Medium",
     "description": "Tous les éléments `<select>` doivent être associés à une étiquette ou avoir un nom accessible afin d'être correctement identifiés par les lecteurs d'écran.",
@@ -1720,6 +1782,7 @@
     ]
   },
   {
+    "id": "accessibility-provide-accessible-names-for-toggle-fields",
     "title": "Donner un nom accessible aux champs à bascule",
     "priority": "Medium",
     "description": "Vérifiez que les champs à bascule (case à cocher, bouton radio, interrupteur) ont un nom accessible.",
@@ -1745,6 +1808,7 @@
     ]
   },
   {
+    "id": "accessibility-provide-accessible-names-for-tooltips",
     "title": "Donner un nom accessible aux info-bulles",
     "priority": "Medium",
     "description": "Vérifiez que les éléments d'info-bulle ont un nom accessible.",
@@ -1770,6 +1834,7 @@
     ]
   },
   {
+    "id": "accessibility-provide-accessible-names-for-tree-items",
     "title": "Donner un nom accessible aux éléments d'arborescence",
     "priority": "Medium",
     "description": "Tous les éléments avec role=\"treeitem\" doivent avoir un nom accessible descriptif afin que les personnes utilisant un lecteur d'écran puissent naviguer dans les composants d'arborescence.",
@@ -1803,6 +1868,7 @@
     ]
   },
   {
+    "id": "accessibility-provide-alternative-text-for-objects",
     "title": "Fournir un texte alternatif aux objets",
     "priority": "Medium",
     "description": "L'élément `<object>` doit contenir un contenu alternatif afin de rester accessible aux personnes qui ne peuvent pas voir le contenu principal.",
@@ -1832,6 +1898,7 @@
     ]
   },
   {
+    "id": "accessibility-provide-alternatives-to-parallax-effects",
     "title": "Proposer des alternatives aux effets de parallaxe",
     "priority": "Medium",
     "description": "Les effets de défilement parallaxe disposent d'une alternative avec réduction du mouvement ou peuvent être désactivés par les utilisateurs.",
@@ -1858,6 +1925,7 @@
     ]
   },
   {
+    "id": "accessibility-provide-audio-descriptions-for-video",
     "title": "Fournir une audiodescription pour les vidéos",
     "priority": "Medium",
     "description": "Les vidéos contenant des informations visuelles importantes incluent une audiodescription qui les décrit aux personnes aveugles.",
@@ -1884,6 +1952,7 @@
     ]
   },
   {
+    "id": "accessibility-provide-sufficient-touch-target-size",
     "title": "Fournir des zones tactiles suffisamment grandes",
     "priority": "Medium",
     "description": "Les éléments interactifs doivent avoir des zones tactiles assez grandes pour que les personnes ayant des troubles moteurs puissent les activer avec précision sur les appareils à écran tactile.",
@@ -1921,6 +1990,7 @@
     ]
   },
   {
+    "id": "accessibility-provide-titles-for-iframes-and-frames",
     "title": "Donner un titre aux iframes et aux frames",
     "priority": "Medium",
     "description": "Les iframes et les frames doivent avoir un attribut title décrivant leur contenu.",
@@ -1946,6 +2016,7 @@
     ]
   },
   {
+    "id": "accessibility-remove-focusable-elements-from-aria-hidden-containers",
     "title": "Retirer les éléments focalisables des conteneurs aria-hidden",
     "priority": "Medium",
     "description": "Vérifiez que les éléments aria-hidden ne contiennent pas de contenu focalisable afin d'éviter un focus « fantôme ».",
@@ -1971,6 +2042,7 @@
     ]
   },
   {
+    "id": "accessibility-use-a-single-label-for-each-form-field",
     "title": "Utiliser une seule étiquette par champ de formulaire",
     "priority": "Medium",
     "description": "Chaque champ de formulaire doit être associé à exactement un élément <label> pour une clarté optimale.",
@@ -1996,6 +2068,7 @@
     ]
   },
   {
+    "id": "accessibility-use-appropriate-tabindex-values",
     "title": "Utiliser des valeurs tabindex appropriées",
     "priority": "Medium",
     "description": "Vérifiez que les valeurs tabindex sont appropriées.",
@@ -2021,6 +2094,7 @@
     ]
   },
   {
+    "id": "accessibility-use-correct-definition-list-structure",
     "title": "Utiliser une structure correcte pour les listes de définitions",
     "priority": "Medium",
     "description": "Les listes de définitions (&lt;dl&gt;) ne doivent contenir que des éléments &lt;dt&gt; et &lt;dd&gt; valides.",
@@ -2046,6 +2120,7 @@
     ]
   },
   {
+    "id": "accessibility-use-correct-list-structure",
     "title": "Utiliser une structure correcte pour les listes",
     "priority": "Medium",
     "description": "Les listes (ul, ol) ne doivent contenir que des éléments de liste (li) afin d'être correctement interprétées par les technologies d'assistance.",
@@ -2075,6 +2150,7 @@
     ]
   },
   {
+    "id": "accessibility-use-exactly-one-main-landmark",
     "title": "Utiliser un seul repère main",
     "priority": "Medium",
     "description": "Chaque page doit comporter un seul repère main, et un seul.",
@@ -2104,6 +2180,7 @@
     ]
   },
   {
+    "id": "accessibility-use-inclusive-language",
     "title": "Employer un langage inclusif",
     "priority": "Medium",
     "description": "Le contenu utilise un langage inclusif et non discriminatoire, accueillant toutes les personnes, quelles que soient leurs capacités, leur genre, leur origine ou leur parcours.",
@@ -2129,6 +2206,7 @@
     ]
   },
   {
+    "id": "accessibility-use-landmark-regions-correctly",
     "title": "Utiliser correctement les régions de repère",
     "priority": "Medium",
     "description": "Des régions de repère appropriées (main, nav, footer) aident les utilisateurs à naviguer plus efficacement dans la page.",
@@ -2154,6 +2232,7 @@
     ]
   },
   {
+    "id": "accessibility-use-only-allowed-aria-attributes-for-each-role",
     "title": "Utiliser uniquement les attributs ARIA autorisés pour chaque rôle",
     "priority": "Medium",
     "description": "Vérifiez que les attributs ARIA sont autorisés pour les éléments concernés afin de garantir la validité de l'arbre d'accessibilité.",
@@ -2179,6 +2258,7 @@
     ]
   },
   {
+    "id": "accessibility-use-semantic-list-elements",
     "title": "Utiliser des éléments de liste sémantiques",
     "priority": "Medium",
     "description": "Les groupes d'éléments apparentés utilisent des éléments ul, ol ou dl afin que les lecteurs d'écran annoncent le contexte de la liste et le nombre d'éléments.",
@@ -2205,6 +2285,7 @@
     ]
   },
   {
+    "id": "accessibility-use-semantic-table-markup-for-screen-readers",
     "title": "Utiliser un balisage de tableau sémantique pour les lecteurs d'écran",
     "priority": "Medium",
     "description": "Les tableaux de données utilisent un balisage sémantique approprié, avec des en-têtes, des légendes et des attributs scope pour l'accessibilité des lecteurs d'écran.",
@@ -2231,6 +2312,7 @@
     ]
   },
   {
+    "id": "accessibility-use-valid-aria-role-values",
     "title": "Utiliser des valeurs de rôle ARIA valides",
     "priority": "Medium",
     "description": "Vérifiez que les valeurs de rôle ARIA sont valides.",
@@ -2256,6 +2338,7 @@
     ]
   },
   {
+    "id": "accessibility-use-valid-values-for-aria-attributes",
     "title": "Utiliser des valeurs valides pour les attributs ARIA",
     "priority": "Medium",
     "description": "Vérifiez que les valeurs des attributs ARIA sont valides.",
@@ -2281,6 +2364,7 @@
     ]
   },
   {
+    "id": "accessibility-wrap-definition-items-in-a-definition-list",
     "title": "Placer les éléments de définition dans une liste de définitions",
     "priority": "Medium",
     "description": "Les termes de définition (&lt;dt&gt;) et leurs descriptions (&lt;dd&gt;) doivent être contenus dans un élément &lt;dl&gt;.",
@@ -2306,6 +2390,7 @@
     ]
   },
   {
+    "id": "accessibility-write-in-plain-language",
     "title": "Rédiger en langage clair",
     "priority": "Medium",
     "description": "Le contenu utilise un langage clair et simple, facile à comprendre pour les personnes ayant des troubles cognitifs et les personnes dont le français n'est pas la langue maternelle.",
@@ -2331,6 +2416,7 @@
     ]
   },
   {
+    "id": "accessibility-avoid-autofocus-on-form-fields",
     "title": "Éviter autofocus sur les champs de formulaire",
     "priority": "Low",
     "description": "Les champs de formulaire n'utilisent pas l'attribut autofocus, qui peut désorienter les personnes utilisant un lecteur d'écran et entraîner un comportement inattendu de la page.",
@@ -2357,6 +2443,7 @@
     ]
   },
   {
+    "id": "accessibility-avoid-images-of-text",
     "title": "Éviter les images contenant du texte",
     "priority": "Low",
     "description": "Utilisez du vrai texte plutôt que des images contenant du texte, sauf pour les logos ou lorsque la présentation visuelle spécifique est essentielle.",
@@ -2383,6 +2470,7 @@
     ]
   },
   {
+    "id": "accessibility-avoid-redundant-image-alternative-text",
     "title": "Éviter les textes alternatifs redondants pour les images",
     "priority": "Low",
     "description": "Le texte alternatif ne doit pas contenir de mots redondants comme « image » ou « photo ».",
@@ -2412,6 +2500,7 @@
     ]
   },
   {
+    "id": "accessibility-provide-instant-anchor-scroll-option",
     "title": "Proposer un défilement instantané vers les ancres",
     "priority": "Low",
     "description": "Les animations de défilement fluide vers les liens d'ancrage respectent les préférences de mouvement ou proposent une option de défilement instantané.",

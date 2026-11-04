@@ -1,5 +1,6 @@
 [
   {
+    "id": "i18n-add-hreflang-tags-for-multilingual-sites",
     "title": "Add hreflang tags for multilingual sites",
     "priority": "Medium",
     "description": "Hreflang tags indicate language and regional variations for multilingual sites.",
@@ -26,6 +27,7 @@
     ]
   },
   {
+    "id": "i18n-design-ui-components-to-accommodate-text-expansion-from-tran",
     "title": "Design UI components to accommodate text expansion from translation",
     "priority": "Medium",
     "description": "Ensure that layouts use flexible sizing so that translated text — which can be 30–50% longer than English — does not overflow, clip, or break the UI.",
@@ -55,6 +57,7 @@
     ]
   },
   {
+    "id": "i18n-handle-plural-forms-with-intl-pluralrules-or-icu-messageform",
     "title": "Handle plural forms with Intl.PluralRules or ICU MessageFormat",
     "priority": "Medium",
     "description": "Select the correct grammatical plural category for every language using Intl.PluralRules or an ICU-aware i18n library instead of simple singular/plural branching.",
@@ -82,6 +85,7 @@
     ]
   },
   {
+    "id": "i18n-use-intl-apis-for-currency-number-and-date-formatting",
     "title": "Use Intl APIs for currency, number, and date formatting",
     "priority": "Medium",
     "description": "Format monetary values, numbers, and dates using the browser's built-in Intl.NumberFormat and Intl.DateTimeFormat APIs instead of manual string manipulation.",
@@ -111,6 +115,7 @@
     ]
   },
   {
+    "id": "i18n-use-locale-neutral-images-and-provide-cultural-overrides-whe",
     "title": "Use locale-neutral images and provide cultural overrides when needed",
     "priority": "Low",
     "description": "Default to abstract, culture-neutral icons and illustrations, and supply locale-specific image variants only when visual content carries meaning that differs across regions.",

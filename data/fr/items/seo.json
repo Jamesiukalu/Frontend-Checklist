@@ -1,5 +1,6 @@
 [
   {
+    "id": "seo-4xx-pages-in-sitemap",
     "title": "Pages 4XX dans le sitemap",
     "priority": "High",
     "description": "Vérifie si des URL du sitemap renvoient des codes d’état HTTP 4XX, indiquant des pages supprimées ou introuvables.",
@@ -29,6 +30,7 @@
     ]
   },
   {
+    "id": "seo-add-structured-data-markup",
     "title": "Ajouter des données structurées",
     "priority": "High",
     "description": "Les données structurées Schema.org (JSON-LD) sont implémentées pour obtenir des résultats de recherche enrichis.",
@@ -54,6 +56,7 @@
     ]
   },
   {
+    "id": "seo-avoid-multi-hop-redirect-chains",
     "title": "Éviter les chaînes de redirections à plusieurs étapes",
     "priority": "High",
     "description": "Détecte les chaînes de redirections à plusieurs étapes qui gaspillent le budget d’exploration.",
@@ -73,6 +76,7 @@
     ]
   },
   {
+    "id": "seo-create-and-submit-an-xml-sitemap",
     "title": "Créer et envoyer un sitemap XML",
     "priority": "High",
     "description": "Un sitemap XML est disponible à l’adresse /sitemap.xml et comprend toutes les pages importantes.",
@@ -98,6 +102,7 @@
     ]
   },
   {
+    "id": "seo-identify-ymyl-content-on-your-site",
     "title": "Identifier le contenu YMYL de votre site",
     "priority": "High",
     "description": "Détecte le contenu Your Money or Your Life (YMYL), soumis aux normes de qualité E-E-A-T renforcées de Google.",
@@ -127,6 +132,7 @@
     ]
   },
   {
+    "id": "seo-implement-valid-article-structured-data",
     "title": "Implémenter des données structurées Article valides",
     "priority": "High",
     "description": "Vérifie que les articles utilisent les bonnes propriétés Schema.org afin d’améliorer leur visibilité dans les résultats de recherche.",
@@ -152,6 +158,7 @@
     ]
   },
   {
+    "id": "seo-keep-page-titles-unique",
     "title": "Utiliser des titres de page uniques",
     "priority": "High",
     "description": "Vérifie que la balise `<title>` est unique sur toutes les pages du site afin d’éviter les problèmes SEO liés aux titres dupliqués.",
@@ -177,6 +184,7 @@
     ]
   },
   {
+    "id": "seo-keep-xml-sitemaps-valid",
     "title": "Garantir la validité des sitemaps XML",
     "priority": "High",
     "description": "Vérifie la structure XML du sitemap au regard du protocole sitemaps.org, des limites d’URL et des exigences d’encodage.",
@@ -206,6 +214,7 @@
     ]
   },
   {
+    "id": "seo-meta-tags-in-body",
     "title": "Balises meta dans le corps",
     "priority": "High",
     "description": "Détecte les balises meta placées par erreur dans le corps du document.",
@@ -229,6 +238,7 @@
     ]
   },
   {
+    "id": "seo-noindex-in-sitemap",
     "title": "Noindex dans le sitemap",
     "priority": "High",
     "description": "Vérifie si des pages en noindex figurent dans le sitemap.",
@@ -252,6 +262,7 @@
     ]
   },
   {
+    "id": "seo-publish-a-robots-txt-file",
     "title": "Publier un fichier robots.txt",
     "priority": "High",
     "description": "Vérifie que robots.txt existe à la racine, est accessible et contient des directives valides.",
@@ -281,6 +292,7 @@
     ]
   },
   {
+    "id": "seo-publish-high-quality-content",
     "title": "Publier du contenu de haute qualité",
     "priority": "High",
     "description": "Analyse de la qualité du contenu pour le SEO basée sur un LLM.",
@@ -304,6 +316,7 @@
     ]
   },
   {
+    "id": "seo-resolve-internal-broken-links",
     "title": "Résoudre les liens internes brisés",
     "priority": "High",
     "description": "Détecte et corrige les liens internes qui renvoient des erreurs 404 ou 5xx afin d’améliorer l’expérience utilisateur.",
@@ -329,6 +342,7 @@
     ]
   },
   {
+    "id": "seo-robots-meta-conflict",
     "title": "Conflit de directives robots",
     "priority": "High",
     "description": "Détecte les pages bloquées par robots.txt qui comportent aussi des balises meta noindex, créant un paradoxe où la directive n’est jamais lue.",
@@ -358,6 +372,7 @@
     ]
   },
   {
+    "id": "seo-schema-noindex-conflict",
     "title": "Conflit entre Schema et Noindex",
     "priority": "High",
     "description": "Détecte les pages qui comportent un balisage de données structurées pour les résultats enrichis, mais dont l’indexation est bloquée par noindex ou robots.txt.",
@@ -387,6 +402,7 @@
     ]
   },
   {
+    "id": "seo-set-canonical-urls-for-all-pages",
     "title": "Définir des URL canoniques pour toutes les pages",
     "priority": "High",
     "description": "Une balise d’URL canonique est présente afin d’éviter les problèmes de contenu dupliqué.",
@@ -416,6 +432,7 @@
     ]
   },
   {
+    "id": "seo-set-robots-meta-directives-correctly",
     "title": "Définir correctement les directives meta robots",
     "priority": "High",
     "description": "Vérifie que la balise meta robots contient des directives d’indexation valides dans l’en-tête de la page.",
@@ -441,6 +458,7 @@
     ]
   },
   {
+    "id": "seo-write-a-descriptive-page-title",
     "title": "Rédiger un titre de page descriptif",
     "priority": "High",
     "description": "Vérifie la présence et la longueur du titre de la page.",
@@ -460,6 +478,7 @@
     ]
   },
   {
+    "id": "seo-write-a-meta-description-for-each-page",
     "title": "Rédiger une meta description pour chaque page",
     "priority": "High",
     "description": "Vérifie la présence et la longueur de la meta description.",
@@ -479,6 +498,7 @@
     ]
   },
   {
+    "id": "seo-add-a-favicon-to-every-page",
     "title": "Ajouter un favicon à chaque page",
     "priority": "Medium",
     "description": "Vérifie la présence du favicon et la configuration correcte de l’élément de lien.",
@@ -498,6 +518,7 @@
     ]
   },
   {
+    "id": "seo-add-disclaimers-to-sensitive-content",
     "title": "Ajouter des avertissements au contenu sensible",
     "priority": "Medium",
     "description": "Vérifie la présence d’avertissements appropriés pour les contenus sensibles, notamment les pages médicales, juridiques, financières et d’affiliation.",
@@ -517,6 +538,7 @@
     ]
   },
   {
+    "id": "seo-add-faqpage-schema-markup",
     "title": "Ajouter un balisage de schéma FAQPage",
     "priority": "Medium",
     "description": "Vérifie les données structurées FAQPage en JSON-LD pour les contenus sous forme de questions-réponses.",
@@ -536,6 +558,7 @@
     ]
   },
   {
+    "id": "seo-add-internal-links-to-key-pages",
     "title": "Ajouter des liens internes vers les pages clés",
     "priority": "Medium",
     "description": "Vérifie que les pages clés reçoivent suffisamment de liens internes provenant d’autres pages du site.",
@@ -555,6 +578,7 @@
     ]
   },
   {
+    "id": "seo-add-internal-links-to-orphan-pages",
     "title": "Ajouter des liens internes vers les pages orphelines",
     "priority": "Medium",
     "description": "Détecte les pages vers lesquelles aucun lien interne ne pointe.",
@@ -574,6 +598,7 @@
     ]
   },
   {
+    "id": "seo-add-localbusiness-schema-markup",
     "title": "Ajouter un balisage de schéma LocalBusiness",
     "priority": "Medium",
     "description": "Vérifie le schéma LocalBusiness pour le SEO local.",
@@ -597,6 +622,7 @@
     ]
   },
   {
+    "id": "seo-add-organization-schema-markup",
     "title": "Ajouter un balisage de schéma Organization",
     "priority": "Medium",
     "description": "Vérifie le schéma Organization pour renforcer la présence de la marque.",
@@ -620,6 +646,7 @@
     ]
   },
   {
+    "id": "seo-add-outgoing-links-to-dead-end-pages",
     "title": "Ajouter des liens sortants aux pages sans issue",
     "priority": "Medium",
     "description": "Repère les pages dépourvues de liens internes sortants, qui risquent d’enfermer les utilisateurs et les robots d’exploration.",
@@ -639,6 +666,7 @@
     ]
   },
   {
+    "id": "seo-add-product-schema-markup",
     "title": "Ajouter un balisage de schéma Product",
     "priority": "Medium",
     "description": "Vérifie le schéma Product pour les sites e-commerce.",
@@ -662,6 +690,7 @@
     ]
   },
   {
+    "id": "seo-add-relevant-external-links",
     "title": "Ajouter des liens externes pertinents",
     "priority": "Medium",
     "description": "Vérifie que les pages comportent, lorsque cela est approprié, des liens sortants vers des sources externes faisant autorité.",
@@ -681,6 +710,7 @@
     ]
   },
   {
+    "id": "seo-add-review-schema-markup",
     "title": "Ajouter un balisage de schéma Review",
     "priority": "Medium",
     "description": "Vérifie la présence des schémas Review et AggregateRating sur les pages de produits, de services et d’entreprises pour activer les résultats enrichis avec étoiles.",
@@ -714,6 +744,7 @@
     ]
   },
   {
+    "id": "seo-add-twitter-card-meta-tags",
     "title": "Ajouter des balises meta Twitter Card",
     "priority": "Medium",
     "description": "Vérifie que les balises meta Twitter (X) Card indiquent le bon type de carte, les dimensions d’image requises et les champs obligatoires.",
@@ -739,6 +770,7 @@
     ]
   },
   {
+    "id": "seo-add-videoobject-schema-to-video-pages",
     "title": "Ajouter le schéma VideoObject aux pages vidéo",
     "priority": "Medium",
     "description": "Vérifie la présence de données structurées VideoObject sur les pages contenant des vidéos afin d’activer les résultats enrichis vidéo dans Google Search.",
@@ -769,6 +801,7 @@
     ]
   },
   {
+    "id": "seo-audit-all-noindex-pages",
     "title": "Auditer toutes les pages noindex",
     "priority": "Medium",
     "description": "Répertorie et examine toutes les pages dont l’indexation est bloquée afin de s’assurer que les contenus essentiels restent accessibles.",
@@ -794,6 +827,7 @@
     ]
   },
   {
+    "id": "seo-audit-and-refine-ai-generated-content",
     "title": "Auditer et affiner le contenu généré par l’IA",
     "priority": "Medium",
     "description": "Détecte et examine le contenu qui semble avoir été généré principalement par l’IA afin d’en vérifier la qualité.",
@@ -819,6 +853,7 @@
     ]
   },
   {
+    "id": "seo-avoid-conflicting-indexability-signals",
     "title": "Éviter les signaux d’indexabilité contradictoires",
     "priority": "Medium",
     "description": "Détecte les signaux contradictoires entre robots.txt, meta robots, les en-têtes X-Robots-Tag et les balises canoniques.",
@@ -838,6 +873,7 @@
     ]
   },
   {
+    "id": "seo-avoid-duplicate-meta-descriptions",
     "title": "Éviter les meta descriptions en double",
     "priority": "Medium",
     "description": "Vérifie si des meta descriptions sont dupliquées sur le site.",
@@ -863,6 +899,7 @@
     ]
   },
   {
+    "id": "seo-avoid-keyword-stuffing",
     "title": "Éviter le bourrage de mots-clés",
     "priority": "Medium",
     "description": "Détecte la répétition excessive de mots-clés dans le contenu, les titres ou les balises meta, signe de pratiques SEO manipulatrices.",
@@ -882,6 +919,7 @@
     ]
   },
   {
+    "id": "seo-avoid-nofollow-on-internal-links",
     "title": "Éviter rel=nofollow sur les liens internes",
     "priority": "Medium",
     "description": "Signale les liens internes dotés de `rel=nofollow`.",
@@ -905,6 +943,7 @@
     ]
   },
   {
+    "id": "seo-avoid-nosnippet-on-important-pages",
     "title": "Éviter nosnippet sur les pages importantes",
     "priority": "Medium",
     "description": "Détecte les pages qui empêchent l’affichage d’extraits dans les moteurs de recherche.",
@@ -924,6 +963,7 @@
     ]
   },
   {
+    "id": "seo-avoid-redirect-chains-on-canonical-urls",
     "title": "Éviter les chaînes de redirections sur les URL canoniques",
     "priority": "Medium",
     "description": "Vérifie que les balises canoniques pointent directement vers l’URL de destination finale, sans redirection intermédiaire.",
@@ -949,6 +989,7 @@
     ]
   },
   {
+    "id": "seo-avoid-thin-content-on-key-pages",
     "title": "Éviter le contenu trop succinct sur les pages clés",
     "priority": "Medium",
     "description": "Vérifie la longueur du contenu des pages clés pour repérer les contenus trop succincts susceptibles d’obtenir de moins bons résultats dans les recherches.",
@@ -978,6 +1019,7 @@
     ]
   },
   {
+    "id": "seo-cite-authoritative-external-sources",
     "title": "Citer des sources externes faisant autorité",
     "priority": "Medium",
     "description": "Vérifie que les affirmations factuelles sont étayées par des citations de sites externes réputés, afin de renforcer la confiance.",
@@ -1003,6 +1045,7 @@
     ]
   },
   {
+    "id": "seo-create-a-comprehensive-contact-page",
     "title": "Créer une page Contact complète",
     "priority": "Medium",
     "description": "Vérifie la présence d’une page de contact dédiée proposant plusieurs moyens de vous joindre.",
@@ -1028,6 +1071,7 @@
     ]
   },
   {
+    "id": "seo-create-a-dedicated-about-page",
     "title": "Créer une page À propos dédiée",
     "priority": "Medium",
     "description": "Vérifie la présence d’une page dédiée à l’entreprise ou à sa présentation, avec un contenu pertinent.",
@@ -1053,6 +1097,7 @@
     ]
   },
   {
+    "id": "seo-display-a-physical-business-address",
     "title": "Afficher une adresse physique d’entreprise",
     "priority": "Medium",
     "description": "Vérifie que les coordonnées d’une adresse physique sont visibles.",
@@ -1076,6 +1121,7 @@
     ]
   },
   {
+    "id": "seo-display-clear-author-bylines",
     "title": "Afficher clairement les signatures des auteurs",
     "priority": "Medium",
     "description": "Vérifie que les noms des auteurs sont visibles sur les pages de contenu afin d’établir transparence et confiance.",
@@ -1101,6 +1147,7 @@
     ]
   },
   {
+    "id": "seo-do-not-link-from-https-to-http",
     "title": "Ne pas créer de liens de HTTPS vers HTTP",
     "priority": "Medium",
     "description": "Détecte les liens depuis des pages HTTPS vers des destinations HTTP, qui déclenchent des avertissements de contenu mixte et font perdre des signaux de classement.",
@@ -1124,6 +1171,7 @@
     ]
   },
   {
+    "id": "seo-fix-invalid-links",
     "title": "Corriger les liens invalides",
     "priority": "Medium",
     "description": "Détecte les formats de liens mal formés, vides ou syntaxiquement invalides sur la page.",
@@ -1143,6 +1191,7 @@
     ]
   },
   {
+    "id": "seo-fix-malformed-html-structure",
     "title": "Corriger la structure HTML mal formée",
     "priority": "Medium",
     "description": "Vérifie que le document HTML est bien formé, avec des balises correctement imbriquées et fermées.",
@@ -1168,6 +1217,7 @@
     ]
   },
   {
+    "id": "seo-fix-or-remove-broken-external-links",
     "title": "Corriger ou supprimer les liens externes brisés",
     "priority": "Medium",
     "description": "Détecte et résout les liens externes qui renvoient des codes d’erreur ou dont le délai d’attente a expiré.",
@@ -1193,6 +1243,7 @@
     ]
   },
   {
+    "id": "seo-geo-meta-tags",
     "title": "Balises meta géographiques",
     "priority": "Medium",
     "description": "Vérifie la présence de balises meta géographiques pour le ciblage local ou régional.",
@@ -1212,6 +1263,7 @@
     ]
   },
   {
+    "id": "seo-highlight-author-credentials-and-expertise",
     "title": "Mettre en avant les qualifications et l’expertise des auteurs",
     "priority": "Medium",
     "description": "Vérifie la présence de biographies et de qualifications d’auteurs afin d’établir leur expertise et d’inspirer confiance.",
@@ -1237,6 +1289,7 @@
     ]
   },
   {
+    "id": "seo-implement-comprehensive-author-markup",
     "title": "Implémenter un balisage complet des auteurs",
     "priority": "Medium",
     "description": "Utilise des données structurées pour fournir des métadonnées lisibles par machine sur les auteurs du contenu.",
@@ -1262,6 +1315,7 @@
     ]
   },
   {
+    "id": "seo-implement-valid-breadcrumblist-schema",
     "title": "Implémenter un schéma BreadcrumbList valide",
     "priority": "Medium",
     "description": "Ajoute des données structurées à la navigation par fil d’Ariane pour mieux représenter la hiérarchie du site et améliorer son apparence dans les résultats de recherche.",
@@ -1287,6 +1341,7 @@
     ]
   },
   {
+    "id": "seo-include-indexable-pages-in-your-sitemap",
     "title": "Inclure les pages indexables dans votre sitemap",
     "priority": "Medium",
     "description": "Vérifie si des pages indexables avec une URL canonique sont absentes du sitemap XML.",
@@ -1316,6 +1371,7 @@
     ]
   },
   {
+    "id": "seo-include-keywords-in-url-slugs",
     "title": "Inclure des mots-clés dans les segments d’URL",
     "priority": "Medium",
     "description": "Vérifie si les segments d’URL contiennent des mots descriptifs pertinents pour les mots-clés plutôt que des identifiants, des chaînes aléatoires ou des termes vagues.",
@@ -1341,6 +1397,7 @@
     ]
   },
   {
+    "id": "seo-keep-html-documents-under-crawl-limits",
     "title": "Respecter les limites d’exploration pour les documents HTML",
     "priority": "Medium",
     "description": "Vérifie la taille des documents HTML par rapport aux limites d’exploration de Googlebot.",
@@ -1360,6 +1417,7 @@
     ]
   },
   {
+    "id": "seo-keep-linked-pdfs-under-60-mb",
     "title": "Maintenir les PDF liés sous 60 MB",
     "priority": "Medium",
     "description": "Vérifie la taille des PDF liés par rapport à la limite de troncature de 60 MB de Googlebot.",
@@ -1379,6 +1437,7 @@
     ]
   },
   {
+    "id": "seo-keep-nap-details-consistent",
     "title": "Maintenir la cohérence des coordonnées NAP",
     "priority": "Medium",
     "description": "Vérifie que le nom, l’adresse et le numéro de téléphone sont cohérents sur l’ensemble du site.",
@@ -1398,6 +1457,7 @@
     ]
   },
   {
+    "id": "seo-keep-sitemap-urls-on-the-correct-domain",
     "title": "Utiliser le bon domaine pour les URL du sitemap",
     "priority": "Medium",
     "description": "Vérifie que toutes les URL du sitemap utilisent le même domaine et le même protocole que le sitemap lui-même.",
@@ -1427,6 +1487,7 @@
     ]
   },
   {
+    "id": "seo-keep-urls-concise",
     "title": "Garder des URL concises",
     "priority": "Medium",
     "description": "Vérifie la longueur des URL pour optimiser leur explorabilité et leur facilité d’utilisation.",
@@ -1446,6 +1507,7 @@
     ]
   },
   {
+    "id": "seo-limit-unnecessary-url-parameters",
     "title": "Limiter les paramètres d’URL inutiles",
     "priority": "Medium",
     "description": "Vérifie si les URL comportent un nombre excessif de paramètres.",
@@ -1465,6 +1527,7 @@
     ]
   },
   {
+    "id": "seo-link-directly-to-final-destination-urls",
     "title": "Créer des liens directs vers les URL de destination finales",
     "priority": "Medium",
     "description": "Détecte les URL qui redirigent ainsi que les liens qui pointent vers des redirections.",
@@ -1484,6 +1547,7 @@
     ]
   },
   {
+    "id": "seo-make-content-easy-for-llms-to-parse",
     "title": "Faciliter l’analyse du contenu par les LLM",
     "priority": "Medium",
     "description": "Analyse dans quelle mesure les LLM peuvent analyser et comprendre le contenu.",
@@ -1507,6 +1571,7 @@
     ]
   },
   {
+    "id": "seo-make-important-pages-indexable",
     "title": "Rendre indexables les pages importantes",
     "priority": "Medium",
     "description": "Repère les pages importantes dont l’indexation par les moteurs de recherche est bloquée par noindex, robots.txt ou d’autres directives.",
@@ -1526,6 +1591,7 @@
     ]
   },
   {
+    "id": "seo-mime-type-validation",
     "title": "Validation du type MIME",
     "priority": "Medium",
     "description": "Détecte les incohérences entre les en-têtes Content-Type et les extensions de fichier.",
@@ -1549,6 +1615,7 @@
     ]
   },
   {
+    "id": "seo-og-image-size",
     "title": "Taille de l’image OG",
     "priority": "Medium",
     "description": "Vérifie que og:image respecte la taille recommandée (1200x630).",
@@ -1572,6 +1639,7 @@
     ]
   },
   {
+    "id": "seo-og-url-match",
     "title": "Correspondance de l’URL OG",
     "priority": "Medium",
     "description": "Vérifie que og:url correspond à l’URL canonique.",
@@ -1591,6 +1659,7 @@
     ]
   },
   {
+    "id": "seo-open-graph-tags",
     "title": "Balises Open Graph",
     "priority": "Medium",
     "description": "Vérifie la validité des balises meta Open Graph destinées au partage sur les réseaux sociaux.",
@@ -1614,6 +1683,7 @@
     ]
   },
   {
+    "id": "seo-optimize-article-link-density",
     "title": "Optimiser la densité de liens des articles",
     "priority": "Medium",
     "description": "Vérifie que les articles présentent un bon équilibre entre liens internes et externes par rapport à leur longueur.",
@@ -1639,6 +1709,7 @@
     ]
   },
   {
+    "id": "seo-provide-clear-affiliate-disclosures",
     "title": "Fournir des mentions d’affiliation claires",
     "priority": "Medium",
     "description": "Vérifie la présence de mentions relatives aux liens d’affiliation et aux contenus sponsorisés afin d’assurer la transparence.",
@@ -1664,6 +1735,7 @@
     ]
   },
   {
+    "id": "seo-publish-an-editorial-policy-page",
     "title": "Publier une page de politique éditoriale",
     "priority": "Medium",
     "description": "Vérifie la présence de pages consacrées aux politiques éditoriales et de contenu, qui témoignent de la fiabilité du site.",
@@ -1683,6 +1755,7 @@
     ]
   },
   {
+    "id": "seo-publish-llms-txt-for-documentation-heavy-sites",
     "title": "Publier un fichier llms.txt pour les sites riches en documentation",
     "priority": "Medium",
     "description": "Proposez un index llms.txt facultatif renvoyant aux pages de documentation les plus utiles aux outils d’IA et, le cas échéant, un fichier llms-full.txt complémentaire plus complet.",
@@ -1712,6 +1785,7 @@
     ]
   },
   {
+    "id": "seo-service-area-pages",
     "title": "Pages de zones de service",
     "priority": "Medium",
     "description": "Vérifie que les pages de zones de service ou de localisation sont correctement structurées pour les entreprises qui desservent plusieurs régions géographiques.",
@@ -1741,6 +1815,7 @@
     ]
   },
   {
+    "id": "seo-show-content-freshness-signals",
     "title": "Afficher des indicateurs de fraîcheur du contenu",
     "priority": "Medium",
     "description": "Vérifie la présence d’indications de date de dernière modification et de publication, qui aident Google à évaluer l’actualité du contenu.",
@@ -1764,6 +1839,7 @@
     ]
   },
   {
+    "id": "seo-show-published-and-updated-dates",
     "title": "Afficher les dates de publication et de mise à jour",
     "priority": "Medium",
     "description": "Vérifie la présence des dates de publication et de modification sur les pages de contenu.",
@@ -1793,6 +1869,7 @@
     ]
   },
   {
+    "id": "seo-show-trust-signals-on-key-pages",
     "title": "Afficher des signaux de confiance sur les pages clés",
     "priority": "Medium",
     "description": "Vérifie la présence de badges de confiance, de certifications, de logos clients, de témoignages et de preuves sociales sur les pages à fort taux de conversion.",
@@ -1822,6 +1899,7 @@
     ]
   },
   {
+    "id": "seo-sync-html-canonical-tags-and-link-headers",
     "title": "Synchroniser les balises canoniques HTML et les en-têtes Link",
     "priority": "Medium",
     "description": "Vérifie la cohérence entre les balises HTML `rel=\"canonical\"` et les en-têtes HTTP Link indiquant l’URL canonique.",
@@ -1847,6 +1925,7 @@
     ]
   },
   {
+    "id": "seo-tel-mailto-links",
     "title": "Liens Tel et Mailto",
     "priority": "Medium",
     "description": "Vérifie que les numéros de téléphone utilisent le schéma tel: et les adresses e-mail le schéma mailto: pour permettre un contact en un clic sur les appareils mobiles.",
@@ -1876,6 +1955,7 @@
     ]
   },
   {
+    "id": "seo-url-special-characters",
     "title": "Caractères spéciaux dans les URL",
     "priority": "Medium",
     "description": "Vérifie la présence de caractères spéciaux problématiques dans les chemins d’URL, susceptibles de perturber l’exploration, l’analyse ou la canonicalisation.",
@@ -1905,6 +1985,7 @@
     ]
   },
   {
+    "id": "seo-use-a-single-descriptive-h1",
     "title": "Utiliser un seul H1 descriptif",
     "priority": "Medium",
     "description": "Vérifie que chaque page comporte exactement une balise H1 avec un titre descriptif et pertinent pour les mots-clés.",
@@ -1924,6 +2005,7 @@
     ]
   },
   {
+    "id": "seo-use-canonicals-on-paginated-pages",
     "title": "Utiliser des URL canoniques sur les pages paginées",
     "priority": "Medium",
     "description": "Vérifie que les pages paginées disposent de balises canoniques correctes.",
@@ -1943,6 +2025,7 @@
     ]
   },
   {
+    "id": "seo-use-descriptive-anchor-text",
     "title": "Utiliser un texte de lien descriptif",
     "priority": "Medium",
     "description": "Vérifie que le texte d’ancrage est descriptif et riche en mots-clés, et qu’il fournit du contexte aux utilisateurs et aux moteurs de recherche.",
@@ -1968,6 +2051,7 @@
     ]
   },
   {
+    "id": "seo-use-hyphens-in-urls",
     "title": "Utiliser des traits d’union dans les URL",
     "priority": "Medium",
     "description": "Vérifie que les segments d’URL utilisent des traits d’union comme séparateurs de mots, plutôt que des traits de soulignement ou des espaces.",
@@ -1987,6 +2071,7 @@
     ]
   },
   {
+    "id": "seo-use-lowercase-urls",
     "title": "Utiliser des URL en minuscules",
     "priority": "Medium",
     "description": "Vérifie que les URL sont écrites en minuscules.",
@@ -2006,6 +2091,7 @@
     ]
   },
   {
+    "id": "seo-use-trailing-slashes-consistently",
     "title": "Utiliser les barres obliques finales de façon cohérente",
     "priority": "Medium",
     "description": "Vérifie que l’utilisation des barres obliques finales est cohérente dans toutes les URL afin d’éviter les problèmes de contenu dupliqué et de canonicalisation.",
@@ -2031,6 +2117,7 @@
     ]
   },
   {
+    "id": "seo-use-valid-json-ld-structured-data",
     "title": "Utiliser des données structurées JSON-LD valides",
     "priority": "Medium",
     "description": "Vérifie que les données structurées JSON-LD sont syntaxiquement correctes, contiennent les propriétés requises et respectent les spécifications schema.org.",
@@ -2064,6 +2151,7 @@
     ]
   },
   {
+    "id": "seo-weak-internal-links",
     "title": "Liens internes de faible qualité",
     "priority": "Medium",
     "description": "Détecte les pages qui reçoivent très peu de liens internes dofollow, signe d’une mauvaise répartition de l’équité des liens et d’une faible découvrabilité lors de l’exploration.",
@@ -2093,6 +2181,7 @@
     ]
   },
   {
+    "id": "seo-write-at-a-clear-reading-level",
     "title": "Rédiger à un niveau de lecture clair",
     "priority": "Medium",
     "description": "Analyse la lisibilité du contenu à l’aide de l’indice Flesch-Kincaid.",
@@ -2116,6 +2205,7 @@
     ]
   },
   {
+    "id": "seo-add-share-buttons-to-content-pages",
     "title": "Ajouter des boutons de partage aux pages de contenu",
     "priority": "Low",
     "description": "Vérifie la présence de boutons de partage sur les articles, billets de blog et autres pages dont le contenu peut être partagé.",
@@ -2145,6 +2235,7 @@
     ]
   },
   {
+    "id": "seo-link-to-active-social-profiles",
     "title": "Créer des liens vers les profils sociaux actifs",
     "priority": "Low",
     "description": "Vérifie la présence de liens vers les profils de réseaux sociaux de l’organisation afin d’aider les moteurs de recherche à associer le site à son entité sociale et à renforcer les signaux E-E-A-T.",
@@ -2174,6 +2265,7 @@
     ]
   },
   {
+    "id": "seo-url-stop-words",
     "title": "Mots vides dans les URL",
     "priority": "Low",
     "description": "Signale les mots vides courants dans les segments d’URL, qui les rallongent sans améliorer la pertinence des mots-clés.",
@@ -2199,6 +2291,7 @@
     ]
   },
   {
+    "id": "seo-website-search-schema",
     "title": "Schéma de recherche WebSite",
     "priority": "Low",
     "description": "Vérifie la présence du schéma WebSite avec SearchAction afin d’activer le champ de recherche des liens annexes dans les résultats de Google Search.",

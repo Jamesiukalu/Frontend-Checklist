@@ -1,5 +1,6 @@
 [
   {
+    "id": "i18n-add-hreflang-tags-for-multilingual-sites",
     "title": "Ajouter des balises hreflang aux sites multilingues",
     "priority": "Medium",
     "description": "Les balises hreflang indiquent les variantes linguistiques et régionales des sites multilingues.",
@@ -26,6 +27,7 @@
     ]
   },
   {
+    "id": "i18n-design-ui-components-to-accommodate-text-expansion-from-tran",
     "title": "Concevoir les composants d'interface pour permettre l'expansion du texte traduit",
     "priority": "Medium",
     "description": "Veillez à ce que les mises en page utilisent des dimensions flexibles, afin que le texte traduit — qui peut être 30 à 50 % plus long que le texte anglais — ne déborde pas, ne soit pas tronqué et ne casse pas l'interface.",
@@ -55,6 +57,7 @@
     ]
   },
   {
+    "id": "i18n-handle-plural-forms-with-intl-pluralrules-or-icu-messageform",
     "title": "Gérer les formes plurielles avec Intl.PluralRules ou ICU MessageFormat",
     "priority": "Medium",
     "description": "Sélectionnez la catégorie grammaticale de pluriel correcte pour chaque langue à l'aide de Intl.PluralRules ou d'une bibliothèque i18n compatible avec ICU, plutôt qu'avec une simple distinction singulier/pluriel.",
@@ -82,6 +85,7 @@
     ]
   },
   {
+    "id": "i18n-use-intl-apis-for-currency-number-and-date-formatting",
     "title": "Utiliser les API Intl pour formater les devises, les nombres et les dates",
     "priority": "Medium",
     "description": "Formatez les montants, les nombres et les dates à l'aide des API intégrées au navigateur Intl.NumberFormat et Intl.DateTimeFormat, plutôt que de manipuler manuellement les chaînes.",
@@ -111,6 +115,7 @@
     ]
   },
   {
+    "id": "i18n-use-locale-neutral-images-and-provide-cultural-overrides-whe",
     "title": "Utiliser des images neutres du point de vue culturel et prévoir des variantes culturelles si nécessaire",
     "priority": "Low",
     "description": "Privilégiez par défaut des icônes et illustrations abstraites et culturellement neutres, et fournissez des variantes d'images propres à chaque région uniquement lorsque le contenu visuel a un sens qui diffère selon les régions.",

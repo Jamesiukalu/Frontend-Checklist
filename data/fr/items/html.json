@@ -1,5 +1,6 @@
 [
   {
+    "id": "html-declare-utf-8-character-encoding",
     "title": "Déclarer l’encodage de caractères UTF-8",
     "priority": "High",
     "description": "Le charset (UTF-8) est correctement déclaré comme premier élément de l’en-tête.",
@@ -26,6 +27,7 @@
     ]
   },
   {
+    "id": "html-set-the-responsive-viewport-meta-tag",
     "title": "Définir la balise meta viewport adaptative",
     "priority": "High",
     "description": "La balise meta viewport est correctement déclarée pour la conception adaptative.",
@@ -53,6 +55,7 @@
     ]
   },
   {
+    "id": "html-use-the-html5-doctype",
     "title": "Utiliser le doctype HTML5",
     "priority": "High",
     "description": "La déclaration du doctype HTML5 doit être la première ligne de chaque document HTML afin d’activer le mode standard dans tous les navigateurs.",
@@ -83,6 +86,7 @@
     ]
   },
   {
+    "id": "html-add-subresource-integrity-to-external-scripts",
     "title": "Ajouter Subresource Integrity aux scripts externes",
     "priority": "High",
     "description": "Utilisez les attributs de hachage Subresource Integrity (SRI) sur les scripts et feuilles de style externes chargés depuis des CDN afin de garantir que leur contenu n’a pas été altéré.",
@@ -112,6 +116,7 @@
     ]
   },
   {
+    "id": "html-analyze-performance-with-webpagetest",
     "title": "Analyser les performances avec WebPageTest",
     "priority": "High",
     "description": "Analysez les performances de la page avec WebPageTest afin de repérer les goulots d’étranglement du chargement et les possibilités d’optimisation.",
@@ -138,6 +143,7 @@
     ]
   },
   {
+    "id": "html-ensure-all-ids-are-unique",
     "title": "Vérifier l’unicité de tous les ID",
     "priority": "High",
     "description": "Tous les attributs ID sont uniques dans le document.",
@@ -165,6 +171,7 @@
     ]
   },
   {
+    "id": "html-load-scripts-with-defer-async-or-type-module",
     "title": "Charger les scripts avec defer, async ou type=module",
     "priority": "High",
     "description": "Empêchez JavaScript de bloquer l’analyse du HTML en utilisant les attributs defer, async ou type=module sur les balises script, afin que le navigateur puisse continuer à construire le DOM pendant le téléchargement des scripts.",
@@ -194,6 +201,7 @@
     ]
   },
   {
+    "id": "html-make-notifications-accessible",
     "title": "Rendre les notifications accessibles",
     "priority": "High",
     "description": "Les notifications toast et les alertes sont annoncées aux lecteurs d’écran grâce aux régions live ARIA et aux rôles appropriés.",
@@ -220,6 +228,7 @@
     ]
   },
   {
+    "id": "html-make-videos-accessible-with-captions",
     "title": "Rendre les vidéos accessibles avec des sous-titres",
     "priority": "High",
     "description": "Les vidéos proposent des sous-titres, des descriptions audio, des transcriptions et des commandes de pause, et évitent la lecture automatique afin de tenir compte des handicaps auditifs, visuels ou cognitifs.",
@@ -258,6 +267,7 @@
     ]
   },
   {
+    "id": "html-set-the-page-lang-attribute",
     "title": "Définir l’attribut lang de la page",
     "priority": "High",
     "description": "L’élément `<html>` doit avoir un attribut lang contenant un code de langue BCP 47 valide, afin que les lecteurs d’écran, les outils de traduction et les moteurs de recherche connaissent la langue principale de la page.",
@@ -303,6 +313,7 @@
     ]
   },
   {
+    "id": "html-use-navigation-landmark-regions",
     "title": "Utiliser les régions de repère de navigation",
     "priority": "High",
     "description": "La navigation de la page utilise des éléments nav avec des libellés ARIA appropriés pour distinguer les différentes régions de navigation.",
@@ -329,6 +340,7 @@
     ]
   },
   {
+    "id": "html-use-semantic-html-elements",
     "title": "Utiliser des éléments HTML sémantiques",
     "priority": "High",
     "description": "Les éléments sémantiques HTML5 sont utilisés à bon escient (header, section, footer, main, article, aside...).",
@@ -356,6 +368,7 @@
     ]
   },
   {
+    "id": "html-use-semantic-input-type-attributes",
     "title": "Utiliser des attributs type sémantiques pour les champs de saisie",
     "priority": "High",
     "description": "Définissez l’attribut type approprié sur les éléments input pour afficher le bon clavier mobile, activer la validation du navigateur et améliorer la précision du remplissage automatique.",
@@ -385,6 +398,7 @@
     ]
   },
   {
+    "id": "html-validate-forms-accessibly",
     "title": "Valider les formulaires de manière accessible",
     "priority": "High",
     "description": "Les formulaires fournissent des indications de validation claires, avec des messages d’erreur accessibles et des attributs ARIA appropriés.",
@@ -411,6 +425,7 @@
     ]
   },
   {
+    "id": "html-validate-html-against-w3c-standards",
     "title": "Valider le HTML conformément aux normes du W3C",
     "priority": "High",
     "description": "Le balisage HTML est validé conformément aux normes du W3C pour assurer la compatibilité entre navigateurs.",
@@ -436,6 +451,7 @@
     ]
   },
   {
+    "id": "html-add-thumbnail-images-to-videos",
     "title": "Ajouter des images miniatures aux vidéos",
     "priority": "Medium",
     "description": "Les éléments vidéo HTML5 doivent avoir un attribut poster qui fournit une image miniature affichée avant le chargement ou la lecture de la vidéo.",
@@ -469,6 +485,7 @@
     ]
   },
   {
+    "id": "html-check-for-broken-links",
     "title": "Vérifier l’absence de liens brisés",
     "priority": "Medium",
     "description": "Tous les liens sont testés et aucun n’est brisé.",
@@ -496,6 +513,7 @@
     ]
   },
   {
+    "id": "html-create-a-custom-404-error-page",
     "title": "Créer une page d’erreur 404 personnalisée",
     "priority": "Medium",
     "description": "Une page d’erreur 404 personnalisée est conçue avec des options de navigation utiles pour les utilisateurs égarés.",
@@ -521,6 +539,7 @@
     ]
   },
   {
+    "id": "html-create-accessible-tooltips",
     "title": "Créer des info-bulles accessibles",
     "priority": "Medium",
     "description": "Les info-bulles sont accessibles au clavier et aux lecteurs d’écran grâce à des attributs ARIA appropriés et à une gestion correcte du focus.",
@@ -547,6 +566,7 @@
     ]
   },
   {
+    "id": "html-implement-accessible-breadcrumb-navigation",
     "title": "Implémenter une navigation par fil d’Ariane accessible",
     "priority": "Medium",
     "description": "La navigation par fil d’Ariane est implémentée avec un balisage sémantique et des attributs ARIA appropriés pour l’accessibilité.",
@@ -574,6 +594,7 @@
     ]
   },
   {
+    "id": "html-implement-favicons-for-all-devices",
     "title": "Implémenter des favicons pour tous les appareils",
     "priority": "Medium",
     "description": "Tous les formats de favicon nécessaires sont implémentés pour les navigateurs, les appareils et la prise en charge des PWA.",
@@ -599,6 +620,7 @@
     ]
   },
   {
+    "id": "html-link-a-web-app-manifest-for-installability",
     "title": "Associer un manifeste d’application Web pour permettre l’installation",
     "priority": "Medium",
     "description": "Incluez un manifeste d’application Web (manifest.json) lié depuis l’en-tête HTML afin d’activer des fonctionnalités PWA, telles que l’installation sur l’écran d’accueil, l’affichage autonome et les écrans de démarrage.",
@@ -628,6 +650,7 @@
     ]
   },
   {
+    "id": "html-make-accordions-keyboard-navigable",
     "title": "Rendre les accordéons navigables au clavier",
     "priority": "Medium",
     "description": "Les composants accordéon utilisent les attributs ARIA et les interactions clavier appropriés pour être accessibles aux lecteurs d’écran.",
@@ -654,6 +677,7 @@
     ]
   },
   {
+    "id": "html-make-carousels-accessible",
     "title": "Rendre les carrousels accessibles",
     "priority": "Medium",
     "description": "Les carrousels et les curseurs sont accessibles grâce à des commandes de pause, à la navigation au clavier et aux attributs ARIA appropriés.",
@@ -680,6 +704,7 @@
     ]
   },
   {
+    "id": "html-make-custom-elements-and-web-components-accessible",
     "title": "Rendre les éléments personnalisés et les Web Components accessibles",
     "priority": "Medium",
     "description": "Les éléments personnalisés doivent implémenter la réflexion ARIA via ElementInternals, les interactions au clavier et l’association aux formulaires, afin que les lecteurs d’écran et les technologies d’assistance puissent les interpréter correctement.",
@@ -718,6 +743,7 @@
     ]
   },
   {
+    "id": "html-make-drag-and-drop-accessible",
     "title": "Rendre le glisser-déposer accessible",
     "priority": "Medium",
     "description": "Les interfaces de glisser-déposer proposent des alternatives au clavier et des attributs ARIA appropriés pour l’accessibilité.",
@@ -744,6 +770,7 @@
     ]
   },
   {
+    "id": "html-make-file-uploads-accessible",
     "title": "Rendre les téléversements de fichiers accessibles",
     "priority": "Medium",
     "description": "Les composants de téléversement de fichiers sont accessibles grâce à des libellés appropriés, à des restrictions de type de fichier et à des indications de progression.",
@@ -770,6 +797,7 @@
     ]
   },
   {
+    "id": "html-make-pagination-accessible",
     "title": "Rendre la pagination accessible",
     "priority": "Medium",
     "description": "Les commandes de pagination sont accessibles grâce à des libellés ARIA appropriés, à la navigation au clavier et à l’indication de la page active.",
@@ -796,6 +824,7 @@
     ]
   },
   {
+    "id": "html-make-search-inputs-accessible",
     "title": "Rendre les champs de recherche accessibles",
     "priority": "Medium",
     "description": "La fonction de recherche est accessible grâce à un type de champ, un libellé, un rôle et des suggestions de saisie automatique appropriés.",
@@ -822,6 +851,7 @@
     ]
   },
   {
+    "id": "html-make-tabs-keyboard-navigable",
     "title": "Rendre les onglets navigables au clavier",
     "priority": "Medium",
     "description": "Les composants à onglets implémentent le modèle ARIA tabs avec les rôles, états et interactions clavier appropriés.",
@@ -848,6 +878,7 @@
     ]
   },
   {
+    "id": "html-provide-noscript-fallback-content",
     "title": "Fournir un contenu de remplacement noscript",
     "priority": "Medium",
     "description": "Une balise noscript fournit un contenu de remplacement aux utilisateurs ayant désactivé JavaScript.",
@@ -874,6 +905,7 @@
     ]
   },
   {
+    "id": "html-remove-comments-and-debug-code-in-production",
     "title": "Supprimer les commentaires et le code de débogage en production",
     "priority": "Medium",
     "description": "Le code, les commentaires et les éléments de débogage superflus sont supprimés avant le déploiement en production.",
@@ -900,6 +932,7 @@
     ]
   },
   {
+    "id": "html-set-text-direction-for-rtl-languages",
     "title": "Définir le sens du texte pour les langues RTL",
     "priority": "Medium",
     "description": "L’attribut dir est utilisé pour les langues qui se lisent de droite à gauche (RTL) ou pour les contenus mixtes.",
@@ -934,6 +967,7 @@
     ]
   },
   {
+    "id": "html-meet-pwa-installability-criteria",
     "title": "Respecter les critères d’installabilité des PWA",
     "priority": "Low",
     "description": "L’application Web satisfait aux exigences minimales d’installabilité PWA des navigateurs : un manifeste d’application Web valide, un service worker enregistré, HTTPS et des icônes maskable.",

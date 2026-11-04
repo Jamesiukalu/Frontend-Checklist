@@ -1,5 +1,6 @@
 [
   {
+    "id": "privacy-link-to-your-privacy-policy-in-the-footer",
     "title": "Link to your privacy policy in the footer",
     "priority": "High",
     "description": "Websites that collect any personal data must publish a privacy policy and link to it prominently — this is a legal requirement under GDPR, CCPA, and most other privacy regulations.",
@@ -30,6 +31,7 @@
     ]
   },
   {
+    "id": "privacy-show-a-cookie-consent-notice",
     "title": "Show a cookie consent notice",
     "priority": "High",
     "description": "Websites that set non-essential cookies must obtain prior, informed user consent under GDPR, CCPA, and similar privacy regulations before cookies are placed.",
@@ -59,6 +61,7 @@
     ]
   },
   {
+    "id": "privacy-avoid-third-party-cookies",
     "title": "Avoid third-party cookies",
     "priority": "Medium",
     "description": "Third-party cookies set by external domains track users across sites without their knowledge.",
@@ -89,6 +92,7 @@
     ]
   },
   {
+    "id": "privacy-collect-only-the-minimum-personal-data-necessary",
     "title": "Collect only the minimum personal data necessary",
     "priority": "Medium",
     "description": "Limit data collection to only what is strictly required for the stated purpose, in line with GDPR Article 5(1)(c) data minimisation principles.",
@@ -114,6 +118,7 @@
     ]
   },
   {
+    "id": "privacy-implement-a-user-facing-data-deletion-mechanism",
     "title": "Implement a user-facing data deletion mechanism",
     "priority": "Medium",
     "description": "Provide users with a clear way to request deletion of their personal data, fulfilling GDPR Article 17 (right to erasure / right to be forgotten).",

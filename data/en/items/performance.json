@@ -1,5 +1,6 @@
 [
   {
+    "id": "performance-optimize-largest-contentful-paint",
     "title": "Optimize largest contentful paint",
     "priority": "High",
     "description": "The largest content element loads within 2.5 seconds for a good user experience.",
@@ -25,6 +26,7 @@
     ]
   },
   {
+    "id": "performance-enable-browser-caching",
     "title": "Enable browser caching",
     "priority": "High",
     "description": "Cache-Control and ETag headers are properly configured for static resources.",
@@ -50,6 +52,7 @@
     ]
   },
   {
+    "id": "performance-enable-http-2-or-http-3",
     "title": "Enable HTTP/2 or HTTP/3",
     "priority": "High",
     "description": "Use modern HTTP protocols to enable request multiplexing and reduce network latency.",
@@ -75,6 +78,7 @@
     ]
   },
   {
+    "id": "performance-enable-text-based-compression",
     "title": "Enable text-based compression",
     "priority": "High",
     "description": "Compress text resources (HTML, CSS, JS) using Gzip or Brotli to reduce data transfer size.",
@@ -104,6 +108,7 @@
     ]
   },
   {
+    "id": "performance-implement-google-consent-mode-v2",
     "title": "Implement Google Consent Mode v2",
     "priority": "High",
     "description": "Adjust Google Tag behavior based on user consent to comply with privacy regulations and maintain data insights.",
@@ -129,6 +134,7 @@
     ]
   },
   {
+    "id": "performance-implement-lazy-loading-for-offscreen-content",
     "title": "Implement lazy loading for offscreen content",
     "priority": "High",
     "description": "Images and heavy resources below the fold are lazy loaded to improve initial performance.",
@@ -159,6 +165,7 @@
     ]
   },
   {
+    "id": "performance-keep-page-load-time-under-3-seconds",
     "title": "Keep page load time under 3 seconds",
     "priority": "High",
     "description": "Page fully loads in under 3 seconds on a standard connection.",
@@ -184,6 +191,7 @@
     ]
   },
   {
+    "id": "performance-keep-page-weight-under-1500kb",
     "title": "Keep page weight under 1500KB",
     "priority": "High",
     "description": "Total page weight including all resources is under 1500KB (ideally under 500KB).",
@@ -209,6 +217,7 @@
     ]
   },
   {
+    "id": "performance-load-non-critical-code-on-user-interaction",
     "title": "Load non-critical code on user interaction",
     "priority": "High",
     "description": "Defer JavaScript modules, widgets, and third-party code until the user signals intent through a click, focus, hover, or similar interaction.",
@@ -238,6 +247,7 @@
     ]
   },
   {
+    "id": "performance-load-non-critical-code-when-content-approaches-the-viewport",
     "title": "Load non-critical code when content approaches the viewport",
     "priority": "High",
     "description": "Use viewport-aware loading to fetch components, embeds, and feature code shortly before they become visible instead of shipping them on first load.",
@@ -267,6 +277,7 @@
     ]
   },
   {
+    "id": "performance-minimize-critical-request-chains",
     "title": "Minimize critical request chains",
     "priority": "High",
     "description": "Reduce the number and depth of dependent resource requests that block the initial rendering of the page.",
@@ -292,6 +303,7 @@
     ]
   },
   {
+    "id": "performance-minimize-cumulative-layout-shift",
     "title": "Minimize cumulative layout shift",
     "priority": "High",
     "description": "Page maintains visual stability with a CLS score below 0.1, preventing unexpected content shifts during load.",
@@ -317,6 +329,7 @@
     ]
   },
   {
+    "id": "performance-minimize-http-requests",
     "title": "Minimize HTTP requests",
     "priority": "High",
     "description": "HTTP requests are minimized by combining files, using sprites, and HTTP/2.",
@@ -342,6 +355,7 @@
     ]
   },
   {
+    "id": "performance-optimize-and-compress-web-videos",
     "title": "Optimize and compress web videos",
     "priority": "High",
     "description": "Videos are compressed, resized per device, and served in efficient codecs (H.264, HEVC, VP9/AV1) to reduce page weight and bandwidth use.",
@@ -376,6 +390,7 @@
     ]
   },
   {
+    "id": "performance-optimize-first-contentful-paint",
     "title": "Optimize first contentful paint",
     "priority": "High",
     "description": "First content renders within 1.8 seconds, providing quick visual feedback that the page is loading.",
@@ -401,6 +416,7 @@
     ]
   },
   {
+    "id": "performance-optimize-interaction-to-next-paint",
     "title": "Optimize interaction to next paint",
     "priority": "High",
     "description": "Page responds to user interactions within 200ms, ensuring good responsiveness.",
@@ -426,6 +442,7 @@
     ]
   },
   {
+    "id": "performance-optimize-pages-for-back-forward-cache",
     "title": "Optimize pages for back/forward cache",
     "priority": "High",
     "description": "Pages avoid back/forward cache blockers such as unload listeners and restore state correctly when a browser resumes them from memory.",
@@ -456,6 +473,7 @@
     ]
   },
   {
+    "id": "performance-optimize-third-party-script-loading",
     "title": "Optimize third-party script loading",
     "priority": "High",
     "description": "Load third-party scripts asynchronously to prevent blocking the main thread and improve page performance.",
@@ -490,6 +508,7 @@
     ]
   },
   {
+    "id": "performance-optimize-web-font-loading",
     "title": "Optimize web font loading",
     "priority": "High",
     "description": "Use efficient font formats and loading strategies to prevent layout shifts and invisible text.",
@@ -515,6 +534,7 @@
     ]
   },
   {
+    "id": "performance-show-loading-indicators",
     "title": "Show loading indicators",
     "priority": "High",
     "description": "Loading indicators provide feedback during asynchronous operations to keep users informed of progress.",
@@ -541,6 +561,7 @@
     ]
   },
   {
+    "id": "performance-use-a-content-delivery-network",
     "title": "Use a content delivery network",
     "priority": "High",
     "description": "Static assets are served from a CDN for reduced latency and faster delivery.",
@@ -566,6 +587,7 @@
     ]
   },
   {
+    "id": "performance-use-resource-hints-for-faster-loading",
     "title": "Use resource hints for faster loading",
     "priority": "High",
     "description": "Implement preload, prefetch, and preconnect hints to optimize resource loading priority.",
@@ -604,6 +626,7 @@
     ]
   },
   {
+    "id": "performance-virtualize-long-lists-and-tables",
     "title": "Virtualize long lists and tables",
     "priority": "High",
     "description": "Render only the visible subset of rows or cards in large collections to reduce DOM size, memory usage, and scroll-time rendering work.",
@@ -629,6 +652,7 @@
     ]
   },
   {
+    "id": "performance-avoid-javascript-based-redirects",
     "title": "Avoid JavaScript-based redirects",
     "priority": "Medium",
     "description": "Detects JavaScript resources that return 3XX redirects to reduce latency",
@@ -654,6 +678,7 @@
     ]
   },
   {
+    "id": "performance-avoid-serving-legacy-javascript-to-modern-browsers",
     "title": "Avoid serving legacy JavaScript to modern browsers",
     "priority": "Medium",
     "description": "Detects ES5 polyfills and legacy JavaScript code to reduce bundle size and improve execution",
@@ -679,6 +704,7 @@
     ]
   },
   {
+    "id": "performance-convert-animated-gifs-to-video",
     "title": "Convert animated GIFs to video",
     "priority": "Medium",
     "description": "Large animated GIFs are replaced with more efficient video formats like MP4 or WebM to reduce page weight.",
@@ -704,6 +730,7 @@
     ]
   },
   {
+    "id": "performance-disable-lazy-loading-for-above-the-fold-content",
     "title": "Disable lazy loading for above-the-fold content",
     "priority": "Medium",
     "description": "Detects lazy loading on likely above-fold images to improve Largest Contentful Paint (LCP)",
@@ -729,6 +756,7 @@
     ]
   },
   {
+    "id": "performance-eliminate-render-blocking-resources",
     "title": "Eliminate render-blocking resources",
     "priority": "Medium",
     "description": "Checks for render-blocking CSS and JavaScript that prevent the initial page render",
@@ -754,6 +782,7 @@
     ]
   },
   {
+    "id": "performance-optimize-css-file-size",
     "title": "Optimize CSS file size",
     "priority": "Medium",
     "description": "Keep individual CSS files small and remove unused styles to accelerate the critical rendering path.",
@@ -779,6 +808,7 @@
     ]
   },
   {
+    "id": "performance-optimize-google-tag-manager-implementation",
     "title": "Optimize Google Tag Manager implementation",
     "priority": "Medium",
     "description": "Configure Google Tag Manager efficiently to minimize its impact on page load speed and main-thread blocking.",
@@ -804,6 +834,7 @@
     ]
   },
   {
+    "id": "performance-optimize-javascript-bundle-size",
     "title": "Optimize JavaScript bundle size",
     "priority": "Medium",
     "description": "Checks for JavaScript files that exceed recommended size limits to ensure fast interaction",
@@ -829,6 +860,7 @@
     ]
   },
   {
+    "id": "performance-perform-browser-based-performance-audits",
     "title": "Perform browser-based performance audits",
     "priority": "Medium",
     "description": "Conduct performance audits in a full browser environment to capture accurate runtime metrics and layout shifts.",
@@ -854,6 +886,7 @@
     ]
   },
   {
+    "id": "performance-provide-source-maps-for-production-debugging",
     "title": "Provide source maps for production debugging",
     "priority": "Medium",
     "description": "Checks for source map availability and configuration to ensure easier debugging",
@@ -879,6 +912,7 @@
     ]
   },
   {
+    "id": "performance-reduce-dom-size-and-complexity",
     "title": "Reduce DOM size and complexity",
     "priority": "Medium",
     "description": "Keep the DOM tree small and shallow to improve memory usage and rendering performance.",
@@ -908,6 +942,7 @@
     ]
   },
   {
+    "id": "performance-reduce-time-to-first-byte-ttfb",
     "title": "Reduce Time to First Byte (TTFB)",
     "priority": "Medium",
     "description": "Measures and optimizes server response time (TTFB) to ensure a fast initial response",
@@ -933,6 +968,7 @@
     ]
   },
   {
+    "id": "performance-register-a-service-worker-for-caching-and-offline-support",
     "title": "Register a service worker for caching and offline support",
     "priority": "Medium",
     "description": "A service worker is registered to intercept network requests, cache critical assets, and enable offline functionality for your web application.",
@@ -962,6 +998,7 @@
     ]
   },
   {
+    "id": "performance-remove-duplicate-javascript-libraries",
     "title": "Remove duplicate JavaScript libraries",
     "priority": "Medium",
     "description": "Detect and consolidate duplicate JavaScript libraries to reduce bundle size and prevent version conflicts.",
@@ -987,6 +1024,7 @@
     ]
   },
   {
+    "id": "performance-stream-html-to-the-browser-before-the-full-response-is-ready",
     "title": "Stream HTML to the browser before the full response is ready",
     "priority": "Medium",
     "description": "Use HTTP chunked transfer encoding and React renderToPipeableStream (or ReadableStream) to begin delivering HTML to the browser as soon as the first bytes are available, reducing Time to First Byte and First Contentful Paint.",
@@ -1024,6 +1062,7 @@
     ]
   },
   {
+    "id": "performance-use-fetchpriority-to-hint-resource-loading-priority",
     "title": "Use fetchpriority to hint resource loading priority",
     "priority": "Medium",
     "description": "The fetchpriority attribute is applied to critical images, scripts, and preload links to help the browser prioritise the most important resources and defer lower-priority ones.",
@@ -1043,6 +1082,7 @@
     ]
   },
   {
+    "id": "performance-use-preconnect-for-critical-third-party-origins",
     "title": "Use preconnect for critical third-party origins",
     "priority": "Medium",
     "description": "Checks for preconnect hints to critical third-party origins to reduce connection latency",
@@ -1068,6 +1108,7 @@
     ]
   },
   {
+    "id": "performance-use-secure-and-up-to-date-js-libraries",
     "title": "Use secure and up-to-date JS libraries",
     "priority": "Medium",
     "description": "Detects JavaScript libraries and checks for known vulnerabilities",
@@ -1093,6 +1134,7 @@
     ]
   },
   {
+    "id": "performance-provide-an-offline-fallback-page",
     "title": "Provide an offline fallback page",
     "priority": "Low",
     "description": "When the network is unavailable, users are shown a custom offline fallback page rather than the browser's generic error screen.",
@@ -1112,6 +1154,7 @@
     ]
   },
   {
+    "id": "performance-use-the-speculation-rules-api-to-prefetch-and-prerender-navi",
     "title": "Use the Speculation Rules API to prefetch and prerender navigations",
     "priority": "Low",
     "description": "The Speculation Rules API is used to declaratively prefetch or prerender likely next pages, making navigation feel near-instant without the overhead of a full client-side router.",

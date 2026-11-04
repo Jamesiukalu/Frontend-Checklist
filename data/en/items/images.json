@@ -1,5 +1,6 @@
 [
   {
+    "id": "images-provide-meaningful-alt-text-for-images",
     "title": "Provide meaningful alt text for images",
     "priority": "High",
     "description": "Every informative image has a descriptive alt attribute; decorative images use alt=\"\" to be ignored by screen readers.",
@@ -33,6 +34,7 @@
     ]
   },
   {
+    "id": "images-compress-images-without-quality-loss",
     "title": "Compress images without quality loss",
     "priority": "High",
     "description": "All images are compressed without significant quality loss to reduce file sizes.",
@@ -59,6 +61,7 @@
     ]
   },
   {
+    "id": "images-fix-broken-images",
     "title": "Fix broken images",
     "priority": "High",
     "description": "No images return 404 errors or display broken-image icons to users.",
@@ -92,6 +95,7 @@
     ]
   },
   {
+    "id": "images-implement-responsive-images-with-srcset",
     "title": "Implement responsive images with srcset",
     "priority": "High",
     "description": "Images use srcset and sizes attributes for responsive delivery across devices.",
@@ -118,6 +122,7 @@
     ]
   },
   {
+    "id": "images-keep-image-file-sizes-within-recommended-limits",
     "title": "Keep image file sizes within recommended limits",
     "priority": "High",
     "description": "Individual image files are compressed to reasonable sizes to avoid wasted bandwidth and slow load times, especially on mobile networks.",
@@ -159,6 +164,7 @@
     ]
   },
   {
+    "id": "images-lazy-load-offscreen-images",
     "title": "Lazy load offscreen images",
     "priority": "High",
     "description": "Images below the visible viewport use loading=\"lazy\" to defer download until the user scrolls near them, reducing initial page load time.",
@@ -188,6 +194,7 @@
     ]
   },
   {
+    "id": "images-optimise-images-for-faster-loading",
     "title": "Optimise images for faster loading",
     "priority": "High",
     "description": "All images are compressed and metadata-stripped before deployment, removing unnecessary bytes without visible quality loss.",
@@ -229,6 +236,7 @@
     ]
   },
   {
+    "id": "images-optimize-all-images-for-web",
     "title": "Optimize all images for web",
     "priority": "High",
     "description": "Images are optimized with appropriate formats, compression, and modern techniques.",
@@ -271,6 +279,7 @@
     ]
   },
   {
+    "id": "images-prioritize-loading-critical-images",
     "title": "Prioritize loading critical images",
     "priority": "High",
     "description": "Hero and above-the-fold images are preloaded with high fetch priority for LCP.",
@@ -297,6 +306,7 @@
     ]
   },
   {
+    "id": "images-serve-images-at-the-correct-display-size",
     "title": "Serve images at the correct display size",
     "priority": "High",
     "description": "Images are not significantly larger than their display dimensions—serving a 2000px image for a 400px container wastes bandwidth and hurts LCP.",
@@ -330,6 +340,7 @@
     ]
   },
   {
+    "id": "images-serve-images-from-a-cdn",
     "title": "Serve images from a CDN",
     "priority": "High",
     "description": "Images are served from a CDN with automatic optimization, resizing, and format conversion.",
@@ -356,6 +367,7 @@
     ]
   },
   {
+    "id": "images-set-explicit-width-and-height-on-images",
     "title": "Set explicit width and height on images",
     "priority": "High",
     "description": "All <img> elements have explicit width and height attributes so browsers can reserve space before the image loads, preventing layout shift.",
@@ -389,6 +401,7 @@
     ]
   },
   {
+    "id": "images-use-picture-with-an-img-fallback",
     "title": "Use <picture> with an <img> fallback",
     "priority": "High",
     "description": "Every <picture> element contains a required <img> fallback as its last child, ensuring images display in all browsers including those that don't support <picture>.",
@@ -418,6 +431,7 @@
     ]
   },
   {
+    "id": "images-use-modern-image-formats-webp-avif",
     "title": "Use modern image formats (WebP, AVIF)",
     "priority": "High",
     "description": "Images are served in modern formats (WebP or AVIF) instead of legacy JPEG/PNG where browser support allows, reducing file size without visible quality loss.",
@@ -455,6 +469,7 @@
     ]
   },
   {
+    "id": "images-use-srcset-for-responsive-images",
     "title": "Use srcset for responsive images",
     "priority": "High",
     "description": "Images wider than 100px use the srcset attribute to offer multiple resolution variants, letting the browser download the optimal size for the user's viewport and device pixel ratio.",
@@ -484,6 +499,7 @@
     ]
   },
   {
+    "id": "images-use-webp-format-with-fallbacks",
     "title": "Use WebP format with fallbacks",
     "priority": "High",
     "description": "Images are served in WebP format with fallbacks for older browsers.",
@@ -510,6 +526,7 @@
     ]
   },
   {
+    "id": "images-manage-inline-svg-size-and-complexity",
     "title": "Manage inline SVG size and complexity",
     "priority": "Medium",
     "description": "Large or complex SVGs inlined in HTML are extracted to external files or components, preventing them from bloating the HTML document and blocking parsing.",
@@ -543,6 +560,7 @@
     ]
   },
   {
+    "id": "images-optimize-svg-files",
     "title": "Optimize SVG files",
     "priority": "Medium",
     "description": "SVG files are optimized with SVGO to remove unnecessary metadata and reduce size.",
@@ -569,6 +587,7 @@
     ]
   },
   {
+    "id": "images-support-high-dpi-retina-displays",
     "title": "Support high-DPI retina displays",
     "priority": "Medium",
     "description": "High-resolution images (2x, 3x) are provided for retina and high-DPI displays.",
@@ -594,6 +613,7 @@
     ]
   },
   {
+    "id": "images-use-figure-and-figcaption-for-image-captions",
     "title": "Use <figure> and <figcaption> for image captions",
     "priority": "Medium",
     "description": "Images with visible captions are wrapped in <figure> with a <figcaption> child, creating a semantic association between image and caption.",
@@ -623,6 +643,7 @@
     ]
   },
   {
+    "id": "images-use-avif-format-for-modern-browsers",
     "title": "Use AVIF format for modern browsers",
     "priority": "Medium",
     "description": "Images support AVIF format for superior compression with proper browser fallbacks.",
@@ -649,6 +670,7 @@
     ]
   },
   {
+    "id": "images-handle-image-loading-errors-gracefully",
     "title": "Handle image loading errors gracefully",
     "priority": "Low",
     "description": "Broken images are handled gracefully with fallback images or placeholder content.",
@@ -675,6 +697,7 @@
     ]
   },
   {
+    "id": "images-use-descriptive-image-filenames",
     "title": "Use descriptive image filenames",
     "priority": "Low",
     "description": "Image filenames are descriptive and human-readable, using lowercase letters, hyphens as separators, and meaningful words that reflect the image content.",
@@ -700,6 +723,7 @@
     ]
   },
   {
+    "id": "images-use-image-sprites-where-appropriate",
     "title": "Use image sprites where appropriate",
     "priority": "Low",
     "description": "Small images and icons use sprites or SVG to reduce HTTP requests.",
@@ -726,6 +750,7 @@
     ]
   },
   {
+    "id": "images-use-progressive-jpeg-encoding",
     "title": "Use progressive JPEG encoding",
     "priority": "Low",
     "description": "JPEG images use progressive format for better perceived loading performance.",

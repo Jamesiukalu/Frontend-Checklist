@@ -1,5 +1,6 @@
 [
   {
+    "id": "head-doctype",
     "title": "Doctype",
     "priority": "High",
     "description": "Le Doctype est HTML5 et figure en haut de toutes vos pages HTML.",
@@ -16,6 +17,7 @@
     ]
   },
   {
+    "id": "head-charset",
     "title": "Charset",
     "priority": "High",
     "description": "Le charset déclaré (UTF-8) est correctement défini.",
@@ -26,6 +28,7 @@
     ]
   },
   {
+    "id": "head-x-ua-compatible",
     "title": "X-UA-Compatible",
     "priority": "Medium",
     "description": "La balise Meta X-UA-Compatible est présente.",
@@ -42,6 +45,7 @@
     ]
   },
   {
+    "id": "head-viewport",
     "title": "Viewport",
     "priority": "High",
     "description": "Le viewport est correctement défini.",
@@ -52,6 +56,7 @@
     ]
   },
   {
+    "id": "head-title",
     "title": "Title",
     "priority": "High",
     "description": "Un titre est défini sur toutes les pages.",
@@ -75,6 +80,7 @@
     ]
   },
   {
+    "id": "head-description",
     "title": "Description",
     "priority": "High",
     "description": "Une meta description est fournie ; elle est unique et ne dépasse pas 150 caractères.",
@@ -91,6 +97,7 @@
     ]
   },
   {
+    "id": "head-favicons",
     "title": "Favicons",
     "priority": "Medium",
     "description": "Chaque favicon a été créé et s'affiche correctement.",
@@ -126,6 +133,7 @@
     ]
   },
   {
+    "id": "head-apple-web-app-meta",
     "title": "Meta Apple Web App",
     "priority": "Low",
     "description": "Les balises meta Apple sont présentes.",
@@ -146,6 +154,7 @@
     ]
   },
   {
+    "id": "head-windows-tiles",
     "title": "Vignettes Windows",
     "priority": "Low",
     "description": "Les vignettes Windows sont présentes et associées à des liens.",
@@ -162,6 +171,7 @@
     ]
   },
   {
+    "id": "head-canonical",
     "title": "Canonical",
     "priority": "Medium",
     "description": "Utilisez rel=\"canonical\" pour éviter le contenu dupliqué.",
@@ -182,6 +192,7 @@
     ]
   },
   {
+    "id": "head-language-attribute",
     "title": "Attribut de langue",
     "priority": "High",
     "description": "L'attribut <code>lang</code> de votre site est défini et correspond à la langue de la page actuelle.",
@@ -192,6 +203,7 @@
     ]
   },
   {
+    "id": "head-direction-attribute",
     "title": "Attribut de direction",
     "priority": "Medium",
     "description": "Le sens de lecture est défini sur la balise html (il peut également être défini sur une autre balise HTML).",
@@ -202,6 +214,7 @@
     ]
   },
   {
+    "id": "head-alternate-language",
     "title": "Langue alternative",
     "priority": "Low",
     "description": "La balise de langue de votre site est définie et correspond à la langue de la page actuelle.",
@@ -212,6 +225,7 @@
     ]
   },
   {
+    "id": "head-conditional-comments",
     "title": "Commentaires conditionnels",
     "priority": "Low",
     "description": "Les commentaires conditionnels sont présents pour IE si nécessaire.",
@@ -227,6 +241,7 @@
     ]
   },
   {
+    "id": "head-rss-feed",
     "title": "Flux RSS",
     "priority": "Low",
     "description": "Si votre projet est un blog ou contient des articles, un lien RSS est fourni.",
@@ -236,6 +251,7 @@
     ]
   },
   {
+    "id": "head-inline-critical-css",
     "title": "CSS critique en ligne",
     "priority": "Medium",
     "description": "Le CSS critique en ligne est correctement injecté dans le HEAD.",
@@ -254,6 +270,7 @@
     ]
   },
   {
+    "id": "head-css-order",
     "title": "Ordre du CSS",
     "priority": "High",
     "description": "Tous les fichiers CSS sont chargés avant les fichiers JavaScript dans le HEAD.",
@@ -264,6 +281,7 @@
     ]
   },
   {
+    "id": "head-facebook-open-graph",
     "title": "Open Graph Facebook",
     "priority": "Low",
     "description": "",
@@ -292,6 +310,7 @@
     ]
   },
   {
+    "id": "head-twitter-card",
     "title": "Twitter Card",
     "priority": "Low",
     "description": "",

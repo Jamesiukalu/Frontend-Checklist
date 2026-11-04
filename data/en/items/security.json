@@ -1,5 +1,6 @@
 [
   {
+    "id": "security-leaked-environment-variables",
     "title": "Leaked Environment Variables",
     "priority": "High",
     "description": "Checks for exposed API keys, tokens, passwords, and other secrets embedded in HTML source, JavaScript bundles, or client-accessible files.",
@@ -29,6 +30,7 @@
     ]
   },
   {
+    "id": "security-redirect-http-to-https",
     "title": "Redirect HTTP to HTTPS",
     "priority": "High",
     "description": "All HTTP requests must be permanently redirected (301) to HTTPS to prevent users from accessing your site over an insecure connection.",
@@ -58,6 +60,7 @@
     ]
   },
   {
+    "id": "security-serve-all-pages-over-https",
     "title": "Serve all pages over HTTPS",
     "priority": "High",
     "description": "Every page and resource on your site must be delivered over HTTPS to protect user data in transit and enable modern browser features.",
@@ -87,6 +90,7 @@
     ]
   },
   {
+    "id": "security-submit-forms-over-https",
     "title": "Submit forms over HTTPS",
     "priority": "High",
     "description": "All HTML form actions must point to HTTPS URLs to ensure form data is encrypted in transit and cannot be intercepted by network attackers.",
@@ -116,6 +120,7 @@
     ]
   },
   {
+    "id": "security-audit-dependencies-for-known-vulnerabilities",
     "title": "Audit dependencies for known vulnerabilities",
     "priority": "High",
     "description": "Dependencies are regularly scanned for known security vulnerabilities using automated tooling, and critical findings are remediated before deployment.",
@@ -149,6 +154,7 @@
     ]
   },
   {
+    "id": "security-avoid-mixed-content-on-https-pages",
     "title": "Avoid mixed content on HTTPS pages",
     "priority": "High",
     "description": "An HTTPS page that loads resources over HTTP has mixed content — browsers block or warn about these requests, breaking functionality and undermining transport security.",
@@ -178,6 +184,7 @@
     ]
   },
   {
+    "id": "security-implement-a-content-security-policy",
     "title": "Implement a content security policy",
     "priority": "High",
     "description": "A Content Security Policy is implemented to prevent XSS attacks and control resource loading.",
@@ -203,6 +210,7 @@
     ]
   },
   {
+    "id": "security-prevent-stack-trace-exposure-in-production-error-responses",
     "title": "Prevent stack trace exposure in production error responses",
     "priority": "High",
     "description": "Production error responses never include stack traces, internal file paths, framework internals, or other debugging detail that could aid an attacker (OWASP A09).",
@@ -222,6 +230,7 @@
     ]
   },
   {
+    "id": "security-secure-password-input-fields",
     "title": "Secure password input fields",
     "priority": "High",
     "description": "Password fields implement security best practices including proper autocomplete, show/hide toggle, and strength indicators.",
@@ -249,6 +258,7 @@
     ]
   },
   {
+    "id": "security-set-an-hsts-header",
     "title": "Set an HSTS header",
     "priority": "High",
     "description": "The Strict-Transport-Security response header tells browsers to always use HTTPS for your domain, preventing protocol downgrade attacks and cookie hijacking.",
@@ -278,6 +288,7 @@
     ]
   },
   {
+    "id": "security-set-an-x-frame-options-header",
     "title": "Set an X-Frame-Options header",
     "priority": "High",
     "description": "The X-Frame-Options header controls whether your page can be embedded in an iframe, frame, or object — preventing clickjacking attacks.",
@@ -307,6 +318,7 @@
     ]
   },
   {
+    "id": "security-set-secure-httponly-and-samesite-flags-on-session-cookies",
     "title": "Set Secure, HttpOnly, and SameSite flags on session cookies",
     "priority": "High",
     "description": "All session and authentication cookies are issued with the Secure, HttpOnly, and an appropriate SameSite flag to prevent interception, JavaScript exfiltration, and cross-site request forgery.",
@@ -326,6 +338,7 @@
     ]
   },
   {
+    "id": "security-set-x-content-type-options-nosniff",
     "title": "Set X-Content-Type-Options: nosniff",
     "priority": "High",
     "description": "The X-Content-Type-Options: nosniff header prevents browsers from MIME-sniffing a response away from the declared Content-Type, blocking a class of drive-by download and XSS attacks.",
@@ -355,6 +368,7 @@
     ]
   },
   {
+    "id": "security-store-authentication-tokens-securely",
     "title": "Store authentication tokens securely",
     "priority": "High",
     "description": "Sensitive authentication tokens are stored in httpOnly cookies rather than localStorage or sessionStorage to prevent theft via cross-site scripting attacks (OWASP A07).",
@@ -378,6 +392,7 @@
     ]
   },
   {
+    "id": "security-external-link-security",
     "title": "External Link Security",
     "priority": "Medium",
     "description": "Links that open in a new tab using target='_blank' must include rel='noopener noreferrer' to prevent the opened page from accessing the opener's window context.",
@@ -407,6 +422,7 @@
     ]
   },
   {
+    "id": "security-link-to-your-terms-of-service-in-the-footer",
     "title": "Link to your terms of service in the footer",
     "priority": "Medium",
     "description": "Websites offering services to users should publish Terms of Service and link to them from every page — this establishes the legal agreement governing use of the service.",
@@ -433,6 +449,7 @@
     ]
   },
   {
+    "id": "security-protect-public-forms-with-captcha",
     "title": "Protect public forms with CAPTCHA",
     "priority": "Medium",
     "description": "Public forms that accept user input without authentication must include bot protection to prevent spam, credential stuffing, and automated abuse.",
@@ -462,6 +479,7 @@
     ]
   },
   {
+    "id": "security-set-a-permissions-policy-header",
     "title": "Set a Permissions-Policy header",
     "priority": "Medium",
     "description": "The Permissions-Policy header lets servers restrict which browser features (camera, microphone, geolocation, etc.) can be used in a page or its embedded iframes.",
@@ -491,6 +509,7 @@
     ]
   },
   {
+    "id": "security-set-a-referrer-policy-header",
     "title": "Set a Referrer-Policy header",
     "priority": "Medium",
     "description": "The Referrer-Policy header controls how much referrer information is sent when navigating from your site to another, protecting user privacy and preventing leaking sensitive URL parameters.",
@@ -520,6 +539,7 @@
     ]
   },
   {
+    "id": "security-use-coop-coep-and-corp-for-cross-origin-isolation-when-neede",
     "title": "Use COOP, COEP, and CORP for cross-origin isolation when needed",
     "priority": "Medium",
     "description": "Sensitive or high-capability applications use COOP, COEP, and CORP deliberately, audit third-party embeds, and verify cross-origin isolation in the browser before relying on it.",
@@ -554,6 +574,7 @@
     ]
   },
   {
+    "id": "security-adblock-element-hiding",
     "title": "Adblock Element Hiding",
     "priority": "Low",
     "description": "Checks for HTML elements and CSS classes that would be hidden by common adblockers, causing layout breaks or missing functionality for users with ad blocking enabled.",
@@ -583,6 +604,7 @@
     ]
   },
   {
+    "id": "security-blocked-tracking-links",
     "title": "Blocked Tracking Links",
     "priority": "Low",
     "description": "Links and resources pointing to known tracking or advertising domains may be blocked by adblockers, breaking navigation and functionality for a significant portion of users.",

@@ -139,9 +139,17 @@ class Storage {
       localStorage.getItem(sectionName) === undefined
     ) {
       const currentStorage = localStorage.getItem(sectionName);
-      const currentObj = JSON.parse(currentStorage);
-      const checkedItems = currentObj.length;
       const itemsBySection = el.querySelectorAll('.js-item');
+      const knownIds = Array.from(itemsBySection).map(item =>
+        item.getAttribute('data-item-id'),
+      );
+
+      // Drop saved ids that no longer exist (e.g. legacy index-based progress)
+      const currentObj = JSON.parse(currentStorage).filter(
+        saved => knownIds.indexOf(saved.id) > -1,
+      );
+      localStorage.setItem(sectionName, JSON.stringify(currentObj));
+      const checkedItems = currentObj.length;
 
       instance.loadItems(itemsBySection, currentObj);
 

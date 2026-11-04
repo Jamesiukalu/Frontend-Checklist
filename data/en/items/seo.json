@@ -1,5 +1,6 @@
 [
   {
+    "id": "seo-4xx-pages-in-sitemap",
     "title": "4XX Pages in Sitemap",
     "priority": "High",
     "description": "Checks for sitemap URLs that return 4XX HTTP status codes, indicating broken or removed pages.",
@@ -29,6 +30,7 @@
     ]
   },
   {
+    "id": "seo-add-structured-data-markup",
     "title": "Add structured data markup",
     "priority": "High",
     "description": "Schema.org structured data (JSON-LD) is implemented for rich search results.",
@@ -54,6 +56,7 @@
     ]
   },
   {
+    "id": "seo-avoid-multi-hop-redirect-chains",
     "title": "Avoid multi-hop redirect chains",
     "priority": "High",
     "description": "Detects multi-hop redirect chains that waste crawl budget",
@@ -73,6 +76,7 @@
     ]
   },
   {
+    "id": "seo-create-and-submit-an-xml-sitemap",
     "title": "Create and submit an XML sitemap",
     "priority": "High",
     "description": "An XML sitemap is available at /sitemap.xml and includes all important pages.",
@@ -98,6 +102,7 @@
     ]
   },
   {
+    "id": "seo-identify-ymyl-content-on-your-site",
     "title": "Identify YMYL content on your site",
     "priority": "High",
     "description": "Detects Your Money or Your Life (YMYL) content that is subject to Google's elevated E-E-A-T quality standards.",
@@ -127,6 +132,7 @@
     ]
   },
   {
+    "id": "seo-implement-valid-article-structured-data",
     "title": "Implement valid Article structured data",
     "priority": "High",
     "description": "Validates that articles use the correct Schema.org properties for improved search visibility.",
@@ -152,6 +158,7 @@
     ]
   },
   {
+    "id": "seo-keep-page-titles-unique",
     "title": "Keep page titles unique",
     "priority": "High",
     "description": "Checks that the <title> tag is unique across all pages of the site to avoid duplicate title SEO issues.",
@@ -177,6 +184,7 @@
     ]
   },
   {
+    "id": "seo-keep-xml-sitemaps-valid",
     "title": "Keep XML sitemaps valid",
     "priority": "High",
     "description": "Validates sitemap XML structure against the sitemaps.org protocol, URL limits, and encoding requirements.",
@@ -206,6 +214,7 @@
     ]
   },
   {
+    "id": "seo-meta-tags-in-body",
     "title": "Meta Tags in Body",
     "priority": "High",
     "description": "Detects meta tags incorrectly placed in document body",
@@ -229,6 +238,7 @@
     ]
   },
   {
+    "id": "seo-noindex-in-sitemap",
     "title": "Noindex in Sitemap",
     "priority": "High",
     "description": "Checks for noindexed pages listed in sitemap",
@@ -252,6 +262,7 @@
     ]
   },
   {
+    "id": "seo-publish-a-robots-txt-file",
     "title": "Publish a robots.txt file",
     "priority": "High",
     "description": "Checks if robots.txt exists at the root, is accessible, and contains valid directives.",
@@ -281,6 +292,7 @@
     ]
   },
   {
+    "id": "seo-publish-high-quality-content",
     "title": "Publish high-quality content",
     "priority": "High",
     "description": "LLM-based content quality analysis for SEO",
@@ -304,6 +316,7 @@
     ]
   },
   {
+    "id": "seo-resolve-internal-broken-links",
     "title": "Resolve internal broken links",
     "priority": "High",
     "description": "Detects and fixes internal links that return 404 or 5xx errors to improve user experience.",
@@ -329,6 +342,7 @@
     ]
   },
   {
+    "id": "seo-robots-meta-conflict",
     "title": "Robots Meta Conflict",
     "priority": "High",
     "description": "Detects pages blocked by robots.txt that also carry noindex meta tags, creating a paradox where the directive is never read.",
@@ -358,6 +372,7 @@
     ]
   },
   {
+    "id": "seo-schema-noindex-conflict",
     "title": "Schema + Noindex Conflict",
     "priority": "High",
     "description": "Detects pages that carry rich result schema markup but are blocked from indexing via noindex or robots.txt.",
@@ -387,6 +402,7 @@
     ]
   },
   {
+    "id": "seo-set-canonical-urls-for-all-pages",
     "title": "Set canonical URLs for all pages",
     "priority": "High",
     "description": "A canonical URL tag is present to prevent duplicate content issues.",
@@ -416,6 +432,7 @@
     ]
   },
   {
+    "id": "seo-set-robots-meta-directives-correctly",
     "title": "Set robots meta directives correctly",
     "priority": "High",
     "description": "Checks robots meta tag for valid indexing directives in the page head.",
@@ -441,6 +458,7 @@
     ]
   },
   {
+    "id": "seo-write-a-descriptive-page-title",
     "title": "Write a descriptive page title",
     "priority": "High",
     "description": "Validates page title presence and length",
@@ -460,6 +478,7 @@
     ]
   },
   {
+    "id": "seo-write-a-meta-description-for-each-page",
     "title": "Write a meta description for each page",
     "priority": "High",
     "description": "Validates meta description presence and length",
@@ -479,6 +498,7 @@
     ]
   },
   {
+    "id": "seo-add-a-favicon-to-every-page",
     "title": "Add a favicon to every page",
     "priority": "Medium",
     "description": "Checks for favicon presence and correct link element configuration",
@@ -498,6 +518,7 @@
     ]
   },
   {
+    "id": "seo-add-disclaimers-to-sensitive-content",
     "title": "Add disclaimers to sensitive content",
     "priority": "Medium",
     "description": "Checks for appropriate disclaimers on sensitive content types such as medical, legal, financial, and affiliate pages",
@@ -517,6 +538,7 @@
     ]
   },
   {
+    "id": "seo-add-faqpage-schema-markup",
     "title": "Add FAQPage schema markup",
     "priority": "Medium",
     "description": "Validates FAQPage JSON-LD structured data for question-and-answer content",
@@ -536,6 +558,7 @@
     ]
   },
   {
+    "id": "seo-add-internal-links-to-key-pages",
     "title": "Add internal links to key pages",
     "priority": "Medium",
     "description": "Validates that key pages receive adequate internal links from other site pages",
@@ -555,6 +578,7 @@
     ]
   },
   {
+    "id": "seo-add-internal-links-to-orphan-pages",
     "title": "Add internal links to orphan pages",
     "priority": "Medium",
     "description": "Detects pages with no internal links pointing to them",
@@ -574,6 +598,7 @@
     ]
   },
   {
+    "id": "seo-add-localbusiness-schema-markup",
     "title": "Add LocalBusiness schema markup",
     "priority": "Medium",
     "description": "Validates LocalBusiness schema for local SEO",
@@ -597,6 +622,7 @@
     ]
   },
   {
+    "id": "seo-add-organization-schema-markup",
     "title": "Add Organization schema markup",
     "priority": "Medium",
     "description": "Validates Organization schema for brand presence",
@@ -620,6 +646,7 @@
     ]
   },
   {
+    "id": "seo-add-outgoing-links-to-dead-end-pages",
     "title": "Add outgoing links to dead-end pages",
     "priority": "Medium",
     "description": "Pages with no outgoing internal links, potentially trapping users and crawlers",
@@ -639,6 +666,7 @@
     ]
   },
   {
+    "id": "seo-add-product-schema-markup",
     "title": "Add Product schema markup",
     "priority": "Medium",
     "description": "Validates Product schema for e-commerce",
@@ -662,6 +690,7 @@
     ]
   },
   {
+    "id": "seo-add-relevant-external-links",
     "title": "Add relevant external links",
     "priority": "Medium",
     "description": "Validates that pages include outgoing links to authoritative external sources where appropriate",
@@ -681,6 +710,7 @@
     ]
   },
   {
+    "id": "seo-add-review-schema-markup",
     "title": "Add Review schema markup",
     "priority": "Medium",
     "description": "Validates Review and AggregateRating schema on product, service, and business pages to enable star-rating rich results.",
@@ -714,6 +744,7 @@
     ]
   },
   {
+    "id": "seo-add-twitter-card-meta-tags",
     "title": "Add Twitter Card meta tags",
     "priority": "Medium",
     "description": "Validates Twitter (X) Card meta tags for correct card type, image dimensions, and required fields.",
@@ -739,6 +770,7 @@
     ]
   },
   {
+    "id": "seo-add-videoobject-schema-to-video-pages",
     "title": "Add VideoObject schema to video pages",
     "priority": "Medium",
     "description": "Checks for VideoObject structured data on pages containing video content to enable video rich results in Google Search.",
@@ -769,6 +801,7 @@
     ]
   },
   {
+    "id": "seo-audit-all-noindex-pages",
     "title": "Audit all noindex pages",
     "priority": "Medium",
     "description": "Lists and reviews all pages blocked from indexing to ensure critical content is accessible.",
@@ -794,6 +827,7 @@
     ]
   },
   {
+    "id": "seo-audit-and-refine-ai-generated-content",
     "title": "Audit and refine AI-generated content",
     "priority": "Medium",
     "description": "Detects and reviews content that appears to be primarily AI-generated to ensure quality.",
@@ -819,6 +853,7 @@
     ]
   },
   {
+    "id": "seo-avoid-conflicting-indexability-signals",
     "title": "Avoid conflicting indexability signals",
     "priority": "Medium",
     "description": "Detects conflicting signals between robots.txt, meta robots, X-Robots-Tag headers, and canonical tags",
@@ -838,6 +873,7 @@
     ]
   },
   {
+    "id": "seo-avoid-duplicate-meta-descriptions",
     "title": "Avoid duplicate meta descriptions",
     "priority": "Medium",
     "description": "Checks for duplicate meta descriptions across the site",
@@ -863,6 +899,7 @@
     ]
   },
   {
+    "id": "seo-avoid-keyword-stuffing",
     "title": "Avoid keyword stuffing",
     "priority": "Medium",
     "description": "Detects excessive keyword repetition in content, titles, or meta tags that signals manipulative SEO",
@@ -882,6 +919,7 @@
     ]
   },
   {
+    "id": "seo-avoid-nofollow-on-internal-links",
     "title": "Avoid nofollow on internal links",
     "priority": "Medium",
     "description": "Flags internal links with rel=nofollow",
@@ -905,6 +943,7 @@
     ]
   },
   {
+    "id": "seo-avoid-nosnippet-on-important-pages",
     "title": "Avoid nosnippet on important pages",
     "priority": "Medium",
     "description": "Detects pages preventing search engine snippets",
@@ -924,6 +963,7 @@
     ]
   },
   {
+    "id": "seo-avoid-redirect-chains-on-canonical-urls",
     "title": "Avoid redirect chains on canonical URLs",
     "priority": "Medium",
     "description": "Ensures that canonical tags point directly to the final destination URL without intermediate redirects.",
@@ -949,6 +989,7 @@
     ]
   },
   {
+    "id": "seo-avoid-thin-content-on-key-pages",
     "title": "Avoid thin content on key pages",
     "priority": "Medium",
     "description": "Checks content length on key pages to identify thin content that may underperform in search results.",
@@ -978,6 +1019,7 @@
     ]
   },
   {
+    "id": "seo-cite-authoritative-external-sources",
     "title": "Cite authoritative external sources",
     "priority": "Medium",
     "description": "Checks for citations to reputable external websites to back up factual claims and build trust.",
@@ -1003,6 +1045,7 @@
     ]
   },
   {
+    "id": "seo-create-a-comprehensive-contact-page",
     "title": "Create a comprehensive Contact page",
     "priority": "Medium",
     "description": "Checks for a dedicated contact page with multiple methods for users to reach out.",
@@ -1028,6 +1071,7 @@
     ]
   },
   {
+    "id": "seo-create-a-dedicated-about-page",
     "title": "Create a dedicated About page",
     "priority": "Medium",
     "description": "Checks for a dedicated about or company page with meaningful content.",
@@ -1053,6 +1097,7 @@
     ]
   },
   {
+    "id": "seo-display-a-physical-business-address",
     "title": "Display a physical business address",
     "priority": "Medium",
     "description": "Checks for visible physical address information",
@@ -1076,6 +1121,7 @@
     ]
   },
   {
+    "id": "seo-display-clear-author-bylines",
     "title": "Display clear author bylines",
     "priority": "Medium",
     "description": "Checks for visible author names on content pages to establish transparency and trust.",
@@ -1101,6 +1147,7 @@
     ]
   },
   {
+    "id": "seo-do-not-link-from-https-to-http",
     "title": "Do not link from HTTPS to HTTP",
     "priority": "Medium",
     "description": "Detects links from HTTPS pages to HTTP destinations, which trigger mixed content warnings and lose ranking signals",
@@ -1124,6 +1171,7 @@
     ]
   },
   {
+    "id": "seo-fix-invalid-links",
     "title": "Fix invalid links",
     "priority": "Medium",
     "description": "Detects malformed, empty, or syntactically invalid link formats on the page",
@@ -1143,6 +1191,7 @@
     ]
   },
   {
+    "id": "seo-fix-malformed-html-structure",
     "title": "Fix malformed HTML structure",
     "priority": "Medium",
     "description": "Ensures that the HTML document is well-formed with correctly nested and closed tags.",
@@ -1168,6 +1217,7 @@
     ]
   },
   {
+    "id": "seo-fix-or-remove-broken-external-links",
     "title": "Fix or remove broken external links",
     "priority": "Medium",
     "description": "Detects and resolves external links that return error codes or have timed out.",
@@ -1193,6 +1243,7 @@
     ]
   },
   {
+    "id": "seo-geo-meta-tags",
     "title": "Geo Meta Tags",
     "priority": "Medium",
     "description": "Checks for geographic meta tags for local or regional targeting",
@@ -1212,6 +1263,7 @@
     ]
   },
   {
+    "id": "seo-highlight-author-credentials-and-expertise",
     "title": "Highlight author credentials and expertise",
     "priority": "Medium",
     "description": "Checks for author bios and credentials to establish expertise and trust.",
@@ -1237,6 +1289,7 @@
     ]
   },
   {
+    "id": "seo-implement-comprehensive-author-markup",
     "title": "Implement comprehensive author markup",
     "priority": "Medium",
     "description": "Uses structured data to provide machine-readable metadata about content authors.",
@@ -1262,6 +1315,7 @@
     ]
   },
   {
+    "id": "seo-implement-valid-breadcrumblist-schema",
     "title": "Implement valid BreadcrumbList schema",
     "priority": "Medium",
     "description": "Adds structured data to breadcrumb navigation for better site hierarchy and search appearance.",
@@ -1287,6 +1341,7 @@
     ]
   },
   {
+    "id": "seo-include-indexable-pages-in-your-sitemap",
     "title": "Include indexable pages in your sitemap",
     "priority": "Medium",
     "description": "Checks for canonical-url, indexable pages that are missing from the XML sitemap.",
@@ -1316,6 +1371,7 @@
     ]
   },
   {
+    "id": "seo-include-keywords-in-url-slugs",
     "title": "Include keywords in URL slugs",
     "priority": "Medium",
     "description": "Checks if URL slugs contain descriptive, keyword-relevant words instead of IDs, random strings, or vague terms.",
@@ -1341,6 +1397,7 @@
     ]
   },
   {
+    "id": "seo-keep-html-documents-under-crawl-limits",
     "title": "Keep HTML documents under crawl limits",
     "priority": "Medium",
     "description": "Checks HTML document size against Googlebot crawl limits",
@@ -1360,6 +1417,7 @@
     ]
   },
   {
+    "id": "seo-keep-linked-pdfs-under-60-mb",
     "title": "Keep linked PDFs under 60 MB",
     "priority": "Medium",
     "description": "Checks linked PDF sizes against Googlebot 60MB truncation limit",
@@ -1379,6 +1437,7 @@
     ]
   },
   {
+    "id": "seo-keep-nap-details-consistent",
     "title": "Keep NAP details consistent",
     "priority": "Medium",
     "description": "Checks for consistent Name, Address, Phone across site",
@@ -1398,6 +1457,7 @@
     ]
   },
   {
+    "id": "seo-keep-sitemap-urls-on-the-correct-domain",
     "title": "Keep sitemap URLs on the correct domain",
     "priority": "Medium",
     "description": "Checks that all URLs in the sitemap belong to the same domain and protocol as the sitemap itself.",
@@ -1427,6 +1487,7 @@
     ]
   },
   {
+    "id": "seo-keep-urls-concise",
     "title": "Keep URLs concise",
     "priority": "Medium",
     "description": "Checks URL length for optimal crawlability and usability",
@@ -1446,6 +1507,7 @@
     ]
   },
   {
+    "id": "seo-limit-unnecessary-url-parameters",
     "title": "Limit unnecessary URL parameters",
     "priority": "Medium",
     "description": "Checks for excessive URL parameters",
@@ -1465,6 +1527,7 @@
     ]
   },
   {
+    "id": "seo-link-directly-to-final-destination-urls",
     "title": "Link directly to final destination URLs",
     "priority": "Medium",
     "description": "Detects URLs that redirect and links pointing to redirects",
@@ -1484,6 +1547,7 @@
     ]
   },
   {
+    "id": "seo-make-content-easy-for-llms-to-parse",
     "title": "Make content easy for LLMs to parse",
     "priority": "Medium",
     "description": "Analyzes how well LLMs can parse and understand the content",
@@ -1507,6 +1571,7 @@
     ]
   },
   {
+    "id": "seo-make-important-pages-indexable",
     "title": "Make important pages indexable",
     "priority": "Medium",
     "description": "Identifies important pages blocked from search engine indexing by noindex, robots.txt, or other directives",
@@ -1526,6 +1591,7 @@
     ]
   },
   {
+    "id": "seo-mime-type-validation",
     "title": "MIME Type Validation",
     "priority": "Medium",
     "description": "Detects Content-Type header mismatches with file extensions",
@@ -1549,6 +1615,7 @@
     ]
   },
   {
+    "id": "seo-og-image-size",
     "title": "OG Image Size",
     "priority": "Medium",
     "description": "Checks og:image meets recommended size (1200x630)",
@@ -1572,6 +1639,7 @@
     ]
   },
   {
+    "id": "seo-og-url-match",
     "title": "OG URL Match",
     "priority": "Medium",
     "description": "Checks that og:url matches canonical URL",
@@ -1591,6 +1659,7 @@
     ]
   },
   {
+    "id": "seo-open-graph-tags",
     "title": "Open Graph Tags",
     "priority": "Medium",
     "description": "Validates Open Graph meta tags for social sharing",
@@ -1614,6 +1683,7 @@
     ]
   },
   {
+    "id": "seo-optimize-article-link-density",
     "title": "Optimize article link density",
     "priority": "Medium",
     "description": "Ensures articles have a healthy balance of internal and external links relative to their length.",
@@ -1639,6 +1709,7 @@
     ]
   },
   {
+    "id": "seo-provide-clear-affiliate-disclosures",
     "title": "Provide clear affiliate disclosures",
     "priority": "Medium",
     "description": "Checks for affiliate and sponsored content disclosures to maintain transparency.",
@@ -1664,6 +1735,7 @@
     ]
   },
   {
+    "id": "seo-publish-an-editorial-policy-page",
     "title": "Publish an editorial policy page",
     "priority": "Medium",
     "description": "Checks for editorial and content policy pages that demonstrate site-wide trustworthiness",
@@ -1683,6 +1755,7 @@
     ]
   },
   {
+    "id": "seo-publish-llms-txt-for-documentation-heavy-sites",
     "title": "Publish llms.txt for documentation-heavy sites",
     "priority": "Medium",
     "description": "Offer an optional llms.txt index that points AI tools to high-value documentation pages and, when useful, a fuller llms-full.txt companion.",
@@ -1712,6 +1785,7 @@
     ]
   },
   {
+    "id": "seo-service-area-pages",
     "title": "Service Area Pages",
     "priority": "Medium",
     "description": "Checks for properly structured service-area or location pages for businesses serving multiple geographic regions.",
@@ -1741,6 +1815,7 @@
     ]
   },
   {
+    "id": "seo-show-content-freshness-signals",
     "title": "Show content freshness signals",
     "priority": "Medium",
     "description": "Checks for last-modified and published date signals that help Google assess content currency",
@@ -1764,6 +1839,7 @@
     ]
   },
   {
+    "id": "seo-show-published-and-updated-dates",
     "title": "Show published and updated dates",
     "priority": "Medium",
     "description": "Checks for published and modified dates on content pages",
@@ -1793,6 +1869,7 @@
     ]
   },
   {
+    "id": "seo-show-trust-signals-on-key-pages",
     "title": "Show trust signals on key pages",
     "priority": "Medium",
     "description": "Checks for trust badges, certifications, client logos, testimonials, and social proof on high-conversion pages.",
@@ -1822,6 +1899,7 @@
     ]
   },
   {
+    "id": "seo-sync-html-canonical-tags-and-link-headers",
     "title": "Sync HTML canonical tags and Link headers",
     "priority": "Medium",
     "description": "Ensures consistency between HTML rel=\"canonical\" tags and HTTP Link canonical-url headers.",
@@ -1847,6 +1925,7 @@
     ]
   },
   {
+    "id": "seo-tel-mailto-links",
     "title": "Tel & Mailto Links",
     "priority": "Medium",
     "description": "Validates that phone numbers use the tel: scheme and email addresses use the mailto: scheme for one-click contact on mobile devices.",
@@ -1876,6 +1955,7 @@
     ]
   },
   {
+    "id": "seo-url-special-characters",
     "title": "URL Special Characters",
     "priority": "Medium",
     "description": "Checks for problematic special characters in URL paths that can cause crawling, parsing, or canonicalization issues.",
@@ -1905,6 +1985,7 @@
     ]
   },
   {
+    "id": "seo-use-a-single-descriptive-h1",
     "title": "Use a single descriptive H1",
     "priority": "Medium",
     "description": "Validates that each page has exactly one H1 tag containing a descriptive, keyword-relevant heading",
@@ -1924,6 +2005,7 @@
     ]
   },
   {
+    "id": "seo-use-canonicals-on-paginated-pages",
     "title": "Use canonicals on paginated pages",
     "priority": "Medium",
     "description": "Checks that paginated pages have proper canonicals",
@@ -1943,6 +2025,7 @@
     ]
   },
   {
+    "id": "seo-use-descriptive-anchor-text",
     "title": "Use descriptive anchor text",
     "priority": "Medium",
     "description": "Checks for descriptive, keyword-rich anchor text that provides context for users and search engines.",
@@ -1968,6 +2051,7 @@
     ]
   },
   {
+    "id": "seo-use-hyphens-in-urls",
     "title": "Use hyphens in URLs",
     "priority": "Medium",
     "description": "Checks that URL slugs use hyphens as word separators, not underscores or spaces",
@@ -1987,6 +2071,7 @@
     ]
   },
   {
+    "id": "seo-use-lowercase-urls",
     "title": "Use lowercase URLs",
     "priority": "Medium",
     "description": "Checks that URLs are lowercase",
@@ -2006,6 +2091,7 @@
     ]
   },
   {
+    "id": "seo-use-trailing-slashes-consistently",
     "title": "Use trailing slashes consistently",
     "priority": "Medium",
     "description": "Checks for consistent trailing slash usage across all URLs to avoid duplicate content and canonicalization issues.",
@@ -2031,6 +2117,7 @@
     ]
   },
   {
+    "id": "seo-use-valid-json-ld-structured-data",
     "title": "Use valid JSON-LD structured data",
     "priority": "Medium",
     "description": "Validates JSON-LD structured data for syntax correctness, required properties, and schema.org compliance",
@@ -2064,6 +2151,7 @@
     ]
   },
   {
+    "id": "seo-weak-internal-links",
     "title": "Weak Internal Links",
     "priority": "Medium",
     "description": "Detects pages with very few dofollow internal links pointing to them, indicating poor link equity distribution and crawl discoverability.",
@@ -2093,6 +2181,7 @@
     ]
   },
   {
+    "id": "seo-write-at-a-clear-reading-level",
     "title": "Write at a clear reading level",
     "priority": "Medium",
     "description": "Analyzes content readability using Flesch-Kincaid",
@@ -2116,6 +2205,7 @@
     ]
   },
   {
+    "id": "seo-add-share-buttons-to-content-pages",
     "title": "Add share buttons to content pages",
     "priority": "Low",
     "description": "Checks for social sharing buttons on articles, blog posts, and other shareable content pages.",
@@ -2145,6 +2235,7 @@
     ]
   },
   {
+    "id": "seo-link-to-active-social-profiles",
     "title": "Link to active social profiles",
     "priority": "Low",
     "description": "Checks for links to the organization's social media profiles to help search engines connect the site to its social entity and build E-E-A-T signals.",
@@ -2174,6 +2265,7 @@
     ]
   },
   {
+    "id": "seo-url-stop-words",
     "title": "URL Stop Words",
     "priority": "Low",
     "description": "Flags common stop words in URL slugs that add length without improving keyword relevance.",
@@ -2199,6 +2291,7 @@
     ]
   },
   {
+    "id": "seo-website-search-schema",
     "title": "WebSite Search Schema",
     "priority": "Low",
     "description": "Checks for WebSite schema with SearchAction to enable the Sitelinks Searchbox in Google Search results.",

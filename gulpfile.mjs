@@ -336,6 +336,28 @@ export function jsonRebuildAll(done) {
   done();
 }
 
+// Static, CORS-friendly JSON API: /api/checklist.<lang>.json
+export function apiBuild(done) {
+  fs.mkdirSync(`${dirs.dest}/api`, {recursive: true});
+  langs.forEach((l) => {
+    const items = JSON.parse(fs.readFileSync(`./data/${l}/_items.json`, 'utf8'));
+    const sections = Object.entries(items).map(([section, list]) => ({
+      id: section,
+      count: list.length,
+      items: list,
+    }));
+    fs.writeFileSync(
+      `${dirs.dest}/api/checklist.${l}.json`,
+      JSON.stringify({
+        language: l,
+        total: sections.reduce((n, s) => n + s.count, 0),
+        sections,
+      }),
+    );
+  });
+  done();
+}
+
 export function copy() {
   return gulp
     .src(
@@ -382,7 +404,7 @@ export const build = gulp.series(
   compileAllPug,
   gulp.parallel(compileStyles, compressImages, webpackScripts),
   cdn,
-  gulp.parallel(criticalCss, copy),
+  gulp.parallel(criticalCss, copy, apiBuild),
 );
 
 export default gulp.series(serve, watch);

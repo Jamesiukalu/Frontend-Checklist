@@ -1,5 +1,6 @@
 [
   {
+    "id": "webfonts-webfont-format",
     "title": "Webfont format",
     "priority": "High",
     "description": "WOFF, WOFF2 and TTF are supported by all modern browsers.",
@@ -21,15 +22,23 @@
         "url": "https://css-tricks.com/snippets/css/using-font-face/"
       }
     ],
-    "tags": ["all", "webfont"]
+    "tags": [
+      "all",
+      "webfont"
+    ]
   },
   {
+    "id": "webfonts-webfont-size",
     "title": "Webfont size",
     "priority": "High",
     "description": "Webfont sizes don't exceed 2 MB (all variants included).",
-    "tags": ["all", "webfont"]
+    "tags": [
+      "all",
+      "webfont"
+    ]
   },
   {
+    "id": "webfonts-webfont-loader",
     "title": "Webfont loader",
     "priority": "Low",
     "description": "Control loading behavior with a webfont loader.",
@@ -39,6 +48,9 @@
         "url": "https://github.com/typekit/webfontloader"
       }
     ],
-    "tags": ["all", "webfont"]
+    "tags": [
+      "all",
+      "webfont"
+    ]
   }
 ]

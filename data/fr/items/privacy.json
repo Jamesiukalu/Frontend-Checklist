@@ -1,5 +1,6 @@
 [
   {
+    "id": "privacy-link-to-your-privacy-policy-in-the-footer",
     "title": "Ajouter un lien vers votre politique de confidentialité dans le pied de page",
     "priority": "High",
     "description": "Les sites web qui collectent des données personnelles doivent publier une politique de confidentialité et la rendre facilement accessible : le RGPD, le CCPA et la plupart des autres réglementations sur la confidentialité l’exigent.",
@@ -30,6 +31,7 @@
     ]
   },
   {
+    "id": "privacy-show-a-cookie-consent-notice",
     "title": "Afficher une notice de consentement aux cookies",
     "priority": "High",
     "description": "Les sites web qui déposent des cookies non essentiels doivent obtenir au préalable le consentement éclairé de l’utilisateur, conformément au RGPD, au CCPA et aux réglementations similaires sur la confidentialité.",
@@ -59,6 +61,7 @@
     ]
   },
   {
+    "id": "privacy-avoid-third-party-cookies",
     "title": "Éviter les cookies tiers",
     "priority": "Medium",
     "description": "Les cookies tiers déposés par des domaines externes suivent les utilisateurs d’un site à l’autre sans qu’ils en aient connaissance.",
@@ -89,6 +92,7 @@
     ]
   },
   {
+    "id": "privacy-collect-only-the-minimum-personal-data-necessary",
     "title": "Ne collecter que le minimum de données personnelles nécessaire",
     "priority": "Medium",
     "description": "Limitez la collecte aux seules données strictement nécessaires à l’objectif annoncé, conformément au principe de minimisation des données de l’article 5(1)(c) du RGPD.",
@@ -114,6 +118,7 @@
     ]
   },
   {
+    "id": "privacy-implement-a-user-facing-data-deletion-mechanism",
     "title": "Mettre en place un mécanisme de suppression des données accessible aux utilisateurs",
     "priority": "Medium",
     "description": "Permettez clairement aux utilisateurs de demander la suppression de leurs données personnelles, conformément à l’article 17 du RGPD (droit à l’effacement / droit à l’oubli).",
