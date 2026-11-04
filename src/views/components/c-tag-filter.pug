@@ -31,4 +31,4 @@ aside.c-tag-filter
       //- Check if title is not empty before printing it
       if title != ''
         li.c-tag-filter__item
-          button.js-filter-tag(data-tag=`${dataFilter}`)= titleFilter
+          button.js-filter-tag(data-tag=`${dataFilter}`)= (translation.tags && translation.tags[title]) || titleFilter

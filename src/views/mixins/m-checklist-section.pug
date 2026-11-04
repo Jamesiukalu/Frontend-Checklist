@@ -16,7 +16,7 @@ mixin checklist-section(options)
 
         .s-checklist__title
 
-          h2.s-checklist__header__title= sectionTitle
+          h2.s-checklist__header__title= (translation.sections && translation.sections[sectionTitle.toLowerCase()]) || sectionTitle
 
           include ../components/c-progress
 

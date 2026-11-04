@@ -49,4 +49,4 @@
       each tag in item.tags
         if tag == 'all'
         else
-          li.c-tags__item= tag.toUpperCase()
+          li.c-tags__item= ((translation.tags && translation.tags[tag.toLowerCase()]) || tag).toUpperCase()

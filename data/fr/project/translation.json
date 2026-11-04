@@ -1,5 +1,5 @@
 {
-  "SITE_NAME": "The Front-End Checklist",
+  "SITE_NAME": "La Checklist Front-End",
   "INDEX_TITLE": "🔥 Votre NOUVEL outil Front-End 🔥",
   "URL_WEBSITE": "https://github.com/Jamesiukalu/Frontend-Checklist",
   "SITE_TAGLINE": "🗂 L'application Front-End Checklist est idéale pour les sites web modernes et les développeurs méticuleux !",
@@ -52,5 +52,38 @@
     "PRIORITY_MEDIUM": "Élément de priorité moyenne",
     "PRIORITY_LOW": "Élément de priorité basse",
     "OPEN_DESCRIPTION": "Ouvrir la description"
+  },
+  "sections": {
+    "head": "En-tête (Head)",
+    "html": "HTML",
+    "webfonts": "Polices web",
+    "css": "CSS",
+    "javascript": "JavaScript",
+    "images": "Images",
+    "accessibility": "Accessibilité",
+    "performance": "Performance",
+    "seo": "SEO",
+    "security": "Sécurité",
+    "privacy": "Confidentialité",
+    "testing": "Tests",
+    "i18n": "i18n"
+  },
+  "tags": {
+    "all": "Tous",
+    "accessibility": "Accessibilité",
+    "css": "CSS",
+    "html": "HTML",
+    "seo": "SEO",
+    "javascript": "JavaScript",
+    "security": "Sécurité",
+    "performance": "Performance",
+    "meta tag": "Balise meta",
+    "html tag": "Balise HTML",
+    "social meta": "Meta sociales",
+    "testing": "Tests",
+    "i18n": "i18n",
+    "images": "Images",
+    "privacy": "Confidentialité",
+    "webfont": "Police web"
   }
 }

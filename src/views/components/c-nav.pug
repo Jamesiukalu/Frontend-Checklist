@@ -6,4 +6,4 @@ nav.c-nav(aria-label=translation.ui.NAV_LABEL)
       li.c-nav__item
         a.c-nav__link(href=`#section-${anchor}`)
           span.c-nav__status(id=`js-nav-${anchor}`, data-notation="0")
-          span.c-nav__label= section[1]
+          span.c-nav__label= (translation.sections && translation.sections[anchor]) || section[1]
