@@ -5,10 +5,11 @@
   "scripts": {
     "start": "gulp dev",
     "build": "gulp build",
-    "test": "mocha",
+    "test": "mocha && npm run test:server",
     "test:coverage": "c8 mocha",
     "lint": "eslint src/scripts",
-    "lint:css": "stylelint \"src/styles/**/*.scss\""
+    "lint:css": "stylelint \"src/styles/**/*.scss\"",
+    "test:server": "mocha --no-config test/audit.test.js"
   },
   "author": "Jamesiukalu",
   "license": "MIT",
@@ -69,5 +70,8 @@
     "diff": "^9.0.0",
     "minimatch": "^11.0.4",
     "glob": "^14.0.3"
+  },
+  "dependencies": {
+    "cheerio": "^1.2.0"
   }
 }

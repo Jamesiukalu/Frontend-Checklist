@@ -52,5 +52,19 @@
     "PRIORITY_MEDIUM": "Medium priority item",
     "PRIORITY_LOW": "Low priority item",
     "OPEN_DESCRIPTION": "Open the description section"
+  },
+  "audit": {
+    "TITLE": "Audit a live page",
+    "LEAD": "Paste a URL and we'll check what can be verified automatically, then tick the items that pass and flag the ones that fail. Everything else stays manual.",
+    "LABEL": "Page URL",
+    "BUTTON": "Run audit",
+    "RUNNING": "Auditing…",
+    "DONE": "Audit complete for",
+    "PASSED": "passed",
+    "FAILED": "failed",
+    "CHECKED": "automatic checks",
+    "CLEAR": "Clear audit marks",
+    "ERROR": "Audit failed",
+    "FAILED_BADGE": "Failed audit"
   }
 }

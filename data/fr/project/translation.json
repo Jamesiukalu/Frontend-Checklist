@@ -85,5 +85,19 @@
     "images": "Images",
     "privacy": "Confidentialité",
     "webfont": "Police web"
+  },
+  "audit": {
+    "TITLE": "Auditer une page en ligne",
+    "LEAD": "Collez une URL : nous vérifions automatiquement ce qui peut l'être, cochons les éléments réussis et signalons ceux en échec. Le reste reste à vérifier manuellement.",
+    "LABEL": "URL de la page",
+    "BUTTON": "Lancer l'audit",
+    "RUNNING": "Audit en cours…",
+    "DONE": "Audit terminé pour",
+    "PASSED": "réussis",
+    "FAILED": "en échec",
+    "CHECKED": "vérifications automatiques",
+    "CLEAR": "Effacer les marques d'audit",
+    "ERROR": "Échec de l'audit",
+    "FAILED_BADGE": "Échec à l'audit"
   }
 }

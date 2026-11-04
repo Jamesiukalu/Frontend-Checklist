@@ -6,6 +6,7 @@ import Notation from './Notation';
 import Tools from './Tools';
 import Report from './Report';
 import Ui from './Ui';
+import Audit from './Audit';
 
 let instance = null;
 /**
@@ -30,6 +31,7 @@ class Init {
     this.toolsInit();
     this.reportInit();
     this.uiInit();
+    new Audit();
 
     return instance;
   }

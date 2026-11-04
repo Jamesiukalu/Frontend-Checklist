@@ -1,4 +1,10 @@
 {
   "spec": "test/**/*.test.js",
-  "require": ["jsdom-global/register.js", "@babel/register"]
+  "require": [
+    "jsdom-global/register.js",
+    "@babel/register"
+  ],
+  "ignore": [
+    "test/audit.test.js"
+  ]
 }

@@ -458,3 +458,119 @@
     align-items: flex-start;
   }
 }
+
+// Live page audit
+.c-audit {
+  margin-bottom: 32px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.c-audit__title {
+  font-size: 1.25rem;
+  font-weight: 650;
+}
+
+.c-audit__lead {
+  margin: 8px 0 16px;
+  color: var(--text-muted);
+}
+
+.c-audit__label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.c-audit__row {
+  display: flex;
+  gap: 8px;
+}
+
+.c-audit__input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+}
+
+.c-audit__input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.c-audit__submit {
+  padding: 10px 20px;
+}
+
+.c-audit__status {
+  min-height: 1.5em;
+  margin-top: 12px;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  overflow-wrap: anywhere;
+}
+
+.c-audit__summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 16px;
+  margin-top: 8px;
+}
+
+.c-audit__summary[hidden] {
+  display: none;
+}
+
+.c-audit__score {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.c-audit__counts {
+  flex: 1;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.c-audit__clear {
+  padding: 6px 12px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.8125rem;
+  cursor: pointer;
+}
+
+.c-audit__badge {
+  display: inline-block;
+  margin: 8px 0 0 36px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--danger) 14%, transparent);
+  color: var(--danger);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.js-item[data-audit='fail'] {
+  box-shadow: inset 3px 0 0 var(--danger);
+}
+
+@media (max-width: 600px) {
+  .c-audit__row {
+    flex-direction: column;
+  }
+}

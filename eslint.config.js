@@ -13,6 +13,14 @@ module.exports = [
       globals: {...globals.browser, gtag: 'readonly'},
     },
   },
+  {
+    files: ['server/**/*.js', 'api/**/*.js', 'test/audit.test.js'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'commonjs',
+      globals: {...globals.node, ...globals.mocha},
+    },
+  },
   prettier,
   {
     rules: {
