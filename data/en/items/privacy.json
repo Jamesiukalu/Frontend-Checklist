@@ -1,0 +1,145 @@
+[
+  {
+    "title": "Link to your privacy policy in the footer",
+    "priority": "High",
+    "description": "Websites that collect any personal data must publish a privacy policy and link to it prominently — this is a legal requirement under GDPR, CCPA, and most other privacy regulations.",
+    "documentation": [
+      {
+        "title": "GDPR Article 13 - Information to be provided",
+        "url": "https://gdpr-info.eu/art-13-gdpr/"
+      },
+      {
+        "title": "CCPA: California Consumer Privacy Act",
+        "url": "https://oag.ca.gov/privacy/ccpa"
+      },
+      {
+        "title": "ICO Privacy notices, transparency and control",
+        "url": "https://ico.org.uk/for-organisations/advice-for-small-organisations/privacy-notices-and-cookies/how-to-write-a-privacy-notice-and-what-goes-in-it/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Mozilla Observatory",
+        "url": "https://observatory.mozilla.org/"
+      }
+    ],
+    "tags": [
+      "all",
+      "privacy",
+      "seo"
+    ]
+  },
+  {
+    "title": "Show a cookie consent notice",
+    "priority": "High",
+    "description": "Websites that set non-essential cookies must obtain prior, informed user consent under GDPR, CCPA, and similar privacy regulations before cookies are placed.",
+    "documentation": [
+      {
+        "title": "GDPR Article 6 - Lawfulness of processing",
+        "url": "https://gdpr-info.eu/art-6-gdpr/"
+      },
+      {
+        "title": "GDPR Recital 32 - Consent",
+        "url": "https://gdpr-info.eu/recitals/no-32/"
+      },
+      {
+        "title": "ICO Guide to PECR - Cookies and similar technologies",
+        "url": "https://ico.org.uk/media2/kz0doybw/guidance-on-the-use-of-cookies-and-similar-technologies-1-0.pdf"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Mozilla Observatory",
+        "url": "https://observatory.mozilla.org/"
+      }
+    ],
+    "tags": [
+      "all",
+      "privacy"
+    ]
+  },
+  {
+    "title": "Avoid third-party cookies",
+    "priority": "Medium",
+    "description": "Third-party cookies set by external domains track users across sites without their knowledge.",
+    "detail": "Modern browsers are phasing them out, and regulations like GDPR and CCPA require consent before setting them.",
+    "documentation": [
+      {
+        "title": "MDN: Third-party cookies",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Privacy/Third-party_cookies"
+      },
+      {
+        "title": "web.dev: Preparing for the end of third-party cookies",
+        "url": "https://privacysandbox.google.com/cookies"
+      },
+      {
+        "title": "GDPR Article 5 and Recital 30",
+        "url": "https://gdpr-info.eu/art-5-gdpr/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Mozilla Observatory",
+        "url": "https://observatory.mozilla.org/"
+      }
+    ],
+    "tags": [
+      "all",
+      "privacy"
+    ]
+  },
+  {
+    "title": "Collect only the minimum personal data necessary",
+    "priority": "Medium",
+    "description": "Limit data collection to only what is strictly required for the stated purpose, in line with GDPR Article 5(1)(c) data minimisation principles.",
+    "documentation": [
+      {
+        "title": "GDPR Article 5 — Principles relating to processing of personal data",
+        "url": "https://gdpr-info.eu/art-5-gdpr/"
+      },
+      {
+        "title": "MDN: Storage API",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Storage_API"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Privacy Sandbox Privacy Analysis",
+        "url": "https://privacysandbox.com/"
+      }
+    ],
+    "tags": [
+      "all",
+      "privacy"
+    ]
+  },
+  {
+    "title": "Implement a user-facing data deletion mechanism",
+    "priority": "Medium",
+    "description": "Provide users with a clear way to request deletion of their personal data, fulfilling GDPR Article 17 (right to erasure / right to be forgotten).",
+    "documentation": [
+      {
+        "title": "GDPR Article 17 — Right to erasure",
+        "url": "https://gdpr-info.eu/art-17-gdpr/"
+      },
+      {
+        "title": "ICO: Right to erasure",
+        "url": "https://ico.org.uk/for-the-public/your-right-to-get-your-data-deleted/"
+      },
+      {
+        "title": "MDN: IndexedDB API",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Lighthouse Privacy Audits",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      }
+    ],
+    "tags": [
+      "all",
+      "privacy"
+    ]
+  }
+]

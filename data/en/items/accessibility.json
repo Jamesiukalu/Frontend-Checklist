@@ -1,0 +1,2440 @@
+[
+  {
+    "title": "Associate labels with form controls",
+    "priority": "High",
+    "description": "Form inputs must have programmatically associated labels.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Do not use aria-hidden on the document body",
+    "priority": "High",
+    "description": "Ensures the document body is not set to aria-hidden, which would hide the entire page from screen readers.",
+    "documentation": [
+      {
+        "title": "WAI-ARIA 1.2",
+        "url": "https://www.w3.org/TR/wai-aria-1.2/"
+      },
+      {
+        "title": "MDN: ARIA",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Enable keyboard navigation for all elements",
+    "priority": "High",
+    "description": "All interactive elements are accessible via keyboard with logical focus order and hidden elements excluded from tab sequence.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Ensure all input fields have accessible names",
+    "priority": "High",
+    "description": "Checks that input fields have accessible names so screen reader users know what data each field expects.",
+    "documentation": [
+      {
+        "title": "WCAG 2.1 SC 4.1.2: Name, Role, Value",
+        "url": "https://www.w3.org/TR/WCAG21/#name-role-value"
+      },
+      {
+        "title": "WCAG 2.1 SC 1.3.1: Info and Relationships",
+        "url": "https://www.w3.org/TR/WCAG21/#info-and-relationships"
+      },
+      {
+        "title": "WAI-ARIA 1.2: Accessible Name and Description Computation",
+        "url": "https://www.w3.org/TR/accname-1.2/"
+      },
+      {
+        "title": "MDN: <label>",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label"
+      },
+      {
+        "title": "WebAIM: Creating Accessible Forms",
+        "url": "https://webaim.org/techniques/forms/controls"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Prevent seizure-triggering flashing content",
+    "priority": "High",
+    "description": "Content does not flash more than three times per second to prevent seizures in users with photosensitive epilepsy.",
+    "documentation": [
+      {
+        "title": "WCAG 2.1 SC 2.3.1: Three Flashes or Below Threshold",
+        "url": "https://www.w3.org/TR/WCAG21/#three-flashes-or-below-threshold"
+      },
+      {
+        "title": "W3C: Understanding SC 2.3.1 Three Flashes or Below Threshold",
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility",
+      "css"
+    ]
+  },
+  {
+    "title": "Provide accessible names for buttons",
+    "priority": "High",
+    "description": "All buttons must have a discernible, descriptive accessible name for screen readers.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Provide alt text for image buttons",
+    "priority": "High",
+    "description": "Input elements of type='image' must have a descriptive alt attribute.",
+    "documentation": [
+      {
+        "title": "WCAG 2.1 SC 1.1.1: Non-text Content",
+        "url": "https://www.w3.org/TR/WCAG21/#non-text-content"
+      },
+      {
+        "title": "MDN: <input type=\"image\">",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/image"
+      },
+      {
+        "title": "HTML Living Standard: Image Button state",
+        "url": "https://html.spec.whatwg.org/multipage/input.html#image-button-state-(type=image)"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Support content reflow at 400% zoom",
+    "priority": "High",
+    "description": "Content reflows when zoomed to 400% without requiring horizontal scrolling or loss of functionality.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility",
+      "css"
+    ]
+  },
+  {
+    "title": "Use logical heading hierarchy",
+    "priority": "High",
+    "description": "Headings follow a sequential structure (h1 to h6) that reflects the content hierarchy without skipping levels.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility",
+      "html",
+      "seo"
+    ]
+  },
+  {
+    "title": "Announce dynamic content with ARIA live regions",
+    "priority": "High",
+    "description": "Dynamic content updates are announced to screen readers using appropriate ARIA live regions.",
+    "documentation": [
+      {
+        "title": "WAI-ARIA 1.2",
+        "url": "https://www.w3.org/TR/wai-aria-1.2/"
+      },
+      {
+        "title": "MDN: ARIA",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Avoid autoplaying media",
+    "priority": "High",
+    "description": "Audio and video content does not autoplay, or provides immediate controls to pause or stop playback.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility",
+      "html"
+    ]
+  },
+  {
+    "title": "Avoid redundant entry in the same process",
+    "priority": "High",
+    "description": "Information already provided earlier in a multi-step flow is auto-populated or available for selection instead of being typed again.",
+    "documentation": [
+      {
+        "title": "WCAG 2.2 SC 3.3.7: Redundant Entry",
+        "url": "https://www.w3.org/TR/WCAG22/#redundant-entry"
+      },
+      {
+        "title": "W3C: Understanding SC 3.3.7 Redundant Entry",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility",
+      "html",
+      "javascript"
+    ]
+  },
+  {
+    "title": "Avoid sensory-only instructions",
+    "priority": "High",
+    "description": "Instructions do not rely solely on sensory characteristics like color, shape, size, location, or sound.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility",
+      "html"
+    ]
+  },
+  {
+    "title": "Do not disable pinch zoom",
+    "priority": "High",
+    "description": "The viewport meta tag must not set user-scalable=no or maximum-scale=1 as these prevent users from zooming in to read content, violating WCAG 2.1 SC 1.4.4 (Resize Text).",
+    "documentation": [
+      {
+        "title": "WCAG 2.1 SC 1.4.4: Resize Text",
+        "url": "https://www.w3.org/TR/WCAG21/#resize-text"
+      },
+      {
+        "title": "MDN: <meta name='viewport'>",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag"
+      },
+      {
+        "title": "WebAIM: Visual Disabilities — Screen Magnification",
+        "url": "https://webaim.org/articles/visual/lowvision"
+      },
+      {
+        "title": "Google web.dev: Does not have a <meta name='viewport'> tag with width or initial-scale",
+        "url": "https://web.dev/viewport/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Chrome DevTools",
+        "url": "https://developer.chrome.com/docs/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility",
+      "css"
+    ]
+  },
+  {
+    "title": "Ensure ARIA attributes are valid",
+    "priority": "High",
+    "description": "All ARIA attributes must be valid and exist in the WAI-ARIA specification.",
+    "documentation": [
+      {
+        "title": "WAI-ARIA 1.2",
+        "url": "https://www.w3.org/TR/wai-aria-1.2/"
+      },
+      {
+        "title": "MDN: ARIA",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Ensure ARIA roles contain required child roles",
+    "priority": "High",
+    "description": "Elements with certain ARIA roles must contain the required child roles or the widget structure will be broken for assistive technologies.",
+    "documentation": [
+      {
+        "title": "WAI-ARIA 1.2: Required Owned Elements",
+        "url": "https://www.w3.org/TR/wai-aria-1.2/#mustContain"
+      },
+      {
+        "title": "WAI-ARIA 1.2: Role Definitions",
+        "url": "https://www.w3.org/TR/wai-aria-1.2/#role_definitions"
+      },
+      {
+        "title": "WCAG 2.1 SC 4.1.2: Name, Role, Value",
+        "url": "https://www.w3.org/TR/WCAG21/#name-role-value"
+      },
+      {
+        "title": "MDN: ARIA roles",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Ensure content remains usable without CSS",
+    "priority": "High",
+    "description": "Content structure, instructions, and primary tasks remain understandable and operable when author CSS is disabled or replaced by user styles.",
+    "documentation": [
+      {
+        "title": "W3C: Understanding SC 1.3.1 Info and Relationships",
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships"
+      },
+      {
+        "title": "W3C: Understanding SC 1.3.2 Meaningful Sequence",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/meaningful-sequence"
+      },
+      {
+        "title": "MDN: HTML: A good basis for accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      },
+      {
+        "title": "Nu Html Checker",
+        "url": "https://validator.w3.org/nu/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility",
+      "html",
+      "css"
+    ]
+  },
+  {
+    "title": "Ensure logical focus order",
+    "priority": "High",
+    "description": "Tab focus order follows the visual layout and logical reading sequence of the page.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility",
+      "html"
+    ]
+  },
+  {
+    "title": "Include a skip navigation link",
+    "priority": "High",
+    "description": "A skip navigation link is provided to allow keyboard users to bypass repetitive content and navigate directly to main content.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Keep focused elements unobscured",
+    "priority": "High",
+    "description": "Sticky headers, footers, banners, and overlays must not fully hide the element that currently has keyboard focus.",
+    "documentation": [
+      {
+        "title": "WCAG 2.2 SC 2.4.11: Focus Not Obscured (Minimum)",
+        "url": "https://www.w3.org/TR/WCAG22/#focus-not-obscured-minimum"
+      },
+      {
+        "title": "W3C: Understanding SC 2.4.11 Focus Not Obscured (Minimum)",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html"
+      },
+      {
+        "title": "MDN: scroll-padding-top",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-padding-top"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Chrome DevTools",
+        "url": "https://developer.chrome.com/docs/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility",
+      "css",
+      "html"
+    ]
+  },
+  {
+    "title": "Make modal dialogs keyboard accessible",
+    "priority": "High",
+    "description": "Modal dialogs are accessible with proper focus trapping, ARIA attributes, and keyboard dismissal.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility",
+      "html"
+    ]
+  },
+  {
+    "title": "Manage focus during dynamic interactions",
+    "priority": "High",
+    "description": "Focus is programmatically managed during dynamic interactions like modals, page transitions, and content updates.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Meet minimum color contrast ratios",
+    "priority": "High",
+    "description": "Text and background colors must have sufficient contrast to be readable by users with low vision or color blindness.",
+    "documentation": [
+      {
+        "title": "WCAG 2.1 SC 1.4.3: Contrast (Minimum)",
+        "url": "https://www.w3.org/TR/WCAG21/#contrast-minimum"
+      },
+      {
+        "title": "WCAG 2.1 SC 1.4.6: Contrast (Enhanced)",
+        "url": "https://www.w3.org/TR/WCAG21/#contrast-enhanced"
+      },
+      {
+        "title": "WCAG 2.1 SC 1.4.11: Non-text Contrast",
+        "url": "https://www.w3.org/TR/WCAG21/#non-text-contrast"
+      },
+      {
+        "title": "WebAIM: Contrast Checker",
+        "url": "https://webaim.org/resources/contrastchecker/"
+      },
+      {
+        "title": "MDN: Color and contrast accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Prevent data loss from session timeouts",
+    "priority": "High",
+    "description": "Users are warned before session expiry, can extend time when appropriate, and can re-authenticate or resume work without losing entered data.",
+    "documentation": [
+      {
+        "title": "W3C: Understanding SC 2.2.1 Timing Adjustable",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/timing-adjustable.html"
+      },
+      {
+        "title": "W3C: Understanding SC 2.2.5 Re-authenticating",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/re-authenticating.html"
+      },
+      {
+        "title": "W3C: Understanding SC 2.2.6 Timeouts",
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/timeouts"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility",
+      "html",
+      "javascript"
+    ]
+  },
+  {
+    "title": "Provide accessible authentication methods",
+    "priority": "High",
+    "description": "Authentication flows avoid unnecessary cognitive tests and support assistive mechanisms such as password managers, paste, OTP autofill, and passkeys.",
+    "documentation": [
+      {
+        "title": "WCAG 2.2 SC 3.3.8: Accessible Authentication (Minimum)",
+        "url": "https://www.w3.org/TR/WCAG22/#accessible-authentication-minimum"
+      },
+      {
+        "title": "W3C: Understanding SC 3.3.8 Accessible Authentication (Minimum)",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html"
+      },
+      {
+        "title": "MDN: HTML autocomplete attribute",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete"
+      }
+    ],
+    "tools": [
+      {
+        "title": "WebAuthn.io",
+        "url": "https://webauthn.io/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility",
+      "security",
+      "html"
+    ]
+  },
+  {
+    "title": "Provide accessible names for all interactive elements",
+    "priority": "High",
+    "description": "Checks that interactive elements have accessible names for clear navigation.",
+    "documentation": [
+      {
+        "title": "WAI-ARIA 1.2",
+        "url": "https://www.w3.org/TR/wai-aria-1.2/"
+      },
+      {
+        "title": "MDN: ARIA",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Provide captions for video content",
+    "priority": "High",
+    "description": "Prerecorded video with audio must have synchronized captions.",
+    "detail": "Live video must have real-time captions. This is required by WCAG 2.1 SC 1.2.2 and SC 1.2.4.",
+    "documentation": [
+      {
+        "title": "WCAG 2.1 SC 1.2.2: Captions (Prerecorded)",
+        "url": "https://www.w3.org/TR/WCAG21/#captions-prerecorded"
+      },
+      {
+        "title": "WCAG 2.1 SC 1.2.4: Captions (Live)",
+        "url": "https://www.w3.org/TR/WCAG21/#captions-live"
+      },
+      {
+        "title": "MDN: <track> element",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track"
+      },
+      {
+        "title": "MDN: WebVTT format",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API"
+      },
+      {
+        "title": "WebAIM: Captions, Transcripts, and Audio Descriptions",
+        "url": "https://webaim.org/techniques/captions/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Respect reduced motion preferences",
+    "priority": "High",
+    "description": "Animations respect user motion preferences, avoid seizure-triggering flashing, and include warnings for excessive motion.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility",
+      "css"
+    ]
+  },
+  {
+    "title": "Support both portrait and landscape orientation",
+    "priority": "High",
+    "description": "Content and functionality work in both portrait and landscape unless a specific orientation is essential to the activity.",
+    "documentation": [
+      {
+        "title": "WCAG 2.1 SC 1.3.4: Orientation",
+        "url": "https://www.w3.org/TR/WCAG21/#orientation"
+      },
+      {
+        "title": "W3C Understanding SC 1.3.4: Orientation",
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/orientation.html"
+      },
+      {
+        "title": "MDN: Managing screen orientation",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Chrome DevTools Device Mode",
+        "url": "https://developer.chrome.com/docs/devtools/device-mode/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility",
+      "css"
+    ]
+  },
+  {
+    "title": "Support text resizing to 200%",
+    "priority": "High",
+    "description": "Text can be resized up to 200% without loss of content or functionality using browser settings.",
+    "documentation": [
+      {
+        "title": "WCAG 2.1 SC 1.4.4: Resize Text",
+        "url": "https://www.w3.org/TR/WCAG21/#resize-text"
+      },
+      {
+        "title": "W3C: Understanding SC 1.4.4 Resize Text",
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/resize-text"
+      },
+      {
+        "title": "MDN: font-size",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-size"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility",
+      "css"
+    ]
+  },
+  {
+    "title": "Test with screen readers",
+    "priority": "High",
+    "description": "Pages must be tested with actual screen reader software (NVDA, JAWS, VoiceOver, TalkBack) to verify announcements, focus order, and widget behavior beyond what automated tools can detect.",
+    "documentation": [
+      {
+        "title": "WebAIM: Using Screen Readers for Testing",
+        "url": "https://webaim.org/articles/screenreader_testing/"
+      },
+      {
+        "title": "NVDA User Guide",
+        "url": "https://www.nvaccess.org/files/nvda/documentation/userGuide.html"
+      },
+      {
+        "title": "Apple: VoiceOver User Guide (macOS)",
+        "url": "https://support.apple.com/guide/voiceover/welcome/mac"
+      },
+      {
+        "title": "ARIA Authoring Practices Guide",
+        "url": "https://www.w3.org/WAI/ARIA/apg/"
+      },
+      {
+        "title": "WebAIM Screen Reader User Survey",
+        "url": "https://webaim.org/projects/screenreadersurvey10/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Use descriptive link text",
+    "priority": "High",
+    "description": "Link text clearly describes the destination or purpose without relying on surrounding context.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility",
+      "html"
+    ]
+  },
+  {
+    "title": "Use unique IDs for active elements",
+    "priority": "High",
+    "description": "All focusable or active elements must have a unique ID attribute.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/TR/WCAG22/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Use unique IDs for ARIA references",
+    "priority": "High",
+    "description": "IDs referenced by ARIA attributes must be unique to ensure correct accessibility relationships.",
+    "documentation": [
+      {
+        "title": "WAI-ARIA 1.2",
+        "url": "https://www.w3.org/TR/wai-aria-1.2/"
+      },
+      {
+        "title": "MDN: ARIA",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Align visible labels with accessible names",
+    "priority": "Medium",
+    "description": "The accessible name of a control should contain its visible label text.",
+    "documentation": [
+      {
+        "title": "WCAG 2.1 SC 2.5.3: Label in Name",
+        "url": "https://www.w3.org/TR/WCAG21/#label-in-name"
+      },
+      {
+        "title": "W3C: Understanding SC 2.5.3 Label in Name",
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html"
+      },
+      {
+        "title": "MDN: aria-label",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Allow pasting into form inputs",
+    "priority": "Medium",
+    "description": "Users should be able to paste content into form fields to improve usability and reduce errors.",
+    "documentation": [
+      {
+        "title": "WCAG 2.2 SC 3.3.8: Accessible Authentication (Minimum)",
+        "url": "https://www.w3.org/TR/WCAG22/#accessible-authentication-minimum"
+      },
+      {
+        "title": "W3C: Understanding SC 3.3.8 Accessible Authentication (Minimum)",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum"
+      },
+      {
+        "title": "MDN: Element paste event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Element/paste_event"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Avoid focusable descendants in role=\"text\" elements",
+    "priority": "Medium",
+    "description": "Checks that elements with role='text' have no focusable descendants",
+    "documentation": [
+      {
+        "title": "WAI-ARIA 1.2",
+        "url": "https://www.w3.org/TR/wai-aria-1.2/"
+      },
+      {
+        "title": "MDN: ARIA",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Avoid meta refresh redirects",
+    "priority": "Medium",
+    "description": "Meta refresh redirects can disorient users and cause accessibility issues by refreshing the page unexpectedly.",
+    "documentation": [
+      {
+        "title": "WCAG Quick Reference: Timing Adjustable",
+        "url": "https://www.w3.org/WAI/WCAG22/quickref/#timing-adjustable"
+      },
+      {
+        "title": "W3C: Understanding SC 2.2.1 Timing Adjustable",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/timing-adjustable.html"
+      },
+      {
+        "title": "MDN: <meta> element",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meta"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Avoid scrolljacking and custom scroll behavior",
+    "priority": "Medium",
+    "description": "Natural scroll behavior is preserved without custom scroll speeds, directions, or hijacked scroll events.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility",
+      "javascript"
+    ]
+  },
+  {
+    "title": "Avoid using deprecated ARIA roles",
+    "priority": "Medium",
+    "description": "Checks for deprecated or abstract ARIA roles to ensure long-term compatibility.",
+    "documentation": [
+      {
+        "title": "WAI-ARIA 1.2",
+        "url": "https://www.w3.org/TR/wai-aria-1.2/"
+      },
+      {
+        "title": "MDN: ARIA",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Define proper table headers",
+    "priority": "Medium",
+    "description": "Checks that data tables have proper headers",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Ensure accesskey values are unique",
+    "priority": "Medium",
+    "description": "Checks that accesskey values are unique to avoid shortcut conflicts.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Ensure ARIA roles are contained by required parent roles",
+    "priority": "Medium",
+    "description": "Checks that elements with certain roles have required parent roles",
+    "documentation": [
+      {
+        "title": "WAI-ARIA 1.2",
+        "url": "https://www.w3.org/TR/wai-aria-1.2/"
+      },
+      {
+        "title": "MDN: ARIA",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Ensure dialogs have an accessible name",
+    "priority": "Medium",
+    "description": "Checks that dialog elements have accessible names to orient screen reader users.",
+    "documentation": [
+      {
+        "title": "WAI-ARIA 1.2",
+        "url": "https://www.w3.org/TR/wai-aria-1.2/"
+      },
+      {
+        "title": "MDN: ARIA",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Ensure headings contain text",
+    "priority": "Medium",
+    "description": "All heading elements (h1-h6) must have visible, descriptive content.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Ensure identical links have consistent destinations",
+    "priority": "Medium",
+    "description": "Links with the same text must point to the same destination or be distinguishable.",
+    "documentation": [
+      {
+        "title": "WCAG 2.1 SC 2.4.4: Link Purpose (In Context)",
+        "url": "https://www.w3.org/TR/WCAG21/#link-purpose-in-context"
+      },
+      {
+        "title": "W3C: Understanding SC 2.4.4 Link Purpose (In Context)",
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context"
+      },
+      {
+        "title": "WebAIM: Links and Hypertext",
+        "url": "https://webaim.org/techniques/hypertext/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Ensure table headers associate with data cells",
+    "priority": "Medium",
+    "description": "Checks that table headers have associated data cells",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Ensure tables have unique accessible names",
+    "priority": "Medium",
+    "description": "Checks that data tables have unique accessible names",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Fix empty and broken links",
+    "priority": "Medium",
+    "description": "All links contain accessible text content and do not lead to broken destinations.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility",
+      "html"
+    ]
+  },
+  {
+    "title": "Hide decorative elements from assistive technology",
+    "priority": "Medium",
+    "description": "Decorative images and visual elements are hidden from screen readers using aria-hidden or empty alt attributes.",
+    "documentation": [
+      {
+        "title": "WAI-ARIA 1.2",
+        "url": "https://www.w3.org/TR/wai-aria-1.2/"
+      },
+      {
+        "title": "MDN: ARIA",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility",
+      "html"
+    ]
+  },
+  {
+    "title": "Implement \"Skip to Content\" links",
+    "priority": "Medium",
+    "description": "Checks for bypass mechanisms for keyboard navigation",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Include required ARIA attributes for roles",
+    "priority": "Medium",
+    "description": "Checks that elements have required ARIA attributes for their roles",
+    "documentation": [
+      {
+        "title": "WAI-ARIA 1.2",
+        "url": "https://www.w3.org/TR/wai-aria-1.2/"
+      },
+      {
+        "title": "MDN: ARIA",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Keep repeated help mechanisms in a consistent location",
+    "priority": "Medium",
+    "description": "When help or support mechanisms appear on multiple pages in the same flow, they stay in the same relative order so users can find them predictably.",
+    "documentation": [
+      {
+        "title": "WCAG 2.2 SC 3.2.6: Consistent Help",
+        "url": "https://www.w3.org/TR/WCAG22/#consistent-help"
+      },
+      {
+        "title": "W3C: Understanding SC 3.2.6 Consistent Help",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Chrome DevTools",
+        "url": "https://developer.chrome.com/docs/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility",
+      "html"
+    ]
+  },
+  {
+    "title": "Link table cells to headers using IDs",
+    "priority": "Medium",
+    "description": "Checks that td headers attribute references valid th ids",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Maintain logical heading order",
+    "priority": "Medium",
+    "description": "Heading levels should follow a sequential, hierarchical order.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Make links in text blocks visually distinguishable",
+    "priority": "Medium",
+    "description": "Links within blocks of text must be distinguishable from surrounding non-link text by more than color alone.",
+    "documentation": [
+      {
+        "title": "WCAG 2.1 SC 1.4.1: Use of Color",
+        "url": "https://www.w3.org/TR/WCAG21/#use-of-color"
+      },
+      {
+        "title": "WCAG Technique G183: Using a contrast ratio of 3:1 with surrounding text",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G183"
+      },
+      {
+        "title": "WCAG Technique F73: Failure for creating links not visually evident without color vision",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F73"
+      },
+      {
+        "title": "WebAIM: Links and Hypertext",
+        "url": "https://webaim.org/techniques/hypertext/"
+      },
+      {
+        "title": "MDN: text-decoration",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Match lang and xml:lang attributes",
+    "priority": "Medium",
+    "description": "The lang and xml:lang attributes on the html element must have identical values to avoid conflicting language signals across HTML and XML parsers.",
+    "documentation": [
+      {
+        "title": "WCAG 2.1 SC 3.1.1: Language of Page",
+        "url": "https://www.w3.org/TR/WCAG21/#language-of-page"
+      },
+      {
+        "title": "HTML Living Standard: The lang and xml:lang attributes",
+        "url": "https://html.spec.whatwg.org/multipage/dom.html#attr-lang"
+      },
+      {
+        "title": "W3C: Declaring language in HTML",
+        "url": "https://www.w3.org/International/questions/qa-html-language-declarations"
+      },
+      {
+        "title": "MDN: lang attribute",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang"
+      },
+      {
+        "title": "BCP 47: Tags for Identifying Languages",
+        "url": "https://www.rfc-editor.org/info/rfc5646/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Place list items within list containers",
+    "priority": "Medium",
+    "description": "List item elements (li) must always be direct children of a list container (ul, ol, or menu) to maintain valid HTML structure and correct screen reader announcements.",
+    "documentation": [
+      {
+        "title": "HTML Living Standard: The li element",
+        "url": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-li-element"
+      },
+      {
+        "title": "MDN: ARIA listitem role",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role"
+      },
+      {
+        "title": "MDN: <li> element",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li"
+      },
+      {
+        "title": "WebAIM: Semantic Structure",
+        "url": "https://webaim.org/techniques/semanticstructure/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Provide accessible names for ARIA command elements",
+    "priority": "Medium",
+    "description": "Checks that command elements like buttons and links have accessible names for screen reader support.",
+    "documentation": [
+      {
+        "title": "WAI-ARIA 1.2",
+        "url": "https://www.w3.org/TR/wai-aria-1.2/"
+      },
+      {
+        "title": "MDN: ARIA",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Provide accessible names for meter elements",
+    "priority": "Medium",
+    "description": "Checks that meter elements have accessible names to provide context for measurements.",
+    "documentation": [
+      {
+        "title": "WAI-ARIA 1.2",
+        "url": "https://www.w3.org/TR/wai-aria-1.2/"
+      },
+      {
+        "title": "MDN: ARIA",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Provide accessible names for progress bars",
+    "priority": "Medium",
+    "description": "Checks that progressbar elements have accessible names",
+    "documentation": [
+      {
+        "title": "WAI-ARIA 1.2",
+        "url": "https://www.w3.org/TR/wai-aria-1.2/"
+      },
+      {
+        "title": "MDN: ARIA",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Provide accessible names for select elements",
+    "priority": "Medium",
+    "description": "All `<select>` elements must have an associated label or an accessible name to be correctly identified by screen readers.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Provide accessible names for toggle fields",
+    "priority": "Medium",
+    "description": "Checks that toggle fields (checkbox, radio, switch) have accessible names",
+    "documentation": [
+      {
+        "title": "WAI-ARIA 1.2",
+        "url": "https://www.w3.org/TR/wai-aria-1.2/"
+      },
+      {
+        "title": "MDN: ARIA",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Provide accessible names for tooltips",
+    "priority": "Medium",
+    "description": "Checks that tooltip elements have accessible names",
+    "documentation": [
+      {
+        "title": "WAI-ARIA 1.2",
+        "url": "https://www.w3.org/TR/wai-aria-1.2/"
+      },
+      {
+        "title": "MDN: ARIA",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Provide accessible names for tree items",
+    "priority": "Medium",
+    "description": "All elements with role=\"treeitem\" must have a descriptive accessible name so screen reader users can navigate hierarchical tree widgets.",
+    "documentation": [
+      {
+        "title": "WAI-ARIA 1.2: treeitem Role",
+        "url": "https://www.w3.org/TR/wai-aria-1.2/#treeitem"
+      },
+      {
+        "title": "ARIA Authoring Practices Guide: Tree View Pattern",
+        "url": "https://www.w3.org/WAI/ARIA/apg/patterns/treeview/"
+      },
+      {
+        "title": "WCAG 2.1 SC 4.1.2: Name, Role, Value",
+        "url": "https://www.w3.org/TR/WCAG21/#name-role-value"
+      },
+      {
+        "title": "MDN: ARIA treeitem role",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Provide alternative text for objects",
+    "priority": "Medium",
+    "description": "The `<object>` element must contain alternative content to ensure accessibility for users who cannot view the primary content.",
+    "documentation": [
+      {
+        "title": "WCAG 2.1 SC 1.1.1: Non-text Content",
+        "url": "https://www.w3.org/TR/WCAG21/#non-text-content"
+      },
+      {
+        "title": "MDN: <object> element",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object"
+      },
+      {
+        "title": "HTML Living Standard: The object element",
+        "url": "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-object-element"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Provide alternatives to parallax effects",
+    "priority": "Medium",
+    "description": "Parallax scrolling effects have reduced-motion alternatives or can be disabled by users.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility",
+      "css"
+    ]
+  },
+  {
+    "title": "Provide audio descriptions for video",
+    "priority": "Medium",
+    "description": "Videos with important visual content include audio descriptions that narrate visual information for blind users.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility",
+      "html"
+    ]
+  },
+  {
+    "title": "Provide sufficient touch target size",
+    "priority": "Medium",
+    "description": "Interactive elements must have large enough touch targets so users with motor impairments can activate them accurately on touchscreen devices.",
+    "documentation": [
+      {
+        "title": "WCAG 2.2 SC 2.5.8: Target Size (Minimum)",
+        "url": "https://www.w3.org/TR/WCAG22/#target-size-minimum"
+      },
+      {
+        "title": "WCAG 2.1 SC 2.5.5: Target Size",
+        "url": "https://www.w3.org/TR/WCAG21/#target-size"
+      },
+      {
+        "title": "Apple Human Interface Guidelines: Adaptivity and Layout",
+        "url": "https://developer.apple.com/design/human-interface-guidelines/accessibility#Buttons-and-controls"
+      },
+      {
+        "title": "Material Design: Accessibility",
+        "url": "https://m1.material.io/usability/accessibility.html"
+      },
+      {
+        "title": "MDN: touch-action",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Provide titles for iframes and frames",
+    "priority": "Medium",
+    "description": "iframes and frames must have a title attribute to describe their content.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Remove focusable elements from aria-hidden containers",
+    "priority": "Medium",
+    "description": "Ensures aria-hidden elements do not contain focusable content to avoid \"ghost\" focus.",
+    "documentation": [
+      {
+        "title": "WAI-ARIA 1.2",
+        "url": "https://www.w3.org/TR/wai-aria-1.2/"
+      },
+      {
+        "title": "MDN: ARIA",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Use a single label for each form field",
+    "priority": "Medium",
+    "description": "Form fields should have exactly one associated <label> element for maximum clarity.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Use appropriate tabindex values",
+    "priority": "Medium",
+    "description": "Checks for appropriate tabindex values",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Use correct definition list structure",
+    "priority": "Medium",
+    "description": "Definition lists (&lt;dl&gt;) must only contain valid &lt;dt&gt; and &lt;dd&gt; elements.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Use correct list structure",
+    "priority": "Medium",
+    "description": "Lists (ul, ol) should only contain list item elements (li) to ensure they are correctly interpreted by assistive technology.",
+    "documentation": [
+      {
+        "title": "HTML Living Standard: The ul element",
+        "url": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-ul-element"
+      },
+      {
+        "title": "HTML Living Standard: The ol element",
+        "url": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-ol-element"
+      },
+      {
+        "title": "MDN: <ul> element",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/ul"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Use exactly one main landmark",
+    "priority": "Medium",
+    "description": "Each page must have one and only one main landmark.",
+    "documentation": [
+      {
+        "title": "MDN: <main> element",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/main"
+      },
+      {
+        "title": "WAI-ARIA 1.2: main Role",
+        "url": "https://www.w3.org/TR/wai-aria-1.2/#main"
+      },
+      {
+        "title": "HTML Living Standard: The main element",
+        "url": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-main-element"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Use inclusive language",
+    "priority": "Medium",
+    "description": "Content uses inclusive, non-discriminatory language that welcomes all users regardless of ability, gender, race, or background.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Use landmark regions correctly",
+    "priority": "Medium",
+    "description": "Proper landmark regions (main, nav, footer) help users navigate the page more efficiently.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Use only allowed ARIA attributes for each role",
+    "priority": "Medium",
+    "description": "Checks that ARIA attributes are allowed on their elements to ensure valid accessibility trees.",
+    "documentation": [
+      {
+        "title": "WAI-ARIA 1.2",
+        "url": "https://www.w3.org/TR/wai-aria-1.2/"
+      },
+      {
+        "title": "MDN: ARIA",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Use semantic list elements",
+    "priority": "Medium",
+    "description": "Groups of related items use ul, ol, or dl elements so screen readers announce list context and item count.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility",
+      "html"
+    ]
+  },
+  {
+    "title": "Use semantic table markup for screen readers",
+    "priority": "Medium",
+    "description": "Data tables use proper semantic markup with headers, captions, and scope attributes for screen reader accessibility.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility",
+      "html"
+    ]
+  },
+  {
+    "title": "Use valid ARIA role values",
+    "priority": "Medium",
+    "description": "Checks for valid ARIA role values",
+    "documentation": [
+      {
+        "title": "WAI-ARIA 1.2",
+        "url": "https://www.w3.org/TR/wai-aria-1.2/"
+      },
+      {
+        "title": "MDN: ARIA",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Use valid values for ARIA attributes",
+    "priority": "Medium",
+    "description": "Checks for valid values in ARIA attributes",
+    "documentation": [
+      {
+        "title": "WAI-ARIA 1.2",
+        "url": "https://www.w3.org/TR/wai-aria-1.2/"
+      },
+      {
+        "title": "MDN: ARIA",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Wrap definition items in a definition list",
+    "priority": "Medium",
+    "description": "Description terms (&lt;dt&gt;) and details (&lt;dd&gt;) must be contained within a &lt;dl&gt; element.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Write in plain language",
+    "priority": "Medium",
+    "description": "Content uses clear, simple language that is easy to understand for users with cognitive disabilities and non-native speakers.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Avoid autofocus on form fields",
+    "priority": "Low",
+    "description": "Form fields do not use the autofocus attribute which can disorient screen reader users and cause unexpected page behavior.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility",
+      "html"
+    ]
+  },
+  {
+    "title": "Avoid images of text",
+    "priority": "Low",
+    "description": "Real text is used instead of images containing text, except for logos or when specific visual presentation is essential.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility",
+      "html"
+    ]
+  },
+  {
+    "title": "Avoid redundant image alternative text",
+    "priority": "Low",
+    "description": "Alternative text should not contain redundant words like 'image' or 'photo'.",
+    "documentation": [
+      {
+        "title": "WCAG 2.1 SC 1.1.1: Non-text Content",
+        "url": "https://www.w3.org/TR/WCAG21/#non-text-content"
+      },
+      {
+        "title": "W3C WAI Images Tutorial: Alternative Text",
+        "url": "https://www.w3.org/WAI/tutorials/images/decision-tree/"
+      },
+      {
+        "title": "MDN: <img> element",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Provide instant anchor scroll option",
+    "priority": "Low",
+    "description": "Smooth scroll animations to anchor links respect motion preferences or provide an instant alternative.",
+    "documentation": [
+      {
+        "title": "W3C WAI: WCAG Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+      },
+      {
+        "title": "MDN: Accessibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "accessibility",
+      "css"
+    ]
+  }
+]

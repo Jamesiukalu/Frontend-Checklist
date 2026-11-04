@@ -1,0 +1,136 @@
+[
+  {
+    "title": "Add hreflang tags for multilingual sites",
+    "priority": "Medium",
+    "description": "Hreflang tags indicate language and regional variations for multilingual sites.",
+    "documentation": [
+      {
+        "title": "Google Search Central: Search Essentials",
+        "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+      },
+      {
+        "title": "Google Search Central documentation",
+        "url": "https://developers.google.com/search/docs"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "i18n",
+      "seo"
+    ]
+  },
+  {
+    "title": "Design UI components to accommodate text expansion from translation",
+    "priority": "Medium",
+    "description": "Ensure that layouts use flexible sizing so that translated text — which can be 30–50% longer than English — does not overflow, clip, or break the UI.",
+    "documentation": [
+      {
+        "title": "W3C Internationalization: Text size in translation",
+        "url": "https://www.w3.org/International/articles/article-text-size"
+      },
+      {
+        "title": "MDN: CSS Logical Properties",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values"
+      },
+      {
+        "title": "MDN: min-inline-size",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/min-inline-size"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Pseudo-Localization Tool",
+        "url": "https://github.com/nicktacular/pseudo-localize"
+      }
+    ],
+    "tags": [
+      "all",
+      "i18n"
+    ]
+  },
+  {
+    "title": "Handle plural forms with Intl.PluralRules or ICU MessageFormat",
+    "priority": "Medium",
+    "description": "Select the correct grammatical plural category for every language using Intl.PluralRules or an ICU-aware i18n library instead of simple singular/plural branching.",
+    "documentation": [
+      {
+        "title": "MDN: Intl.PluralRules",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules"
+      },
+      {
+        "title": "Unicode CLDR Plural Rules",
+        "url": "https://cldr.unicode.org/index/cldr-spec/plural-rules"
+      },
+      {
+        "title": "react-intl: Plural Format",
+        "url": "https://formatjs.io/docs/core-concepts/icu-syntax/#plural-format"
+      },
+      {
+        "title": "i18next: Pluralization",
+        "url": "https://www.i18next.com/translation-function/plurals"
+      }
+    ],
+    "tags": [
+      "all",
+      "i18n"
+    ]
+  },
+  {
+    "title": "Use Intl APIs for currency, number, and date formatting",
+    "priority": "Medium",
+    "description": "Format monetary values, numbers, and dates using the browser's built-in Intl.NumberFormat and Intl.DateTimeFormat APIs instead of manual string manipulation.",
+    "documentation": [
+      {
+        "title": "MDN: Intl.NumberFormat",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat"
+      },
+      {
+        "title": "MDN: Intl.DateTimeFormat",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat"
+      },
+      {
+        "title": "MDN: Intl.RelativeTimeFormat",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Intl Explorer",
+        "url": "https://www.intl-explorer.com/"
+      }
+    ],
+    "tags": [
+      "all",
+      "i18n"
+    ]
+  },
+  {
+    "title": "Use locale-neutral images and provide cultural overrides when needed",
+    "priority": "Low",
+    "description": "Default to abstract, culture-neutral icons and illustrations, and supply locale-specific image variants only when visual content carries meaning that differs across regions.",
+    "documentation": [
+      {
+        "title": "W3C Internationalization: Cultural considerations",
+        "url": "https://www.w3.org/International/quicktips/"
+      },
+      {
+        "title": "MDN: Internationalization",
+        "url": "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization"
+      },
+      {
+        "title": "Nielsen Norman Group: Culturally Responsive Design",
+        "url": "https://www.nngroup.com/articles/crosscultural-design/"
+      }
+    ],
+    "tags": [
+      "all",
+      "i18n"
+    ]
+  }
+]

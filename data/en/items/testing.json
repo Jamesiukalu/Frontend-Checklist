@@ -1,0 +1,385 @@
+[
+  {
+    "title": "Implement end-to-end testing",
+    "priority": "High",
+    "description": "Use E2E testing frameworks like Playwright or Cypress to test critical user journeys.",
+    "documentation": [
+      {
+        "title": "Playwright Docs",
+        "url": "https://playwright.dev/docs/intro"
+      },
+      {
+        "title": "Testing Library Guiding Principles",
+        "url": "https://testing-library.com/docs/guiding-principles"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Agent QA",
+        "url": "https://github.com/vostride/agent-qa"
+      },
+      {
+        "title": "Playwright",
+        "url": "https://playwright.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "testing"
+    ]
+  },
+  {
+    "title": "Include accessibility testing",
+    "priority": "High",
+    "description": "Automate accessibility testing with tools like axe-core, jest-axe, or Playwright's accessibility testing.",
+    "documentation": [
+      {
+        "title": "W3C WAI: Evaluating Web Accessibility",
+        "url": "https://www.w3.org/WAI/test-evaluate/"
+      },
+      {
+        "title": "Playwright: Accessibility testing",
+        "url": "https://playwright.dev/docs/accessibility-testing"
+      },
+      {
+        "title": "Testing Library Guiding Principles",
+        "url": "https://testing-library.com/docs/guiding-principles"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe-core",
+        "url": "https://github.com/dequelabs/axe-core"
+      }
+    ],
+    "tags": [
+      "all",
+      "testing",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Integrate real-time error monitoring in production",
+    "priority": "High",
+    "description": "A real-time error monitoring service captures, groups, and alerts on unhandled exceptions and promise rejections in production so issues are discovered before users report them.",
+    "documentation": [
+      {
+        "title": "Sentry: Getting started with JavaScript",
+        "url": "https://docs.sentry.io/platforms/javascript/"
+      },
+      {
+        "title": "web.dev: Monitor and analyze the app",
+        "url": "https://web.dev/articles/vitals-measurement-getting-started"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Sentry",
+        "url": "https://sentry.io/"
+      }
+    ],
+    "tags": [
+      "all",
+      "testing"
+    ]
+  },
+  {
+    "title": "Test across all major browsers",
+    "priority": "High",
+    "description": "Website works correctly across major browsers (Chrome, Firefox, Safari, Edge).",
+    "documentation": [
+      {
+        "title": "Playwright Docs",
+        "url": "https://playwright.dev/docs/intro"
+      },
+      {
+        "title": "Testing Library Guiding Principles",
+        "url": "https://testing-library.com/docs/guiding-principles"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Playwright",
+        "url": "https://playwright.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "testing"
+    ]
+  },
+  {
+    "title": "Test on real mobile devices and viewports",
+    "priority": "High",
+    "description": "Verify your application on real mobile devices and browser DevTools device emulation to catch touch interaction issues, viewport bugs, and mobile-specific rendering problems.",
+    "documentation": [
+      {
+        "title": "Playwright Docs",
+        "url": "https://playwright.dev/docs/intro"
+      },
+      {
+        "title": "Testing Library Guiding Principles",
+        "url": "https://testing-library.com/docs/guiding-principles"
+      }
+    ],
+    "tools": [
+      {
+        "title": "BrowserStack (real device cloud)",
+        "url": "https://www.browserstack.com"
+      },
+      {
+        "title": "Playwright mobile emulation",
+        "url": "https://playwright.dev/docs/emulation"
+      },
+      {
+        "title": "Chrome DevTools device toolbar",
+        "url": "https://developer.chrome.com/docs/devtools/device-mode"
+      }
+    ],
+    "tags": [
+      "all",
+      "testing"
+    ]
+  },
+  {
+    "title": "Write integration tests for key workflows",
+    "priority": "High",
+    "description": "Test how multiple units of code work together — API routes with their database queries, form submissions with validation, and component trees with their state management.",
+    "documentation": [
+      {
+        "title": "Playwright Docs",
+        "url": "https://playwright.dev/docs/intro"
+      },
+      {
+        "title": "Testing Library Guiding Principles",
+        "url": "https://testing-library.com/docs/guiding-principles"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Vitest (with jsdom)",
+        "url": "https://vitest.dev"
+      },
+      {
+        "title": "Testing Library (React/Vue/Angular)",
+        "url": "https://testing-library.com"
+      },
+      {
+        "title": "Supertest (HTTP API integration)",
+        "url": "https://github.com/ladjs/supertest"
+      }
+    ],
+    "tags": [
+      "all",
+      "testing"
+    ]
+  },
+  {
+    "title": "Write unit tests",
+    "priority": "High",
+    "description": "Critical functionality has unit tests with good coverage for reliability.",
+    "documentation": [
+      {
+        "title": "Playwright Docs",
+        "url": "https://playwright.dev/docs/intro"
+      },
+      {
+        "title": "Testing Library Guiding Principles",
+        "url": "https://testing-library.com/docs/guiding-principles"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Playwright",
+        "url": "https://playwright.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "testing",
+      "javascript"
+    ]
+  },
+  {
+    "title": "Enforce performance budgets in CI",
+    "priority": "Medium",
+    "description": "Define measurable performance thresholds (bundle size, Lighthouse scores, Core Web Vitals) and fail CI builds automatically when they're exceeded.",
+    "documentation": [
+      {
+        "title": "web.dev: Your first performance budget",
+        "url": "https://web.dev/articles/your-first-performance-budget"
+      },
+      {
+        "title": "web.dev: Core Web Vitals thresholds",
+        "url": "https://web.dev/articles/vitals"
+      },
+      {
+        "title": "Lighthouse CI configuration",
+        "url": "https://github.com/GoogleChrome/lighthouse-ci/blob/main/docs/configuration.md"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Bundlesize",
+        "url": "https://github.com/siddharthkp/bundlesize"
+      },
+      {
+        "title": "Lighthouse CI",
+        "url": "https://github.com/GoogleChrome/lighthouse-ci"
+      },
+      {
+        "title": "size-limit",
+        "url": "https://github.com/ai/size-limit"
+      }
+    ],
+    "tags": [
+      "all",
+      "testing"
+    ]
+  },
+  {
+    "title": "Follow mocking best practices",
+    "priority": "Medium",
+    "description": "Use mocks strategically to isolate units under test without over-mocking.",
+    "documentation": [
+      {
+        "title": "Playwright Docs",
+        "url": "https://playwright.dev/docs/intro"
+      },
+      {
+        "title": "Testing Library Guiding Principles",
+        "url": "https://testing-library.com/docs/guiding-principles"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Playwright",
+        "url": "https://playwright.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "testing"
+    ]
+  },
+  {
+    "title": "Implement consumer-driven contract testing for API boundaries",
+    "priority": "Medium",
+    "description": "Consumer-driven contract tests (Pact) define and verify the API contracts between the frontend consumer and backend provider, catching integration mismatches before they reach production.",
+    "documentation": [
+      {
+        "title": "Pact documentation",
+        "url": "https://docs.pact.io/"
+      },
+      {
+        "title": "Martin Fowler: Consumer-Driven Contracts",
+        "url": "https://martinfowler.com/articles/consumerDrivenContracts.html"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Pact",
+        "url": "https://pact.io/"
+      },
+      {
+        "title": "PactFlow (Pact Broker SaaS)",
+        "url": "https://pactflow.io/"
+      }
+    ],
+    "tags": [
+      "all",
+      "testing"
+    ]
+  },
+  {
+    "title": "Maintain test coverage thresholds",
+    "priority": "Medium",
+    "description": "Set and enforce minimum code coverage thresholds to ensure adequate test coverage.",
+    "documentation": [
+      {
+        "title": "Playwright Docs",
+        "url": "https://playwright.dev/docs/intro"
+      },
+      {
+        "title": "Testing Library Guiding Principles",
+        "url": "https://testing-library.com/docs/guiding-principles"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Playwright",
+        "url": "https://playwright.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "testing"
+    ]
+  },
+  {
+    "title": "Use mutation testing to measure how well tests detect bugs",
+    "priority": "Medium",
+    "description": "Run Stryker mutation testing on critical business logic to verify that your test suite will actually catch real bugs, not just achieve line coverage.",
+    "documentation": [
+      {
+        "title": "Stryker Mutator documentation",
+        "url": "https://stryker-mutator.io/docs/"
+      },
+      {
+        "title": "Mutation Testing: A literature review",
+        "url": "https://ieeexplore.ieee.org/document/8716567"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Stryker Mutator",
+        "url": "https://stryker-mutator.io/"
+      },
+      {
+        "title": "Stryker Dashboard",
+        "url": "https://dashboard.stryker-mutator.io/"
+      }
+    ],
+    "tags": [
+      "all",
+      "testing"
+    ]
+  },
+  {
+    "title": "Use visual regression testing",
+    "priority": "Medium",
+    "description": "Capture screenshots of components and pages, then automatically compare them against approved baselines to detect unintended visual changes before they reach production.",
+    "documentation": [
+      {
+        "title": "Playwright Docs",
+        "url": "https://playwright.dev/docs/intro"
+      },
+      {
+        "title": "Testing Library Guiding Principles",
+        "url": "https://testing-library.com/docs/guiding-principles"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Playwright (built-in screenshot comparison)",
+        "url": "https://playwright.dev/docs/screenshots"
+      },
+      {
+        "title": "Chromatic (Storybook visual testing)",
+        "url": "https://www.chromatic.com"
+      },
+      {
+        "title": "Percy (CI visual testing)",
+        "url": "https://percy.io"
+      },
+      {
+        "title": "Storybook (component isolation)",
+        "url": "https://storybook.js.org"
+      }
+    ],
+    "tags": [
+      "all",
+      "testing"
+    ]
+  }
+]

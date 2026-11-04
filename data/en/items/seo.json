@@ -1,0 +1,2230 @@
+[
+  {
+    "title": "4XX Pages in Sitemap",
+    "priority": "High",
+    "description": "Checks for sitemap URLs that return 4XX HTTP status codes, indicating broken or removed pages.",
+    "documentation": [
+      {
+        "title": "Google: Build and submit a sitemap",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap"
+      },
+      {
+        "title": "Google: HTTP status codes and SEO",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/http-network-errors"
+      },
+      {
+        "title": "Sitemaps XML format",
+        "url": "https://www.sitemaps.org/protocol.html"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Add structured data markup",
+    "priority": "High",
+    "description": "Schema.org structured data (JSON-LD) is implemented for rich search results.",
+    "documentation": [
+      {
+        "title": "Google Search Central: Search Essentials",
+        "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+      },
+      {
+        "title": "Google Search Central documentation",
+        "url": "https://developers.google.com/search/docs"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Avoid multi-hop redirect chains",
+    "priority": "High",
+    "description": "Detects multi-hop redirect chains that waste crawl budget",
+    "documentation": [
+      {
+        "title": "Google Search Central: Redirect and Google Search",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/301-redirects"
+      },
+      {
+        "title": "Google Search Central: How Googlebot crawls",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/googlebot"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Create and submit an XML sitemap",
+    "priority": "High",
+    "description": "An XML sitemap is available at /sitemap.xml and includes all important pages.",
+    "documentation": [
+      {
+        "title": "Google Search Central: Search Essentials",
+        "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+      },
+      {
+        "title": "Google Search Central documentation",
+        "url": "https://developers.google.com/search/docs"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Identify YMYL content on your site",
+    "priority": "High",
+    "description": "Detects Your Money or Your Life (YMYL) content that is subject to Google's elevated E-E-A-T quality standards.",
+    "documentation": [
+      {
+        "title": "Google: Quality Rater Guidelines",
+        "url": "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf"
+      },
+      {
+        "title": "Google: Creating helpful, reliable, people-first content",
+        "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+      },
+      {
+        "title": "Google: What is E-E-A-T?",
+        "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content#what-is-eeeat"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Implement valid Article structured data",
+    "priority": "High",
+    "description": "Validates that articles use the correct Schema.org properties for improved search visibility.",
+    "documentation": [
+      {
+        "title": "Google Search Central: Search Essentials",
+        "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+      },
+      {
+        "title": "Google Search Central documentation",
+        "url": "https://developers.google.com/search/docs"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Keep page titles unique",
+    "priority": "High",
+    "description": "Checks that the <title> tag is unique across all pages of the site to avoid duplicate title SEO issues.",
+    "documentation": [
+      {
+        "title": "Google: Influence your title links in Search",
+        "url": "https://developers.google.com/search/docs/appearance/title-link"
+      },
+      {
+        "title": "Google: Control your title and description in Search",
+        "url": "https://developers.google.com/search/docs/appearance/snippet"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Keep XML sitemaps valid",
+    "priority": "High",
+    "description": "Validates sitemap XML structure against the sitemaps.org protocol, URL limits, and encoding requirements.",
+    "documentation": [
+      {
+        "title": "Sitemaps XML format",
+        "url": "https://www.sitemaps.org/protocol.html"
+      },
+      {
+        "title": "Google: Sitemap best practices",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview"
+      },
+      {
+        "title": "Google: Build and submit a sitemap",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Meta Tags in Body",
+    "priority": "High",
+    "description": "Detects meta tags incorrectly placed in document body",
+    "documentation": [
+      {
+        "title": "HTML Living Standard: The meta element",
+        "url": "https://html.spec.whatwg.org/multipage/semantics.html#the-meta-element"
+      },
+      {
+        "title": "MDN: <meta> — The metadata element",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta"
+      },
+      {
+        "title": "Google Search Central: Robots meta tag",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Noindex in Sitemap",
+    "priority": "High",
+    "description": "Checks for noindexed pages listed in sitemap",
+    "documentation": [
+      {
+        "title": "Google Search Central: Sitemaps",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview"
+      },
+      {
+        "title": "Google Search Central: Robots meta tag",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag"
+      },
+      {
+        "title": "Google Search Central: Block indexing with noindex",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/block-indexing"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Publish a robots.txt file",
+    "priority": "High",
+    "description": "Checks if robots.txt exists at the root, is accessible, and contains valid directives.",
+    "documentation": [
+      {
+        "title": "Google: robots.txt introduction",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/robots/intro"
+      },
+      {
+        "title": "Robots Exclusion Protocol (RFC 9309)",
+        "url": "https://www.rfc-editor.org/info/rfc9309/"
+      },
+      {
+        "title": "Google: Create and submit a sitemap",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Publish high-quality content",
+    "priority": "High",
+    "description": "LLM-based content quality analysis for SEO",
+    "documentation": [
+      {
+        "title": "Google Search Central: Creating helpful, reliable, people-first content",
+        "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+      },
+      {
+        "title": "Google: Search Quality Rater Guidelines",
+        "url": "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf"
+      },
+      {
+        "title": "Google Search Central: What is E-E-A-T",
+        "url": "https://developers.google.com/search/blog/2022/12/google-raters-guidelines-e-e-a-t"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Resolve internal broken links",
+    "priority": "High",
+    "description": "Detects and fixes internal links that return 404 or 5xx errors to improve user experience.",
+    "documentation": [
+      {
+        "title": "Google Search Central: Search Essentials",
+        "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+      },
+      {
+        "title": "Google Search Central documentation",
+        "url": "https://developers.google.com/search/docs"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Robots Meta Conflict",
+    "priority": "High",
+    "description": "Detects pages blocked by robots.txt that also carry noindex meta tags, creating a paradox where the directive is never read.",
+    "documentation": [
+      {
+        "title": "Google: Remove a page from Google",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/remove-information"
+      },
+      {
+        "title": "Google: robots meta tag documentation",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag"
+      },
+      {
+        "title": "Google: robots.txt introduction",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/robots/intro"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Schema + Noindex Conflict",
+    "priority": "High",
+    "description": "Detects pages that carry rich result schema markup but are blocked from indexing via noindex or robots.txt.",
+    "documentation": [
+      {
+        "title": "Google: Structured data general guidelines",
+        "url": "https://developers.google.com/search/docs/appearance/structured-data/sd-policies"
+      },
+      {
+        "title": "Google: robots meta tag",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag"
+      },
+      {
+        "title": "Google: Rich Results Test",
+        "url": "https://search.google.com/test/rich-results"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Set canonical URLs for all pages",
+    "priority": "High",
+    "description": "A canonical URL tag is present to prevent duplicate content issues.",
+    "documentation": [
+      {
+        "title": "Google Search Central: Search Essentials",
+        "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+      },
+      {
+        "title": "Google Search Central documentation",
+        "url": "https://developers.google.com/search/docs"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      },
+      {
+        "title": "Screaming Frog",
+        "url": "https://www.screamingfrog.co.uk/seo-spider/"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Set robots meta directives correctly",
+    "priority": "High",
+    "description": "Checks robots meta tag for valid indexing directives in the page head.",
+    "documentation": [
+      {
+        "title": "Google: robots meta tag, data-nosnippet, and X-Robots-Tag",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag"
+      },
+      {
+        "title": "MDN: meta name=\\\"robots\\\"",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meta/name/robots"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Write a descriptive page title",
+    "priority": "High",
+    "description": "Validates page title presence and length",
+    "documentation": [
+      {
+        "title": "Google Search Central: Title links",
+        "url": "https://developers.google.com/search/docs/appearance/title-link"
+      },
+      {
+        "title": "MDN: The Title element",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Write a meta description for each page",
+    "priority": "High",
+    "description": "Validates meta description presence and length",
+    "documentation": [
+      {
+        "title": "Google Search Central: Control your snippets",
+        "url": "https://developers.google.com/search/docs/appearance/snippet"
+      },
+      {
+        "title": "MDN: meta description",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_a_description"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Add a favicon to every page",
+    "priority": "Medium",
+    "description": "Checks for favicon presence and correct link element configuration",
+    "documentation": [
+      {
+        "title": "Google Search Central: Favicon in search results",
+        "url": "https://developers.google.com/search/docs/appearance/favicon-in-search"
+      },
+      {
+        "title": "MDN: How to add a favicon",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#adding_custom_icons_to_your_site"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Add disclaimers to sensitive content",
+    "priority": "Medium",
+    "description": "Checks for appropriate disclaimers on sensitive content types such as medical, legal, financial, and affiliate pages",
+    "documentation": [
+      {
+        "title": "Google Search Quality Rater Guidelines",
+        "url": "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf"
+      },
+      {
+        "title": "FTC: .com Disclosures — How to Make Effective Disclosures in Digital Advertising",
+        "url": "https://www.ftc.gov/sites/default/files/attachments/press-releases/ftc-staff-revises-online-advertising-disclosure-guidelines/130312dotcomdisclosures.pdf"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Add FAQPage schema markup",
+    "priority": "Medium",
+    "description": "Validates FAQPage JSON-LD structured data for question-and-answer content",
+    "documentation": [
+      {
+        "title": "Google Search Central: FAQPage structured data",
+        "url": "https://developers.google.com/search/docs/appearance/structured-data/faqpage"
+      },
+      {
+        "title": "Schema.org: FAQPage",
+        "url": "https://schema.org/FAQPage"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Add internal links to key pages",
+    "priority": "Medium",
+    "description": "Validates that key pages receive adequate internal links from other site pages",
+    "documentation": [
+      {
+        "title": "Google Search Central: Links — crawlable links",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/links-crawlable"
+      },
+      {
+        "title": "Google SEO Starter Guide: Use anchor text",
+        "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide#anchor"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Add internal links to orphan pages",
+    "priority": "Medium",
+    "description": "Detects pages with no internal links pointing to them",
+    "documentation": [
+      {
+        "title": "Google Search Central: Links — internal and external",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/links-crawlable"
+      },
+      {
+        "title": "Google Search Central: How Googlebot crawls",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/googlebot"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Add LocalBusiness schema markup",
+    "priority": "Medium",
+    "description": "Validates LocalBusiness schema for local SEO",
+    "documentation": [
+      {
+        "title": "Schema.org: LocalBusiness",
+        "url": "https://schema.org/LocalBusiness"
+      },
+      {
+        "title": "Google Search Central: Local business structured data",
+        "url": "https://developers.google.com/search/docs/appearance/structured-data/local-business"
+      },
+      {
+        "title": "Google Rich Results Test",
+        "url": "https://search.google.com/test/rich-results"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Add Organization schema markup",
+    "priority": "Medium",
+    "description": "Validates Organization schema for brand presence",
+    "documentation": [
+      {
+        "title": "Schema.org: Organization",
+        "url": "https://schema.org/Organization"
+      },
+      {
+        "title": "Google Search Central: Organization structured data",
+        "url": "https://developers.google.com/search/docs/appearance/structured-data/organization"
+      },
+      {
+        "title": "Google Rich Results Test",
+        "url": "https://search.google.com/test/rich-results"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Add outgoing links to dead-end pages",
+    "priority": "Medium",
+    "description": "Pages with no outgoing internal links, potentially trapping users and crawlers",
+    "documentation": [
+      {
+        "title": "Google Search Central: Links best practices",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/overview-google-crawlers"
+      },
+      {
+        "title": "Google Search Central: Crawling and indexing",
+        "url": "https://developers.google.com/search/docs/fundamentals/how-search-works"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Add Product schema markup",
+    "priority": "Medium",
+    "description": "Validates Product schema for e-commerce",
+    "documentation": [
+      {
+        "title": "Google Search Central: Product structured data",
+        "url": "https://developers.google.com/search/docs/appearance/structured-data/product"
+      },
+      {
+        "title": "Schema.org: Product",
+        "url": "https://schema.org/Product"
+      },
+      {
+        "title": "Google Rich Results Test",
+        "url": "https://search.google.com/test/rich-results"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Add relevant external links",
+    "priority": "Medium",
+    "description": "Validates that pages include outgoing links to authoritative external sources where appropriate",
+    "documentation": [
+      {
+        "title": "Google Search Central: Qualify your outbound links",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/qualify-outbound-links"
+      },
+      {
+        "title": "MDN: Link types",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Add Review schema markup",
+    "priority": "Medium",
+    "description": "Validates Review and AggregateRating schema on product, service, and business pages to enable star-rating rich results.",
+    "documentation": [
+      {
+        "title": "Google: Review snippet structured data",
+        "url": "https://developers.google.com/search/docs/appearance/structured-data/review-snippet"
+      },
+      {
+        "title": "Schema.org: AggregateRating",
+        "url": "https://schema.org/AggregateRating"
+      },
+      {
+        "title": "Schema.org: Review",
+        "url": "https://schema.org/Review"
+      },
+      {
+        "title": "Google: Rich Results Test",
+        "url": "https://search.google.com/test/rich-results"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Add Twitter Card meta tags",
+    "priority": "Medium",
+    "description": "Validates Twitter (X) Card meta tags for correct card type, image dimensions, and required fields.",
+    "documentation": [
+      {
+        "title": "X (Twitter) Cards documentation",
+        "url": "https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards"
+      },
+      {
+        "title": "X Cards: Getting started guide",
+        "url": "https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Add VideoObject schema to video pages",
+    "priority": "Medium",
+    "description": "Checks for VideoObject structured data on pages containing video content to enable video rich results in Google Search.",
+    "documentation": [
+      {
+        "title": "Google: Video structured data",
+        "url": "https://developers.google.com/search/docs/appearance/structured-data/video"
+      },
+      {
+        "title": "Schema.org: VideoObject",
+        "url": "https://schema.org/VideoObject"
+      },
+      {
+        "title": "Google: Rich Results Test",
+        "url": "https://search.google.com/test/rich-results"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo",
+      "html"
+    ]
+  },
+  {
+    "title": "Audit all noindex pages",
+    "priority": "Medium",
+    "description": "Lists and reviews all pages blocked from indexing to ensure critical content is accessible.",
+    "documentation": [
+      {
+        "title": "Google Search Central: Search Essentials",
+        "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+      },
+      {
+        "title": "Google Search Central documentation",
+        "url": "https://developers.google.com/search/docs"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Audit and refine AI-generated content",
+    "priority": "Medium",
+    "description": "Detects and reviews content that appears to be primarily AI-generated to ensure quality.",
+    "documentation": [
+      {
+        "title": "Google Search Central: Search Essentials",
+        "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+      },
+      {
+        "title": "Google Search Central documentation",
+        "url": "https://developers.google.com/search/docs"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Avoid conflicting indexability signals",
+    "priority": "Medium",
+    "description": "Detects conflicting signals between robots.txt, meta robots, X-Robots-Tag headers, and canonical tags",
+    "documentation": [
+      {
+        "title": "Google Search Central: Robots meta tag, data-nosnippet, and X-Robots-Tag",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag"
+      },
+      {
+        "title": "Google Search Central: Robots.txt specification",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/robots/robots_txt"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Avoid duplicate meta descriptions",
+    "priority": "Medium",
+    "description": "Checks for duplicate meta descriptions across the site",
+    "documentation": [
+      {
+        "title": "Google Search Central: Snippet best practices",
+        "url": "https://developers.google.com/search/docs/appearance/snippet"
+      },
+      {
+        "title": "MDN: meta element name attribute — description",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Screaming Frog",
+        "url": "https://www.screamingfrog.co.uk/seo-spider/"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Avoid keyword stuffing",
+    "priority": "Medium",
+    "description": "Detects excessive keyword repetition in content, titles, or meta tags that signals manipulative SEO",
+    "documentation": [
+      {
+        "title": "Google Search Central: Keyword stuffing spam policy",
+        "url": "https://developers.google.com/search/docs/essentials/spam-policies#keyword-stuffing"
+      },
+      {
+        "title": "Google Search Central: Creating helpful, reliable content",
+        "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Avoid nofollow on internal links",
+    "priority": "Medium",
+    "description": "Flags internal links with rel=nofollow",
+    "documentation": [
+      {
+        "title": "Google Search Central: Qualify your outbound links with rel",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/qualify-outbound-links"
+      },
+      {
+        "title": "Google Blog: Official nofollow link attribute announcement",
+        "url": "https://developers.google.com/search/blog/2019/09/evolving-nofollow-new-ways-to-identify"
+      },
+      {
+        "title": "MDN: rel attribute reference",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Avoid nosnippet on important pages",
+    "priority": "Medium",
+    "description": "Detects pages preventing search engine snippets",
+    "documentation": [
+      {
+        "title": "Google Search Central: Robots meta tag — nosnippet",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag#directives"
+      },
+      {
+        "title": "Google Search Central: Control search result snippets",
+        "url": "https://developers.google.com/search/docs/appearance/snippet"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Avoid redirect chains on canonical URLs",
+    "priority": "Medium",
+    "description": "Ensures that canonical tags point directly to the final destination URL without intermediate redirects.",
+    "documentation": [
+      {
+        "title": "Google Search Central: Search Essentials",
+        "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+      },
+      {
+        "title": "Google Search Central documentation",
+        "url": "https://developers.google.com/search/docs"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Avoid thin content on key pages",
+    "priority": "Medium",
+    "description": "Checks content length on key pages to identify thin content that may underperform in search results.",
+    "documentation": [
+      {
+        "title": "Google: Creating helpful, reliable, people-first content",
+        "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+      },
+      {
+        "title": "Google: Thin content spam policy",
+        "url": "https://developers.google.com/search/docs/essentials/spam-policies#thin-content"
+      },
+      {
+        "title": "Google: How Google fights search spam",
+        "url": "https://developers.google.com/search/docs/essentials/spam-policies"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Cite authoritative external sources",
+    "priority": "Medium",
+    "description": "Checks for citations to reputable external websites to back up factual claims and build trust.",
+    "documentation": [
+      {
+        "title": "Google Search Central: Search Essentials",
+        "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+      },
+      {
+        "title": "Google Search Central documentation",
+        "url": "https://developers.google.com/search/docs"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Create a comprehensive Contact page",
+    "priority": "Medium",
+    "description": "Checks for a dedicated contact page with multiple methods for users to reach out.",
+    "documentation": [
+      {
+        "title": "Google Search Central: Search Essentials",
+        "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+      },
+      {
+        "title": "Google Search Central documentation",
+        "url": "https://developers.google.com/search/docs"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Create a dedicated About page",
+    "priority": "Medium",
+    "description": "Checks for a dedicated about or company page with meaningful content.",
+    "documentation": [
+      {
+        "title": "Google Search Central: Search Essentials",
+        "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+      },
+      {
+        "title": "Google Search Central documentation",
+        "url": "https://developers.google.com/search/docs"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Display a physical business address",
+    "priority": "Medium",
+    "description": "Checks for visible physical address information",
+    "documentation": [
+      {
+        "title": "Google Search Central: Local business structured data",
+        "url": "https://developers.google.com/search/docs/appearance/structured-data/local-business"
+      },
+      {
+        "title": "MDN: The <address> element",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address"
+      },
+      {
+        "title": "Schema.org: PostalAddress",
+        "url": "https://schema.org/PostalAddress"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Display clear author bylines",
+    "priority": "Medium",
+    "description": "Checks for visible author names on content pages to establish transparency and trust.",
+    "documentation": [
+      {
+        "title": "Google Search Central: Search Essentials",
+        "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+      },
+      {
+        "title": "Google Search Central documentation",
+        "url": "https://developers.google.com/search/docs"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Do not link from HTTPS to HTTP",
+    "priority": "Medium",
+    "description": "Detects links from HTTPS pages to HTTP destinations, which trigger mixed content warnings and lose ranking signals",
+    "documentation": [
+      {
+        "title": "Google Search Central: Page experience",
+        "url": "https://developers.google.com/search/docs/appearance/page-experience"
+      },
+      {
+        "title": "MDN: Mixed content — what is mixed content?",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content"
+      },
+      {
+        "title": "W3C: Mixed content specification",
+        "url": "https://www.w3.org/TR/mixed-content/"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Fix invalid links",
+    "priority": "Medium",
+    "description": "Detects malformed, empty, or syntactically invalid link formats on the page",
+    "documentation": [
+      {
+        "title": "Google Search Central: Crawlable links",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/links-crawlable"
+      },
+      {
+        "title": "MDN: The anchor element",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Fix malformed HTML structure",
+    "priority": "Medium",
+    "description": "Ensures that the HTML document is well-formed with correctly nested and closed tags.",
+    "documentation": [
+      {
+        "title": "Google Search Central: Search Essentials",
+        "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+      },
+      {
+        "title": "Google Search Central documentation",
+        "url": "https://developers.google.com/search/docs"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Fix or remove broken external links",
+    "priority": "Medium",
+    "description": "Detects and resolves external links that return error codes or have timed out.",
+    "documentation": [
+      {
+        "title": "Google Search Central: Search Essentials",
+        "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+      },
+      {
+        "title": "Google Search Central documentation",
+        "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Geo Meta Tags",
+    "priority": "Medium",
+    "description": "Checks for geographic meta tags for local or regional targeting",
+    "documentation": [
+      {
+        "title": "Bing Webmaster Tools",
+        "url": "https://learn.microsoft.com/bingwebmaster/"
+      },
+      {
+        "title": "Google Search Central: International targeting",
+        "url": "https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Highlight author credentials and expertise",
+    "priority": "Medium",
+    "description": "Checks for author bios and credentials to establish expertise and trust.",
+    "documentation": [
+      {
+        "title": "Google Search Central: Search Essentials",
+        "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+      },
+      {
+        "title": "Google Search Central documentation",
+        "url": "https://developers.google.com/search/docs"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Implement comprehensive author markup",
+    "priority": "Medium",
+    "description": "Uses structured data to provide machine-readable metadata about content authors.",
+    "documentation": [
+      {
+        "title": "Google Search Central: Search Essentials",
+        "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+      },
+      {
+        "title": "Google Search Central documentation",
+        "url": "https://developers.google.com/search/docs"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Implement valid BreadcrumbList schema",
+    "priority": "Medium",
+    "description": "Adds structured data to breadcrumb navigation for better site hierarchy and search appearance.",
+    "documentation": [
+      {
+        "title": "Google Search Central: Breadcrumb structured data",
+        "url": "https://developers.google.com/search/docs/appearance/structured-data/breadcrumb"
+      },
+      {
+        "title": "Google Search Central documentation",
+        "url": "https://developers.google.com/search/docs"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Include indexable pages in your sitemap",
+    "priority": "Medium",
+    "description": "Checks for canonical-url, indexable pages that are missing from the XML sitemap.",
+    "documentation": [
+      {
+        "title": "Google: Sitemaps overview",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview"
+      },
+      {
+        "title": "Google: Build and submit a sitemap",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap"
+      },
+      {
+        "title": "Sitemaps XML format",
+        "url": "https://www.sitemaps.org/schemas/sitemap/0.9/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Include keywords in URL slugs",
+    "priority": "Medium",
+    "description": "Checks if URL slugs contain descriptive, keyword-relevant words instead of IDs, random strings, or vague terms.",
+    "documentation": [
+      {
+        "title": "Google: Keep a simple URL structure",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/url-structure"
+      },
+      {
+        "title": "Google: URLs and their structure",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/url-structure#simple"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Keep HTML documents under crawl limits",
+    "priority": "Medium",
+    "description": "Checks HTML document size against Googlebot crawl limits",
+    "documentation": [
+      {
+        "title": "Google Search Central: Large site crawl budget",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/large-site-managing-crawl-budget"
+      },
+      {
+        "title": "Google Search Central: How Google indexes pages",
+        "url": "https://developers.google.com/search/docs/fundamentals/how-search-works"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Keep linked PDFs under 60 MB",
+    "priority": "Medium",
+    "description": "Checks linked PDF sizes against Googlebot 60MB truncation limit",
+    "documentation": [
+      {
+        "title": "Google Search Central: File types indexable by Google",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/indexable-file-types"
+      },
+      {
+        "title": "Google Search Central: File size limits for indexing",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/overview-google-crawlers"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Keep NAP details consistent",
+    "priority": "Medium",
+    "description": "Checks for consistent Name, Address, Phone across site",
+    "documentation": [
+      {
+        "title": "Google Business Profile",
+        "url": "https://www.google.com/business/"
+      },
+      {
+        "title": "Schema.org: PostalAddress",
+        "url": "https://schema.org/PostalAddress"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Keep sitemap URLs on the correct domain",
+    "priority": "Medium",
+    "description": "Checks that all URLs in the sitemap belong to the same domain and protocol as the sitemap itself.",
+    "documentation": [
+      {
+        "title": "Google: Sitemap best practices",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview"
+      },
+      {
+        "title": "Sitemaps XML format",
+        "url": "https://www.sitemaps.org/protocol.html"
+      },
+      {
+        "title": "Google: Manage your sitemaps with the Sitemaps API",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Keep URLs concise",
+    "priority": "Medium",
+    "description": "Checks URL length for optimal crawlability and usability",
+    "documentation": [
+      {
+        "title": "Google Search Central: URL structure best practices",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/url-structure"
+      },
+      {
+        "title": "Google SEO Starter Guide",
+        "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Limit unnecessary URL parameters",
+    "priority": "Medium",
+    "description": "Checks for excessive URL parameters",
+    "documentation": [
+      {
+        "title": "Google Search Central: URL structure",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/url-structure"
+      },
+      {
+        "title": "Google Search Central: Consolidate duplicate URLs",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Link directly to final destination URLs",
+    "priority": "Medium",
+    "description": "Detects URLs that redirect and links pointing to redirects",
+    "documentation": [
+      {
+        "title": "Google Search Central: Redirect and Google Search",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/301-redirects"
+      },
+      {
+        "title": "Google Search Central: Links that Google follows",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/links-crawlable"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Make content easy for LLMs to parse",
+    "priority": "Medium",
+    "description": "Analyzes how well LLMs can parse and understand the content",
+    "documentation": [
+      {
+        "title": "Google Search Central: How Google Search works",
+        "url": "https://developers.google.com/search/docs/fundamentals/how-search-works"
+      },
+      {
+        "title": "Google Search Central: AI Overviews and your website",
+        "url": "https://developers.google.com/search/docs/appearance/ai-overviews"
+      },
+      {
+        "title": "Schema.org: FAQPage",
+        "url": "https://schema.org/FAQPage"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Make important pages indexable",
+    "priority": "Medium",
+    "description": "Identifies important pages blocked from search engine indexing by noindex, robots.txt, or other directives",
+    "documentation": [
+      {
+        "title": "Google Search Central: Prevent Google from indexing pages",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/block-indexing"
+      },
+      {
+        "title": "Google Search Central: Robots meta tag",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "MIME Type Validation",
+    "priority": "Medium",
+    "description": "Detects Content-Type header mismatches with file extensions",
+    "documentation": [
+      {
+        "title": "MDN: MIME types (IANA media types)",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/MIME_types"
+      },
+      {
+        "title": "MDN: X-Content-Type-Options",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options"
+      },
+      {
+        "title": "IANA Media Types registry",
+        "url": "https://www.iana.org/assignments/media-types/media-types.xhtml"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "OG Image Size",
+    "priority": "Medium",
+    "description": "Checks og:image meets recommended size (1200x630)",
+    "documentation": [
+      {
+        "title": "The Open Graph Protocol",
+        "url": "https://ogp.me"
+      },
+      {
+        "title": "Open Graph Protocol: Structured properties",
+        "url": "https://ogp.me/#structured"
+      },
+      {
+        "title": "Twitter/X: Cards markup tag reference",
+        "url": "https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "OG URL Match",
+    "priority": "Medium",
+    "description": "Checks that og:url matches canonical URL",
+    "documentation": [
+      {
+        "title": "The Open Graph Protocol",
+        "url": "https://ogp.me"
+      },
+      {
+        "title": "Facebook: Sharing best practices",
+        "url": "https://developers.facebook.com/docs/sharing/best-practices/"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Open Graph Tags",
+    "priority": "Medium",
+    "description": "Validates Open Graph meta tags for social sharing",
+    "documentation": [
+      {
+        "title": "The Open Graph Protocol",
+        "url": "https://ogp.me"
+      },
+      {
+        "title": "Open Graph Protocol: Basic metadata",
+        "url": "https://ogp.me/#metadata"
+      },
+      {
+        "title": "Google: Structured data for social",
+        "url": "https://developers.google.com/search/docs/appearance/structured-data/article"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Optimize article link density",
+    "priority": "Medium",
+    "description": "Ensures articles have a healthy balance of internal and external links relative to their length.",
+    "documentation": [
+      {
+        "title": "Google Search Central: Search Essentials",
+        "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+      },
+      {
+        "title": "Google Search Central documentation",
+        "url": "https://developers.google.com/search/docs"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Provide clear affiliate disclosures",
+    "priority": "Medium",
+    "description": "Checks for affiliate and sponsored content disclosures to maintain transparency.",
+    "documentation": [
+      {
+        "title": "Google Search Central: Search Essentials",
+        "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+      },
+      {
+        "title": "Google Search Central documentation",
+        "url": "https://developers.google.com/search/docs"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Publish an editorial policy page",
+    "priority": "Medium",
+    "description": "Checks for editorial and content policy pages that demonstrate site-wide trustworthiness",
+    "documentation": [
+      {
+        "title": "Google Search Quality Rater Guidelines",
+        "url": "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf"
+      },
+      {
+        "title": "Google Search Central: E-E-A-T and quality content",
+        "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Publish llms.txt for documentation-heavy sites",
+    "priority": "Medium",
+    "description": "Offer an optional llms.txt index that points AI tools to high-value documentation pages and, when useful, a fuller llms-full.txt companion.",
+    "documentation": [
+      {
+        "title": "llms.txt",
+        "url": "https://llmstxt.org/"
+      },
+      {
+        "title": "Google Search Central: AI features and your website",
+        "url": "https://developers.google.com/search/docs/appearance/ai-features"
+      },
+      {
+        "title": "Google: robots.txt introduction",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/robots/intro"
+      }
+    ],
+    "tools": [
+      {
+        "title": "MCP LLMS.txt Explorer (`npx -y @thedaviddias/mcp-llms-txt-explorer`)",
+        "url": "https://github.com/thedaviddias/mcp-llms-txt-explorer"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Service Area Pages",
+    "priority": "Medium",
+    "description": "Checks for properly structured service-area or location pages for businesses serving multiple geographic regions.",
+    "documentation": [
+      {
+        "title": "Google: LocalBusiness structured data",
+        "url": "https://developers.google.com/search/docs/appearance/structured-data/local-business"
+      },
+      {
+        "title": "Schema.org: areaServed",
+        "url": "https://schema.org/areaServed"
+      },
+      {
+        "title": "Google: Doorway pages spam policy",
+        "url": "https://developers.google.com/search/docs/essentials/spam-policies#doorway-pages"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Show content freshness signals",
+    "priority": "Medium",
+    "description": "Checks for last-modified and published date signals that help Google assess content currency",
+    "documentation": [
+      {
+        "title": "Google Search Central: Ranking systems guide",
+        "url": "https://developers.google.com/search/docs/appearance/ranking-systems-guide"
+      },
+      {
+        "title": "Schema.org: dateModified",
+        "url": "https://schema.org/dateModified"
+      },
+      {
+        "title": "HTTP Last-Modified header",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Last-Modified"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Show published and updated dates",
+    "priority": "Medium",
+    "description": "Checks for published and modified dates on content pages",
+    "documentation": [
+      {
+        "title": "Google Search Central: Article structured data",
+        "url": "https://developers.google.com/search/docs/appearance/structured-data/article"
+      },
+      {
+        "title": "Schema.org: dateModified",
+        "url": "https://schema.org/dateModified"
+      },
+      {
+        "title": "Open Graph protocol: article",
+        "url": "https://ogp.me/#type_article"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Rich Results Test",
+        "url": "https://search.google.com/test/rich-results"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Show trust signals on key pages",
+    "priority": "Medium",
+    "description": "Checks for trust badges, certifications, client logos, testimonials, and social proof on high-conversion pages.",
+    "documentation": [
+      {
+        "title": "Google: Quality Rater Guidelines (E-E-A-T)",
+        "url": "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf"
+      },
+      {
+        "title": "Google: Creating helpful, reliable, people-first content",
+        "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+      },
+      {
+        "title": "Google: What is E-E-A-T?",
+        "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content#what-is-eeeat"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Sync HTML canonical tags and Link headers",
+    "priority": "Medium",
+    "description": "Ensures consistency between HTML rel=\"canonical\" tags and HTTP Link canonical-url headers.",
+    "documentation": [
+      {
+        "title": "Google Search Central: Search Essentials",
+        "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+      },
+      {
+        "title": "Google Search Central documentation",
+        "url": "https://developers.google.com/search/docs"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Tel & Mailto Links",
+    "priority": "Medium",
+    "description": "Validates that phone numbers use the tel: scheme and email addresses use the mailto: scheme for one-click contact on mobile devices.",
+    "documentation": [
+      {
+        "title": "IETF RFC 3966: The tel URI for Telephone Numbers",
+        "url": "https://www.rfc-editor.org/info/rfc3966/"
+      },
+      {
+        "title": "MDN: tel URI scheme",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#linking_to_phone_numbers"
+      },
+      {
+        "title": "IETF RFC 2368: The mailto URL scheme",
+        "url": "https://www.rfc-editor.org/info/rfc2368/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "URL Special Characters",
+    "priority": "Medium",
+    "description": "Checks for problematic special characters in URL paths that can cause crawling, parsing, or canonicalization issues.",
+    "documentation": [
+      {
+        "title": "RFC 3986: Uniform Resource Identifier (URI) — Generic Syntax",
+        "url": "https://datatracker.ietf.org/doc/html/rfc3986"
+      },
+      {
+        "title": "Google: Keep a simple URL structure",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/url-structure"
+      },
+      {
+        "title": "MDN: URL encoding",
+        "url": "https://developer.mozilla.org/en-US/docs/Glossary/Percent-encoding"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Use a single descriptive H1",
+    "priority": "Medium",
+    "description": "Validates that each page has exactly one H1 tag containing a descriptive, keyword-relevant heading",
+    "documentation": [
+      {
+        "title": "Google Search Central: Headings and title tags",
+        "url": "https://developers.google.com/search/docs/appearance/title-link"
+      },
+      {
+        "title": "MDN: The HTML Section Heading elements",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Use canonicals on paginated pages",
+    "priority": "Medium",
+    "description": "Checks that paginated pages have proper canonicals",
+    "documentation": [
+      {
+        "title": "Google Search Central: Pagination best practices",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls#use-case-pagination"
+      },
+      {
+        "title": "Google Search Central Blog: 5 common mistakes with rel=canonical",
+        "url": "https://developers.google.com/search/blog/2013/04/5-common-mistakes-with-relcanonical"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Use descriptive anchor text",
+    "priority": "Medium",
+    "description": "Checks for descriptive, keyword-rich anchor text that provides context for users and search engines.",
+    "documentation": [
+      {
+        "title": "Google Search Central: Search Essentials",
+        "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+      },
+      {
+        "title": "Google Search Central documentation",
+        "url": "https://developers.google.com/search/docs"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Use hyphens in URLs",
+    "priority": "Medium",
+    "description": "Checks that URL slugs use hyphens as word separators, not underscores or spaces",
+    "documentation": [
+      {
+        "title": "Google Search Central: URL structure",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/url-structure"
+      },
+      {
+        "title": "Google for Developers: Hyphens vs underscores (Matt Cutts video summary)",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Use lowercase URLs",
+    "priority": "Medium",
+    "description": "Checks that URLs are lowercase",
+    "documentation": [
+      {
+        "title": "Google Search Central: URL structure best practices",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/url-structure"
+      },
+      {
+        "title": "RFC 3986: URI syntax — case normalization",
+        "url": "https://www.rfc-editor.org/info/rfc3986/"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Use trailing slashes consistently",
+    "priority": "Medium",
+    "description": "Checks for consistent trailing slash usage across all URLs to avoid duplicate content and canonicalization issues.",
+    "documentation": [
+      {
+        "title": "Google: Trailing slashes on URLs",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/url-structure"
+      },
+      {
+        "title": "Google: Consolidate duplicate URLs",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Use valid JSON-LD structured data",
+    "priority": "Medium",
+    "description": "Validates JSON-LD structured data for syntax correctness, required properties, and schema.org compliance",
+    "documentation": [
+      {
+        "title": "Google Search Central: Introduction to structured data",
+        "url": "https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data"
+      },
+      {
+        "title": "Schema.org specification",
+        "url": "https://schema.org/docs/schemas.html"
+      },
+      {
+        "title": "JSON-LD specification",
+        "url": "https://www.w3.org/TR/json-ld11/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Schema Markup Validator",
+        "url": "https://validator.schema.org/"
+      },
+      {
+        "title": "JSONLint",
+        "url": "https://jsonlint.com"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Weak Internal Links",
+    "priority": "Medium",
+    "description": "Detects pages with very few dofollow internal links pointing to them, indicating poor link equity distribution and crawl discoverability.",
+    "documentation": [
+      {
+        "title": "Google: Internal links",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/links-crawlable"
+      },
+      {
+        "title": "Google: How Google Search Works — Crawling",
+        "url": "https://developers.google.com/search/docs/fundamentals/how-search-works"
+      },
+      {
+        "title": "Google: Links and PageRank",
+        "url": "https://developers.google.com/search/docs/fundamentals/how-search-works#ranking"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Write at a clear reading level",
+    "priority": "Medium",
+    "description": "Analyzes content readability using Flesch-Kincaid",
+    "documentation": [
+      {
+        "title": "Yoast: What is readability and why is it important?",
+        "url": "https://yoast.com/what-is-readability/"
+      },
+      {
+        "title": "web.dev: Content best practices for the web",
+        "url": "https://web.dev/learn/performance/resource-hints"
+      },
+      {
+        "title": "Nielsen Norman Group: How users read on the web",
+        "url": "https://www.nngroup.com/articles/how-users-read-on-the-web/"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Add share buttons to content pages",
+    "priority": "Low",
+    "description": "Checks for social sharing buttons on articles, blog posts, and other shareable content pages.",
+    "documentation": [
+      {
+        "title": "X (Twitter) Web Intent: Share a Tweet",
+        "url": "https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/overview"
+      },
+      {
+        "title": "LinkedIn Share API",
+        "url": "https://learn.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/share-on-linkedin"
+      },
+      {
+        "title": "Facebook Share Dialog",
+        "url": "https://developers.facebook.com/docs/sharing/web/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "Link to active social profiles",
+    "priority": "Low",
+    "description": "Checks for links to the organization's social media profiles to help search engines connect the site to its social entity and build E-E-A-T signals.",
+    "documentation": [
+      {
+        "title": "Schema.org: sameAs",
+        "url": "https://schema.org/sameAs"
+      },
+      {
+        "title": "Google: Organization structured data",
+        "url": "https://developers.google.com/search/docs/appearance/structured-data/organization"
+      },
+      {
+        "title": "Google: E-E-A-T and Quality Rater Guidelines",
+        "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "URL Stop Words",
+    "priority": "Low",
+    "description": "Flags common stop words in URL slugs that add length without improving keyword relevance.",
+    "documentation": [
+      {
+        "title": "Google: Keep a simple URL structure",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/url-structure"
+      },
+      {
+        "title": "Moz: URL best practices",
+        "url": "https://moz.com/learn/seo/url"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  },
+  {
+    "title": "WebSite Search Schema",
+    "priority": "Low",
+    "description": "Checks for WebSite schema with SearchAction to enable the Sitelinks Searchbox in Google Search results.",
+    "documentation": [
+      {
+        "title": "Google: Sitelinks Searchbox structured data",
+        "url": "https://developers.google.com/search/docs/appearance/structured-data/sitelinks-searchbox"
+      },
+      {
+        "title": "Schema.org: SearchAction",
+        "url": "https://schema.org/SearchAction"
+      },
+      {
+        "title": "Schema.org: WebSite",
+        "url": "https://schema.org/WebSite"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console/about"
+      }
+    ],
+    "tags": [
+      "all",
+      "seo"
+    ]
+  }
+]

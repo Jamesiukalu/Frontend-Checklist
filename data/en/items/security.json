@@ -1,0 +1,614 @@
+[
+  {
+    "title": "Leaked Environment Variables",
+    "priority": "High",
+    "description": "Checks for exposed API keys, tokens, passwords, and other secrets embedded in HTML source, JavaScript bundles, or client-accessible files.",
+    "documentation": [
+      {
+        "title": "OWASP: Secrets Management Cheat Sheet",
+        "url": "https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html"
+      },
+      {
+        "title": "OWASP Top 10 A02:2021 - Cryptographic Failures",
+        "url": "https://owasp.org/Top10/A02_2021-Cryptographic_Failures/"
+      },
+      {
+        "title": "GitHub: Secret Scanning",
+        "url": "https://docs.github.com/en/code-security/secret-scanning/about-secret-scanning"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Mozilla Observatory",
+        "url": "https://observatory.mozilla.org/"
+      }
+    ],
+    "tags": [
+      "all",
+      "security"
+    ]
+  },
+  {
+    "title": "Redirect HTTP to HTTPS",
+    "priority": "High",
+    "description": "All HTTP requests must be permanently redirected (301) to HTTPS to prevent users from accessing your site over an insecure connection.",
+    "documentation": [
+      {
+        "title": "MDN: Redirections in HTTP",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Redirections"
+      },
+      {
+        "title": "OWASP: Transport Layer Protection Cheat Sheet",
+        "url": "https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html"
+      },
+      {
+        "title": "web.dev: Why HTTPS Matters",
+        "url": "https://web.dev/articles/why-https-matters"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Mozilla Observatory",
+        "url": "https://observatory.mozilla.org/"
+      }
+    ],
+    "tags": [
+      "all",
+      "security"
+    ]
+  },
+  {
+    "title": "Serve all pages over HTTPS",
+    "priority": "High",
+    "description": "Every page and resource on your site must be delivered over HTTPS to protect user data in transit and enable modern browser features.",
+    "documentation": [
+      {
+        "title": "MDN: Why HTTPS Matters",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Security/Transport_Layer_Security"
+      },
+      {
+        "title": "web.dev: Why HTTPS Matters",
+        "url": "https://web.dev/articles/why-https-matters"
+      },
+      {
+        "title": "OWASP: Transport Layer Protection Cheat Sheet",
+        "url": "https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Mozilla Observatory",
+        "url": "https://observatory.mozilla.org/"
+      }
+    ],
+    "tags": [
+      "all",
+      "security"
+    ]
+  },
+  {
+    "title": "Submit forms over HTTPS",
+    "priority": "High",
+    "description": "All HTML form actions must point to HTTPS URLs to ensure form data is encrypted in transit and cannot be intercepted by network attackers.",
+    "documentation": [
+      {
+        "title": "MDN: Sending form data",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data"
+      },
+      {
+        "title": "OWASP: Transport Layer Protection Cheat Sheet",
+        "url": "https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html"
+      },
+      {
+        "title": "web.dev: Why HTTPS Matters",
+        "url": "https://web.dev/articles/why-https-matters"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Mozilla Observatory",
+        "url": "https://observatory.mozilla.org/"
+      }
+    ],
+    "tags": [
+      "all",
+      "security"
+    ]
+  },
+  {
+    "title": "Audit dependencies for known vulnerabilities",
+    "priority": "High",
+    "description": "Dependencies are regularly scanned for known security vulnerabilities using automated tooling, and critical findings are remediated before deployment.",
+    "documentation": [
+      {
+        "title": "OWASP: A06 Vulnerable and Outdated Components",
+        "url": "https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/"
+      },
+      {
+        "title": "npm audit documentation",
+        "url": "https://docs.npmjs.com/cli/v10/commands/npm-audit"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Snyk",
+        "url": "https://snyk.io/"
+      },
+      {
+        "title": "GitHub Dependabot",
+        "url": "https://docs.github.com/en/code-security/dependabot"
+      },
+      {
+        "title": "OSV Database",
+        "url": "https://osv.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "security"
+    ]
+  },
+  {
+    "title": "Avoid mixed content on HTTPS pages",
+    "priority": "High",
+    "description": "An HTTPS page that loads resources over HTTP has mixed content — browsers block or warn about these requests, breaking functionality and undermining transport security.",
+    "documentation": [
+      {
+        "title": "MDN: Mixed Content",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content"
+      },
+      {
+        "title": "web.dev: Fixing Mixed Content",
+        "url": "https://web.dev/articles/fixing-mixed-content"
+      },
+      {
+        "title": "W3C: Mixed Content Level 2",
+        "url": "https://www.w3.org/TR/mixed-content/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Mozilla Observatory",
+        "url": "https://observatory.mozilla.org/"
+      }
+    ],
+    "tags": [
+      "all",
+      "security"
+    ]
+  },
+  {
+    "title": "Implement a content security policy",
+    "priority": "High",
+    "description": "A Content Security Policy is implemented to prevent XSS attacks and control resource loading.",
+    "documentation": [
+      {
+        "title": "OWASP: HTTP Headers Cheat Sheet",
+        "url": "https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html"
+      },
+      {
+        "title": "MDN: Web security",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Security"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Mozilla Observatory",
+        "url": "https://observatory.mozilla.org/"
+      }
+    ],
+    "tags": [
+      "all",
+      "security"
+    ]
+  },
+  {
+    "title": "Prevent stack trace exposure in production error responses",
+    "priority": "High",
+    "description": "Production error responses never include stack traces, internal file paths, framework internals, or other debugging detail that could aid an attacker (OWASP A09).",
+    "documentation": [
+      {
+        "title": "OWASP: A09:2021 – Security Logging and Monitoring Failures",
+        "url": "https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/"
+      },
+      {
+        "title": "OWASP: Error Handling Cheat Sheet",
+        "url": "https://cheatsheetseries.owasp.org/cheatsheets/Error_Handling_Cheat_Sheet.html"
+      }
+    ],
+    "tags": [
+      "all",
+      "security"
+    ]
+  },
+  {
+    "title": "Secure password input fields",
+    "priority": "High",
+    "description": "Password fields implement security best practices including proper autocomplete, show/hide toggle, and strength indicators.",
+    "documentation": [
+      {
+        "title": "OWASP: HTTP Headers Cheat Sheet",
+        "url": "https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html"
+      },
+      {
+        "title": "MDN: Web security",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Security"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Mozilla Observatory",
+        "url": "https://observatory.mozilla.org/"
+      }
+    ],
+    "tags": [
+      "all",
+      "security",
+      "html",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Set an HSTS header",
+    "priority": "High",
+    "description": "The Strict-Transport-Security response header tells browsers to always use HTTPS for your domain, preventing protocol downgrade attacks and cookie hijacking.",
+    "documentation": [
+      {
+        "title": "MDN: Strict-Transport-Security",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security"
+      },
+      {
+        "title": "RFC 6797: HTTP Strict Transport Security (HSTS)",
+        "url": "https://www.rfc-editor.org/info/rfc6797/"
+      },
+      {
+        "title": "OWASP: HTTP Strict Transport Security Cheat Sheet",
+        "url": "https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Mozilla Observatory",
+        "url": "https://observatory.mozilla.org/"
+      }
+    ],
+    "tags": [
+      "all",
+      "security"
+    ]
+  },
+  {
+    "title": "Set an X-Frame-Options header",
+    "priority": "High",
+    "description": "The X-Frame-Options header controls whether your page can be embedded in an iframe, frame, or object — preventing clickjacking attacks.",
+    "documentation": [
+      {
+        "title": "MDN: X-Frame-Options",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options"
+      },
+      {
+        "title": "OWASP: Clickjacking Defense Cheat Sheet",
+        "url": "https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html"
+      },
+      {
+        "title": "MDN: CSP frame-ancestors",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Mozilla Observatory",
+        "url": "https://observatory.mozilla.org/"
+      }
+    ],
+    "tags": [
+      "all",
+      "security"
+    ]
+  },
+  {
+    "title": "Set Secure, HttpOnly, and SameSite flags on session cookies",
+    "priority": "High",
+    "description": "All session and authentication cookies are issued with the Secure, HttpOnly, and an appropriate SameSite flag to prevent interception, JavaScript exfiltration, and cross-site request forgery.",
+    "documentation": [
+      {
+        "title": "MDN: Set-Cookie",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie"
+      },
+      {
+        "title": "OWASP: Session Management Cheat Sheet",
+        "url": "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html"
+      }
+    ],
+    "tags": [
+      "all",
+      "security"
+    ]
+  },
+  {
+    "title": "Set X-Content-Type-Options: nosniff",
+    "priority": "High",
+    "description": "The X-Content-Type-Options: nosniff header prevents browsers from MIME-sniffing a response away from the declared Content-Type, blocking a class of drive-by download and XSS attacks.",
+    "documentation": [
+      {
+        "title": "MDN: X-Content-Type-Options",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options"
+      },
+      {
+        "title": "OWASP: Security Headers Cheat Sheet",
+        "url": "https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html"
+      },
+      {
+        "title": "Fetch Standard: MIME type sniffing",
+        "url": "https://fetch.spec.whatwg.org/#should-response-to-request-be-blocked-due-to-mime-type"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Mozilla Observatory",
+        "url": "https://observatory.mozilla.org/"
+      }
+    ],
+    "tags": [
+      "all",
+      "security"
+    ]
+  },
+  {
+    "title": "Store authentication tokens securely",
+    "priority": "High",
+    "description": "Sensitive authentication tokens are stored in httpOnly cookies rather than localStorage or sessionStorage to prevent theft via cross-site scripting attacks (OWASP A07).",
+    "documentation": [
+      {
+        "title": "OWASP: Session Management Cheat Sheet",
+        "url": "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html"
+      },
+      {
+        "title": "OWASP: A07:2021 – Identification and Authentication Failures",
+        "url": "https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/"
+      },
+      {
+        "title": "MDN: Using HTTP cookies",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies"
+      }
+    ],
+    "tags": [
+      "all",
+      "security"
+    ]
+  },
+  {
+    "title": "External Link Security",
+    "priority": "Medium",
+    "description": "Links that open in a new tab using target='_blank' must include rel='noopener noreferrer' to prevent the opened page from accessing the opener's window context.",
+    "documentation": [
+      {
+        "title": "MDN: Link types: noreferrer",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/noreferrer"
+      },
+      {
+        "title": "MDN: Link types: noopener",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/noopener"
+      },
+      {
+        "title": "OWASP WSTG: Testing for Reverse Tabnabbing",
+        "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/11-Client-side_Testing/14-Testing_for_Reverse_Tabnabbing"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Mozilla Observatory",
+        "url": "https://observatory.mozilla.org/"
+      }
+    ],
+    "tags": [
+      "all",
+      "security"
+    ]
+  },
+  {
+    "title": "Link to your terms of service in the footer",
+    "priority": "Medium",
+    "description": "Websites offering services to users should publish Terms of Service and link to them from every page — this establishes the legal agreement governing use of the service.",
+    "documentation": [
+      {
+        "title": "FTC: Disclosures Guide",
+        "url": "https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers"
+      },
+      {
+        "title": "GDPR Article 13 - Information to be provided where personal data collected from the data subject",
+        "url": "https://gdpr-info.eu/art-13-gdpr/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Mozilla Observatory",
+        "url": "https://observatory.mozilla.org/"
+      }
+    ],
+    "tags": [
+      "all",
+      "security",
+      "seo"
+    ]
+  },
+  {
+    "title": "Protect public forms with CAPTCHA",
+    "priority": "Medium",
+    "description": "Public forms that accept user input without authentication must include bot protection to prevent spam, credential stuffing, and automated abuse.",
+    "documentation": [
+      {
+        "title": "OWASP: Credential Stuffing Prevention Cheat Sheet",
+        "url": "https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html"
+      },
+      {
+        "title": "OWASP: Automated Threats to Web Applications",
+        "url": "https://owasp.org/www-project-automated-threats-to-web-applications/"
+      },
+      {
+        "title": "Cloudflare Turnstile documentation",
+        "url": "https://developers.cloudflare.com/turnstile/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Mozilla Observatory",
+        "url": "https://observatory.mozilla.org/"
+      }
+    ],
+    "tags": [
+      "all",
+      "security"
+    ]
+  },
+  {
+    "title": "Set a Permissions-Policy header",
+    "priority": "Medium",
+    "description": "The Permissions-Policy header lets servers restrict which browser features (camera, microphone, geolocation, etc.) can be used in a page or its embedded iframes.",
+    "documentation": [
+      {
+        "title": "MDN: Permissions-Policy",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy"
+      },
+      {
+        "title": "W3C: Permissions Policy specification",
+        "url": "https://w3c.github.io/webappsec-permissions-policy/"
+      },
+      {
+        "title": "OWASP: Security Headers Cheat Sheet",
+        "url": "https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Mozilla Observatory",
+        "url": "https://observatory.mozilla.org/"
+      }
+    ],
+    "tags": [
+      "all",
+      "security"
+    ]
+  },
+  {
+    "title": "Set a Referrer-Policy header",
+    "priority": "Medium",
+    "description": "The Referrer-Policy header controls how much referrer information is sent when navigating from your site to another, protecting user privacy and preventing leaking sensitive URL parameters.",
+    "documentation": [
+      {
+        "title": "MDN: Referrer-Policy",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy"
+      },
+      {
+        "title": "web.dev: Best Practices for Referrer Policies",
+        "url": "https://web.dev/articles/referrer-best-practices"
+      },
+      {
+        "title": "W3C Referrer Policy specification",
+        "url": "https://www.w3.org/TR/referrer-policy/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Mozilla Observatory",
+        "url": "https://observatory.mozilla.org/"
+      }
+    ],
+    "tags": [
+      "all",
+      "security"
+    ]
+  },
+  {
+    "title": "Use COOP, COEP, and CORP for cross-origin isolation when needed",
+    "priority": "Medium",
+    "description": "Sensitive or high-capability applications use COOP, COEP, and CORP deliberately, audit third-party embeds, and verify cross-origin isolation in the browser before relying on it.",
+    "documentation": [
+      {
+        "title": "MDN: Cross-Origin-Opener-Policy (COOP) header",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy"
+      },
+      {
+        "title": "MDN: Cross-Origin-Embedder-Policy (COEP) header",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy"
+      },
+      {
+        "title": "MDN: Cross-Origin-Resource-Policy (CORP) header",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Resource-Policy"
+      },
+      {
+        "title": "web.dev: Why you need cross-origin isolated for powerful features",
+        "url": "https://web.dev/articles/why-coop-coep"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Mozilla Observatory",
+        "url": "https://observatory.mozilla.org/"
+      }
+    ],
+    "tags": [
+      "all",
+      "security",
+      "javascript"
+    ]
+  },
+  {
+    "title": "Adblock Element Hiding",
+    "priority": "Low",
+    "description": "Checks for HTML elements and CSS classes that would be hidden by common adblockers, causing layout breaks or missing functionality for users with ad blocking enabled.",
+    "documentation": [
+      {
+        "title": "EasyList Filter Rules",
+        "url": "https://easylist.to/"
+      },
+      {
+        "title": "uBlock Origin Filter Syntax",
+        "url": "https://github.com/gorhill/uBlock/wiki/Static-filter-syntax"
+      },
+      {
+        "title": "MDN: HTML class attribute",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Mozilla Observatory",
+        "url": "https://observatory.mozilla.org/"
+      }
+    ],
+    "tags": [
+      "all",
+      "security"
+    ]
+  },
+  {
+    "title": "Blocked Tracking Links",
+    "priority": "Low",
+    "description": "Links and resources pointing to known tracking or advertising domains may be blocked by adblockers, breaking navigation and functionality for a significant portion of users.",
+    "documentation": [
+      {
+        "title": "EasyList Filter Lists",
+        "url": "https://easylist.to/"
+      },
+      {
+        "title": "uBlock Origin Filter Syntax",
+        "url": "https://github.com/gorhill/uBlock/wiki/Static-filter-syntax"
+      },
+      {
+        "title": "web.dev: Self-hosting fonts and scripts",
+        "url": "https://web.dev/articles/font-best-practices"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Mozilla Observatory",
+        "url": "https://observatory.mozilla.org/"
+      }
+    ],
+    "tags": [
+      "all",
+      "security"
+    ]
+  }
+]

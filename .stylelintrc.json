@@ -1,0 +1,33 @@
+{
+  "extends": "stylelint-config-standard-scss",
+  "rules": {
+    "color-named": ["always-where-possible", {"ignore": ["inside-function"]}],
+    "color-hex-length": "long",
+    "max-nesting-depth": 3,
+    "unit-allowed-list": ["%", "px", "rem", "s", "deg", "ms", "fr", "pt"],
+    "selector-class-pattern": null,
+    "selector-id-pattern": null,
+    "scss/at-mixin-pattern": null,
+    "scss/no-global-function-names": null,
+    "scss/comment-no-empty": null,
+    "scss/double-slash-comment-empty-line-before": null,
+    "scss/dollar-variable-empty-line-before": null,
+    "scss/at-else-empty-line-before": null,
+    "scss/at-else-closing-brace-newline-after": null,
+    "scss/at-else-closing-brace-space-after": null,
+    "scss/at-if-closing-brace-newline-after": null,
+    "scss/at-if-closing-brace-space-after": null,
+    "color-function-notation": null,
+    "color-function-alias-notation": null,
+    "alpha-value-notation": null,
+    "hue-degree-notation": null,
+    "media-feature-range-notation": null,
+    "property-no-vendor-prefix": null,
+    "property-no-deprecated": null,
+    "declaration-block-no-redundant-longhand-properties": null,
+    "value-keyword-case": null,
+    "number-max-precision": null,
+    "no-duplicate-at-import-rules": null,
+    "keyframes-name-pattern": null
+  }
+}

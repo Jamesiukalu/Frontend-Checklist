@@ -1,0 +1,4 @@
+{
+  "spec": "test/**/*.test.js",
+  "require": ["jsdom-global/register.js", "@babel/register"]
+}
