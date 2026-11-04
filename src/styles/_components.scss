@@ -734,3 +734,20 @@
     flex-direction: column;
   }
 }
+
+@media print {
+  .s-topbar,
+  .c-audit__form,
+  .c-audit__actions,
+  .c-audit__note,
+  .c-audit__status,
+  .c-help,
+  .c-sidebar,
+  footer {
+    display: none !important;
+  }
+
+  .c-audit__item {
+    break-inside: avoid;
+  }
+}

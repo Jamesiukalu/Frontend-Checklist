@@ -104,7 +104,17 @@
     "VIEW_CHECKLIST": "Ouvrir la checklist →",
     "NOTE": "Les vérifications automatiques ne couvrent que ce qui se constate dans le HTML et les en-têtes de la page. Le reste, comme les tests sur appareils réels ou la qualité du contenu, reste à vérifier manuellement. Seules les pages publiques peuvent être auditées.",
     "NONE_FAILED": "Aucun échec. Bravo !",
-    "NONE_PASSED": "Aucun élément réussi pour l'instant."
+    "NONE_PASSED": "Aucun élément réussi pour l'instant.",
+    "EXPORT_MD": "Télécharger en Markdown",
+    "COPY_MD": "Copier le Markdown",
+    "COPY_LINK": "Copier le lien de partage",
+    "PRINT": "Imprimer / enregistrer en PDF",
+    "COPIED": "Copié.",
+    "REPORT_TITLE": "Rapport d'audit Front-End",
+    "REPORT_PAGE": "Page",
+    "REPORT_DATE": "Date",
+    "REPORT_SCORE": "Score",
+    "REPORT_FOOTER": "Généré par"
   },
   "nav": {
     "LABEL": "Principal",

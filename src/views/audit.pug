@@ -27,6 +27,10 @@ block main
       .c-audit__actions
         button.button.--fill.js-audit-apply(type="button")= translation.audit.APPLY
         a.c-audit__link(href=(translation.SITE_LANGUAGE === 'en' ? '' : '/' + translation.SITE_LANGUAGE) + '/')= translation.audit.VIEW_CHECKLIST
+        button.button.js-audit-export(type="button" data-action="download")= translation.audit.EXPORT_MD
+        button.button.js-audit-export(type="button" data-action="copy-md")= translation.audit.COPY_MD
+        button.button.js-audit-export(type="button" data-action="copy-link")= translation.audit.COPY_LINK
+        button.button.js-audit-export(type="button" data-action="print")= translation.audit.PRINT
         span.c-audit__applied.js-audit-applied(role="status" aria-live="polite")
 
       h2.c-audit__heading= translation.audit.FAILED_HEADING

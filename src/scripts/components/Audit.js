@@ -38,7 +38,90 @@ class Audit {
       .querySelector('.js-audit-apply')
       .addEventListener('click', () => this.apply());
 
-    this.restore();
+    document
+      .querySelectorAll('.js-audit-export')
+      .forEach(btn =>
+        btn.addEventListener('click', () =>
+          this.exportAction(btn.dataset.action),
+        ),
+      );
+
+    const shared = new URLSearchParams(window.location.search).get('url');
+
+    if (shared) {
+      this.input.value = shared;
+      this.run(shared);
+    } else {
+      this.restore();
+    }
+  }
+
+  toMarkdown() {
+    const {labels, current: data} = this;
+    const rank = {High: 0, Medium: 1, Low: 2};
+    const rows = status =>
+      data.results
+        .filter(r => r.status === status && this.catalog[r.id])
+        .sort(
+          (a, b) =>
+            (rank[this.catalog[a.id].priority] ?? 3) -
+            (rank[this.catalog[b.id].priority] ?? 3),
+        )
+        .map(r => {
+          const item = this.catalog[r.id];
+          const detail = r.detail ? ` — ${r.detail}` : '';
+
+          return `- [${status === 'pass' ? 'x' : ' '}] **${item.priority}** ${item.title}${detail}`;
+        });
+
+    return [
+      `# ${labels.REPORT_TITLE}`,
+      '',
+      `- ${labels.REPORT_PAGE}: ${data.finalUrl}`,
+      `- ${labels.REPORT_DATE}: ${new Date().toISOString().slice(0, 10)}`,
+      `- ${labels.REPORT_SCORE}: ${data.score.percent}% (${data.score.passed}/${data.score.total})`,
+      '',
+      `## ${labels.FAILED_HEADING}`,
+      '',
+      ...(rows('fail').length ? rows('fail') : [labels.NONE_FAILED]),
+      '',
+      `## ${labels.PASSED_HEADING}`,
+      '',
+      ...(rows('pass').length ? rows('pass') : [labels.NONE_PASSED]),
+      '',
+      `${labels.REPORT_FOOTER} ${window.location.origin}${this.prefix}/audit`,
+      '',
+    ].join('\n');
+  }
+
+  async exportAction(action) {
+    if (!this.current) return;
+
+    if (action === 'print') return window.print();
+
+    if (action === 'download') {
+      const blob = new Blob([this.toMarkdown()], {type: 'text/markdown'});
+      const link = el('a');
+      const host = new URL(this.current.finalUrl).hostname;
+
+      link.href = URL.createObjectURL(blob);
+      link.download = `audit-${host}.md`;
+      link.click();
+      URL.revokeObjectURL(link.href);
+      return;
+    }
+
+    const text =
+      action === 'copy-link'
+        ? `${window.location.origin}${this.prefix}/audit?url=${encodeURIComponent(this.current.finalUrl)}`
+        : this.toMarkdown();
+
+    try {
+      await navigator.clipboard.writeText(text);
+      this.applied.textContent = this.labels.COPIED;
+    } catch {
+      this.applied.textContent = text;
+    }
   }
 
   // Show the previous audit again after navigating away and back
