@@ -50,7 +50,7 @@ const dataFolder = './data';
 
 const langs = fs
   .readdirSync(dataFolder)
-  .filter((file) => fs.statSync(path.join(dataFolder, file)).isDirectory());
+  .filter(file => fs.statSync(path.join(dataFolder, file)).isDirectory());
 
 const lang = argv.l === undefined ? 'en' : argv.l; // Default language
 
@@ -77,14 +77,14 @@ const onError = function onError(error) {
 
 const plumberOptions = {errorHandler: isWatching ? onError : false};
 
-const loadProjectData = (l) =>
+const loadProjectData = l =>
   JSON.parse(fs.readFileSync(`./data/${l}/_project.json`, 'utf8'));
 
 // Waits for every stream so the gulp task only completes once all are written
-const allStreams = (streams) => Promise.all(streams.map((s) => finished(s)));
+const allStreams = streams => Promise.all(streams.map(s => finished(s)));
 
 // Wraps an async (file) => Buffer function as a vinyl transform stream
-const mapContents = (fn) =>
+const mapContents = fn =>
   new Transform({
     objectMode: true,
     async transform(file, _enc, cb) {
@@ -130,7 +130,7 @@ export function compileAuditPug() {
 
 export function compileAllPug() {
   return allStreams(
-    langs.map((l) =>
+    langs.map(l =>
       gulp
         .src(`${dirs.src}/views/index-${l}.pug`)
         .pipe(data(() => loadProjectData(l)))
@@ -142,7 +142,7 @@ export function compileAllPug() {
 
 export function compileAllAuditPug() {
   return allStreams(
-    langs.map((l) =>
+    langs.map(l =>
       gulp
         .src(`${dirs.src}/views/audit.pug`)
         .pipe(data(() => loadProjectData(l)))
@@ -187,16 +187,16 @@ const beasties = new Beasties({
   logLevel: 'warn',
 });
 
-const minifyPage = (html) =>
+const minifyPage = html =>
   minifyHtml(html, {collapseWhitespace: true, removeComments: true});
 
 export function criticalCss() {
   return allStreams([
-    ...langs.map((l) =>
+    ...langs.map(l =>
       gulp
         .src(`${dirs.dest}/${l === 'en' ? '' : `${l}/`}audit/index.html`)
         .pipe(
-          mapContents(async (file) =>
+          mapContents(async file =>
             Buffer.from(
               await minifyPage(
                 await beasties.process(file.contents.toString()),
@@ -206,11 +206,11 @@ export function criticalCss() {
         )
         .pipe(gulp.dest(`${dirs.dest}/${l === 'en' ? '' : `${l}/`}audit`)),
     ),
-    ...langs.map((l) =>
+    ...langs.map(l =>
       gulp
         .src(`${dirs.dest}/index-${l}.html`)
         .pipe(
-          mapContents(async (file) =>
+          mapContents(async file =>
             Buffer.from(
               await minifyPage(
                 await beasties.process(file.contents.toString()),
@@ -241,7 +241,7 @@ export function webpackScripts() {
 // IMAGES
 // ========================================
 
-const optimizeImage = async (file) => {
+const optimizeImage = async file => {
   const ext = path.extname(file.path).toLowerCase();
   const input = file.contents;
   switch (ext) {
@@ -260,7 +260,7 @@ const optimizeImage = async (file) => {
 };
 
 // Keeps the original when optimizing would make the file larger
-const smallest = (fn) => async (file) => {
+const smallest = fn => async file => {
   const optimized = await fn(file);
   return optimized.length < file.contents.length ? optimized : file.contents;
 };
@@ -286,7 +286,29 @@ export const compressImages = gulp.series(compressWebp, function images() {
 
 export function serve(done) {
   browserSync.init({
-    server: {baseDir: './dist', index: 'index.html'},
+    server: {
+      baseDir: './dist',
+      index: 'index.html',
+      serveStaticOptions: {extensions: ['html']},
+    },
+    // Mirror the Vercel function locally so the audit page works in dev
+    middleware: [
+      (req, res, next) => {
+        const url = new URL(req.url, 'http://localhost');
+
+        if (url.pathname !== '/api/audit') return next();
+        res.status = code => {
+          res.statusCode = code;
+          return res;
+        };
+        res.json = body => {
+          res.setHeader('Content-Type', 'application/json');
+          res.end(JSON.stringify(body));
+        };
+        req.query = Object.fromEntries(url.searchParams);
+        return require('./api/audit.js')(req, res);
+      },
+    ],
     notify: false,
     open: true,
   });
@@ -312,7 +334,7 @@ const cdnFiles = [
   '/img/logos/logo-front-end-checklist.webp',
 ];
 
-const escapeRegExp = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const escapeRegExp = str => str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
 // Rewrites asset URLs to a CDN. Opt in with CDN_BASE (e.g. //cdn.example.com)
 export function cdn(done) {
@@ -325,11 +347,11 @@ export function cdn(done) {
   );
 
   return allStreams(
-    langs.map((l) =>
+    langs.map(l =>
       gulp
         .src(`./dist/index-${l}.html`)
         .pipe(
-          mapContents(async (file) =>
+          mapContents(async file =>
             Buffer.from(
               file.contents.toString().replace(pattern, `$1${base}$2`),
             ),
@@ -343,7 +365,7 @@ export function cdn(done) {
 export const cleanDist = () => deleteAsync(['./dist'], {force: true});
 
 // Merges JSON files into one object keyed by file name (without extension)
-const concatJson = (files) =>
+const concatJson = files =>
   files.reduce((acc, file) => {
     acc[path.basename(file, '.json')] = JSON.parse(
       fs.readFileSync(file, 'utf8'),
@@ -351,12 +373,12 @@ const concatJson = (files) =>
     return acc;
   }, {});
 
-const jsonFilesIn = (dir) =>
+const jsonFilesIn = dir =>
   fs
     .readdirSync(dir)
-    .filter((f) => f.endsWith('.json'))
+    .filter(f => f.endsWith('.json'))
     .sort()
-    .map((f) => path.join(dir, f));
+    .map(f => path.join(dir, f));
 
 function rebuildJson(l) {
   const base = `./data/${l}`;
@@ -386,7 +408,7 @@ export function jsonRebuildAll(done) {
 // Static, CORS-friendly JSON API: /api/checklist.<lang>.json
 export function apiBuild(done) {
   fs.mkdirSync(`${dirs.dest}/api`, {recursive: true});
-  langs.forEach((l) => {
+  langs.forEach(l => {
     const items = JSON.parse(
       fs.readFileSync(`./data/${l}/_items.json`, 'utf8'),
     );
@@ -421,7 +443,7 @@ export function copy() {
 }
 
 export function modernizrBuild(done) {
-  modernizr.build(modernizrConfig, (code) => {
+  modernizr.build(modernizrConfig, code => {
     fs.writeFile(`${dirs.src}/modernizr-custom.min.js`, code, done);
   });
 }
@@ -447,6 +469,7 @@ export function watch() {
 export const dev = gulp.series(
   jsonRebuild,
   gulp.parallel(
+    apiBuild,
     compilePug,
     compileAuditPug,
     compileStyles,

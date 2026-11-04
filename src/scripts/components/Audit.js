@@ -166,7 +166,7 @@ class Audit {
         fetch(`/api/audit?url=${encodeURIComponent(url)}`),
         this.loadCatalog(),
       ]);
-      const data = await res.json();
+      const data = await res.json().catch(() => ({}));
 
       if (!res.ok) throw new Error(data.error || this.labels.ERROR);
       data.language = this.lang;
