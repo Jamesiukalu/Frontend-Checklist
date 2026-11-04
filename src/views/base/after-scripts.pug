@@ -1,4 +1,4 @@
-script(src="/scripts/app.bundle.js" async)
+script(src="/scripts/app.bundle.js?v=" + ASSET_VERSION async)
 script.
   document.addEventListener('click', function (event) {
     var button = event.target.closest('.js-theme-toggle');

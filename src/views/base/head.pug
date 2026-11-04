@@ -26,10 +26,10 @@ script.
     document.documentElement.setAttribute('data-theme', theme);
   })();
 
-link(rel="preload" as="style" href="/styles/main.min.css" onload="this.rel='stylesheet'")
+link(rel="preload" as="style" href="/styles/main.min.css?v=" + ASSET_VERSION onload="this.rel='stylesheet'")
 
 noscript
-  link(rel="stylesheet" href="/styles/main.min.css")
+  link(rel="stylesheet" href="/styles/main.min.css?v=" + ASSET_VERSION)
 
 script.
   /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */

@@ -77,8 +77,13 @@ const onError = function onError(error) {
 
 const plumberOptions = {errorHandler: isWatching ? onError : false};
 
-const loadProjectData = l =>
-  JSON.parse(fs.readFileSync(`./data/${l}/_project.json`, 'utf8'));
+// Query-string version so browsers never reuse CSS/JS from an older build
+const ASSET_VERSION = Date.now().toString(36);
+
+const loadProjectData = l => ({
+  ...JSON.parse(fs.readFileSync(`./data/${l}/_project.json`, 'utf8')),
+  ASSET_VERSION,
+});
 
 // Waits for every stream so the gulp task only completes once all are written
 const allStreams = streams => Promise.all(streams.map(s => finished(s)));
