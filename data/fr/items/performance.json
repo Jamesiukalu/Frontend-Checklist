@@ -1,0 +1,1137 @@
+[
+  {
+    "title": "Optimiser le Largest Contentful Paint",
+    "priority": "High",
+    "description": "Pour offrir une bonne expérience, l’élément de contenu le plus grand se charge en moins de 2,5 secondes.",
+    "documentation": [
+      {
+        "title": "web.dev: Learn Performance",
+        "url": "https://web.dev/learn/performance"
+      },
+      {
+        "title": "Chrome Developers: Lighthouse overview",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Activer la mise en cache du navigateur",
+    "priority": "High",
+    "description": "Configurez correctement les en-têtes Cache-Control et ETag pour les ressources statiques.",
+    "documentation": [
+      {
+        "title": "web.dev: Learn Performance",
+        "url": "https://web.dev/learn/performance"
+      },
+      {
+        "title": "Chrome Developers: Lighthouse overview",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Activer HTTP/2 ou HTTP/3",
+    "priority": "High",
+    "description": "Utilisez les protocoles HTTP modernes pour permettre le multiplexage des requêtes et réduire la latence du réseau.",
+    "documentation": [
+      {
+        "title": "web.dev: Learn Performance",
+        "url": "https://web.dev/learn/performance"
+      },
+      {
+        "title": "Chrome Developers: Lighthouse overview",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Activer la compression des ressources textuelles",
+    "priority": "High",
+    "description": "Compressez les ressources textuelles (HTML, CSS, JS) avec Gzip ou Brotli afin de réduire le volume de données transférées.",
+    "documentation": [
+      {
+        "title": "web.dev: Learn Performance",
+        "url": "https://web.dev/learn/performance"
+      },
+      {
+        "title": "Chrome Developers: Lighthouse overview",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      },
+      {
+        "title": "Patterns.dev: Compressing JavaScript",
+        "url": "https://www.patterns.dev/vanilla/compression/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Mettre en œuvre Google Consent Mode v2",
+    "priority": "High",
+    "description": "Adaptez le comportement de Google Tag en fonction du consentement de l’utilisateur afin de respecter les réglementations sur la confidentialité et de conserver des données analytiques.",
+    "documentation": [
+      {
+        "title": "web.dev: Learn Performance",
+        "url": "https://web.dev/learn/performance"
+      },
+      {
+        "title": "Chrome Developers: Lighthouse overview",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Mettre en place le chargement différé du contenu hors écran",
+    "priority": "High",
+    "description": "Chargez les images et les ressources lourdes situées sous la ligne de flottaison uniquement lorsqu’elles sont nécessaires, afin d’améliorer les performances initiales.",
+    "documentation": [
+      {
+        "title": "web.dev: Learn Performance",
+        "url": "https://web.dev/learn/performance"
+      },
+      {
+        "title": "Chrome Developers: Lighthouse overview",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      },
+      {
+        "title": "Patterns.dev: Import On Visibility",
+        "url": "https://www.patterns.dev/vanilla/import-on-visibility/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance",
+      "images"
+    ]
+  },
+  {
+    "title": "Maintenir le temps de chargement de la page sous 3 secondes",
+    "priority": "High",
+    "description": "La page se charge entièrement en moins de 3 secondes sur une connexion standard.",
+    "documentation": [
+      {
+        "title": "web.dev: Learn Performance",
+        "url": "https://web.dev/learn/performance"
+      },
+      {
+        "title": "Chrome Developers: Lighthouse overview",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Maintenir le poids de la page sous 1500 Ko",
+    "priority": "High",
+    "description": "Le poids total de la page, toutes ressources comprises, reste inférieur à 1500 Ko (idéalement à 500 Ko).",
+    "documentation": [
+      {
+        "title": "web.dev: Learn Performance",
+        "url": "https://web.dev/learn/performance"
+      },
+      {
+        "title": "Chrome Developers: Lighthouse overview",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Charger le code non essentiel lors d’une interaction",
+    "priority": "High",
+    "description": "Différez le chargement des modules JavaScript, widgets et scripts tiers jusqu’à ce que l’utilisateur manifeste son intention par un clic, une prise de focus, un survol ou une interaction similaire.",
+    "documentation": [
+      {
+        "title": "Patterns.dev: Import On Interaction",
+        "url": "https://www.patterns.dev/vanilla/import-on-interaction/"
+      },
+      {
+        "title": "MDN: import()",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import"
+      },
+      {
+        "title": "web.dev: Code splitting with dynamic imports in Next.js",
+        "url": "https://web.dev/articles/code-splitting-with-dynamic-imports-in-nextjs"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Charger le code non essentiel à l’approche du contenu dans la fenêtre d’affichage",
+    "priority": "High",
+    "description": "Utilisez un chargement tenant compte de la fenêtre d’affichage pour récupérer les composants, intégrations et fonctionnalités peu avant leur apparition, au lieu de tout envoyer au chargement initial.",
+    "documentation": [
+      {
+        "title": "Patterns.dev: Import On Visibility",
+        "url": "https://www.patterns.dev/vanilla/import-on-visibility/"
+      },
+      {
+        "title": "MDN: Intersection Observer API",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API"
+      },
+      {
+        "title": "MDN: Lazy loading",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loading"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Réduire les chaînes de requêtes critiques",
+    "priority": "High",
+    "description": "Réduisez le nombre et la profondeur des requêtes de ressources dépendantes qui bloquent le rendu initial de la page.",
+    "documentation": [
+      {
+        "title": "web.dev: Learn Performance",
+        "url": "https://web.dev/learn/performance"
+      },
+      {
+        "title": "Chrome Developers: Lighthouse overview",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Réduire le décalage cumulatif de mise en page",
+    "priority": "High",
+    "description": "La page reste visuellement stable, avec un score CLS inférieur à 0,1, et évite les déplacements inattendus du contenu pendant le chargement.",
+    "documentation": [
+      {
+        "title": "web.dev: Learn Performance",
+        "url": "https://web.dev/learn/performance"
+      },
+      {
+        "title": "Chrome Developers: Lighthouse overview",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Réduire le nombre de requêtes HTTP",
+    "priority": "High",
+    "description": "Réduisez les requêtes HTTP en regroupant les fichiers, en utilisant des sprites et en adoptant HTTP/2.",
+    "documentation": [
+      {
+        "title": "web.dev: Learn Performance",
+        "url": "https://web.dev/learn/performance"
+      },
+      {
+        "title": "Chrome Developers: Lighthouse overview",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Optimiser et compresser les vidéos web",
+    "priority": "High",
+    "description": "Compressez les vidéos, adaptez leur taille à chaque appareil et utilisez des codecs efficaces (H.264, HEVC, VP9/AV1) pour réduire le poids de la page et la consommation de bande passante.",
+    "documentation": [
+      {
+        "title": "web.dev: Video performance",
+        "url": "https://web.dev/learn/performance/video-performance"
+      },
+      {
+        "title": "MDN: Video and audio content",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content"
+      }
+    ],
+    "tools": [
+      {
+        "title": "HandBrake",
+        "url": "https://handbrake.fr/"
+      },
+      {
+        "title": "FFmpeg",
+        "url": "https://ffmpeg.org/"
+      },
+      {
+        "title": "SlingSite",
+        "url": "https://slingsite.github.io"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance",
+      "images"
+    ]
+  },
+  {
+    "title": "Optimiser le First Contentful Paint",
+    "priority": "High",
+    "description": "Le premier contenu s’affiche en moins de 1,8 seconde et indique rapidement que la page est en cours de chargement.",
+    "documentation": [
+      {
+        "title": "web.dev: Learn Performance",
+        "url": "https://web.dev/learn/performance"
+      },
+      {
+        "title": "Chrome Developers: Lighthouse overview",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Optimiser l’Interaction to Next Paint",
+    "priority": "High",
+    "description": "La page répond aux interactions de l’utilisateur en moins de 200 ms, pour garantir une bonne réactivité.",
+    "documentation": [
+      {
+        "title": "web.dev: Learn Performance",
+        "url": "https://web.dev/learn/performance"
+      },
+      {
+        "title": "Chrome Developers: Lighthouse overview",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Optimiser les pages pour le cache de navigation précédent/suivant",
+    "priority": "High",
+    "description": "Évitez les éléments qui empêchent l’utilisation du cache de navigation précédent/suivant, comme les écouteurs unload, et restaurez correctement l’état lorsque le navigateur rétablit une page depuis la mémoire.",
+    "documentation": [
+      {
+        "title": "web.dev: Back/forward cache",
+        "url": "https://web.dev/articles/bfcache"
+      },
+      {
+        "title": "MDN: Window pagehide event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/pagehide_event"
+      },
+      {
+        "title": "MDN: Window pageshow event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/pageshow_event"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Chrome DevTools",
+        "url": "https://developer.chrome.com/docs/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance",
+      "javascript"
+    ]
+  },
+  {
+    "title": "Optimiser le chargement des scripts tiers",
+    "priority": "High",
+    "description": "Chargez les scripts tiers de façon asynchrone afin d’éviter de bloquer le thread principal et d’améliorer les performances de la page.",
+    "documentation": [
+      {
+        "title": "web.dev: Learn Performance",
+        "url": "https://web.dev/learn/performance"
+      },
+      {
+        "title": "Chrome Developers: Lighthouse overview",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      },
+      {
+        "title": "Patterns.dev: Optimize loading third-parties",
+        "url": "https://www.patterns.dev/vanilla/third-party/"
+      },
+      {
+        "title": "Patterns.dev: Import On Interaction",
+        "url": "https://www.patterns.dev/vanilla/import-on-interaction/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance",
+      "security"
+    ]
+  },
+  {
+    "title": "Optimiser le chargement des polices web",
+    "priority": "High",
+    "description": "Utilisez des formats de police et des stratégies de chargement efficaces pour éviter les décalages de mise en page et le texte invisible.",
+    "documentation": [
+      {
+        "title": "web.dev: Learn Performance",
+        "url": "https://web.dev/learn/performance"
+      },
+      {
+        "title": "Chrome Developers: Lighthouse overview",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Afficher des indicateurs de chargement",
+    "priority": "High",
+    "description": "Les indicateurs de chargement renseignent les utilisateurs sur l’avancement des opérations asynchrones.",
+    "documentation": [
+      {
+        "title": "web.dev: Learn Performance",
+        "url": "https://web.dev/learn/performance"
+      },
+      {
+        "title": "Chrome Developers: Lighthouse overview",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Utiliser un réseau de diffusion de contenu",
+    "priority": "High",
+    "description": "Servez les ressources statiques depuis un CDN afin de réduire la latence et d’accélérer leur distribution.",
+    "documentation": [
+      {
+        "title": "web.dev: Learn Performance",
+        "url": "https://web.dev/learn/performance"
+      },
+      {
+        "title": "Chrome Developers: Lighthouse overview",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Utiliser des indications de ressources pour accélérer le chargement",
+    "priority": "High",
+    "description": "Mettez en place les indications preload, prefetch et preconnect afin d’optimiser la priorité de chargement des ressources.",
+    "documentation": [
+      {
+        "title": "web.dev: Learn Performance",
+        "url": "https://web.dev/learn/performance"
+      },
+      {
+        "title": "Chrome Developers: Lighthouse overview",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      },
+      {
+        "title": "Patterns.dev: Preload",
+        "url": "https://www.patterns.dev/vanilla/preload/"
+      },
+      {
+        "title": "Patterns.dev: Prefetch",
+        "url": "https://www.patterns.dev/vanilla/prefetch/"
+      },
+      {
+        "title": "Patterns.dev: Optimize your loading sequence",
+        "url": "https://www.patterns.dev/vanilla/loading-sequence/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance",
+      "html"
+    ]
+  },
+  {
+    "title": "Virtualiser les longues listes et les tableaux",
+    "priority": "High",
+    "description": "Dans les grandes collections, n’affichez que les lignes ou cartes visibles afin de réduire la taille du DOM, l’utilisation de la mémoire et le travail de rendu pendant le défilement.",
+    "documentation": [
+      {
+        "title": "Patterns.dev: List Virtualization",
+        "url": "https://www.patterns.dev/vanilla/virtual-lists/"
+      },
+      {
+        "title": "web.dev: Virtualize large lists with react-window",
+        "url": "https://web.dev/articles/virtualize-long-lists-react-window"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Éviter les redirections basées sur JavaScript",
+    "priority": "Medium",
+    "description": "Repérez les ressources JavaScript qui renvoient des redirections 3XX afin de réduire la latence.",
+    "documentation": [
+      {
+        "title": "web.dev: Learn Performance",
+        "url": "https://web.dev/learn/performance"
+      },
+      {
+        "title": "Chrome Developers: Lighthouse overview",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Éviter de servir du JavaScript ancien aux navigateurs modernes",
+    "priority": "Medium",
+    "description": "Repérez les polyfills ES5 et le code JavaScript ancien afin de réduire la taille des bundles et d’améliorer l’exécution.",
+    "documentation": [
+      {
+        "title": "web.dev: Learn Performance",
+        "url": "https://web.dev/learn/performance"
+      },
+      {
+        "title": "Chrome Developers: Lighthouse overview",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Convertir les GIF animés en vidéo",
+    "priority": "Medium",
+    "description": "Remplacez les GIF animés volumineux par des formats vidéo plus efficaces, comme MP4 ou WebM, afin de réduire le poids de la page.",
+    "documentation": [
+      {
+        "title": "web.dev: Learn Performance",
+        "url": "https://web.dev/learn/performance"
+      },
+      {
+        "title": "Chrome Developers: Lighthouse overview",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Désactiver le chargement différé du contenu au-dessus de la ligne de flottaison",
+    "priority": "Medium",
+    "description": "Repérez le chargement différé appliqué aux images probablement situées au-dessus de la ligne de flottaison afin d’améliorer le Largest Contentful Paint (LCP).",
+    "documentation": [
+      {
+        "title": "web.dev: Learn Performance",
+        "url": "https://web.dev/learn/performance"
+      },
+      {
+        "title": "Chrome Developers: Lighthouse overview",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Éliminer les ressources qui bloquent le rendu",
+    "priority": "Medium",
+    "description": "Repérez les fichiers CSS et JavaScript qui bloquent le rendu initial de la page.",
+    "documentation": [
+      {
+        "title": "web.dev: Learn Performance",
+        "url": "https://web.dev/learn/performance"
+      },
+      {
+        "title": "Chrome Developers: Lighthouse overview",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Optimiser la taille des fichiers CSS",
+    "priority": "Medium",
+    "description": "Gardez les fichiers CSS individuels légers et supprimez les styles inutilisés afin d’accélérer le chemin critique de rendu.",
+    "documentation": [
+      {
+        "title": "web.dev: Learn Performance",
+        "url": "https://web.dev/learn/performance"
+      },
+      {
+        "title": "Chrome Developers: Lighthouse overview",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Optimiser la mise en œuvre de Google Tag Manager",
+    "priority": "Medium",
+    "description": "Configurez Google Tag Manager efficacement afin de limiter son impact sur le temps de chargement de la page et le blocage du thread principal.",
+    "documentation": [
+      {
+        "title": "web.dev: Learn Performance",
+        "url": "https://web.dev/learn/performance"
+      },
+      {
+        "title": "Chrome Developers: Lighthouse overview",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Optimiser la taille des bundles JavaScript",
+    "priority": "Medium",
+    "description": "Repérez les fichiers JavaScript qui dépassent les limites de taille recommandées afin de garantir des interactions rapides.",
+    "documentation": [
+      {
+        "title": "web.dev: Learn Performance",
+        "url": "https://web.dev/learn/performance"
+      },
+      {
+        "title": "Chrome Developers: Lighthouse overview",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Réaliser des audits de performance dans un navigateur",
+    "priority": "Medium",
+    "description": "Effectuez les audits de performance dans un navigateur complet afin de recueillir des mesures d’exécution et des décalages de mise en page fiables.",
+    "documentation": [
+      {
+        "title": "web.dev: Learn Performance",
+        "url": "https://web.dev/learn/performance"
+      },
+      {
+        "title": "Chrome Developers: Lighthouse overview",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Fournir des source maps pour le débogage en production",
+    "priority": "Medium",
+    "description": "Vérifiez la disponibilité et la configuration des source maps afin de faciliter le débogage.",
+    "documentation": [
+      {
+        "title": "web.dev: Learn Performance",
+        "url": "https://web.dev/learn/performance"
+      },
+      {
+        "title": "Chrome Developers: Lighthouse overview",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Réduire la taille et la complexité du DOM",
+    "priority": "Medium",
+    "description": "Gardez l’arbre DOM petit et peu profond afin d’améliorer l’utilisation de la mémoire et les performances de rendu.",
+    "documentation": [
+      {
+        "title": "web.dev: Learn Performance",
+        "url": "https://web.dev/learn/performance"
+      },
+      {
+        "title": "Chrome Developers: Lighthouse overview",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      },
+      {
+        "title": "Patterns.dev: List Virtualization",
+        "url": "https://www.patterns.dev/vanilla/virtual-lists/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Réduire le Time to First Byte (TTFB)",
+    "priority": "Medium",
+    "description": "Mesurez et optimisez le temps de réponse du serveur (TTFB) afin d’obtenir une réponse initiale rapide.",
+    "documentation": [
+      {
+        "title": "web.dev: Time to First Byte (TTFB)",
+        "url": "https://web.dev/articles/ttfb"
+      },
+      {
+        "title": "MDN: Time to first byte",
+        "url": "https://developer.mozilla.org/en-US/docs/Glossary/Time_to_first_byte"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Enregistrer un service worker pour la mise en cache et la prise en charge hors ligne",
+    "priority": "Medium",
+    "description": "Un service worker intercepte les requêtes réseau, met en cache les ressources essentielles et permet à votre application web de fonctionner hors ligne.",
+    "documentation": [
+      {
+        "title": "MDN: Service Worker API",
+        "url": "https://developer.mozilla.org/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "title": "web.dev: Service worker overview",
+        "url": "https://web.dev/learn/pwa/service-workers"
+      },
+      {
+        "title": "web.dev: Offline cookbook",
+        "url": "https://web.dev/articles/offline-cookbook"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Workbox (Google)",
+        "url": "https://developer.chrome.com/docs/workbox"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Supprimer les bibliothèques JavaScript en double",
+    "priority": "Medium",
+    "description": "Repérez et regroupez les bibliothèques JavaScript dupliquées afin de réduire la taille des bundles et d’éviter les conflits de versions.",
+    "documentation": [
+      {
+        "title": "web.dev: Learn Performance",
+        "url": "https://web.dev/learn/performance"
+      },
+      {
+        "title": "Chrome Developers: Lighthouse overview",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Transmettre le HTML au navigateur avant la fin de la réponse",
+    "priority": "Medium",
+    "description": "Utilisez le transfert HTTP par blocs et React renderToPipeableStream (ou ReadableStream) pour commencer à transmettre le HTML au navigateur dès que les premiers octets sont disponibles, et ainsi réduire le Time to First Byte et le First Contentful Paint.",
+    "documentation": [
+      {
+        "title": "React docs: renderToPipeableStream",
+        "url": "https://react.dev/reference/react-dom/server/renderToPipeableStream"
+      },
+      {
+        "title": "Next.js docs: Streaming with Suspense",
+        "url": "https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming"
+      },
+      {
+        "title": "MDN: Transfer-Encoding: chunked",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Transfer-Encoding"
+      },
+      {
+        "title": "web.dev: Streaming requests with the Fetch API",
+        "url": "https://developer.chrome.com/docs/capabilities/web-apis/fetch-streaming-requests"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Chrome DevTools Network panel",
+        "url": "https://developer.chrome.com/docs/devtools/network/"
+      },
+      {
+        "title": "WebPageTest",
+        "url": "https://www.webpagetest.org/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Utiliser fetchpriority pour indiquer la priorité de chargement des ressources",
+    "priority": "Medium",
+    "description": "Appliquez l’attribut fetchpriority aux images, scripts et liens preload essentiels pour aider le navigateur à privilégier les ressources importantes et à différer celles qui le sont moins.",
+    "documentation": [
+      {
+        "title": "web.dev: Optimise resource loading with the Fetch Priority API",
+        "url": "https://web.dev/articles/fetch-priority"
+      },
+      {
+        "title": "MDN: fetchpriority attribute",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/fetchPriority"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Utiliser preconnect pour les origines tierces essentielles",
+    "priority": "Medium",
+    "description": "Vérifiez la présence d’indications preconnect vers les origines tierces essentielles afin de réduire la latence de connexion.",
+    "documentation": [
+      {
+        "title": "web.dev: Learn Performance",
+        "url": "https://web.dev/learn/performance"
+      },
+      {
+        "title": "Chrome Developers: Lighthouse overview",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Utiliser des bibliothèques JS sécurisées et à jour",
+    "priority": "Medium",
+    "description": "Repérez les bibliothèques JavaScript et vérifiez si elles présentent des vulnérabilités connues.",
+    "documentation": [
+      {
+        "title": "web.dev: Learn Performance",
+        "url": "https://web.dev/learn/performance"
+      },
+      {
+        "title": "Chrome Developers: Lighthouse overview",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Fournir une page de secours hors ligne",
+    "priority": "Low",
+    "description": "Lorsque le réseau est indisponible, affichez aux utilisateurs une page de secours hors ligne personnalisée plutôt que l’écran d’erreur générique du navigateur.",
+    "documentation": [
+      {
+        "title": "web.dev: Create an offline fallback page",
+        "url": "https://web.dev/articles/offline-fallback-page"
+      },
+      {
+        "title": "MDN: Service Worker API",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  },
+  {
+    "title": "Utiliser l’API Speculation Rules pour précharger et prérendre les navigations",
+    "priority": "Low",
+    "description": "Utilisez l’API Speculation Rules pour précharger ou prérendre de manière déclarative les pages susceptibles d’être consultées ensuite, afin de rendre la navigation quasi instantanée sans la surcharge d’un routeur entièrement côté client.",
+    "documentation": [
+      {
+        "title": "web.dev: Speculation Rules API",
+        "url": "https://developer.chrome.com/blog/prerender-pages"
+      },
+      {
+        "title": "MDN: Speculation Rules API",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Speculation_Rules_API"
+      },
+      {
+        "title": "Chrome Developers: Prefetch and prerender",
+        "url": "https://developer.chrome.com/docs/devtools/application/debugging-speculation-rules"
+      }
+    ],
+    "tags": [
+      "all",
+      "performance"
+    ]
+  }
+]

@@ -1,0 +1,53 @@
+[
+  {
+    "title": "Format des polices Web",
+    "priority": "High",
+    "description": "Les formats WOFF, WOFF2 et TTF sont pris en charge par tous les navigateurs modernes.",
+    "documentation": [
+      {
+        "title": "WOFF - Web Open Font Format - Caniuse",
+        "url": "https://caniuse.com/#feat=woff"
+      },
+      {
+        "title": "WOFF 2.0 - Web Open Font Format - Caniuse",
+        "url": "https://caniuse.com/#feat=woff2"
+      },
+      {
+        "title": "TTF/OTF - TrueType and OpenType font support",
+        "url": "https://caniuse.com/#feat=ttf"
+      },
+      {
+        "title": "Using @font-face - CSS-Tricks",
+        "url": "https://css-tricks.com/snippets/css/using-font-face/"
+      }
+    ],
+    "tags": [
+      "all",
+      "webfont"
+    ]
+  },
+  {
+    "title": "Taille des polices Web",
+    "priority": "High",
+    "description": "La taille des polices Web ne dépasse pas 2 MB (toutes les variantes comprises).",
+    "tags": [
+      "all",
+      "webfont"
+    ]
+  },
+  {
+    "title": "Chargeur de polices Web",
+    "priority": "Low",
+    "description": "Contrôlez le comportement de chargement à l’aide d’un chargeur de polices Web.",
+    "documentation": [
+      {
+        "title": "Typekit Web Font Loader",
+        "url": "https://github.com/typekit/webfontloader"
+      }
+    ],
+    "tags": [
+      "all",
+      "webfont"
+    ]
+  }
+]

@@ -1,0 +1,969 @@
+[
+  {
+    "title": "Déclarer l’encodage de caractères UTF-8",
+    "priority": "High",
+    "description": "Le charset (UTF-8) est correctement déclaré comme premier élément de l’en-tête.",
+    "documentation": [
+      {
+        "title": "MDN: HTML",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        "title": "WHATWG HTML Living Standard",
+        "url": "https://html.spec.whatwg.org/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Nu Html Checker",
+        "url": "https://validator.w3.org/nu/"
+      }
+    ],
+    "tags": [
+      "all",
+      "html",
+      "seo"
+    ]
+  },
+  {
+    "title": "Définir la balise meta viewport adaptative",
+    "priority": "High",
+    "description": "La balise meta viewport est correctement déclarée pour la conception adaptative.",
+    "documentation": [
+      {
+        "title": "MDN: HTML",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        "title": "WHATWG HTML Living Standard",
+        "url": "https://html.spec.whatwg.org/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Nu Html Checker",
+        "url": "https://validator.w3.org/nu/"
+      }
+    ],
+    "tags": [
+      "all",
+      "html",
+      "performance",
+      "css"
+    ]
+  },
+  {
+    "title": "Utiliser le doctype HTML5",
+    "priority": "High",
+    "description": "La déclaration du doctype HTML5 doit être la première ligne de chaque document HTML afin d’activer le mode standard dans tous les navigateurs.",
+    "documentation": [
+      {
+        "title": "HTML Living Standard: The DOCTYPE",
+        "url": "https://html.spec.whatwg.org/multipage/syntax.html#the-doctype"
+      },
+      {
+        "title": "MDN: DOCTYPE",
+        "url": "https://developer.mozilla.org/en-US/docs/Glossary/Doctype"
+      },
+      {
+        "title": "MDN: Quirks Mode and Standards Mode",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Nu Html Checker",
+        "url": "https://validator.w3.org/nu/"
+      }
+    ],
+    "tags": [
+      "all",
+      "html",
+      "seo"
+    ]
+  },
+  {
+    "title": "Ajouter Subresource Integrity aux scripts externes",
+    "priority": "High",
+    "description": "Utilisez les attributs de hachage Subresource Integrity (SRI) sur les scripts et feuilles de style externes chargés depuis des CDN afin de garantir que leur contenu n’a pas été altéré.",
+    "documentation": [
+      {
+        "title": "MDN: HTML",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        "title": "WHATWG HTML Living Standard",
+        "url": "https://html.spec.whatwg.org/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "SRI Hash Generator",
+        "url": "https://www.srihash.org"
+      },
+      {
+        "title": "MDN Subresource Integrity",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity"
+      }
+    ],
+    "tags": [
+      "all",
+      "html"
+    ]
+  },
+  {
+    "title": "Analyser les performances avec WebPageTest",
+    "priority": "High",
+    "description": "Analysez les performances de la page avec WebPageTest afin de repérer les goulots d’étranglement du chargement et les possibilités d’optimisation.",
+    "documentation": [
+      {
+        "title": "MDN: HTML",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        "title": "WHATWG HTML Living Standard",
+        "url": "https://html.spec.whatwg.org/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Nu Html Checker",
+        "url": "https://validator.w3.org/nu/"
+      }
+    ],
+    "tags": [
+      "all",
+      "html",
+      "performance"
+    ]
+  },
+  {
+    "title": "Vérifier l’unicité de tous les ID",
+    "priority": "High",
+    "description": "Tous les attributs ID sont uniques dans le document.",
+    "detail": "No duplicate IDs exist on the page.",
+    "documentation": [
+      {
+        "title": "MDN: HTML",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        "title": "WHATWG HTML Living Standard",
+        "url": "https://html.spec.whatwg.org/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Nu Html Checker",
+        "url": "https://validator.w3.org/nu/"
+      }
+    ],
+    "tags": [
+      "all",
+      "html",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Charger les scripts avec defer, async ou type=module",
+    "priority": "High",
+    "description": "Empêchez JavaScript de bloquer l’analyse du HTML en utilisant les attributs defer, async ou type=module sur les balises script, afin que le navigateur puisse continuer à construire le DOM pendant le téléchargement des scripts.",
+    "documentation": [
+      {
+        "title": "MDN: <script> element",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script"
+      },
+      {
+        "title": "web.dev: Speed up script loading",
+        "url": "https://web.dev/articles/speed-script-loading"
+      },
+      {
+        "title": "WHATWG HTML Living Standard",
+        "url": "https://html.spec.whatwg.org/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "MDN Script loading strategies",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#script_loading_strategies"
+      }
+    ],
+    "tags": [
+      "all",
+      "html"
+    ]
+  },
+  {
+    "title": "Rendre les notifications accessibles",
+    "priority": "High",
+    "description": "Les notifications toast et les alertes sont annoncées aux lecteurs d’écran grâce aux régions live ARIA et aux rôles appropriés.",
+    "documentation": [
+      {
+        "title": "MDN: HTML",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        "title": "WHATWG HTML Living Standard",
+        "url": "https://html.spec.whatwg.org/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Nu Html Checker",
+        "url": "https://validator.w3.org/nu/"
+      }
+    ],
+    "tags": [
+      "all",
+      "html",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Rendre les vidéos accessibles avec des sous-titres",
+    "priority": "High",
+    "description": "Les vidéos proposent des sous-titres, des descriptions audio, des transcriptions et des commandes de pause, et évitent la lecture automatique afin de tenir compte des handicaps auditifs, visuels ou cognitifs.",
+    "documentation": [
+      {
+        "title": "WCAG 2.1 SC 1.2.2: Captions (Prerecorded)",
+        "url": "https://www.w3.org/TR/WCAG21/#captions-prerecorded"
+      },
+      {
+        "title": "WCAG 2.1 SC 1.2.5: Audio Description (Prerecorded)",
+        "url": "https://www.w3.org/TR/WCAG21/#audio-description-prerecorded"
+      },
+      {
+        "title": "MDN: <track> element",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track"
+      },
+      {
+        "title": "MDN: WebVTT format",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API"
+      },
+      {
+        "title": "WebAIM: Captions, Transcripts, and Audio Descriptions",
+        "url": "https://webaim.org/techniques/captions/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Nu Html Checker",
+        "url": "https://validator.w3.org/nu/"
+      }
+    ],
+    "tags": [
+      "all",
+      "html",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Définir l’attribut lang de la page",
+    "priority": "High",
+    "description": "L’élément `<html>` doit avoir un attribut lang contenant un code de langue BCP 47 valide, afin que les lecteurs d’écran, les outils de traduction et les moteurs de recherche connaissent la langue principale de la page.",
+    "documentation": [
+      {
+        "title": "WCAG 2.1 SC 3.1.1: Language of Page",
+        "url": "https://www.w3.org/TR/WCAG21/#language-of-page"
+      },
+      {
+        "title": "WCAG 2.1 SC 3.1.2: Language of Parts",
+        "url": "https://www.w3.org/TR/WCAG21/#language-of-parts"
+      },
+      {
+        "title": "HTML Living Standard: The lang attribute",
+        "url": "https://html.spec.whatwg.org/multipage/dom.html#attr-lang"
+      },
+      {
+        "title": "MDN: lang global attribute",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang"
+      },
+      {
+        "title": "W3C: Declaring language in HTML",
+        "url": "https://www.w3.org/International/questions/qa-html-language-declarations"
+      },
+      {
+        "title": "IANA Language Subtag Registry",
+        "url": "https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Nu Html Checker",
+        "url": "https://validator.w3.org/nu/"
+      },
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "html"
+    ]
+  },
+  {
+    "title": "Utiliser les régions de repère de navigation",
+    "priority": "High",
+    "description": "La navigation de la page utilise des éléments nav avec des libellés ARIA appropriés pour distinguer les différentes régions de navigation.",
+    "documentation": [
+      {
+        "title": "MDN: HTML",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        "title": "WHATWG HTML Living Standard",
+        "url": "https://html.spec.whatwg.org/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Nu Html Checker",
+        "url": "https://validator.w3.org/nu/"
+      }
+    ],
+    "tags": [
+      "all",
+      "html",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Utiliser des éléments HTML sémantiques",
+    "priority": "High",
+    "description": "Les éléments sémantiques HTML5 sont utilisés à bon escient (header, section, footer, main, article, aside...).",
+    "documentation": [
+      {
+        "title": "MDN: HTML",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        "title": "WHATWG HTML Living Standard",
+        "url": "https://html.spec.whatwg.org/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Nu Html Checker",
+        "url": "https://validator.w3.org/nu/"
+      }
+    ],
+    "tags": [
+      "all",
+      "html",
+      "accessibility",
+      "seo"
+    ]
+  },
+  {
+    "title": "Utiliser des attributs type sémantiques pour les champs de saisie",
+    "priority": "High",
+    "description": "Définissez l’attribut type approprié sur les éléments input pour afficher le bon clavier mobile, activer la validation du navigateur et améliorer la précision du remplissage automatique.",
+    "documentation": [
+      {
+        "title": "MDN: HTML",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        "title": "WHATWG HTML Living Standard",
+        "url": "https://html.spec.whatwg.org/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "MDN input type reference",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types"
+      },
+      {
+        "title": "inputmode reference",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/inputmode"
+      }
+    ],
+    "tags": [
+      "all",
+      "html"
+    ]
+  },
+  {
+    "title": "Valider les formulaires de manière accessible",
+    "priority": "High",
+    "description": "Les formulaires fournissent des indications de validation claires, avec des messages d’erreur accessibles et des attributs ARIA appropriés.",
+    "documentation": [
+      {
+        "title": "MDN: HTML",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        "title": "WHATWG HTML Living Standard",
+        "url": "https://html.spec.whatwg.org/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Nu Html Checker",
+        "url": "https://validator.w3.org/nu/"
+      }
+    ],
+    "tags": [
+      "all",
+      "html",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Valider le HTML conformément aux normes du W3C",
+    "priority": "High",
+    "description": "Le balisage HTML est validé conformément aux normes du W3C pour assurer la compatibilité entre navigateurs.",
+    "documentation": [
+      {
+        "title": "MDN: HTML",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        "title": "WHATWG HTML Living Standard",
+        "url": "https://html.spec.whatwg.org/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Nu Html Checker",
+        "url": "https://validator.w3.org/nu/"
+      }
+    ],
+    "tags": [
+      "all",
+      "html"
+    ]
+  },
+  {
+    "title": "Ajouter des images miniatures aux vidéos",
+    "priority": "Medium",
+    "description": "Les éléments vidéo HTML5 doivent avoir un attribut poster qui fournit une image miniature affichée avant le chargement ou la lecture de la vidéo.",
+    "documentation": [
+      {
+        "title": "HTML Living Standard: The video element — poster attribute",
+        "url": "https://html.spec.whatwg.org/multipage/media.html#attr-video-poster"
+      },
+      {
+        "title": "MDN: <video> — poster attribute",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#poster"
+      },
+      {
+        "title": "web.dev: Lazy loading video",
+        "url": "https://web.dev/learn/performance/video-performance"
+      },
+      {
+        "title": "web.dev: Cumulative Layout Shift (CLS)",
+        "url": "https://web.dev/cls/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Nu Html Checker",
+        "url": "https://validator.w3.org/nu/"
+      }
+    ],
+    "tags": [
+      "all",
+      "html"
+    ]
+  },
+  {
+    "title": "Vérifier l’absence de liens brisés",
+    "priority": "Medium",
+    "description": "Tous les liens sont testés et aucun n’est brisé.",
+    "detail": "Links redirect to intended destinations.",
+    "documentation": [
+      {
+        "title": "MDN: HTML",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        "title": "WHATWG HTML Living Standard",
+        "url": "https://html.spec.whatwg.org/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Nu Html Checker",
+        "url": "https://validator.w3.org/nu/"
+      }
+    ],
+    "tags": [
+      "all",
+      "html",
+      "seo"
+    ]
+  },
+  {
+    "title": "Créer une page d’erreur 404 personnalisée",
+    "priority": "Medium",
+    "description": "Une page d’erreur 404 personnalisée est conçue avec des options de navigation utiles pour les utilisateurs égarés.",
+    "documentation": [
+      {
+        "title": "MDN: HTML",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        "title": "WHATWG HTML Living Standard",
+        "url": "https://html.spec.whatwg.org/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Nu Html Checker",
+        "url": "https://validator.w3.org/nu/"
+      }
+    ],
+    "tags": [
+      "all",
+      "html"
+    ]
+  },
+  {
+    "title": "Créer des info-bulles accessibles",
+    "priority": "Medium",
+    "description": "Les info-bulles sont accessibles au clavier et aux lecteurs d’écran grâce à des attributs ARIA appropriés et à une gestion correcte du focus.",
+    "documentation": [
+      {
+        "title": "MDN: HTML",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        "title": "WHATWG HTML Living Standard",
+        "url": "https://html.spec.whatwg.org/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Nu Html Checker",
+        "url": "https://validator.w3.org/nu/"
+      }
+    ],
+    "tags": [
+      "all",
+      "html",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Implémenter une navigation par fil d’Ariane accessible",
+    "priority": "Medium",
+    "description": "La navigation par fil d’Ariane est implémentée avec un balisage sémantique et des attributs ARIA appropriés pour l’accessibilité.",
+    "documentation": [
+      {
+        "title": "MDN: HTML",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        "title": "WHATWG HTML Living Standard",
+        "url": "https://html.spec.whatwg.org/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Nu Html Checker",
+        "url": "https://validator.w3.org/nu/"
+      }
+    ],
+    "tags": [
+      "all",
+      "html",
+      "accessibility",
+      "seo"
+    ]
+  },
+  {
+    "title": "Implémenter des favicons pour tous les appareils",
+    "priority": "Medium",
+    "description": "Tous les formats de favicon nécessaires sont implémentés pour les navigateurs, les appareils et la prise en charge des PWA.",
+    "documentation": [
+      {
+        "title": "MDN: HTML",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        "title": "WHATWG HTML Living Standard",
+        "url": "https://html.spec.whatwg.org/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Nu Html Checker",
+        "url": "https://validator.w3.org/nu/"
+      }
+    ],
+    "tags": [
+      "all",
+      "html"
+    ]
+  },
+  {
+    "title": "Associer un manifeste d’application Web pour permettre l’installation",
+    "priority": "Medium",
+    "description": "Incluez un manifeste d’application Web (manifest.json) lié depuis l’en-tête HTML afin d’activer des fonctionnalités PWA, telles que l’installation sur l’écran d’accueil, l’affichage autonome et les écrans de démarrage.",
+    "documentation": [
+      {
+        "title": "MDN: HTML",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        "title": "WHATWG HTML Living Standard",
+        "url": "https://html.spec.whatwg.org/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PWA Builder manifest generator",
+        "url": "https://www.pwabuilder.com"
+      },
+      {
+        "title": "Maskable icon editor",
+        "url": "https://maskable.app"
+      }
+    ],
+    "tags": [
+      "all",
+      "html"
+    ]
+  },
+  {
+    "title": "Rendre les accordéons navigables au clavier",
+    "priority": "Medium",
+    "description": "Les composants accordéon utilisent les attributs ARIA et les interactions clavier appropriés pour être accessibles aux lecteurs d’écran.",
+    "documentation": [
+      {
+        "title": "MDN: HTML",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        "title": "WHATWG HTML Living Standard",
+        "url": "https://html.spec.whatwg.org/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Nu Html Checker",
+        "url": "https://validator.w3.org/nu/"
+      }
+    ],
+    "tags": [
+      "all",
+      "html",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Rendre les carrousels accessibles",
+    "priority": "Medium",
+    "description": "Les carrousels et les curseurs sont accessibles grâce à des commandes de pause, à la navigation au clavier et aux attributs ARIA appropriés.",
+    "documentation": [
+      {
+        "title": "MDN: HTML",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        "title": "WHATWG HTML Living Standard",
+        "url": "https://html.spec.whatwg.org/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Nu Html Checker",
+        "url": "https://validator.w3.org/nu/"
+      }
+    ],
+    "tags": [
+      "all",
+      "html",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Rendre les éléments personnalisés et les Web Components accessibles",
+    "priority": "Medium",
+    "description": "Les éléments personnalisés doivent implémenter la réflexion ARIA via ElementInternals, les interactions au clavier et l’association aux formulaires, afin que les lecteurs d’écran et les technologies d’assistance puissent les interpréter correctement.",
+    "documentation": [
+      {
+        "title": "ARIA Authoring Practices Guide",
+        "url": "https://www.w3.org/WAI/ARIA/apg/"
+      },
+      {
+        "title": "MDN: ElementInternals",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals"
+      },
+      {
+        "title": "MDN: Using custom elements",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements"
+      },
+      {
+        "title": "web.dev: More capable form controls",
+        "url": "https://web.dev/articles/more-capable-form-controls"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/devtools/"
+      },
+      {
+        "title": "Accessibility Insights",
+        "url": "https://accessibilityinsights.io/"
+      }
+    ],
+    "tags": [
+      "all",
+      "html",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Rendre le glisser-déposer accessible",
+    "priority": "Medium",
+    "description": "Les interfaces de glisser-déposer proposent des alternatives au clavier et des attributs ARIA appropriés pour l’accessibilité.",
+    "documentation": [
+      {
+        "title": "MDN: HTML",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        "title": "WHATWG HTML Living Standard",
+        "url": "https://html.spec.whatwg.org/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Nu Html Checker",
+        "url": "https://validator.w3.org/nu/"
+      }
+    ],
+    "tags": [
+      "all",
+      "html",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Rendre les téléversements de fichiers accessibles",
+    "priority": "Medium",
+    "description": "Les composants de téléversement de fichiers sont accessibles grâce à des libellés appropriés, à des restrictions de type de fichier et à des indications de progression.",
+    "documentation": [
+      {
+        "title": "MDN: HTML",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        "title": "WHATWG HTML Living Standard",
+        "url": "https://html.spec.whatwg.org/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Nu Html Checker",
+        "url": "https://validator.w3.org/nu/"
+      }
+    ],
+    "tags": [
+      "all",
+      "html",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Rendre la pagination accessible",
+    "priority": "Medium",
+    "description": "Les commandes de pagination sont accessibles grâce à des libellés ARIA appropriés, à la navigation au clavier et à l’indication de la page active.",
+    "documentation": [
+      {
+        "title": "MDN: HTML",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        "title": "WHATWG HTML Living Standard",
+        "url": "https://html.spec.whatwg.org/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Nu Html Checker",
+        "url": "https://validator.w3.org/nu/"
+      }
+    ],
+    "tags": [
+      "all",
+      "html",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Rendre les champs de recherche accessibles",
+    "priority": "Medium",
+    "description": "La fonction de recherche est accessible grâce à un type de champ, un libellé, un rôle et des suggestions de saisie automatique appropriés.",
+    "documentation": [
+      {
+        "title": "MDN: HTML",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        "title": "WHATWG HTML Living Standard",
+        "url": "https://html.spec.whatwg.org/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Nu Html Checker",
+        "url": "https://validator.w3.org/nu/"
+      }
+    ],
+    "tags": [
+      "all",
+      "html",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Rendre les onglets navigables au clavier",
+    "priority": "Medium",
+    "description": "Les composants à onglets implémentent le modèle ARIA tabs avec les rôles, états et interactions clavier appropriés.",
+    "documentation": [
+      {
+        "title": "MDN: HTML",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        "title": "WHATWG HTML Living Standard",
+        "url": "https://html.spec.whatwg.org/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Nu Html Checker",
+        "url": "https://validator.w3.org/nu/"
+      }
+    ],
+    "tags": [
+      "all",
+      "html",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Fournir un contenu de remplacement noscript",
+    "priority": "Medium",
+    "description": "Une balise noscript fournit un contenu de remplacement aux utilisateurs ayant désactivé JavaScript.",
+    "documentation": [
+      {
+        "title": "MDN: HTML",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        "title": "WHATWG HTML Living Standard",
+        "url": "https://html.spec.whatwg.org/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Nu Html Checker",
+        "url": "https://validator.w3.org/nu/"
+      }
+    ],
+    "tags": [
+      "all",
+      "html",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Supprimer les commentaires et le code de débogage en production",
+    "priority": "Medium",
+    "description": "Le code, les commentaires et les éléments de débogage superflus sont supprimés avant le déploiement en production.",
+    "documentation": [
+      {
+        "title": "MDN: HTML",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        "title": "WHATWG HTML Living Standard",
+        "url": "https://html.spec.whatwg.org/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Nu Html Checker",
+        "url": "https://validator.w3.org/nu/"
+      }
+    ],
+    "tags": [
+      "all",
+      "html",
+      "performance"
+    ]
+  },
+  {
+    "title": "Définir le sens du texte pour les langues RTL",
+    "priority": "Medium",
+    "description": "L’attribut dir est utilisé pour les langues qui se lisent de droite à gauche (RTL) ou pour les contenus mixtes.",
+    "documentation": [
+      {
+        "title": "MDN: dir attribute",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/dir"
+      },
+      {
+        "title": "WHATWG HTML Living Standard",
+        "url": "https://html.spec.whatwg.org/multipage/dom.html#the-dir-attribute"
+      },
+      {
+        "title": "MDN: CSS logical properties",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values"
+      },
+      {
+        "title": "web.dev: Building for bidirectional text",
+        "url": "https://web.dev/learn/forms/internationalization/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Nu Html Checker",
+        "url": "https://validator.w3.org/nu/"
+      }
+    ],
+    "tags": [
+      "all",
+      "html",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Respecter les critères d’installabilité des PWA",
+    "priority": "Low",
+    "description": "L’application Web satisfait aux exigences minimales d’installabilité PWA des navigateurs : un manifeste d’application Web valide, un service worker enregistré, HTTPS et des icônes maskable.",
+    "documentation": [
+      {
+        "title": "web.dev: What makes a good Progressive Web App?",
+        "url": "https://web.dev/articles/pwa-checklist"
+      },
+      {
+        "title": "MDN: Web app manifests",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Manifest"
+      },
+      {
+        "title": "web.dev: Add a web app manifest",
+        "url": "https://web.dev/articles/add-manifest"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PWABuilder",
+        "url": "https://docs.pwabuilder.com/#/home/getting-started"
+      },
+      {
+        "title": "Maskable.app icon editor",
+        "url": "https://maskable.app/editor"
+      }
+    ],
+    "tags": [
+      "all",
+      "html"
+    ]
+  }
+]

@@ -1,0 +1,679 @@
+[
+  {
+    "title": "Ne jamais utiliser eval() ni l’exécution dynamique de code non sécurisée",
+    "priority": "High",
+    "description": "Évitez eval(), new Function(), setTimeout/setInterval avec des arguments sous forme de chaîne, ainsi que innerHTML avec du contenu non fiable : ces mécanismes exécutent du code arbitraire et créent de graves vulnérabilités XSS.",
+    "documentation": [
+      {
+        "title": "MDN: eval()",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval"
+      },
+      {
+        "title": "MDN: Function() constructor",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function"
+      },
+      {
+        "title": "ESLint: no-eval",
+        "url": "https://eslint.org/docs/rules/no-eval"
+      }
+    ],
+    "tools": [
+      {
+        "title": "ESLint (no-eval, no-new-func)",
+        "url": "https://eslint.org/docs/rules/no-eval"
+      }
+    ],
+    "tags": [
+      "all",
+      "javascript"
+    ]
+  },
+  {
+    "title": "Éviter le JavaScript intégré",
+    "priority": "High",
+    "description": "Évitez le JavaScript intégré directement dans le HTML.",
+    "detail": "JavaScript is kept in external files for caching and maintainability.",
+    "documentation": [
+      {
+        "title": "MDN: EventTarget",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/EventTarget"
+      },
+      {
+        "title": "MDN: <script> element",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script"
+      },
+      {
+        "title": "MDN: data-* global attribute",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/data-%2A"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Chrome DevTools",
+        "url": "https://developer.chrome.com/docs/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "javascript",
+      "performance"
+    ]
+  },
+  {
+    "title": "Appliquer debounce et throttle aux gestionnaires d’événements",
+    "priority": "High",
+    "description": "Utilisez debounce ou throttle pour les événements fréquents comme scroll, resize et input afin d’améliorer les performances.",
+    "documentation": [
+      {
+        "title": "MDN: JavaScript Guide",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+      },
+      {
+        "title": "web.dev: Learn JavaScript",
+        "url": "https://web.dev/learn/javascript"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Chrome DevTools",
+        "url": "https://developer.chrome.com/docs/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "javascript",
+      "performance"
+    ]
+  },
+  {
+    "title": "Activer le mode strict de TypeScript dans tsconfig.json",
+    "priority": "High",
+    "description": "Activez \"strict\": true dans tsconfig.json pour utiliser l’ensemble des options de vérification de types de TypeScript et détecter à la compilation les erreurs d’exécution les plus courantes.",
+    "documentation": [
+      {
+        "title": "TypeScript: TSConfig Reference — strict",
+        "url": "https://www.typescriptlang.org/tsconfig#strict"
+      },
+      {
+        "title": "TypeScript: Do not use the default tsconfig",
+        "url": "https://typescript-eslint.io/troubleshooting/typed-linting/"
+      },
+      {
+        "title": "TypeScript Handbook: Everyday Types",
+        "url": "https://www.typescriptlang.org/docs/handbook/2/everyday-types.html"
+      }
+    ],
+    "tags": [
+      "all",
+      "javascript"
+    ]
+  },
+  {
+    "title": "Gérer les requêtes inter-origines de manière sécurisée",
+    "priority": "High",
+    "description": "Utilisez correctement CORS, validez les origines des messages avec postMessage et comprenez la Same-Origin Policy afin de prévenir les attaques inter-origines.",
+    "documentation": [
+      {
+        "title": "MDN: JavaScript Guide",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+      },
+      {
+        "title": "web.dev: Learn JavaScript",
+        "url": "https://web.dev/learn/javascript"
+      }
+    ],
+    "tools": [
+      {
+        "title": "MDN CORS",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS"
+      },
+      {
+        "title": "MDN postMessage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage"
+      }
+    ],
+    "tags": [
+      "all",
+      "javascript"
+    ]
+  },
+  {
+    "title": "Mettre en place une gestion appropriée des erreurs",
+    "priority": "High",
+    "description": "Utilisez des blocs try-catch et des limites d’erreur pour gérer proprement les erreurs dans les opérations asynchrones et les composants d’interface.",
+    "documentation": [
+      {
+        "title": "MDN: JavaScript Guide",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+      },
+      {
+        "title": "web.dev: Learn JavaScript",
+        "url": "https://web.dev/learn/javascript"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Chrome DevTools",
+        "url": "https://developer.chrome.com/docs/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "javascript"
+    ]
+  },
+  {
+    "title": "Minifier tous les fichiers JavaScript",
+    "priority": "High",
+    "description": "Minifiez tous les fichiers JavaScript afin de réduire leur taille et d’accélérer le chargement.",
+    "documentation": [
+      {
+        "title": "MDN: JavaScript Guide",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+      },
+      {
+        "title": "web.dev: Learn JavaScript",
+        "url": "https://web.dev/learn/javascript"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Chrome DevTools",
+        "url": "https://developer.chrome.com/docs/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "javascript",
+      "performance"
+    ]
+  },
+  {
+    "title": "Réduire les opérations coûteuses de lecture/écriture du DOM",
+    "priority": "High",
+    "description": "Regroupez séparément les lectures et les écritures du DOM pour éviter les recalculs de mise en page répétés, causés par l’alternance entre lecture et écriture des propriétés de mise en page.",
+    "documentation": [
+      {
+        "title": "MDN: JavaScript Guide",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+      },
+      {
+        "title": "web.dev: Learn JavaScript",
+        "url": "https://web.dev/learn/javascript"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Chrome DevTools Performance panel",
+        "url": "https://developer.chrome.com/docs/devtools/performance"
+      },
+      {
+        "title": "FastDOM library",
+        "url": "https://github.com/wilsonpage/fastdom"
+      }
+    ],
+    "tags": [
+      "all",
+      "javascript"
+    ]
+  },
+  {
+    "title": "Préférer const et let à var",
+    "priority": "High",
+    "description": "Utilisez les déclarations const et let, dont la portée est limitée au bloc, plutôt que var, dont la portée est limitée à la fonction, afin d’éviter les problèmes de hoisting et les modifications involontaires de variables.",
+    "documentation": [
+      {
+        "title": "MDN: JavaScript Guide",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+      },
+      {
+        "title": "web.dev: Learn JavaScript",
+        "url": "https://web.dev/learn/javascript"
+      }
+    ],
+    "tools": [
+      {
+        "title": "ESLint (no-var, prefer-const)",
+        "url": "https://eslint.org/docs/rules/no-var"
+      }
+    ],
+    "tags": [
+      "all",
+      "javascript"
+    ]
+  },
+  {
+    "title": "Prévenir les fuites de mémoire courantes",
+    "priority": "High",
+    "description": "Repérez et évitez les sources courantes de fuite de mémoire en JavaScript : écouteurs d’événements oubliés, références au DOM conservées, closures retenant de gros objets et temporisateurs non effacés.",
+    "documentation": [
+      {
+        "title": "MDN: JavaScript Guide",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+      },
+      {
+        "title": "web.dev: Learn JavaScript",
+        "url": "https://web.dev/learn/javascript"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Chrome DevTools Memory panel",
+        "url": "https://developer.chrome.com/docs/devtools/memory-problems"
+      }
+    ],
+    "tags": [
+      "all",
+      "javascript"
+    ]
+  },
+  {
+    "title": "Fractionner les grands bundles JavaScript",
+    "priority": "High",
+    "description": "Utilisez les imports dynamiques et le fractionnement du code par route pour diviser les grands bundles en morceaux chargés à la demande et réduire le temps de chargement initial.",
+    "documentation": [
+      {
+        "title": "MDN: import()",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import"
+      },
+      {
+        "title": "web.dev: Code splitting with dynamic imports in Next.js",
+        "url": "https://web.dev/articles/code-splitting-with-dynamic-imports-in-nextjs"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Webpack Bundle Analyzer",
+        "url": "https://github.com/webpack-contrib/webpack-bundle-analyzer"
+      },
+      {
+        "title": "Rollup Visualizer",
+        "url": "https://github.com/btd/rollup-plugin-visualizer"
+      },
+      {
+        "title": "Bundlephobia (check package size)",
+        "url": "https://bundlephobia.com"
+      }
+    ],
+    "tags": [
+      "all",
+      "javascript"
+    ]
+  },
+  {
+    "title": "Utiliser les modules ES (import/export)",
+    "priority": "High",
+    "description": "Utilisez la syntaxe native des modules ES pour les imports et les exports plutôt que CommonJS require(), afin de permettre l’analyse statique, le tree-shaking et une meilleure prise en charge par les outils.",
+    "documentation": [
+      {
+        "title": "MDN: JavaScript Guide",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+      },
+      {
+        "title": "web.dev: Learn JavaScript",
+        "url": "https://web.dev/learn/javascript"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Rollup (tree-shaking reference)",
+        "url": "https://rollupjs.org"
+      },
+      {
+        "title": "ESLint import plugin",
+        "url": "https://github.com/import-js/eslint-plugin-import"
+      }
+    ],
+    "tags": [
+      "all",
+      "javascript"
+    ]
+  },
+  {
+    "title": "Valider les données externes à l’exécution avec une bibliothèque de schémas",
+    "priority": "High",
+    "description": "Utilisez Zod ou Valibot pour valider les données des réponses d’API, des champs de formulaire, de localStorage et des variables d’environnement : les types TypeScript sont supprimés à l’exécution et ne protègent pas contre les structures inattendues.",
+    "documentation": [
+      {
+        "title": "Zod Documentation",
+        "url": "https://zod.dev"
+      },
+      {
+        "title": "Valibot Documentation",
+        "url": "https://valibot.dev"
+      },
+      {
+        "title": "MDN: JSON.parse()",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse"
+      }
+    ],
+    "tags": [
+      "all",
+      "javascript"
+    ]
+  },
+  {
+    "title": "Éviter la coercition implicite des types",
+    "priority": "Medium",
+    "description": "Utilisez l’égalité stricte (===), les conversions de type explicites et les constructeurs Number/String/Boolean afin d’éviter les résultats inattendus de la coercition implicite des types en JavaScript.",
+    "documentation": [
+      {
+        "title": "MDN: JavaScript Guide",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+      },
+      {
+        "title": "web.dev: Learn JavaScript",
+        "url": "https://web.dev/learn/javascript"
+      }
+    ],
+    "tools": [
+      {
+        "title": "ESLint (eqeqeq rule)",
+        "url": "https://eslint.org/docs/rules/eqeqeq"
+      }
+    ],
+    "tags": [
+      "all",
+      "javascript"
+    ]
+  },
+  {
+    "title": "Éviter le type any : préférer unknown, les génériques ou les gardes de type",
+    "priority": "Medium",
+    "description": "Remplacez le type any de TypeScript par unknown, des génériques adaptés ou des assertions de type affinées afin de préserver la sûreté des types sans sacrifier l’expressivité.",
+    "documentation": [
+      {
+        "title": "TypeScript Handbook: The any type",
+        "url": "https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#any"
+      },
+      {
+        "title": "TypeScript Handbook: unknown",
+        "url": "https://www.typescriptlang.org/docs/handbook/2/functions.html#unknown"
+      },
+      {
+        "title": "@typescript-eslint/no-explicit-any",
+        "url": "https://typescript-eslint.io/rules/no-explicit-any/"
+      }
+    ],
+    "tags": [
+      "all",
+      "javascript"
+    ]
+  },
+  {
+    "title": "Activer noUncheckedIndexedAccess pour détecter les accès aux tableaux hors limites",
+    "priority": "Medium",
+    "description": "Activez noUncheckedIndexedAccess dans tsconfig.json afin que l’accès aux indices de tableaux et d’objets renvoie T | undefined et impose des vérifications explicites contre les valeurs nulles, prévenant ainsi les erreurs d’exécution dues aux dépassements d’indices.",
+    "documentation": [
+      {
+        "title": "TypeScript 4.1: noUncheckedIndexedAccess",
+        "url": "https://www.typescriptlang.org/tsconfig#noUncheckedIndexedAccess"
+      },
+      {
+        "title": "TypeScript 4.1 Release Notes: Checked Indexed Accesses",
+        "url": "https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-1.html#checked-indexed-accesses-nouncheckedindexedaccess"
+      },
+      {
+        "title": "MDN: Array",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
+      }
+    ],
+    "tags": [
+      "all",
+      "javascript"
+    ]
+  },
+  {
+    "title": "Analyser le code JavaScript avec un linter",
+    "priority": "Medium",
+    "description": "Analysez le code JavaScript avec ESLint afin de détecter les erreurs et de faire respecter les conventions de codage.",
+    "documentation": [
+      {
+        "title": "ESLint: Getting Started",
+        "url": "https://eslint.org/docs/latest/use/getting-started"
+      },
+      {
+        "title": "Biome: Linter",
+        "url": "https://biomejs.dev/linter/"
+      },
+      {
+        "title": "typescript-eslint: Getting Started",
+        "url": "https://typescript-eslint.io/getting-started/"
+      }
+    ],
+    "tags": [
+      "all",
+      "javascript"
+    ]
+  },
+  {
+    "title": "Analyser le JSON de manière sécurisée avec une gestion des erreurs",
+    "priority": "Medium",
+    "description": "Encadrez toujours JSON.parse() d’un bloc try/catch et validez la structure obtenue avant de l’utiliser, car un JSON invalide ou une structure inattendue peut provoquer des erreurs d’exécution.",
+    "documentation": [
+      {
+        "title": "MDN: JavaScript Guide",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+      },
+      {
+        "title": "web.dev: Learn JavaScript",
+        "url": "https://web.dev/learn/javascript"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Zod (runtime type validation)",
+        "url": "https://zod.dev"
+      },
+      {
+        "title": "Valibot (lightweight alternative)",
+        "url": "https://valibot.dev"
+      }
+    ],
+    "tags": [
+      "all",
+      "javascript"
+    ]
+  },
+  {
+    "title": "Privilégier les modèles de données immuables",
+    "priority": "Medium",
+    "description": "Utilisez les opérateurs spread, Object.assign et les méthodes de tableau qui renvoient de nouvelles valeurs plutôt que de modifier les objets et tableaux sur place, afin de rendre le flux de données prévisible et le débogage plus facile.",
+    "documentation": [
+      {
+        "title": "MDN: JavaScript Guide",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+      },
+      {
+        "title": "web.dev: Learn JavaScript",
+        "url": "https://web.dev/learn/javascript"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Immer (immutable state with mutable syntax)",
+        "url": "https://immerjs.github.io/immer"
+      }
+    ],
+    "tags": [
+      "all",
+      "javascript"
+    ]
+  },
+  {
+    "title": "Supprimer les instructions console en production",
+    "priority": "Medium",
+    "description": "Supprimez ou désactivez console.log, console.debug et les autres instructions console avant le déploiement en production.",
+    "documentation": [
+      {
+        "title": "MDN: JavaScript Guide",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+      },
+      {
+        "title": "web.dev: Learn JavaScript",
+        "url": "https://web.dev/learn/javascript"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Chrome DevTools",
+        "url": "https://developer.chrome.com/docs/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "javascript",
+      "performance"
+    ]
+  },
+  {
+    "title": "Utiliser la délégation d’événements pour le contenu dynamique",
+    "priority": "Medium",
+    "description": "Attachez les écouteurs d’événements à des éléments parents stables plutôt qu’à chaque enfant dynamique afin de réduire l’utilisation de la mémoire et de gérer les éléments ajoutés au DOM après le chargement de la page.",
+    "documentation": [
+      {
+        "title": "MDN: JavaScript Guide",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+      },
+      {
+        "title": "web.dev: Learn JavaScript",
+        "url": "https://web.dev/learn/javascript"
+      }
+    ],
+    "tools": [
+      {
+        "title": "MDN Event Delegation",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_delegation"
+      }
+    ],
+    "tags": [
+      "all",
+      "javascript"
+    ]
+  },
+  {
+    "title": "Utiliser les méthodes modernes des tableaux et des objets",
+    "priority": "Medium",
+    "description": "Utilisez les méthodes de tableau ES2015+ (map, filter, reduce, find, flatMap) et les méthodes d’objet (Object.entries, Object.fromEntries, structuredClone) pour écrire un code plus clair et expressif.",
+    "documentation": [
+      {
+        "title": "MDN: JavaScript Guide",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+      },
+      {
+        "title": "web.dev: Learn JavaScript",
+        "url": "https://web.dev/learn/javascript"
+      }
+    ],
+    "tools": [
+      {
+        "title": "MDN Array methods reference",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
+      }
+    ],
+    "tags": [
+      "all",
+      "javascript"
+    ]
+  },
+  {
+    "title": "Utiliser scheduler.yield() pour préserver la réactivité du thread principal pendant les tâches longues",
+    "priority": "Medium",
+    "description": "Découpez les tâches de plus de 50 ms en cédant la main au navigateur avec scheduler.yield() ou une solution de repli basée sur MessageChannel, afin que les saisies de l’utilisateur ne soient jamais bloquées.",
+    "documentation": [
+      {
+        "title": "web.dev: Optimize long tasks",
+        "url": "https://web.dev/articles/optimize-long-tasks"
+      },
+      {
+        "title": "Chrome for Developers: scheduler.yield()",
+        "url": "https://developer.chrome.com/blog/introducing-scheduler-yield-origin-trial"
+      },
+      {
+        "title": "MDN: Scheduler API",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Scheduler"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Chrome DevTools Performance panel",
+        "url": "https://developer.chrome.com/docs/devtools/performance/"
+      }
+    ],
+    "tags": [
+      "all",
+      "javascript"
+    ]
+  },
+  {
+    "title": "Utiliser l’API Web Storage de manière sécurisée",
+    "priority": "Medium",
+    "description": "Utilisez localStorage et sessionStorage avec une sérialisation appropriée, une gestion des erreurs et les précautions de sécurité nécessaires afin d’éviter la corruption des données et les erreurs de quota de stockage.",
+    "documentation": [
+      {
+        "title": "MDN: JavaScript Guide",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+      },
+      {
+        "title": "web.dev: Learn JavaScript",
+        "url": "https://web.dev/learn/javascript"
+      }
+    ],
+    "tools": [
+      {
+        "title": "MDN Web Storage API",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API"
+      }
+    ],
+    "tags": [
+      "all",
+      "javascript"
+    ]
+  },
+  {
+    "title": "Rédiger des chaînes de traduction adaptées à l’internationalisation",
+    "priority": "Medium",
+    "description": "Utilisez des modèles de format de message (ICU ou équivalent) plutôt que la concaténation de chaînes, et gérez correctement le pluriel, le genre et l’interpolation des variables.",
+    "documentation": [
+      {
+        "title": "Unicode: ICU MessageFormat",
+        "url": "https://unicode-org.github.io/icu/userguide/format_parse/messages/"
+      },
+      {
+        "title": "MDN: Intl.PluralRules",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules"
+      },
+      {
+        "title": "react-i18next documentation",
+        "url": "https://react.i18next.com/"
+      }
+    ],
+    "tags": [
+      "all",
+      "javascript"
+    ]
+  },
+  {
+    "title": "Utiliser import type pour les imports réservés aux types",
+    "priority": "Low",
+    "description": "Utilisez la syntaxe import type pour les imports nécessaires uniquement comme types TypeScript, afin qu’ils soient entièrement supprimés à la compilation et n’entraînent aucun coût à l’exécution.",
+    "documentation": [
+      {
+        "title": "TypeScript 3.8: Type-Only Imports and Exports",
+        "url": "https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-8.html#type-only-imports-and-export"
+      },
+      {
+        "title": "TypeScript 5.0: verbatimModuleSyntax",
+        "url": "https://www.typescriptlang.org/tsconfig#verbatimModuleSyntax"
+      },
+      {
+        "title": "@typescript-eslint/consistent-type-imports",
+        "url": "https://typescript-eslint.io/rules/consistent-type-imports/"
+      }
+    ],
+    "tags": [
+      "all",
+      "javascript"
+    ]
+  }
+]

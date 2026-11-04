@@ -1,0 +1,56 @@
+{
+  "SITE_NAME": "The Front-End Checklist",
+  "INDEX_TITLE": "🔥 Votre NOUVEL outil Front-End 🔥",
+  "URL_WEBSITE": "https://github.com/Jamesiukalu/Frontend-Checklist",
+  "SITE_TAGLINE": "🗂 L'application Front-End Checklist est idéale pour les sites web modernes et les développeurs méticuleux !",
+  "SITE_DESCRIPTION": "🗂 L'application Front-End Checklist est idéale pour les sites web modernes et les développeurs méticuleux ! Suivez les règles et livrez le meilleur de votre travail dans un rapport généré !",
+  "SITE_LANGUAGE": "fr",
+  "SITE_DIRECTION": "ltr",
+  "URL_GITHUB_ROOT": "https://github.com/Jamesiukalu/Frontend-Checklist",
+  "URL_GITHUB_REPO": "https://github.com/Jamesiukalu/Frontend-Checklist",
+  "HIGH_CHECKED": "✓ priorité haute",
+  "MEDIUM_CHECKED": "✓ priorité moyenne",
+  "LOW_CHECKED": "✓ priorité basse",
+  "PERCENTAGE_CHECKED": "éléments ✓",
+  "SECTION_DOCUMENTATION": "Documentation",
+  "SECTION_TOOL": "Outils",
+  "SECTION_VIDEO": "Vidéos",
+  "SECTION_TAG": "Filtrer par tags",
+  "alert": {
+    "JAVASCRIPT_DESACTIVATE": "JavaScript semble désactivé. Veuillez l'activer pour profiter de toutes les fonctionnalités de la Front-End Checklist."
+  },
+  "form": {
+    "LABEL_PROJECT_NAME": "Nom du projet",
+    "TITLE_PROJECT_NAME": "Saisissez le nom de votre projet",
+    "LABEL_PAGE_TITLE": "Titre de la page ou URL",
+    "TITLE_PAGE_TITLE": "Saisissez le nom de votre page ou son URL",
+    "LABEL_DEVELOPER_NAME": "Nom du développeur ou de l'équipe",
+    "TITLE_DEVELOPER_NAME": "Saisissez votre nom ou celui de votre équipe",
+    "LABEL_SEARCH": "Rechercher",
+    "BUTTON_START_NEW": "Nouvelle checklist",
+    "BUTTON_GENERATE_PRINT": "Générer le rapport"
+  },
+  "social": {
+    "TWEET": "Tweeter",
+    "TWITTER_MSG": "Découvrez l'application 🔥 Front-End Checklist 🔥 pour les sites web modernes et les développeurs méticuleux !",
+    "TWITTER_VIA": "thedaviddias",
+    "TWITTER_HASHTAGS": "FrontEndChecklist #FrontEnd #Tool #Web",
+    "STAR": "Star",
+    "GITHUB_STAR_MSG": "Mettre une étoile à Jamesiukalu/Frontend-Checklist sur GitHub"
+  },
+  "ui": {
+    "THEME_LABEL": "Basculer entre thème clair et sombre",
+    "THEME_TITLE": "Changer de thème",
+    "REPORT": "Rapport",
+    "NAV_LABEL": "Sections de la checklist",
+    "CHECK_ALL": "Cocher tous les éléments",
+    "UNCHECK_ALL": "Décocher tous les éléments",
+    "EXPAND_ALL": "Tout déplier",
+    "COLLAPSE_ALL": "Tout replier",
+    "HIDE_SECTION": "Masquer la section",
+    "PRIORITY_HIGH": "Élément de priorité haute",
+    "PRIORITY_MEDIUM": "Élément de priorité moyenne",
+    "PRIORITY_LOW": "Élément de priorité basse",
+    "OPEN_DESCRIPTION": "Ouvrir la description"
+  }
+}

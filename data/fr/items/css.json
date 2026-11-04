@@ -1,0 +1,850 @@
+[
+  {
+    "title": "Éviter le CSS intégré et en ligne",
+    "priority": "High",
+    "description": "Évitez le CSS intégré et en ligne, sauf pour le CSS critique et l'optimisation des performances.",
+    "documentation": [
+      {
+        "title": "MDN: CSS",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+      },
+      {
+        "title": "web.dev: Learn CSS",
+        "url": "https://web.dev/learn/css"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Chrome DevTools",
+        "url": "https://developer.chrome.com/docs/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "css",
+      "performance"
+    ]
+  },
+  {
+    "title": "Intégrer le CSS critique pour accélérer le rendu",
+    "priority": "High",
+    "description": "Le CSS critique (contenu visible sans défilement) est intégré dans le head pour accélérer le premier rendu.",
+    "documentation": [
+      {
+        "title": "MDN: CSS",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+      },
+      {
+        "title": "web.dev: Learn CSS",
+        "url": "https://web.dev/learn/css"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Chrome DevTools",
+        "url": "https://developer.chrome.com/docs/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "css",
+      "performance"
+    ]
+  },
+  {
+    "title": "Limiter et aplanir la spécificité CSS",
+    "priority": "High",
+    "description": "Écrivez des sélecteurs avec la spécificité la plus faible possible, en évitant les sélecteurs d'ID et l'imbrication profonde, afin que les styles puissent être remplacés proprement sans recourir à !important.",
+    "documentation": [
+      {
+        "title": "MDN: CSS",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+      },
+      {
+        "title": "web.dev: Learn CSS",
+        "url": "https://web.dev/learn/css"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Specificity Calculator",
+        "url": "https://specificity.keegan.st"
+      },
+      {
+        "title": "Stylelint (max-nesting-depth)",
+        "url": "https://stylelint.io/user-guide/rules/max-nesting-depth"
+      }
+    ],
+    "tags": [
+      "all",
+      "css"
+    ]
+  },
+  {
+    "title": "Charger le CSS sans bloquer le rendu",
+    "priority": "High",
+    "description": "Le CSS non critique est chargé de manière asynchrone pour éviter de bloquer le rendu du DOM.",
+    "documentation": [
+      {
+        "title": "MDN: CSS",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+      },
+      {
+        "title": "web.dev: Learn CSS",
+        "url": "https://web.dev/learn/css"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Chrome DevTools",
+        "url": "https://developer.chrome.com/docs/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "css",
+      "performance"
+    ]
+  },
+  {
+    "title": "Minifier tous les fichiers CSS",
+    "priority": "High",
+    "description": "Tous les fichiers CSS sont minifiés afin de réduire leur taille et d'améliorer les performances de chargement des pages.",
+    "documentation": [
+      {
+        "title": "MDN: CSS",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+      },
+      {
+        "title": "web.dev: Learn CSS",
+        "url": "https://web.dev/learn/css"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Chrome DevTools",
+        "url": "https://developer.chrome.com/docs/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "css",
+      "performance"
+    ]
+  },
+  {
+    "title": "Fournir des indicateurs de focus personnalisés visibles",
+    "priority": "High",
+    "description": "Assurez-vous que tous les éléments interactifs ont un indicateur de focus clairement visible pour la navigation au clavier — ne supprimez jamais simplement le contour par défaut sans proposer une meilleure alternative.",
+    "documentation": [
+      {
+        "title": "MDN: CSS",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+      },
+      {
+        "title": "web.dev: Learn CSS",
+        "url": "https://web.dev/learn/css"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Focus Visible polyfill",
+        "url": "https://github.com/WICG/focus-visible"
+      },
+      {
+        "title": "WCAG 2.4.13 Focus Appearance",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance.html"
+      }
+    ],
+    "tags": [
+      "all",
+      "css"
+    ]
+  },
+  {
+    "title": "Supprimer les règles CSS inutilisées",
+    "priority": "High",
+    "description": "Le CSS inutilisé est supprimé afin de réduire la taille du bundle et d'améliorer les performances.",
+    "documentation": [
+      {
+        "title": "MDN: CSS",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+      },
+      {
+        "title": "web.dev: Learn CSS",
+        "url": "https://web.dev/learn/css"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Chrome DevTools",
+        "url": "https://developer.chrome.com/docs/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "css",
+      "performance"
+    ]
+  },
+  {
+    "title": "Utiliser des propriétés personnalisées CSS pour les jetons de design",
+    "priority": "High",
+    "description": "Définissez les valeurs du système de design (couleurs, espacements, typographie) sous forme de propriétés personnalisées CSS sur :root afin d'assurer une thématisation cohérente, des mises à jour dynamiques et la prise en charge du mode sombre.",
+    "documentation": [
+      {
+        "title": "MDN: CSS",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+      },
+      {
+        "title": "web.dev: Learn CSS",
+        "url": "https://web.dev/learn/css"
+      }
+    ],
+    "tools": [
+      {
+        "title": "MDN CSS Custom Properties",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties"
+      }
+    ],
+    "tags": [
+      "all",
+      "css"
+    ]
+  },
+  {
+    "title": "Utiliser des unités relatives pour les mises en page adaptatives",
+    "priority": "High",
+    "description": "Utilisez rem, em, %, vw, vh et clamp() plutôt que des valeurs px fixes pour créer des mises en page qui s'adaptent aux préférences de taille de police et aux dimensions de la fenêtre d'affichage.",
+    "documentation": [
+      {
+        "title": "MDN: CSS",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+      },
+      {
+        "title": "web.dev: Learn CSS",
+        "url": "https://web.dev/learn/css"
+      }
+    ],
+    "tools": [
+      {
+        "title": "CSS clamp() calculator",
+        "url": "https://clamp.font-size.app"
+      },
+      {
+        "title": "MDN CSS values and units",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units"
+      }
+    ],
+    "tags": [
+      "all",
+      "css"
+    ]
+  },
+  {
+    "title": "Utiliser transform et opacity pour les animations",
+    "priority": "High",
+    "description": "Animez avec les propriétés CSS transform et opacity afin que les animations s'exécutent sur le thread du compositeur GPU à 60 images par seconde, en évitant les propriétés qui déclenchent une mise en page, comme top, left, width et height.",
+    "documentation": [
+      {
+        "title": "MDN: CSS",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+      },
+      {
+        "title": "web.dev: Learn CSS",
+        "url": "https://web.dev/learn/css"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Chrome DevTools Rendering tab",
+        "url": "https://developer.chrome.com/docs/devtools/rendering"
+      },
+      {
+        "title": "MDN prefers-reduced-motion",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion"
+      }
+    ],
+    "tags": [
+      "all",
+      "css"
+    ]
+  },
+  {
+    "title": "Appliquer les bonnes pratiques Flexbox",
+    "priority": "Medium",
+    "description": "Utilisez Flexbox pour les mises en page unidimensionnelles avec les propriétés adaptées, en évitant les erreurs courantes comme l'usage excessif de flex:1, l'oubli de min-width:0 et une mauvaise compréhension de flex-basis.",
+    "documentation": [
+      {
+        "title": "MDN: CSS",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+      },
+      {
+        "title": "web.dev: Learn CSS",
+        "url": "https://web.dev/learn/css"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Flexbox Froggy (interactive learning)",
+        "url": "https://flexboxfroggy.com"
+      },
+      {
+        "title": "MDN Flexbox",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout"
+      }
+    ],
+    "tags": [
+      "all",
+      "css"
+    ]
+  },
+  {
+    "title": "Éviter les interstitiels intrusifs",
+    "priority": "Medium",
+    "description": "Les interstitiels plein écran (fenêtres pop-up, superpositions, bannières de cookies) qui bloquent le contenu principal sur mobile sont un signal pénalisant pour le classement et un obstacle à l'accessibilité.",
+    "detail": "Use non-intrusive alternatives.",
+    "documentation": [
+      {
+        "title": "Google: Intrusive Interstitials in Mobile Search",
+        "url": "https://developers.google.com/search/blog/2016/08/helping-users-easily-access-content-on"
+      },
+      {
+        "title": "WCAG 2.1 SC 2.1.2: No Keyboard Trap",
+        "url": "https://www.w3.org/TR/WCAG21/#no-keyboard-trap"
+      },
+      {
+        "title": "WAI-ARIA Authoring Practices: Dialog (Modal) Pattern",
+        "url": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/"
+      },
+      {
+        "title": "MDN: ARIA dialog role",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Chrome DevTools",
+        "url": "https://developer.chrome.com/docs/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "css"
+    ]
+  },
+  {
+    "title": "Inclure une feuille de style pour l'impression",
+    "priority": "Medium",
+    "description": "Une feuille de style pour l'impression est fournie et correctement optimisée pour les pages imprimées.",
+    "documentation": [
+      {
+        "title": "MDN: CSS",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+      },
+      {
+        "title": "web.dev: Learn CSS",
+        "url": "https://web.dev/learn/css"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Chrome DevTools",
+        "url": "https://developer.chrome.com/docs/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "css",
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Analyser les fichiers CSS et SCSS avec un linter",
+    "priority": "Medium",
+    "description": "Tous les fichiers CSS/SCSS sont analysés avec Stylelint pour détecter les erreurs et faire respecter les normes.",
+    "documentation": [
+      {
+        "title": "MDN: CSS",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+      },
+      {
+        "title": "web.dev: Learn CSS",
+        "url": "https://web.dev/learn/css"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Chrome DevTools",
+        "url": "https://developer.chrome.com/docs/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "css"
+    ]
+  },
+  {
+    "title": "Optimiser les formats de polices web",
+    "priority": "Medium",
+    "description": "Les polices web utilisent des formats modernes (WOFF2, WOFF), avec des polices de remplacement et des stratégies de chargement adaptées.",
+    "documentation": [
+      {
+        "title": "MDN: CSS",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+      },
+      {
+        "title": "web.dev: Learn CSS",
+        "url": "https://web.dev/learn/css"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Chrome DevTools",
+        "url": "https://developer.chrome.com/docs/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "css",
+      "performance"
+    ]
+  },
+  {
+    "title": "Charger les fichiers CSS dans le bon ordre",
+    "priority": "Medium",
+    "description": "Tous les fichiers CSS sont chargés avant les fichiers JavaScript afin d'éviter de bloquer le rendu.",
+    "documentation": [
+      {
+        "title": "MDN: CSS",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+      },
+      {
+        "title": "web.dev: Learn CSS",
+        "url": "https://web.dev/learn/css"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Chrome DevTools",
+        "url": "https://developer.chrome.com/docs/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "css",
+      "performance"
+    ]
+  },
+  {
+    "title": "Éviter le défilement horizontal",
+    "priority": "Medium",
+    "description": "Les pages web ne doivent pas nécessiter de défilement horizontal aux largeurs de fenêtre d'affichage standard.",
+    "detail": "Horizontal overflow breaks responsive layouts and makes content inaccessible to low-vision users who zoom in.",
+    "documentation": [
+      {
+        "title": "WCAG 2.1 SC 1.4.10: Reflow",
+        "url": "https://www.w3.org/TR/WCAG21/#reflow"
+      },
+      {
+        "title": "MDN: overflow",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/overflow"
+      },
+      {
+        "title": "MDN: overflow-wrap",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap"
+      },
+      {
+        "title": "Google web.dev: Responsive web design basics",
+        "url": "https://web.dev/responsive-web-design-basics/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Chrome DevTools",
+        "url": "https://developer.chrome.com/docs/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "css"
+    ]
+  },
+  {
+    "title": "Prendre en charge le mode sombre avec prefers-color-scheme",
+    "priority": "Medium",
+    "description": "Mettez en œuvre le mode sombre à l'aide de la requête média prefers-color-scheme et des propriétés personnalisées CSS afin que le site s'adapte automatiquement aux préférences du système de l'utilisateur.",
+    "documentation": [
+      {
+        "title": "MDN: CSS",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+      },
+      {
+        "title": "web.dev: Learn CSS",
+        "url": "https://web.dev/learn/css"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Polypane dark mode testing",
+        "url": "https://polypane.app"
+      },
+      {
+        "title": "MDN prefers-color-scheme",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme"
+      }
+    ],
+    "tags": [
+      "all",
+      "css"
+    ]
+  },
+  {
+    "title": "Utiliser une feuille de style de réinitialisation ou de normalisation CSS",
+    "priority": "Medium",
+    "description": "Utilisez une feuille de style de réinitialisation ou de normalisation CSS pour garantir un style cohérent entre les navigateurs.",
+    "documentation": [
+      {
+        "title": "normalize.css",
+        "url": "https://github.com/necolas/normalize.css"
+      },
+      {
+        "title": "CSS Remedy",
+        "url": "https://github.com/jensimmons/cssremedy"
+      },
+      {
+        "title": "MDN: CSS",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Chrome DevTools",
+        "url": "https://developer.chrome.com/docs/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "css"
+    ]
+  },
+  {
+    "title": "Adopter des conventions de nommage CSS cohérentes",
+    "priority": "Medium",
+    "description": "Adoptez une méthodologie cohérente de nommage des classes (BEM, CUBE CSS ou une convention convenue par l'équipe) afin que les noms de classes soient explicites et que les conflits de styles soient évités.",
+    "documentation": [
+      {
+        "title": "MDN: CSS",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+      },
+      {
+        "title": "web.dev: Learn CSS",
+        "url": "https://web.dev/learn/css"
+      }
+    ],
+    "tools": [
+      {
+        "title": "BEM methodology",
+        "url": "https://getbem.com"
+      },
+      {
+        "title": "CUBE CSS",
+        "url": "https://cube.fyi"
+      }
+    ],
+    "tags": [
+      "all",
+      "css"
+    ]
+  },
+  {
+    "title": "Utiliser les requêtes de conteneur pour l'adaptabilité des composants",
+    "priority": "Medium",
+    "description": "Utilisez les requêtes de conteneur CSS pour que les composants s'adaptent à la taille de leur propre conteneur plutôt qu'à celle de la fenêtre d'affichage, ce qui permet de créer des composants véritablement réutilisables et adaptatifs.",
+    "documentation": [
+      {
+        "title": "MDN: CSS",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+      },
+      {
+        "title": "web.dev: Learn CSS",
+        "url": "https://web.dev/learn/css"
+      }
+    ],
+    "tools": [
+      {
+        "title": "MDN Container queries",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries"
+      },
+      {
+        "title": "Can I Use container queries",
+        "url": "https://caniuse.com/css-container-queries"
+      }
+    ],
+    "tags": [
+      "all",
+      "css"
+    ]
+  },
+  {
+    "title": "Utiliser le confinement CSS pour limiter la zone de repeinture",
+    "priority": "Medium",
+    "description": "Appliquez la propriété contain aux composants pour indiquer au navigateur qu'ils sont indépendants du reste de la page, ce qui optimise le rendu et limite la zone de repeinture et de recalcul de mise en page.",
+    "documentation": [
+      {
+        "title": "MDN: CSS",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+      },
+      {
+        "title": "web.dev: Learn CSS",
+        "url": "https://web.dev/learn/css"
+      }
+    ],
+    "tools": [
+      {
+        "title": "MDN CSS contain property",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/contain"
+      },
+      {
+        "title": "MDN content-visibility",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/content-visibility"
+      }
+    ],
+    "tags": [
+      "all",
+      "css"
+    ]
+  },
+  {
+    "title": "Utiliser CSS Grid pour les mises en page bidimensionnelles",
+    "priority": "Medium",
+    "description": "Utilisez CSS Grid lorsque vous devez contrôler simultanément les lignes et les colonnes, par exemple pour les mises en page, les grilles de cartes et les compositions de composants complexes.",
+    "documentation": [
+      {
+        "title": "MDN: CSS",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+      },
+      {
+        "title": "web.dev: Learn CSS",
+        "url": "https://web.dev/learn/css"
+      }
+    ],
+    "tools": [
+      {
+        "title": "CSS Grid Generator",
+        "url": "https://cssgrid-generator.netlify.app"
+      },
+      {
+        "title": "MDN CSS Grid",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout"
+      }
+    ],
+    "tags": [
+      "all",
+      "css"
+    ]
+  },
+  {
+    "title": "Utiliser les propriétés logiques CSS pour la prise en charge de l'i18n et du RTL",
+    "priority": "Medium",
+    "description": "Utilisez les propriétés logiques CSS (margin-inline, padding-block, border-inline-start) plutôt que les propriétés physiques (margin-left, padding-top) afin de prendre automatiquement en charge les langues de droite à gauche.",
+    "documentation": [
+      {
+        "title": "MDN: CSS",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+      },
+      {
+        "title": "web.dev: Learn CSS",
+        "url": "https://web.dev/learn/css"
+      }
+    ],
+    "tools": [
+      {
+        "title": "MDN Logical Properties",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values"
+      },
+      {
+        "title": "Logical Properties reference",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values"
+      }
+    ],
+    "tags": [
+      "all",
+      "css"
+    ]
+  },
+  {
+    "title": "Utiliser des tailles de police lisibles sur mobile",
+    "priority": "Medium",
+    "description": "Le texte doit être suffisamment grand pour être lu sur les appareils mobiles sans zoom.",
+    "detail": "Using relative units (rem/em) allows browser font size preferences to be respected.",
+    "documentation": [
+      {
+        "title": "WCAG 2.1 SC 1.4.4: Resize Text",
+        "url": "https://www.w3.org/TR/WCAG21/#resize-text"
+      },
+      {
+        "title": "MDN: font-size",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-size"
+      },
+      {
+        "title": "MDN: rem unit",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units"
+      },
+      {
+        "title": "Google web.dev: Font size",
+        "url": "https://web.dev/font-size/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Chrome DevTools",
+        "url": "https://developer.chrome.com/docs/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "css"
+    ]
+  },
+  {
+    "title": "Enregistrer les propriétés personnalisées CSS avec @property pour l'animation et la sécurité des types",
+    "priority": "Low",
+    "description": "Utilisez @property pour enregistrer les propriétés personnalisées CSS avec un type, une valeur initiale et un contrôle de l'héritage — cela permet de les animer et de valider les jetons de design à la compilation.",
+    "documentation": [
+      {
+        "title": "MDN: @property",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/@property"
+      },
+      {
+        "title": "web.dev: Registering custom properties with @property",
+        "url": "https://web.dev/articles/at-property"
+      },
+      {
+        "title": "CSS Houdini: Properties & Values API",
+        "url": "https://www.w3.org/TR/css-properties-values-api-1/"
+      }
+    ],
+    "tags": [
+      "all",
+      "css"
+    ]
+  },
+  {
+    "title": "Utiliser :has() pour styliser les éléments parents selon leurs descendants",
+    "priority": "Low",
+    "description": "Utilisez la pseudo-classe relationnelle CSS :has() pour sélectionner et styliser un élément en fonction de son contenu, remplaçant ainsi la manipulation du DOM en JavaScript dans de nombreux cas courants.",
+    "documentation": [
+      {
+        "title": "MDN: :has()",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/:has"
+      },
+      {
+        "title": "Chrome for Developers: :has(): the family selector",
+        "url": "https://developer.chrome.com/blog/has-m105/"
+      },
+      {
+        "title": "Can I Use: :has()",
+        "url": "https://caniuse.com/css-has"
+      }
+    ],
+    "tags": [
+      "all",
+      "css"
+    ]
+  },
+  {
+    "title": "Utiliser @layer pour gérer explicitement l'ordre de la cascade CSS",
+    "priority": "Low",
+    "description": "Utilisez les couches de cascade CSS (@layer) pour contrôler explicitement et de façon prévisible la spécificité et l'ordre de la cascade du code, sans devoir lutter contre la spécificité avec !important.",
+    "documentation": [
+      {
+        "title": "MDN: @layer",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/@layer"
+      },
+      {
+        "title": "Chrome for Developers: Cascade layers are coming to your browser",
+        "url": "https://developer.chrome.com/blog/cascade-layers"
+      },
+      {
+        "title": "CSS Tricks: A Complete Guide to CSS Cascade Layers",
+        "url": "https://css-tricks.com/css-cascade-layers/"
+      }
+    ],
+    "tags": [
+      "all",
+      "css"
+    ]
+  },
+  {
+    "title": "Utiliser CSS subgrid pour aligner les éléments de grille imbriqués sur les pistes parentes",
+    "priority": "Low",
+    "description": "Utilisez grid-template-columns: subgrid (ou subgrid pour les lignes) afin que les éléments de grille imbriqués participent aux pistes de la grille parente, résolvant ainsi l'alignement du contenu des cartes sans égaliser les hauteurs avec JavaScript.",
+    "documentation": [
+      {
+        "title": "MDN: Subgrid",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid"
+      },
+      {
+        "title": "web.dev: CSS subgrid",
+        "url": "https://web.dev/articles/css-subgrid"
+      },
+      {
+        "title": "Can I Use: subgrid",
+        "url": "https://caniuse.com/css-subgrid"
+      }
+    ],
+    "tags": [
+      "all",
+      "css"
+    ]
+  },
+  {
+    "title": "Utiliser oklch() et oklab() pour des palettes de couleurs uniformes en perception",
+    "priority": "Low",
+    "description": "Les valeurs de couleur du système de design utilisent les fonctions de couleur oklch() ou oklab() pour produire des palettes uniformes en perception, où des incréments numériques égaux correspondent à des variations égales de luminosité perçue.",
+    "documentation": [
+      {
+        "title": "MDN: oklch()",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklch"
+      },
+      {
+        "title": "oklch.com — interactive colour picker",
+        "url": "https://oklch.com/"
+      },
+      {
+        "title": "web.dev: High definition colour",
+        "url": "https://developer.chrome.com/docs/css-ui/high-definition-css-color-guide"
+      }
+    ],
+    "tools": [
+      {
+        "title": "oklch.com colour picker",
+        "url": "https://oklch.com/"
+      }
+    ],
+    "tags": [
+      "all",
+      "css"
+    ]
+  },
+  {
+    "title": "Utiliser l'API View Transitions pour des transitions fluides entre pages et composants",
+    "priority": "Low",
+    "description": "Utilisez l'API View Transitions pour animer les changements d'état ou les navigations entre pages avec un fondu enchaîné ou des animations personnalisées, afin d'obtenir des transitions de qualité native sans bibliothèque d'animation JavaScript.",
+    "documentation": [
+      {
+        "title": "MDN: View Transitions API",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API"
+      },
+      {
+        "title": "web.dev: Smooth transitions with the View Transitions API",
+        "url": "https://developer.chrome.com/docs/web-platform/view-transitions"
+      }
+    ],
+    "tags": [
+      "all",
+      "css"
+    ]
+  }
+]

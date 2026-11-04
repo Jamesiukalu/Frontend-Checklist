@@ -1,10 +1,10 @@
 .c-checklist__column.c-checklist__priority
 
   if item.priority == "High"
-    +svg-icon.icon.icon--small.icon-priority--high(aria-label="High priority item" data-icon-name='bullet')
+    +svg-icon.icon.icon--small.icon-priority--high(aria-label=translation.ui.PRIORITY_HIGH data-icon-name='bullet')
 
   else if item.priority == "Medium"
-    +svg-icon.icon.icon--small.icon-priority--medium(aria-label="Medium priority item" data-icon-name='bullet')
+    +svg-icon.icon.icon--small.icon-priority--medium(aria-label=translation.ui.PRIORITY_MEDIUM data-icon-name='bullet')
 
   else
-    +svg-icon.icon.icon--small.icon-priority--low(aria-label="Low priority item", data-icon-name='bullet')
+    +svg-icon.icon.icon--small.icon-priority--low(aria-label=translation.ui.PRIORITY_LOW, data-icon-name='bullet')

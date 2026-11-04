@@ -32,27 +32,25 @@ To install and run, open a terminal and use the following commands:
 To add a new translation for the Front-End Checklist, you just need to translate the original JSON files in English to your own language.
 
 - [ ] Duplicate `data/en` folder and change the name of the folder to:
-  * jp for Japanese
   * es for Spanish
-  * cn for Chinese
-  * fr for French
+  * de for German
+  * fr for French (already included)
 
 - [ ] Launch the GULP development mode adding the `--l` argument and your language
 
   ```shell
-    npx gulp dev --l jp
+    npx gulp dev --l fr
   ```
 
 - [ ] Translate all JSON files starting with the `project` folder
 
 > You'll need to stop the development mode, manually launch `npx gulp jsonRebuild`, and launch again the dev mode in order to see your changes on the view.
 
-- [ ] Update the `views/base/header.pug` with the right flag and url (you can download your flag if not already in `src/img/flags` at http://flag-icon-css.lip.is/)
+- [ ] Update the `views/base/header.pug` with a link to your language, and copy `src/views/index-en.pug` to `index-<lang>.pug`
 
   ```haml
     li.s-header__lang__item
-      a(href="/jp")
-        img(src="/img/flags/jp.svg" width="20" height="15" alt="Japanese language")
+      a(href="/fr" hreflang="fr" lang="fr") FR
   ```
 
 ## Contribute

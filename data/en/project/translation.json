@@ -37,5 +37,20 @@
     "TWITTER_HASHTAGS": "FrontEndChecklist #FrontEnd #Tool #Web",
     "STAR": "Star",
     "GITHUB_STAR_MSG": "Star Jamesiukalu/Frontend-Checklist on GitHub"
+  },
+  "ui": {
+    "THEME_LABEL": "Toggle light and dark theme",
+    "THEME_TITLE": "Toggle theme",
+    "REPORT": "Report",
+    "NAV_LABEL": "Checklist sections",
+    "CHECK_ALL": "Check all items",
+    "UNCHECK_ALL": "Uncheck all items",
+    "EXPAND_ALL": "Expand all items",
+    "COLLAPSE_ALL": "Collapse all items",
+    "HIDE_SECTION": "Hide current section",
+    "PRIORITY_HIGH": "High priority item",
+    "PRIORITY_MEDIUM": "Medium priority item",
+    "PRIORITY_LOW": "Low priority item",
+    "OPEN_DESCRIPTION": "Open the description section"
   }
 }

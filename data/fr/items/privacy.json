@@ -1,0 +1,145 @@
+[
+  {
+    "title": "Ajouter un lien vers votre politique de confidentialité dans le pied de page",
+    "priority": "High",
+    "description": "Les sites web qui collectent des données personnelles doivent publier une politique de confidentialité et la rendre facilement accessible : le RGPD, le CCPA et la plupart des autres réglementations sur la confidentialité l’exigent.",
+    "documentation": [
+      {
+        "title": "GDPR Article 13 - Information to be provided",
+        "url": "https://gdpr-info.eu/art-13-gdpr/"
+      },
+      {
+        "title": "CCPA: California Consumer Privacy Act",
+        "url": "https://oag.ca.gov/privacy/ccpa"
+      },
+      {
+        "title": "ICO Privacy notices, transparency and control",
+        "url": "https://ico.org.uk/for-organisations/advice-for-small-organisations/privacy-notices-and-cookies/how-to-write-a-privacy-notice-and-what-goes-in-it/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Mozilla Observatory",
+        "url": "https://observatory.mozilla.org/"
+      }
+    ],
+    "tags": [
+      "all",
+      "privacy",
+      "seo"
+    ]
+  },
+  {
+    "title": "Afficher une notice de consentement aux cookies",
+    "priority": "High",
+    "description": "Les sites web qui déposent des cookies non essentiels doivent obtenir au préalable le consentement éclairé de l’utilisateur, conformément au RGPD, au CCPA et aux réglementations similaires sur la confidentialité.",
+    "documentation": [
+      {
+        "title": "GDPR Article 6 - Lawfulness of processing",
+        "url": "https://gdpr-info.eu/art-6-gdpr/"
+      },
+      {
+        "title": "GDPR Recital 32 - Consent",
+        "url": "https://gdpr-info.eu/recitals/no-32/"
+      },
+      {
+        "title": "ICO Guide to PECR - Cookies and similar technologies",
+        "url": "https://ico.org.uk/media2/kz0doybw/guidance-on-the-use-of-cookies-and-similar-technologies-1-0.pdf"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Mozilla Observatory",
+        "url": "https://observatory.mozilla.org/"
+      }
+    ],
+    "tags": [
+      "all",
+      "privacy"
+    ]
+  },
+  {
+    "title": "Éviter les cookies tiers",
+    "priority": "Medium",
+    "description": "Les cookies tiers déposés par des domaines externes suivent les utilisateurs d’un site à l’autre sans qu’ils en aient connaissance.",
+    "detail": "Modern browsers are phasing them out, and regulations like GDPR and CCPA require consent before setting them.",
+    "documentation": [
+      {
+        "title": "MDN: Third-party cookies",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Privacy/Third-party_cookies"
+      },
+      {
+        "title": "web.dev: Preparing for the end of third-party cookies",
+        "url": "https://privacysandbox.google.com/cookies"
+      },
+      {
+        "title": "GDPR Article 5 and Recital 30",
+        "url": "https://gdpr-info.eu/art-5-gdpr/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Mozilla Observatory",
+        "url": "https://observatory.mozilla.org/"
+      }
+    ],
+    "tags": [
+      "all",
+      "privacy"
+    ]
+  },
+  {
+    "title": "Ne collecter que le minimum de données personnelles nécessaire",
+    "priority": "Medium",
+    "description": "Limitez la collecte aux seules données strictement nécessaires à l’objectif annoncé, conformément au principe de minimisation des données de l’article 5(1)(c) du RGPD.",
+    "documentation": [
+      {
+        "title": "GDPR Article 5 — Principles relating to processing of personal data",
+        "url": "https://gdpr-info.eu/art-5-gdpr/"
+      },
+      {
+        "title": "MDN: Storage API",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Storage_API"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Privacy Sandbox Privacy Analysis",
+        "url": "https://privacysandbox.com/"
+      }
+    ],
+    "tags": [
+      "all",
+      "privacy"
+    ]
+  },
+  {
+    "title": "Mettre en place un mécanisme de suppression des données accessible aux utilisateurs",
+    "priority": "Medium",
+    "description": "Permettez clairement aux utilisateurs de demander la suppression de leurs données personnelles, conformément à l’article 17 du RGPD (droit à l’effacement / droit à l’oubli).",
+    "documentation": [
+      {
+        "title": "GDPR Article 17 — Right to erasure",
+        "url": "https://gdpr-info.eu/art-17-gdpr/"
+      },
+      {
+        "title": "ICO: Right to erasure",
+        "url": "https://ico.org.uk/for-the-public/your-right-to-get-your-data-deleted/"
+      },
+      {
+        "title": "MDN: IndexedDB API",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Lighthouse Privacy Audits",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/"
+      }
+    ],
+    "tags": [
+      "all",
+      "privacy"
+    ]
+  }
+]

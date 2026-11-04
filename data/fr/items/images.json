@@ -1,0 +1,754 @@
+[
+  {
+    "title": "Fournir un texte alternatif pertinent pour les images",
+    "priority": "High",
+    "description": "Chaque image informative possède un attribut alt descriptif ; les images décoratives utilisent alt=\"\" afin que les lecteurs d’écran les ignorent.",
+    "documentation": [
+      {
+        "title": "MDN: Responsive images",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images"
+      },
+      {
+        "title": "web.dev: Image performance",
+        "url": "https://web.dev/learn/performance/image-performance"
+      }
+    ],
+    "tools": [
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/"
+      },
+      {
+        "title": "WAVE Web Accessibility Evaluator",
+        "url": "https://wave.webaim.org/"
+      },
+      {
+        "title": "Lighthouse Accessibility Audit",
+        "url": "https://developer.chrome.com/docs/lighthouse/"
+      }
+    ],
+    "tags": [
+      "all",
+      "images"
+    ]
+  },
+  {
+    "title": "Compresser les images sans perte de qualité",
+    "priority": "High",
+    "description": "Toutes les images sont compressées sans perte de qualité significative afin de réduire leur taille.",
+    "documentation": [
+      {
+        "title": "MDN: Responsive images",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images"
+      },
+      {
+        "title": "web.dev: Image performance",
+        "url": "https://web.dev/learn/performance/image-performance"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Squoosh",
+        "url": "https://squoosh.app/"
+      }
+    ],
+    "tags": [
+      "all",
+      "images",
+      "performance"
+    ]
+  },
+  {
+    "title": "Corriger les images brisées",
+    "priority": "High",
+    "description": "Aucune image ne renvoie d’erreur 404 ni n’affiche d’icône d’image brisée aux utilisateurs.",
+    "documentation": [
+      {
+        "title": "MDN: Responsive images",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images"
+      },
+      {
+        "title": "web.dev: Image performance",
+        "url": "https://web.dev/learn/performance/image-performance"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Lighthouse",
+        "url": "https://developer.chrome.com/docs/lighthouse/"
+      },
+      {
+        "title": "Broken Link Checker",
+        "url": "https://www.brokenlinkcheck.com/"
+      },
+      {
+        "title": "Chrome DevTools Network tab",
+        "url": "https://developer.chrome.com/docs/devtools/network/"
+      }
+    ],
+    "tags": [
+      "all",
+      "images"
+    ]
+  },
+  {
+    "title": "Implémenter des images adaptatives avec srcset",
+    "priority": "High",
+    "description": "Les images utilisent les attributs srcset et sizes pour une diffusion adaptée aux différents appareils.",
+    "documentation": [
+      {
+        "title": "MDN: Responsive images",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images"
+      },
+      {
+        "title": "web.dev: Responsive images",
+        "url": "https://web.dev/articles/responsive-images"
+      }
+    ],
+    "tools": [
+      {
+        "title": "SlingSite",
+        "url": "https://slingsite.github.io"
+      }
+    ],
+    "tags": [
+      "all",
+      "images",
+      "html"
+    ]
+  },
+  {
+    "title": "Respecter les limites de taille recommandées pour les fichiers image",
+    "priority": "High",
+    "description": "Les fichiers image individuels sont compressés à une taille raisonnable pour éviter le gaspillage de bande passante et les chargements lents, en particulier sur les réseaux mobiles.",
+    "documentation": [
+      {
+        "title": "web.dev: Image performance",
+        "url": "https://web.dev/learn/performance/image-performance"
+      },
+      {
+        "title": "web.dev: Use WebP images",
+        "url": "https://web.dev/articles/serve-images-webp"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Squoosh",
+        "url": "https://squoosh.app/"
+      },
+      {
+        "title": "ImageOptim",
+        "url": "https://imageoptim.com/"
+      },
+      {
+        "title": "Sharp",
+        "url": "https://sharp.pixelplumbing.com/"
+      },
+      {
+        "title": "Lighthouse",
+        "url": "https://developer.chrome.com/docs/lighthouse/"
+      },
+      {
+        "title": "WebPageTest",
+        "url": "https://www.webpagetest.org/"
+      }
+    ],
+    "tags": [
+      "all",
+      "images"
+    ]
+  },
+  {
+    "title": "Charger les images hors écran en différé",
+    "priority": "High",
+    "description": "Les images situées sous la zone visible utilisent loading=\"lazy\" pour différer leur téléchargement jusqu’à ce que l’utilisateur s’en approche en faisant défiler la page, réduisant ainsi le temps de chargement initial.",
+    "documentation": [
+      {
+        "title": "MDN: Responsive images",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images"
+      },
+      {
+        "title": "web.dev: Image performance",
+        "url": "https://web.dev/learn/performance/image-performance"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Lighthouse",
+        "url": "https://developer.chrome.com/docs/lighthouse/"
+      },
+      {
+        "title": "Chrome DevTools Coverage tab",
+        "url": "https://developer.chrome.com/docs/devtools/coverage/"
+      }
+    ],
+    "tags": [
+      "all",
+      "images"
+    ]
+  },
+  {
+    "title": "Optimiser les images pour accélérer le chargement",
+    "priority": "High",
+    "description": "Toutes les images sont compressées et leurs métadonnées supprimées avant le déploiement, afin d’éliminer les octets inutiles sans perte de qualité visible.",
+    "documentation": [
+      {
+        "title": "MDN: Responsive images",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images"
+      },
+      {
+        "title": "web.dev: Image performance",
+        "url": "https://web.dev/learn/performance/image-performance"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Squoosh",
+        "url": "https://squoosh.app/"
+      },
+      {
+        "title": "ImageOptim",
+        "url": "https://imageoptim.com/"
+      },
+      {
+        "title": "Sharp",
+        "url": "https://sharp.pixelplumbing.com/"
+      },
+      {
+        "title": "SVGO",
+        "url": "https://github.com/svg/svgo"
+      },
+      {
+        "title": "Lighthouse",
+        "url": "https://developer.chrome.com/docs/lighthouse/"
+      }
+    ],
+    "tags": [
+      "all",
+      "images"
+    ]
+  },
+  {
+    "title": "Optimiser toutes les images pour le Web",
+    "priority": "High",
+    "description": "Les images sont optimisées à l’aide de formats, de méthodes de compression et de techniques modernes appropriés.",
+    "documentation": [
+      {
+        "title": "MDN: Responsive images",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images"
+      },
+      {
+        "title": "web.dev: Image performance",
+        "url": "https://web.dev/learn/performance/image-performance"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Squoosh",
+        "url": "https://squoosh.app/"
+      },
+      {
+        "title": "Sharp",
+        "url": "https://sharp.pixelplumbing.com/"
+      },
+      {
+        "title": "ImageOptim",
+        "url": "https://imageoptim.com/"
+      },
+      {
+        "title": "Lighthouse",
+        "url": "https://developer.chrome.com/docs/lighthouse/"
+      },
+      {
+        "title": "SlingSite",
+        "url": "https://slingsite.github.io"
+      }
+    ],
+    "tags": [
+      "all",
+      "images",
+      "performance"
+    ]
+  },
+  {
+    "title": "Prioriser le chargement des images critiques",
+    "priority": "High",
+    "description": "Les images Hero et celles situées au-dessus de la ligne de flottaison sont préchargées avec une priorité de récupération élevée pour le LCP.",
+    "documentation": [
+      {
+        "title": "MDN: Responsive images",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images"
+      },
+      {
+        "title": "web.dev: Image performance",
+        "url": "https://web.dev/learn/performance/image-performance"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Squoosh",
+        "url": "https://squoosh.app/"
+      }
+    ],
+    "tags": [
+      "all",
+      "images",
+      "performance"
+    ]
+  },
+  {
+    "title": "Diffuser les images à la bonne taille d’affichage",
+    "priority": "High",
+    "description": "Les images ne dépassent pas significativement leurs dimensions d’affichage : diffuser une image de 2000 px dans un conteneur de 400 px gaspille de la bande passante et nuit au LCP.",
+    "documentation": [
+      {
+        "title": "MDN: Responsive images",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images"
+      },
+      {
+        "title": "web.dev: Responsive images",
+        "url": "https://web.dev/articles/responsive-images"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Lighthouse",
+        "url": "https://developer.chrome.com/docs/lighthouse/"
+      },
+      {
+        "title": "Chrome DevTools (Sources → Images)",
+        "url": "https://developer.chrome.com/docs/devtools/"
+      },
+      {
+        "title": "Squoosh",
+        "url": "https://squoosh.app/"
+      }
+    ],
+    "tags": [
+      "all",
+      "images"
+    ]
+  },
+  {
+    "title": "Diffuser les images depuis un CDN",
+    "priority": "High",
+    "description": "Les images sont diffusées depuis un CDN avec optimisation, redimensionnement et conversion de format automatiques.",
+    "documentation": [
+      {
+        "title": "MDN: Responsive images",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images"
+      },
+      {
+        "title": "web.dev: Image performance",
+        "url": "https://web.dev/learn/performance/image-performance"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Squoosh",
+        "url": "https://squoosh.app/"
+      }
+    ],
+    "tags": [
+      "all",
+      "images",
+      "performance"
+    ]
+  },
+  {
+    "title": "Définir explicitement la largeur et la hauteur des images",
+    "priority": "High",
+    "description": "Tous les éléments `<img>` ont des attributs width et height explicites afin que les navigateurs puissent réserver l’espace avant le chargement de l’image et éviter les décalages de mise en page.",
+    "documentation": [
+      {
+        "title": "MDN: Responsive images",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images"
+      },
+      {
+        "title": "web.dev: Image performance",
+        "url": "https://web.dev/learn/performance/image-performance"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Lighthouse",
+        "url": "https://developer.chrome.com/docs/lighthouse/"
+      },
+      {
+        "title": "PageSpeed Insights",
+        "url": "https://pagespeed.web.dev/"
+      },
+      {
+        "title": "Squoosh",
+        "url": "https://squoosh.app/"
+      }
+    ],
+    "tags": [
+      "all",
+      "images"
+    ]
+  },
+  {
+    "title": "Utiliser `<picture>` avec un élément `<img>` de remplacement",
+    "priority": "High",
+    "description": "Chaque élément `<picture>` contient un élément `<img>` de remplacement obligatoire comme dernier enfant, afin que les images s’affichent dans tous les navigateurs, y compris ceux qui ne prennent pas en charge `<picture>`.",
+    "documentation": [
+      {
+        "title": "MDN: Responsive images",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images"
+      },
+      {
+        "title": "web.dev: Image performance",
+        "url": "https://web.dev/learn/performance/image-performance"
+      }
+    ],
+    "tools": [
+      {
+        "title": "W3C HTML Validator",
+        "url": "https://validator.w3.org/"
+      },
+      {
+        "title": "caniuse — picture element",
+        "url": "https://caniuse.com/picture"
+      }
+    ],
+    "tags": [
+      "all",
+      "images"
+    ]
+  },
+  {
+    "title": "Utiliser des formats d’image modernes (WebP, AVIF)",
+    "priority": "High",
+    "description": "Lorsque la prise en charge par le navigateur le permet, les images sont diffusées dans des formats modernes (WebP ou AVIF) plutôt qu’en JPEG/PNG obsolètes, afin de réduire la taille des fichiers sans perte de qualité visible.",
+    "documentation": [
+      {
+        "title": "MDN: Responsive images",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images"
+      },
+      {
+        "title": "web.dev: Image performance",
+        "url": "https://web.dev/learn/performance/image-performance"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Squoosh",
+        "url": "https://squoosh.app/"
+      },
+      {
+        "title": "Sharp",
+        "url": "https://sharp.pixelplumbing.com/"
+      },
+      {
+        "title": "caniuse — WebP",
+        "url": "https://caniuse.com/webp"
+      },
+      {
+        "title": "caniuse — AVIF",
+        "url": "https://caniuse.com/avif"
+      }
+    ],
+    "tags": [
+      "all",
+      "images"
+    ]
+  },
+  {
+    "title": "Utiliser srcset pour les images adaptatives",
+    "priority": "High",
+    "description": "Les images de plus de 100 px de largeur utilisent l’attribut srcset pour proposer plusieurs résolutions, ce qui permet au navigateur de télécharger la taille optimale selon la fenêtre d’affichage et la densité de pixels de l’appareil de l’utilisateur.",
+    "documentation": [
+      {
+        "title": "MDN: Responsive images",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images"
+      },
+      {
+        "title": "web.dev: Responsive images",
+        "url": "https://web.dev/articles/responsive-images"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Lighthouse",
+        "url": "https://developer.chrome.com/docs/lighthouse/"
+      },
+      {
+        "title": "RespImageLint",
+        "url": "https://ausi.github.io/respimagelint/"
+      }
+    ],
+    "tags": [
+      "all",
+      "images"
+    ]
+  },
+  {
+    "title": "Utiliser le format WebP avec des solutions de repli",
+    "priority": "High",
+    "description": "Les images sont diffusées au format WebP, avec des solutions de repli pour les navigateurs plus anciens.",
+    "documentation": [
+      {
+        "title": "MDN: Responsive images",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images"
+      },
+      {
+        "title": "web.dev: Image performance",
+        "url": "https://web.dev/learn/performance/image-performance"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Squoosh",
+        "url": "https://squoosh.app/"
+      }
+    ],
+    "tags": [
+      "all",
+      "images",
+      "performance"
+    ]
+  },
+  {
+    "title": "Gérer la taille et la complexité des SVG intégrés",
+    "priority": "Medium",
+    "description": "Les SVG volumineux ou complexes intégrés au HTML sont extraits dans des fichiers externes ou des composants, afin d’éviter d’alourdir le document HTML et de bloquer son analyse.",
+    "documentation": [
+      {
+        "title": "MDN: Responsive images",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images"
+      },
+      {
+        "title": "web.dev: Image performance",
+        "url": "https://web.dev/learn/performance/image-performance"
+      }
+    ],
+    "tools": [
+      {
+        "title": "SVGO",
+        "url": "https://github.com/svg/svgo"
+      },
+      {
+        "title": "SVGR",
+        "url": "https://react-svgr.com/"
+      },
+      {
+        "title": "Chrome DevTools Elements panel",
+        "url": "https://developer.chrome.com/docs/devtools/"
+      }
+    ],
+    "tags": [
+      "all",
+      "images"
+    ]
+  },
+  {
+    "title": "Optimiser les fichiers SVG",
+    "priority": "Medium",
+    "description": "Les fichiers SVG sont optimisés avec SVGO pour supprimer les métadonnées inutiles et réduire leur taille.",
+    "documentation": [
+      {
+        "title": "MDN: Responsive images",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images"
+      },
+      {
+        "title": "web.dev: Image performance",
+        "url": "https://web.dev/learn/performance/image-performance"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Squoosh",
+        "url": "https://squoosh.app/"
+      }
+    ],
+    "tags": [
+      "all",
+      "images",
+      "performance"
+    ]
+  },
+  {
+    "title": "Prendre en charge les écrans Retina haute densité",
+    "priority": "Medium",
+    "description": "Des images haute résolution (2x, 3x) sont fournies pour les écrans Retina et haute densité.",
+    "documentation": [
+      {
+        "title": "MDN: Responsive images",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images"
+      },
+      {
+        "title": "web.dev: Responsive images",
+        "url": "https://web.dev/articles/responsive-images"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Squoosh",
+        "url": "https://squoosh.app/"
+      }
+    ],
+    "tags": [
+      "all",
+      "images"
+    ]
+  },
+  {
+    "title": "Utiliser `<figure>` et `<figcaption>` pour les légendes d’image",
+    "priority": "Medium",
+    "description": "Les images accompagnées d’une légende visible sont placées dans `<figure>` avec un enfant `<figcaption>`, ce qui associe l’image et sa légende de manière sémantique.",
+    "documentation": [
+      {
+        "title": "MDN: Responsive images",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images"
+      },
+      {
+        "title": "web.dev: Image performance",
+        "url": "https://web.dev/learn/performance/image-performance"
+      }
+    ],
+    "tools": [
+      {
+        "title": "W3C HTML Validator",
+        "url": "https://validator.w3.org/"
+      },
+      {
+        "title": "axe DevTools",
+        "url": "https://www.deque.com/axe/"
+      }
+    ],
+    "tags": [
+      "all",
+      "images"
+    ]
+  },
+  {
+    "title": "Utiliser le format AVIF dans les navigateurs modernes",
+    "priority": "Medium",
+    "description": "Les images prennent en charge le format AVIF pour une compression supérieure, avec des solutions de repli adaptées aux navigateurs.",
+    "documentation": [
+      {
+        "title": "MDN: Responsive images",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images"
+      },
+      {
+        "title": "web.dev: Image performance",
+        "url": "https://web.dev/learn/performance/image-performance"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Squoosh",
+        "url": "https://squoosh.app/"
+      }
+    ],
+    "tags": [
+      "all",
+      "images",
+      "performance"
+    ]
+  },
+  {
+    "title": "Gérer les erreurs de chargement des images avec élégance",
+    "priority": "Low",
+    "description": "Les images brisées sont gérées avec élégance à l’aide d’images de remplacement ou de contenu de substitution.",
+    "documentation": [
+      {
+        "title": "MDN: Responsive images",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images"
+      },
+      {
+        "title": "web.dev: Image performance",
+        "url": "https://web.dev/learn/performance/image-performance"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Squoosh",
+        "url": "https://squoosh.app/"
+      }
+    ],
+    "tags": [
+      "all",
+      "images",
+      "html"
+    ]
+  },
+  {
+    "title": "Utiliser des noms de fichiers image descriptifs",
+    "priority": "Low",
+    "description": "Les noms de fichiers image sont descriptifs et lisibles, utilisent des lettres minuscules, des traits d’union comme séparateurs et des mots pertinents qui reflètent le contenu de l’image.",
+    "documentation": [
+      {
+        "title": "MDN: Responsive images",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images"
+      },
+      {
+        "title": "web.dev: Image performance",
+        "url": "https://web.dev/learn/performance/image-performance"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Google Search Console",
+        "url": "https://search.google.com/search-console"
+      }
+    ],
+    "tags": [
+      "all",
+      "images"
+    ]
+  },
+  {
+    "title": "Utiliser des sprites d’images lorsque c’est pertinent",
+    "priority": "Low",
+    "description": "Les petites images et les icônes utilisent des sprites ou du SVG pour réduire le nombre de requêtes HTTP.",
+    "documentation": [
+      {
+        "title": "MDN: Responsive images",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/srcset"
+      },
+      {
+        "title": "web.dev: Image performance",
+        "url": "https://web.dev/learn/performance/image-performance"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Squoosh",
+        "url": "https://squoosh.app/"
+      }
+    ],
+    "tags": [
+      "all",
+      "images",
+      "performance"
+    ]
+  },
+  {
+    "title": "Utiliser l’encodage JPEG progressif",
+    "priority": "Low",
+    "description": "Les images JPEG utilisent le format progressif pour améliorer la performance de chargement perçue.",
+    "documentation": [
+      {
+        "title": "MDN: Responsive images",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images"
+      },
+      {
+        "title": "web.dev: Image performance",
+        "url": "https://web.dev/learn/performance/image-performance"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Squoosh",
+        "url": "https://squoosh.app/"
+      }
+    ],
+    "tags": [
+      "all",
+      "images",
+      "performance"
+    ]
+  }
+]
