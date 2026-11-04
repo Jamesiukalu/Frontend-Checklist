@@ -11,7 +11,7 @@ class Report {
     }
 
     this.form = document.querySelector('.s-form');
-    this.inputs = this.form.querySelectorAll('input');
+    this.inputs = this.form ? this.form.querySelectorAll('input') : [];
   }
 
   readInputs() {

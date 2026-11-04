@@ -6,7 +6,6 @@ import Notation from './Notation';
 import Tools from './Tools';
 import Report from './Report';
 import Ui from './Ui';
-import Audit from './Audit';
 
 let instance = null;
 /**
@@ -20,6 +19,9 @@ class Init {
       instance = this;
     }
 
+    // Pages without a checklist (e.g. the audit page) have nothing to set up
+    if (!document.querySelector('.js-section')) return instance;
+
     this.sections = document.querySelectorAll('.js-section');
     this.main = document.getElementById('js-main');
 
@@ -31,7 +33,6 @@ class Init {
     this.toolsInit();
     this.reportInit();
     this.uiInit();
-    new Audit();
 
     return instance;
   }

@@ -55,7 +55,7 @@
   },
   "audit": {
     "TITLE": "Audit a live page",
-    "LEAD": "Paste a URL and we'll check what can be verified automatically, then tick the items that pass and flag the ones that fail. Everything else stays manual.",
+    "LEAD": "Paste a public URL and we'll run about 60 automatic checks against it. You get a score, what to fix, and one click to tick the passing items in your checklist.",
     "LABEL": "Page URL",
     "BUTTON": "Run audit",
     "RUNNING": "Auditing…",
@@ -63,8 +63,51 @@
     "PASSED": "passed",
     "FAILED": "failed",
     "CHECKED": "automatic checks",
-    "CLEAR": "Clear audit marks",
     "ERROR": "Audit failed",
-    "FAILED_BADGE": "Failed audit"
+    "FAILED_HEADING": "Needs attention",
+    "PASSED_HEADING": "Passing",
+    "APPLY": "Tick passing items in my checklist",
+    "APPLIED": "items ticked in your checklist.",
+    "VIEW_CHECKLIST": "Open the checklist →",
+    "NOTE": "Automatic checks cover only what can be verified from the page's HTML and response headers. Everything else, such as real-device testing or content quality, stays a manual item in the checklist. Only public pages can be audited.",
+    "NONE_FAILED": "Nothing failed. Nice work.",
+    "NONE_PASSED": "Nothing passed yet."
+  },
+  "nav": {
+    "LABEL": "Main",
+    "CHECKLIST": "Checklist",
+    "AUDIT": "Audit",
+    "REPORT": "Report",
+    "HELP": "Help"
+  },
+  "help": {
+    "TITLE": "How to use this checklist",
+    "CLOSE": "Close help",
+    "INTRO": "A front-end quality checklist you can work through by hand or partly automate.",
+    "STEPS": [
+      {
+        "title": "1. Work through the checklist.",
+        "text": "Open a section from the sidebar and tick items as you complete them. Click the arrow on an item for documentation and tools."
+      },
+      {
+        "title": "2. Filter what matters.",
+        "text": "Use the tag pills to focus on one area, and the eye icon to hide a section you don't need."
+      },
+      {
+        "title": "3. Audit a live page.",
+        "text": "On the Audit page, paste a URL. About 60 checks run automatically and the passing items can be ticked in your checklist in one click."
+      },
+      {
+        "title": "4. Generate a report.",
+        "text": "Open Report to fill in the project name and developer, then print or save a PDF of your progress."
+      }
+    ],
+    "TIPS_TITLE": "Good to know",
+    "TIPS": [
+      "Your progress is saved in this browser only. Nothing is uploaded.",
+      "The dark/light button remembers your choice.",
+      "Use EN / FR in the top bar to switch language."
+    ],
+    "TRY_AUDIT": "Try the audit"
   }
 }

@@ -1,0 +1,22 @@
+dialog.c-help.js-help(aria-labelledby="help-title")
+  .c-help__inner
+    header.c-help__header
+      h2#help-title= translation.help.TITLE
+      button.c-help__close.js-help-close(type="button" aria-label=translation.help.CLOSE) ×
+
+    p.c-help__intro= translation.help.INTRO
+
+    ol.c-help__steps
+      each step in translation.help.STEPS
+        li
+          strong= step.title
+          |  
+          span= step.text
+
+    h3.c-help__subtitle= translation.help.TIPS_TITLE
+    ul.c-help__tips
+      each tip in translation.help.TIPS
+        li= tip
+
+    footer.c-help__footer
+      a.button.--fill(href=(translation.SITE_LANGUAGE === 'en' ? '' : '/' + translation.SITE_LANGUAGE) + '/audit')= translation.help.TRY_AUDIT

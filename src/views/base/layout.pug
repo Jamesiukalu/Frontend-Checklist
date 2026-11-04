@@ -1,5 +1,6 @@
 block vars
   - listSections = []
+  - var page = 'checklist'
 
 //- Inject all mixins to be able to call these
 include ../mixins/mixins
@@ -31,6 +32,8 @@ html.no-js(lang=translation.SITE_LANGUAGE, dir=translation.SITE_DIRECTION)
 
       .page-footer
         include footer
+
+    include help
 
     //- Scripts loading
     include after-scripts

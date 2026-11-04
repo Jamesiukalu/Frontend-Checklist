@@ -88,7 +88,7 @@
   },
   "audit": {
     "TITLE": "Auditer une page en ligne",
-    "LEAD": "Collez une URL : nous vérifions automatiquement ce qui peut l'être, cochons les éléments réussis et signalons ceux en échec. Le reste reste à vérifier manuellement.",
+    "LEAD": "Collez une URL publique : nous exécutons une soixantaine de vérifications automatiques. Vous obtenez un score, ce qu'il faut corriger, et un clic pour cocher les éléments réussis dans votre checklist.",
     "LABEL": "URL de la page",
     "BUTTON": "Lancer l'audit",
     "RUNNING": "Audit en cours…",
@@ -96,8 +96,51 @@
     "PASSED": "réussis",
     "FAILED": "en échec",
     "CHECKED": "vérifications automatiques",
-    "CLEAR": "Effacer les marques d'audit",
     "ERROR": "Échec de l'audit",
-    "FAILED_BADGE": "Échec à l'audit"
+    "FAILED_HEADING": "À corriger",
+    "PASSED_HEADING": "Réussis",
+    "APPLY": "Cocher les éléments réussis dans ma checklist",
+    "APPLIED": "éléments cochés dans votre checklist.",
+    "VIEW_CHECKLIST": "Ouvrir la checklist →",
+    "NOTE": "Les vérifications automatiques ne couvrent que ce qui se constate dans le HTML et les en-têtes de la page. Le reste, comme les tests sur appareils réels ou la qualité du contenu, reste à vérifier manuellement. Seules les pages publiques peuvent être auditées.",
+    "NONE_FAILED": "Aucun échec. Bravo !",
+    "NONE_PASSED": "Aucun élément réussi pour l'instant."
+  },
+  "nav": {
+    "LABEL": "Principal",
+    "CHECKLIST": "Checklist",
+    "AUDIT": "Audit",
+    "REPORT": "Rapport",
+    "HELP": "Aide"
+  },
+  "help": {
+    "TITLE": "Comment utiliser cette checklist",
+    "CLOSE": "Fermer l'aide",
+    "INTRO": "Une checklist de qualité front-end à parcourir à la main ou à automatiser en partie.",
+    "STEPS": [
+      {
+        "title": "1. Parcourez la checklist.",
+        "text": "Ouvrez une section depuis la barre latérale et cochez les éléments au fur et à mesure. Cliquez sur la flèche d'un élément pour la documentation et les outils."
+      },
+      {
+        "title": "2. Filtrez l'essentiel.",
+        "text": "Utilisez les tags pour vous concentrer sur un domaine, et l'icône en forme d'œil pour masquer une section inutile."
+      },
+      {
+        "title": "3. Auditez une page en ligne.",
+        "text": "Sur la page Audit, collez une URL. Une soixantaine de vérifications s'exécutent et les éléments réussis peuvent être cochés d'un clic dans votre checklist."
+      },
+      {
+        "title": "4. Générez un rapport.",
+        "text": "Ouvrez Rapport pour renseigner le nom du projet et du développeur, puis imprimez ou enregistrez en PDF votre progression."
+      }
+    ],
+    "TIPS_TITLE": "Bon à savoir",
+    "TIPS": [
+      "Votre progression est enregistrée uniquement dans ce navigateur. Rien n'est envoyé.",
+      "Le bouton clair/sombre mémorise votre choix.",
+      "Utilisez EN / FR dans la barre du haut pour changer de langue."
+    ],
+    "TRY_AUDIT": "Essayer l'audit"
   }
 }

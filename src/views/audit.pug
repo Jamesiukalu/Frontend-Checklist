@@ -1,0 +1,39 @@
+extends base/layout
+
+block vars
+  - listSections = []
+  - var page = 'audit'
+
+block main
+  .s-audit
+    header.s-audit__hero
+      h1.s-audit__title= translation.audit.TITLE
+      p.s-audit__lead= translation.audit.LEAD
+
+    section.c-audit
+      form.c-audit__form.js-audit-form(novalidate)
+        label.c-audit__label(for="audit-url")= translation.audit.LABEL
+        .c-audit__row
+          input#audit-url.c-audit__input(type="text" name="url" inputmode="url" autocomplete="url" placeholder="example.com" required)
+          button.button.--fill.c-audit__submit.js-audit-submit(type="submit")= translation.audit.BUTTON
+
+      p.c-audit__status.js-audit-status(role="status" aria-live="polite")
+
+    section.c-audit-results.js-audit-results(hidden)
+      .c-audit__summary
+        strong.c-audit__score.js-audit-score
+        span.c-audit__counts.js-audit-counts
+
+      .c-audit__actions
+        button.button.--fill.js-audit-apply(type="button")= translation.audit.APPLY
+        a.c-audit__link(href=(translation.SITE_LANGUAGE === 'en' ? '' : '/' + translation.SITE_LANGUAGE) + '/')= translation.audit.VIEW_CHECKLIST
+        span.c-audit__applied.js-audit-applied(role="status" aria-live="polite")
+
+      h2.c-audit__heading= translation.audit.FAILED_HEADING
+      ul.c-audit__list.js-audit-failed
+      h2.c-audit__heading= translation.audit.PASSED_HEADING
+      ul.c-audit__list.c-audit__list--passed.js-audit-passed
+
+    p.c-audit__note= translation.audit.NOTE
+
+  script#js-audit-labels(type="application/json")!= JSON.stringify(translation.audit)

@@ -46,6 +46,48 @@
   text-decoration: none;
 }
 
+.s-topbar__nav {
+  display: flex;
+  flex: 1;
+  gap: 4px;
+  margin-left: 32px;
+}
+
+.s-topbar__nav .s-topbar__link {
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.s-topbar__link[aria-current='page'] {
+  background: var(--surface-muted);
+  color: var(--text);
+}
+
+.s-topbar__help {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: transparent;
+  font: inherit;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.s-topbar__help-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  font-size: 0.6875rem;
+  font-weight: 700;
+}
+
 .s-topbar__actions {
   display: flex;
   align-items: center;
@@ -182,8 +224,13 @@
     padding: 0 16px;
   }
 
-  .s-topbar__link:nth-child(3) {
+  .s-topbar__brand,
+  .s-topbar__github {
     display: none;
+  }
+
+  .s-topbar__nav {
+    margin-left: 0;
   }
 
   .s-layout {

@@ -112,6 +112,22 @@ export function compilePug() {
     .pipe(browserSync.stream());
 }
 
+// The audit page shares one template across languages; output is /audit and /<lang>/audit
+export function compileAuditPug() {
+  return gulp
+    .src(`${dirs.src}/views/audit.pug`)
+    .pipe(plumber(plumberOptions))
+    .pipe(data(() => loadProjectData(lang)))
+    .pipe(pug({locals: {}, pretty: true}))
+    .pipe(rename({basename: 'index'}))
+    .pipe(
+      gulp.dest(
+        lang === 'en' ? `${dirs.dest}/audit` : `${dirs.dest}/${lang}/audit`,
+      ),
+    )
+    .pipe(browserSync.stream());
+}
+
 export function compileAllPug() {
   return allStreams(
     langs.map((l) =>
@@ -120,6 +136,23 @@ export function compileAllPug() {
         .pipe(data(() => loadProjectData(l)))
         .pipe(pug({locals: {}, pretty: true}))
         .pipe(gulp.dest(dirs.dest)),
+    ),
+  );
+}
+
+export function compileAllAuditPug() {
+  return allStreams(
+    langs.map((l) =>
+      gulp
+        .src(`${dirs.src}/views/audit.pug`)
+        .pipe(data(() => loadProjectData(l)))
+        .pipe(pug({locals: {}, pretty: true}))
+        .pipe(rename({basename: 'index'}))
+        .pipe(
+          gulp.dest(
+            l === 'en' ? `${dirs.dest}/audit` : `${dirs.dest}/${l}/audit`,
+          ),
+        ),
     ),
   );
 }
@@ -158,21 +191,37 @@ const minifyPage = (html) =>
   minifyHtml(html, {collapseWhitespace: true, removeComments: true});
 
 export function criticalCss() {
-  return allStreams(
-    langs.map((l) =>
+  return allStreams([
+    ...langs.map((l) =>
+      gulp
+        .src(`${dirs.dest}/${l === 'en' ? '' : `${l}/`}audit/index.html`)
+        .pipe(
+          mapContents(async (file) =>
+            Buffer.from(
+              await minifyPage(
+                await beasties.process(file.contents.toString()),
+              ),
+            ),
+          ),
+        )
+        .pipe(gulp.dest(`${dirs.dest}/${l === 'en' ? '' : `${l}/`}audit`)),
+    ),
+    ...langs.map((l) =>
       gulp
         .src(`${dirs.dest}/index-${l}.html`)
         .pipe(
           mapContents(async (file) =>
             Buffer.from(
-              await minifyPage(await beasties.process(file.contents.toString())),
+              await minifyPage(
+                await beasties.process(file.contents.toString()),
+              ),
             ),
           ),
         )
         .pipe(rename({basename: 'index'}))
         .pipe(gulp.dest(l === 'en' ? dirs.dest : `${dirs.dest}/${l}`)),
     ),
-  );
+  ]);
 }
 
 // ========================================
@@ -204,9 +253,7 @@ const optimizeImage = async (file) => {
     case '.png':
       return sharp(input).png({compressionLevel: 9, effort: 10}).toBuffer();
     case '.svg':
-      return Buffer.from(
-        optimizeSvg(input.toString(), {path: file.path}).data,
-      );
+      return Buffer.from(optimizeSvg(input.toString(), {path: file.path}).data);
     default:
       return input;
   }
@@ -340,7 +387,9 @@ export function jsonRebuildAll(done) {
 export function apiBuild(done) {
   fs.mkdirSync(`${dirs.dest}/api`, {recursive: true});
   langs.forEach((l) => {
-    const items = JSON.parse(fs.readFileSync(`./data/${l}/_items.json`, 'utf8'));
+    const items = JSON.parse(
+      fs.readFileSync(`./data/${l}/_items.json`, 'utf8'),
+    );
     const sections = Object.entries(items).map(([section, list]) => ({
       id: section,
       count: list.length,
@@ -383,10 +432,13 @@ export function modernizrBuild(done) {
 
 export function watch() {
   gulp.watch(`${dirs.src}/styles/**/*.scss`, compileStyles);
-  gulp.watch(`${dirs.src}/views/**/*.pug`, compilePug);
+  gulp.watch(
+    `${dirs.src}/views/**/*.pug`,
+    gulp.parallel(compilePug, compileAuditPug),
+  );
   gulp.watch(
     [`./data/${lang}/items/*.json`, `./data/${lang}/project/*.json`],
-    gulp.series(jsonRebuild, compilePug),
+    gulp.series(jsonRebuild, gulp.parallel(compilePug, compileAuditPug)),
   );
   gulp.watch(`${dirs.src}/img/**/*`, compressImages);
   gulp.watch(`${dirs.src}/scripts/**/*.js`, webpackScripts);
@@ -394,14 +446,20 @@ export function watch() {
 
 export const dev = gulp.series(
   jsonRebuild,
-  gulp.parallel(compilePug, compileStyles, compressImages, webpackScripts),
+  gulp.parallel(
+    compilePug,
+    compileAuditPug,
+    compileStyles,
+    compressImages,
+    webpackScripts,
+  ),
   serve,
   watch,
 );
 
 export const build = gulp.series(
   gulp.parallel(cleanDist, jsonRebuildAll, modernizrBuild),
-  compileAllPug,
+  gulp.parallel(compileAllPug, compileAllAuditPug),
   gulp.parallel(compileStyles, compressImages, webpackScripts),
   cdn,
   gulp.parallel(criticalCss, copy, apiBuild),
