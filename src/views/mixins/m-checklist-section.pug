@@ -5,9 +5,6 @@ mixin checklist-section(options)
   - dataSection = options.dataSection || [];
   - filter = options.filter || 'all';
 
-  //- Push each section title to build navigation bar
-  - listSections.push(sectionTitle.toLowerCase())
-
   //- Add a 0 in the array everytime the mixin is called
   - listSectionId.push(sectionId++)
 

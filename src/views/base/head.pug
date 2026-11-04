@@ -17,6 +17,15 @@ title #[=translation.SITE_NAME] - #[=translation.INDEX_TITLE]
 <!-- Meta Description -->
 meta(name='description', content=translation.SITE_DESCRIPTION)
 
+//- Set the theme before first paint to avoid a flash of the wrong theme
+script.
+  (function () {
+    var theme;
+    try { theme = localStorage.getItem('theme'); } catch (e) {}
+    if (!theme) theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+
 link(rel="preload" as="style" href="/styles/main.min.css" onload="this.rel='stylesheet'")
 
 noscript

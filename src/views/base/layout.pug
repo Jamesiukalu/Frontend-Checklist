@@ -6,7 +6,6 @@ include ../mixins/mixins
 
 
 doctype html
-<!-- Doctype HTML5 -->
 html.no-js(lang=translation.SITE_LANGUAGE, dir=translation.SITE_DIRECTION)
   head
 
@@ -21,14 +20,12 @@ html.no-js(lang=translation.SITE_LANGUAGE, dir=translation.SITE_DIRECTION)
     .page-wrapper
 
       .page-header
-        //- Top banners with informations for the user
+        //- Banner shown when JavaScript is disabled
         include ../components/c-top-alert
 
         include header
 
       .page-main
-
-        //- The main tag is not include in the block main because repeted
         main.s-main#js-main
           block main
 

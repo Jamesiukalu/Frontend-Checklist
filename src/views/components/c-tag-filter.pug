@@ -9,8 +9,9 @@ each item, i in _items
     each tag in tagList.tags
 
       //- Check if the filter tag already exist in the tagFilter array
-      - if (tagFilter.indexOf(tag) === -1)
-        - tagFilter.push(tag)
+      - var tagKey = tag.toLowerCase()
+      - if (tagFilter.indexOf(tagKey) === -1)
+        - tagFilter.push(tagKey)
 
 //- Filter code implementation
 aside.c-tag-filter
@@ -22,7 +23,7 @@ aside.c-tag-filter
     each title in tagFilter
 
       //- Add uppercase in the first letter
-      - titleFilter = title.charAt(0).toUpperCase() + title.slice(1)
+      - titleFilter = ['css', 'html', 'seo'].indexOf(title) > -1 ? title.toUpperCase() : (title === 'i18n' ? title : title.charAt(0).toUpperCase() + title.slice(1))
 
       //- Slip and add a dash if the tag is more than 1 word
       - dataFilter = title.split(' ').join('-')

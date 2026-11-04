@@ -10,6 +10,7 @@
     "lint": "eslint src/scripts",
     "lint:css": "stylelint \"src/styles/**/*.scss\""
   },
+  "author": "Jamesiukalu",
   "license": "MIT",
   "engines": {
     "node": ">=22.11.0"

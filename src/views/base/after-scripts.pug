@@ -1,16 +1,13 @@
 script(src="/scripts/app.bundle.js" async)
-script(src="https://platform.twitter.com/widgets.js" async)
-script(src="https://buttons.github.io/buttons.js" async)
 script.
+  document.addEventListener('click', function (event) {
+    var button = event.target.closest('.js-theme-toggle');
+    if (!button) return;
+    var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
 
   if ('serviceWorker' in navigator) {
-    //- console.log('CLIENT: service worker registration in progress.');
-    navigator.serviceWorker.register('/service-worker.js').then(function() {
-      //- console.log('CLIENT: service worker registration complete.');
-    }, function() {
-      //- console.log('CLIENT: service worker registration failure.');
-    });
-  }
-  else {
-    //- console.log('CLIENT: service worker is not supported.');
+    navigator.serviceWorker.register('/service-worker.js').catch(function () {});
   }

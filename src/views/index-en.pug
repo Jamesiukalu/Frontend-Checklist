@@ -5,75 +5,44 @@ block main
 
   include components/s-section-top
 
-  //- List each section (the order is linked to the order of the c-nav)
-  //- _items is in the JSON injected in the view with gulp-data (called _project.json)
-  .s-main__section.s-main__checklist
+  //- Sections, in display order. The sidebar nav is built from this list.
+  -
+    var sections = [
+      ['head', 'Head'],
+      ['html', 'HTML'],
+      ['webfonts', 'Webfonts'],
+      ['css', 'CSS'],
+      ['javascript', 'JavaScript'],
+      ['images', 'Images'],
+      ['accessibility', 'Accessibility'],
+      ['performance', 'Performance'],
+      ['seo', 'SEO'],
+      ['security', 'Security'],
+      ['privacy', 'Privacy'],
+      ['testing', 'Testing'],
+      ['i18n', 'i18n'],
+    ];
+    listSections = sections.map(function (s) { return s[1].toLowerCase(); });
 
-    if _items !== undefined
+  .s-layout
 
-      +checklist-section({
-        dataSection: _items.head,
-        sectionTitle: "Head"
-      })
+    aside.s-sidebar
+      include components/c-nav
 
-      +checklist-section({
-        dataSection: _items.html,
-        sectionTitle: "HTML"
-      })
+    .s-content
 
-      +checklist-section({
-        dataSection: _items.webfonts,
-        sectionTitle: "Webfonts"
-      })
+      //- _items is in the JSON injected in the view with gulp-data (called _project.json)
+      .s-main__section.s-main__filter
+        include components/c-tag-filter
 
-      +checklist-section({
-        dataSection: _items.css,
-        sectionTitle: "CSS"
-      })
+      .s-main__section.s-main__checklist
 
-      +checklist-section({
-        dataSection: _items.javascript,
-        sectionTitle: "JavaScript"
-      })
+        if _items !== undefined
 
-      +checklist-section({
-        dataSection: _items.images,
-        sectionTitle: "Images"
-      })
+          each section in sections
+            +checklist-section({
+              dataSection: _items[section[0]],
+              sectionTitle: section[1]
+            })
 
-      +checklist-section({
-        dataSection: _items.accessibility,
-        sectionTitle: "Accessibility"
-      })
-
-      +checklist-section({
-        dataSection: _items.performance,
-        sectionTitle: "Performance"
-      })
-
-      +checklist-section({
-        dataSection: _items.seo,
-        sectionTitle: "SEO"
-      })
-
-      +checklist-section({
-        dataSection: _items.security,
-        sectionTitle: "Security"
-      })
-
-      +checklist-section({
-        dataSection: _items.privacy,
-        sectionTitle: "Privacy"
-      })
-
-      +checklist-section({
-        dataSection: _items.testing,
-        sectionTitle: "Testing"
-      })
-
-      +checklist-section({
-        dataSection: _items.i18n,
-        sectionTitle: "i18n"
-      })
-
-  include components/s-section-bottom
+      include components/c-report

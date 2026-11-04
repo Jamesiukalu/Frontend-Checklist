@@ -105,39 +105,8 @@ class Ui {
     });
   }
 
-  navScroll() {
-    let lastScrollPosition = 0;
-    let ticking = false;
-
-    window.addEventListener(
-      'scroll',
-      () => {
-        lastScrollPosition = window.scrollY;
-
-        if (!ticking) {
-          window.requestAnimationFrame(() => {
-            // Execute only on desktop and when the menu is already on the side
-            if (window.innerWidth > 1265) {
-              if (instance.isScrolledIntoView(this.nav) === false) {
-                this.nav.classList.add('c-nav__sidebar');
-              } else {
-                this.nav.classList.remove('c-nav__sidebar');
-              }
-            }
-
-            ticking = false;
-          });
-
-          ticking = true;
-        }
-      },
-      {passive: true},
-    );
-  }
-
   enableUi() {
-    // instance.scrollAnchor();
-    instance.navScroll();
+    // The sidebar nav is sticky in CSS, so no scroll handling is needed.
   }
 }
 

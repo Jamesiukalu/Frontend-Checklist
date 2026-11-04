@@ -1,8 +1,9 @@
-nav.c-nav
-  ul.c-nav__list.c-nav--inline
+nav.c-nav(aria-label="Checklist sections")
+  ul.c-nav__list
 
-    each item, i in listSections
+    each section in sections
+      - var anchor = section[1].toLowerCase()
       li.c-nav__item
-        a.c-button.js-scroll(href=`#section-${item}`)
-          span.c-nav__status(id=`js-nav-${item}`, data-notation="0")
-          span= item
+        a.c-nav__link(href=`#section-${anchor}`)
+          span.c-nav__status(id=`js-nav-${anchor}`, data-notation="0")
+          span.c-nav__label= section[1]

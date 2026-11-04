@@ -1,0 +1,460 @@
+// Tag filter
+.c-tag-filter__title {
+  margin-bottom: 12px;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.c-tag-filter__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.js-filter-tag {
+  padding: 4px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+}
+
+.js-filter-tag:hover {
+  border-color: var(--border-strong);
+  color: var(--text);
+}
+
+.js-filter-tag.filter-active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+// Sections
+.s-main__filter {
+  margin-bottom: 40px;
+}
+
+.s-checklist {
+  margin-bottom: 56px;
+}
+
+.s-checklist__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.s-checklist__header__title {
+  font-size: 1.5rem;
+  font-weight: 650;
+}
+
+.s-checklist__body[data-body-visibility='hide'] {
+  display: none;
+}
+
+.c-tools {
+  display: flex;
+  gap: 12px;
+}
+
+.c-button__group {
+  display: flex;
+  gap: 4px;
+}
+
+// Progress
+.c-progress {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.c-progress__bar {
+  width: 120px;
+  height: 4px;
+  appearance: none;
+  border: 0;
+  border-radius: 2px;
+  background: var(--border);
+  overflow: hidden;
+}
+
+.c-progress__bar::-webkit-progress-bar {
+  background: var(--border);
+}
+
+.c-progress__bar::-webkit-progress-value {
+  background: var(--accent);
+  transition: width 200ms;
+}
+
+.c-progress__bar::-moz-progress-bar {
+  background: var(--accent);
+}
+
+.c-progress__counter {
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+}
+
+// Checklist items
+.c-checklist__intro {
+  margin: 16px 0 0;
+  color: var(--text-muted);
+}
+
+.c-checklist__list {
+  margin: 0;
+}
+
+.c-checklist__item {
+  border-bottom: 1px solid var(--border);
+}
+
+.c-checklist__item[data-item-visible='false'] {
+  display: none;
+}
+
+.c-checklist__body {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 0;
+}
+
+.c-checklist__priority {
+  padding-top: 9px;
+}
+
+.c-checklist__checkbox {
+  padding-top: 3px;
+}
+
+// Custom checkbox: the original SVG icons are hidden
+.c-checklist__checkbox .icon {
+  display: none;
+}
+
+.checkbox {
+  appearance: none;
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  border: 1.5px solid var(--border-strong);
+  border-radius: 6px;
+  background: var(--surface);
+  cursor: pointer;
+  transition: background-color 150ms, border-color 150ms;
+}
+
+.checkbox:hover {
+  border-color: var(--accent);
+}
+
+.checkbox:checked {
+  border-color: var(--accent);
+  background: var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%23ffffff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 10.5l3.2 3.2L15 7'/%3E%3C/svg%3E") center / 100% no-repeat;
+}
+
+[data-theme='dark'] .checkbox:checked {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%230c0a09' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 10.5l3.2 3.2L15 7'/%3E%3C/svg%3E");
+}
+
+.c-checklist__label {
+  flex: 1;
+  min-width: 0;
+}
+
+.c-checklist__label label {
+  display: block;
+  cursor: pointer;
+}
+
+.label__title {
+  font-weight: 600;
+}
+
+.label__description {
+  color: var(--text-muted);
+}
+
+[data-item-check='true'] .label__title {
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+[data-item-check='true'] .label__description {
+  opacity: 0.6;
+}
+
+.c-checklist__dropdown {
+  width: 32px;
+}
+
+.c-checklist__dropdown__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-muted);
+}
+
+.c-checklist__dropdown__button:hover {
+  background: var(--surface-muted);
+  color: var(--text);
+}
+
+.c-checklist__dropdown__button .icon {
+  position: static;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+}
+
+// Item details (collapsible)
+.c-checklist__details {
+  display: none;
+  margin-top: 16px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  font-size: 0.9375rem;
+}
+
+[data-item-dropdown='open'] .c-checklist__details {
+  display: block;
+}
+
+[data-item-dropdown='close'] .c-checklist__details {
+  display: none;
+}
+
+.c-checklist__text {
+  margin-bottom: 16px;
+  color: var(--text-muted);
+}
+
+.c-checklist__details h4 {
+  margin: 16px 0 8px;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.c-checklist__text + h4,
+.c-checklist__details > :first-child {
+  margin-top: 0;
+}
+
+.documentation__list,
+.video__list {
+  display: grid;
+  gap: 6px;
+}
+
+.documentation__list li,
+.video__list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.c-checklist__favicon {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  border-radius: 3px;
+}
+
+.c-checklist__code {
+  margin-bottom: 16px;
+  overflow: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.c-checklist__code .gist {
+  font-size: 0.8125rem;
+}
+
+.c-checklist__code__loader {
+  padding: 16px;
+}
+
+// Tags
+.c-tags__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.c-tags__item {
+  padding: 1px 8px;
+  border-radius: 4px;
+  background: var(--surface-muted);
+  color: var(--text-muted);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+// Report
+.s-report {
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+
+.s-report__title {
+  margin-bottom: 24px;
+  font-size: 1.5rem;
+  font-weight: 650;
+}
+
+.s-report__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.form {
+  display: grid;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 6px;
+}
+
+.form-group label {
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+}
+
+.form-group input:focus {
+  border-color: var(--accent);
+  outline: 2px solid var(--accent-soft);
+}
+
+#generated-date {
+  display: none;
+}
+
+.s-meta {
+  margin-top: 16px;
+}
+
+.c-notation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.c-notation__details__list {
+  display: grid;
+  gap: 8px;
+  font-size: 0.875rem;
+}
+
+.c-notation__details__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.c-notation__box {
+  position: relative;
+}
+
+.c-notation__item {
+  display: grid;
+  place-items: center;
+  width: 88px;
+  height: 88px;
+  border-radius: 16px;
+  background: var(--border);
+}
+
+.c-notation__letter {
+  color: #ffffff;
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.c-notation__generate {
+  margin-top: 24px;
+}
+
+.c-notation__generate .button {
+  padding: 10px 20px;
+}
+
+.c-notation__item[data-notation='0'] {
+  background-color: var(--grade-0);
+}
+
+// Completion colours for the grade box and sidebar status dots
+@for $n from 1 through 100 {
+  [data-notation='#{$n}'] {
+    @if $n <= 20 {
+      background-color: var(--grade-0);
+    } @else if $n <= 40 {
+      background-color: var(--grade-20);
+    } @else if $n <= 60 {
+      background-color: var(--grade-40);
+    } @else if $n <= 80 {
+      background-color: var(--grade-60);
+    } @else if $n < 100 {
+      background-color: var(--grade-80);
+    } @else {
+      background-color: var(--grade-100);
+    }
+  }
+}
+
+@media (max-width: 880px) {
+  .s-report__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .s-checklist__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
