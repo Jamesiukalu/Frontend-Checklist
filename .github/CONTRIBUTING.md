@@ -26,4 +26,4 @@ It is also always helpful to have some context for your pull request. What was t
 ## Questions
 
 If you have any questions, create an [issue](https://github.com/Jamesiukalu/Frontend-Checklist/issues) (protip: do a quick search first to see if someone else didn't ask the same question before!).
-You can also reach us via https://www.shinningtechservices.com/.
+You can also reach us at info@shinningtechservices.com.
