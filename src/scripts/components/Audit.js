@@ -38,6 +38,11 @@ class Audit {
       .querySelector('.js-audit-apply')
       .addEventListener('click', () => this.apply());
 
+    // Opening the checklist also ticks what passed, so it is never empty
+    document
+      .querySelector('.js-audit-open')
+      .addEventListener('click', () => this.apply());
+
     document
       .querySelectorAll('.js-audit-export')
       .forEach(btn =>
