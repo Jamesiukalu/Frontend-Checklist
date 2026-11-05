@@ -83,3 +83,8 @@ To add a new translation for the Front-End Checklist, you just need to translate
 
 [codeclimate-coverage-image]: https://api.codeclimate.com/v1/badges/55642648e3348bfe38eb/test_coverage
 [codeclimate-coverage-url]: https://codeclimate.com/repos/59f3015dd77fc102a50008ee/test_coverage
+
+## Use it from AI assistants
+
+- Agent skill: [skills/frontend-checklist-audit/SKILL.md](skills/frontend-checklist-audit/SKILL.md)
+- MCP server (audit a URL, look up items): [mcp/README.md](mcp/README.md)
