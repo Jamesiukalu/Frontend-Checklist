@@ -1,5 +1,6 @@
 const {audit} = require('../server/audit');
 const {AuditError} = require('../server/safe-fetch');
+const {recordAudit} = require('../server/analytics');
 
 // Best-effort per-instance limit; serverless instances do not share memory.
 const WINDOW_MS = 60 * 1000;
@@ -43,8 +44,25 @@ module.exports = async function handler(req, res) {
   }
 
   try {
-    return res.status(200).json(await audit(target));
+    const result = await audit(target);
+
+    await recordAudit(req, {
+      url: result.url,
+      host: new URL(result.url).hostname,
+      ok: true,
+      percent: result.score.percent,
+      passed: result.score.passed,
+      total: result.score.total,
+    });
+
+    return res.status(200).json(result);
   } catch (error) {
+    await recordAudit(req, {
+      url: String(target).slice(0, 2048),
+      ok: false,
+      error: error.code || 'fetch_failed',
+    });
+
     if (error instanceof AuditError) {
       return res.status(400).json({error: error.message, code: error.code});
     }

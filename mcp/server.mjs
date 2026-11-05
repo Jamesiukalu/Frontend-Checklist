@@ -69,7 +69,9 @@ const tools = [
 const handlers = {
   async audit_page({url, language}) {
     const catalog = await loadCatalog(language);
-    const res = await fetch(`${BASE}/api/audit?url=${encodeURIComponent(url)}`);
+    const res = await fetch(`${BASE}/api/audit?url=${encodeURIComponent(url)}`, {
+      headers: {'User-Agent': 'frontend-checklist-mcp'},
+    });
     const data = await res.json().catch(() => ({}));
 
     if (!res.ok) throw new Error(data.error || `Audit failed (${res.status})`);

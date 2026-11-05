@@ -865,18 +865,15 @@ add(['html-remove-comments-and-debug-code-in-production'], ctx => {
   );
 });
 
-add(
-  ['html-set-text-direction-for-rtl-languages'],
-  ({$}) => {
-    const lang = ($('html').attr('lang') || '').toLowerCase().split('-')[0];
-    const dir = ($('html').attr('dir') || '').toLowerCase();
-    const rtl = ['ar', 'he', 'fa', 'ur'].includes(lang);
+add(['html-set-text-direction-for-rtl-languages'], ({$}) => {
+  const lang = ($('html').attr('lang') || '').toLowerCase().split('-')[0];
+  const dir = ($('html').attr('dir') || '').toLowerCase();
+  const rtl = ['ar', 'he', 'fa', 'ur'].includes(lang);
 
-    return rtl
-      ? ok(dir === 'rtl', dir || 'dir missing')
-      : ok(true, dir || 'defaults to ltr');
-  },
-);
+  return rtl
+    ? ok(dir === 'rtl', dir || 'dir missing')
+    : ok(true, dir || 'defaults to ltr');
+});
 
 add(['html-implement-favicons-for-all-devices'], ({$}) =>
   ok(
@@ -933,17 +930,14 @@ add(
   },
 );
 
-add(
-  ['css-inline-critical-css-for-faster-rendering'],
-  ({$}) => {
-    const inline = $('head style')
-      .map((_, el) => $(el).text().length)
-      .get()
-      .reduce((a, b) => a + b, 0);
+add(['css-inline-critical-css-for-faster-rendering'], ({$}) => {
+  const inline = $('head style')
+    .map((_, el) => $(el).text().length)
+    .get()
+    .reduce((a, b) => a + b, 0);
 
-    return ok(inline > 300, `${inline} bytes of inline CSS in head`);
-  },
-);
+  return ok(inline > 300, `${inline} bytes of inline CSS in head`);
+});
 
 add(['head-css-order', 'css-order-css-files-correctly'], ({$}) => {
   const order = $('head link[rel~="stylesheet" i], head script[src]')
