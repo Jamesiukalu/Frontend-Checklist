@@ -1,0 +1,39 @@
+{
+  "name": "frontend-checklist-mcp",
+  "version": "1.0.0",
+  "description": "MCP server that audits a live web page against the Front-End Checklist and looks up checklist items. No API key needed.",
+  "type": "module",
+  "bin": {
+    "frontend-checklist-mcp": "server.mjs"
+  },
+  "main": "server.mjs",
+  "files": [
+    "server.mjs",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "frontend",
+    "checklist",
+    "audit",
+    "web-quality",
+    "seo",
+    "accessibility"
+  ],
+  "author": "James Kalu (Shinning Tech Services) <info@shinningtechservices.com>",
+  "license": "MIT",
+  "homepage": "https://checklist.shinningtechservices.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jamesiukalu/Frontend-Checklist.git",
+    "directory": "mcp"
+  },
+  "bugs": {
+    "url": "https://github.com/Jamesiukalu/Frontend-Checklist/issues"
+  }
+}

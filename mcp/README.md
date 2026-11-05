@@ -6,6 +6,23 @@ Tools: `audit_page`, `get_checklist_item`, `search_checklist`.
 
 ## Use it
 
+Quickest (once published to npm), no clone needed:
+
+```json
+{
+  "mcpServers": {
+    "frontend-checklist": {
+      "command": "npx",
+      "args": ["-y", "frontend-checklist-mcp"]
+    }
+  }
+}
+```
+
+VS Code uses the same command and args under `"servers"` in `.vscode/mcp.json`.
+
+From a clone instead:
+
 VS Code (`.vscode/mcp.json`):
 
 ```json
