@@ -90,7 +90,7 @@
   },
   "audit": {
     "TITLE": "Auditer une page en ligne",
-    "LEAD": "Collez une URL publique : nous exécutons environ 200 vérifications automatiques. Vous obtenez un score, ce qu'il faut corriger, et un clic pour cocher les éléments réussis dans votre checklist.",
+    "LEAD": "Collez une URL publique : nous exécutons jusqu'à 246 vérifications automatiques. Vous obtenez un score, ce qu'il faut corriger, et un clic pour cocher les éléments réussis dans votre checklist.",
     "LABEL": "URL de la page",
     "BUTTON": "Lancer l'audit",
     "RUNNING": "Audit en cours…",
@@ -164,7 +164,7 @@
       },
       {
         "title": "3. Auditez une page en ligne.",
-        "text": "Sur la page Audit, collez une URL. Une soixantaine de vérifications s'exécutent et les éléments réussis peuvent être cochés d'un clic dans votre checklist."
+        "text": "Sur la page Audit, collez une URL. Jusqu'à 246 vérifications s'exécutent et les éléments réussis peuvent être cochés d'un clic dans votre checklist."
       },
       {
         "title": "4. Générez un rapport.",

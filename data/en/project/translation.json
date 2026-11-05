@@ -57,7 +57,7 @@
   },
   "audit": {
     "TITLE": "Audit a live page",
-    "LEAD": "Paste a public URL and we'll run about 200 automatic checks against it. You get a score, what to fix, and one click to tick the passing items in your checklist.",
+    "LEAD": "Paste a public URL and we'll run up to 246 automatic checks against it. You get a score, what to fix, and one click to tick the passing items in your checklist.",
     "LABEL": "Page URL",
     "BUTTON": "Run audit",
     "RUNNING": "Auditing…",
@@ -131,7 +131,7 @@
       },
       {
         "title": "3. Audit a live page.",
-        "text": "On the Audit page, paste a URL. About 200 checks run automatically and the passing items can be ticked in your checklist in one click."
+        "text": "On the Audit page, paste a URL. Up to 246 checks run automatically and the passing items can be ticked in your checklist in one click."
       },
       {
         "title": "4. Generate a report.",

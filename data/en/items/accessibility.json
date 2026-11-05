@@ -1437,32 +1437,6 @@
     ]
   },
   {
-    "id": "accessibility-implement-skip-to-content-links",
-    "title": "Implement \"Skip to Content\" links",
-    "priority": "Medium",
-    "description": "Checks for bypass mechanisms for keyboard navigation",
-    "documentation": [
-      {
-        "title": "W3C WAI: WCAG Overview",
-        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
-      },
-      {
-        "title": "MDN: Accessibility",
-        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
-      }
-    ],
-    "tools": [
-      {
-        "title": "axe DevTools",
-        "url": "https://www.deque.com/axe/devtools/"
-      }
-    ],
-    "tags": [
-      "all",
-      "accessibility"
-    ]
-  },
-  {
     "id": "accessibility-include-required-aria-attributes-for-roles",
     "title": "Include required ARIA attributes for roles",
     "priority": "Medium",

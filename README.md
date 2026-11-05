@@ -8,11 +8,34 @@ Built and maintained by [Shinning Tech Services](https://www.shinningtechservice
 
 ## What you get
 
-- **The checklist:** 408 items in 13 sections (accessibility, CSS, HTML, head, i18n, images, JavaScript, performance, privacy, security, SEO, testing, web fonts), each with a priority, documentation links and tools. Tick items off, filter by tag, hide sections, light and dark theme.
-- **Live page audit:** paste a public URL and about 200 automatic checks run against its HTML, CSS, JS, images, links, fonts, sitemap and response headers. You get a score, the failed items by priority, and one click to tick the passing items in your checklist.
+- **The checklist:** 400 items in 13 sections (accessibility, CSS, HTML, head, i18n, images, JavaScript, performance, privacy, security, SEO, testing, web fonts), each with a priority, documentation links and tools. Tick items off, filter by tag, hide sections, light and dark theme.
+- **Live page audit:** paste a public URL and up to 246 automatic checks run against its HTML, CSS, JS, images, links, fonts, sitemap and response headers. You get a score, the failed items by priority, and one click to tick the passing items in your checklist.
 - **Shareable reports:** download or copy Markdown, copy a share link (`/audit?url=…`), or print/save as PDF. Reports state which results are heuristic ("verify") and what the scan cannot check.
 - **Public JSON API:** `GET /api/checklist.en.json` (or `.fr.json`) and `GET /api/audit?url=…`. Rate limit: 10 audits per minute per IP.
 - **AI assistants:** an [agent skill](skills/frontend-checklist-audit/SKILL.md) and an [MCP server](mcp/README.md) so Copilot, Claude or Cursor can audit a URL and fix the failures.
+
+### Install the agent skill
+
+Copy the skill folder into your agent's skills directory, then restart the agent (or start a new session):
+
+```shell
+# Claude Code (every project; use .claude/skills/ in a repo for that project only)
+mkdir -p ~/.claude/skills/frontend-checklist-audit
+curl -fsSL https://raw.githubusercontent.com/Jamesiukalu/Frontend-Checklist/main/skills/frontend-checklist-audit/SKILL.md \
+  -o ~/.claude/skills/frontend-checklist-audit/SKILL.md
+
+# Cursor (this project; use ~/.cursor/skills/ for every project)
+mkdir -p .cursor/skills/frontend-checklist-audit
+curl -fsSL https://raw.githubusercontent.com/Jamesiukalu/Frontend-Checklist/main/skills/frontend-checklist-audit/SKILL.md \
+  -o .cursor/skills/frontend-checklist-audit/SKILL.md
+
+# GitHub Copilot (this project; use ~/.copilot/skills/ for every project)
+mkdir -p .github/skills/frontend-checklist-audit
+curl -fsSL https://raw.githubusercontent.com/Jamesiukalu/Frontend-Checklist/main/skills/frontend-checklist-audit/SKILL.md \
+  -o .github/skills/frontend-checklist-audit/SKILL.md
+```
+
+Then ask the agent to audit a URL, for example: "Audit https://example.com with the front-end checklist skill." See [SKILL.md](skills/frontend-checklist-audit/SKILL.md) for a worked example and error handling.
 
 ## What the audit cannot check
 
