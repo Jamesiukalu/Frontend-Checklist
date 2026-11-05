@@ -1,7 +1,7 @@
 {
   "SITE_NAME": "La Checklist Front-End",
   "INDEX_TITLE": "🔥 Votre NOUVEL outil Front-End 🔥",
-  "URL_WEBSITE": "https://github.com/Jamesiukalu/Frontend-Checklist",
+  "URL_WEBSITE": "https://checklist.shinningtechservices.com",
   "SITE_TAGLINE": "🗂 L'application Front-End Checklist est idéale pour les sites web modernes et les développeurs méticuleux !",
   "SITE_DESCRIPTION": "🗂 L'application Front-End Checklist est idéale pour les sites web modernes et les développeurs méticuleux ! Suivez les règles et livrez le meilleur de votre travail dans un rapport généré !",
   "SITE_LANGUAGE": "fr",
@@ -33,7 +33,7 @@
   "social": {
     "TWEET": "Tweeter",
     "TWITTER_MSG": "Découvrez l'application 🔥 Front-End Checklist 🔥 pour les sites web modernes et les développeurs méticuleux !",
-    "TWITTER_VIA": "thedaviddias",
+    "TWITTER_VIA": "",
     "TWITTER_HASHTAGS": "FrontEndChecklist #FrontEnd #Tool #Web",
     "STAR": "Star",
     "GITHUB_STAR_MSG": "Mettre une étoile à Jamesiukalu/Frontend-Checklist sur GitHub"
@@ -175,7 +175,8 @@
     "TIPS": [
       "Votre progression est enregistrée uniquement dans ce navigateur. Rien n'est envoyé.",
       "Le bouton clair/sombre mémorise votre choix.",
-      "Utilisez EN / FR dans la barre du haut pour changer de langue."
+      "Utilisez EN / FR dans la barre du haut pour changer de langue.",
+      "Les assistants IA peuvent aussi lancer l'audit : voir le serveur MCP et la skill d'agent dans le dépôt GitHub."
     ],
     "TRY_AUDIT": "Essayer l'audit"
   }

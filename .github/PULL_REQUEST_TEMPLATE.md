@@ -1,6 +1,3 @@
-<!-- Love Front-End Checklist? Please consider supporting our collective:
-👉  https://opencollective.com/front-end-checklist/donate -->
-
 **Fixes**: #
 
 🚨 Please review the [guidelines for contributing](CONTRIBUTING.md) and our [code of conduct](../CODE_OF_CONDUCT.md) to this repository. 🚨
