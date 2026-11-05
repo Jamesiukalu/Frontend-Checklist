@@ -1437,32 +1437,6 @@
     ]
   },
   {
-    "id": "accessibility-implement-skip-to-content-links",
-    "title": "Ajouter des liens « Aller au contenu »",
-    "priority": "Medium",
-    "description": "Vérifiez la présence de mécanismes permettant de contourner des blocs pour la navigation au clavier.",
-    "documentation": [
-      {
-        "title": "W3C WAI: WCAG Overview",
-        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
-      },
-      {
-        "title": "MDN: Accessibility",
-        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
-      }
-    ],
-    "tools": [
-      {
-        "title": "axe DevTools",
-        "url": "https://www.deque.com/axe/devtools/"
-      }
-    ],
-    "tags": [
-      "all",
-      "accessibility"
-    ]
-  },
-  {
     "id": "accessibility-include-required-aria-attributes-for-roles",
     "title": "Inclure les attributs ARIA requis pour les rôles",
     "priority": "Medium",

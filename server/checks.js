@@ -21,11 +21,11 @@ const VAGUE_LINK_TEXT =
 
 const checks = [
   {
-    ids: ['head-doctype', 'html-use-the-html5-doctype'],
+    ids: ['html-use-the-html5-doctype'],
     run: ctx => ok(/^\s*(<!--[\s\S]*?-->\s*)*<!doctype html>/i.test(ctx.html)),
   },
   {
-    ids: ['head-charset', 'html-declare-utf-8-character-encoding'],
+    ids: ['html-declare-utf-8-character-encoding'],
     run: ({$, headers}) => {
       const charset = ($('meta[charset]').attr('charset') || '').toLowerCase();
       const viaHeader = /charset=utf-8/i.test(headers['content-type'] || '');
@@ -39,7 +39,7 @@ const checks = [
       ok(/width\s*=\s*device-width/i.test(meta($, 'viewport') || '')),
   },
   {
-    ids: ['head-title', 'seo-write-a-descriptive-page-title'],
+    ids: ['seo-write-a-descriptive-page-title'],
     run: ({$}) => {
       const title = text($('head title').first());
 
@@ -50,7 +50,7 @@ const checks = [
     },
   },
   {
-    ids: ['head-description', 'seo-write-a-meta-description-for-each-page'],
+    ids: ['seo-write-a-meta-description-for-each-page'],
     run: ({$}) => {
       const length = (meta($, 'description') || '').trim().length;
 
@@ -69,7 +69,7 @@ const checks = [
     run: ({$}) => ok(Boolean($('link[rel="canonical" i]').attr('href'))),
   },
   {
-    ids: ['head-language-attribute', 'html-set-the-page-lang-attribute'],
+    ids: ['html-set-the-page-lang-attribute'],
     run: ({$}) => {
       const lang = ($('html').attr('lang') || '').trim();
 
@@ -152,10 +152,7 @@ const checks = [
     run: ({$}) => ok($('nav, [role="navigation"]').length > 0),
   },
   {
-    ids: [
-      'accessibility-include-a-skip-navigation-link',
-      'accessibility-implement-skip-to-content-links',
-    ],
+    ids: ['accessibility-include-a-skip-navigation-link'],
     run: ({$}) => {
       const found = $('a[href^="#"]')
         .slice(0, 8)

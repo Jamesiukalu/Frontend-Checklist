@@ -1,31 +1,5 @@
 [
   {
-    "id": "head-doctype",
-    "title": "Doctype",
-    "priority": "High",
-    "description": "The Doctype is HTML5 and is at the top of all your HTML pages.",
-    "documentation": [
-      {
-        "title": "Determining the character encoding - HTML5 W3C",
-        "url": "https://www.w3.org/TR/html5/syntax.html#determining-the-character-encoding"
-      }
-    ],
-    "tags": [
-      "all",
-      "Meta tag"
-    ]
-  },
-  {
-    "id": "head-charset",
-    "title": "Charset",
-    "priority": "High",
-    "description": "The charset declared (UTF-8) is declared correctly.",
-    "tags": [
-      "all",
-      "Meta tag"
-    ]
-  },
-  {
     "id": "head-x-ua-compatible",
     "title": "X-UA-Compatible",
     "priority": "Medium",
@@ -46,45 +20,6 @@
     "title": "Viewport",
     "priority": "High",
     "description": "The viewport is declared correctly.",
-    "tags": [
-      "all",
-      "Meta tag"
-    ]
-  },
-  {
-    "id": "head-title",
-    "title": "Title",
-    "priority": "High",
-    "description": "A title is used on all pages",
-    "detail": "SEO: Google calculates the pixel width of the characters used in the title and cuts off between 472 and 482 pixels. Average character limit would be around 55 characters",
-    "documentation": [
-      {
-        "title": "Title - HTML - MDN",
-        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title"
-      }
-    ],
-    "tools": [
-      {
-        "title": "SERP Snippet Generator",
-        "url": "https://www.sistrix.com/serp-snippet-generator/"
-      }
-    ],
-    "tags": [
-      "all",
-      "Meta tag"
-    ]
-  },
-  {
-    "id": "head-description",
-    "title": "Description",
-    "priority": "High",
-    "description": "A meta description is provided, it is unique and doesn't possess more than 150 characters.",
-    "documentation": [
-      {
-        "title": "Meta Description - HTML - MDN",
-        "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#Adding_an_author_and_description"
-      }
-    ],
     "tags": [
       "all",
       "Meta tag"
@@ -182,26 +117,6 @@
     ]
   },
   {
-    "id": "head-language-attribute",
-    "title": "Language attribute",
-    "priority": "High",
-    "description": "The <code>lang</code> attribute of your website is specified and related to the language of the current page.",
-    "tags": [
-      "all",
-      "HTML tag"
-    ]
-  },
-  {
-    "id": "head-direction-attribute",
-    "title": "Direction attribute",
-    "priority": "Medium",
-    "description": "The direction of lecture is specified on the html tag (It can be used on another HTML tag).",
-    "tags": [
-      "all",
-      "HTML tag"
-    ]
-  },
-  {
     "id": "head-alternate-language",
     "title": "Alternate language",
     "priority": "Low",
@@ -235,25 +150,6 @@
     "tags": [
       "all",
       "HTML tag"
-    ]
-  },
-  {
-    "id": "head-inline-critical-css",
-    "title": "Inline critical CSS",
-    "priority": "Medium",
-    "description": "The inline critical CSS is correctly injected in the HEAD.",
-    "detail": "The CSS critical (or above the fold) collects all the CSS used to render the visible portion of the page. It is embedded before your principal CSS call and between `<style></style>` in a single line (minified).",
-    "tools": [
-      {
-        "title": "Critical by Addy Osmani on GitHub automates this.",
-        "url": "https://github.com/addyosmani/critical"
-      }
-    ],
-    "tags": [
-      "all",
-      "HTML tag",
-      "CSS",
-      "Performance"
     ]
   },
   {

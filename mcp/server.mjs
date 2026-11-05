@@ -32,7 +32,7 @@ const tools = [
   {
     name: 'audit_page',
     description:
-      'Audit a public web page against the Front-End Checklist (about 200 automatic checks). Returns the score, failed items sorted by priority with guidance, and the sections not checked automatically.',
+      'Audit a public web page against the Front-End Checklist (up to 246 automatic checks). Returns the score, failed items sorted by priority with guidance, and the sections not checked automatically.',
     inputSchema: {
       type: 'object',
       properties: {

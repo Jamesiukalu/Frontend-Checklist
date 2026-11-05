@@ -866,7 +866,7 @@ add(['html-remove-comments-and-debug-code-in-production'], ctx => {
 });
 
 add(
-  ['html-set-text-direction-for-rtl-languages', 'head-direction-attribute'],
+  ['html-set-text-direction-for-rtl-languages'],
   ({$}) => {
     const lang = ($('html').attr('lang') || '').toLowerCase().split('-')[0];
     const dir = ($('html').attr('dir') || '').toLowerCase();
@@ -934,7 +934,7 @@ add(
 );
 
 add(
-  ['head-inline-critical-css', 'css-inline-critical-css-for-faster-rendering'],
+  ['css-inline-critical-css-for-faster-rendering'],
   ({$}) => {
     const inline = $('head style')
       .map((_, el) => $(el).text().length)

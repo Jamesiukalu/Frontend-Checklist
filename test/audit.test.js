@@ -46,6 +46,17 @@ describe('audit: checks', () => {
     );
   });
 
+  it('keeps the documented totals true', () => {
+    // The README, skill and site copy say 400 checklist items with up to
+    // 246 automatic checks. If either number moves, update the copy too.
+    const catalogueTotal = Object.values(items).flat().length;
+    const automaticTotal = new Set(checks.flatMap(check => check.ids)).size;
+
+    expect(catalogueTotal).to.equal(400);
+    expect(automaticTotal).to.equal(246);
+    expect(catalogueTotal - automaticTotal).to.equal(154);
+  });
+
   const good = `<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>A perfectly reasonable page title</title></head>
@@ -66,9 +77,9 @@ describe('audit: checks', () => {
   it('passes a well-formed page', () => {
     const r = run(good);
 
-    expect(r['head-doctype']).to.equal('pass');
-    expect(r['head-charset']).to.equal('pass');
-    expect(r['head-language-attribute']).to.equal('pass');
+    expect(r['html-use-the-html5-doctype']).to.equal('pass');
+    expect(r['html-declare-utf-8-character-encoding']).to.equal('pass');
+    expect(r['html-set-the-page-lang-attribute']).to.equal('pass');
     expect(r['seo-use-a-single-descriptive-h1']).to.equal('pass');
     expect(r['images-provide-meaningful-alt-text-for-images']).to.equal('pass');
   });
@@ -76,9 +87,9 @@ describe('audit: checks', () => {
   it('flags a poor page', () => {
     const r = run(bad);
 
-    expect(r['head-doctype']).to.equal('fail');
+    expect(r['html-use-the-html5-doctype']).to.equal('fail');
     expect(r['head-viewport']).to.equal('fail');
-    expect(r['head-language-attribute']).to.equal('fail');
+    expect(r['html-set-the-page-lang-attribute']).to.equal('fail');
     expect(r['accessibility-maintain-logical-heading-order']).to.equal('fail');
     expect(r['images-provide-meaningful-alt-text-for-images']).to.equal('fail');
   });
