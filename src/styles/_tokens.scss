@@ -1,16 +1,24 @@
-// Design tokens. Light is the default; the dark theme overrides the same names.
+@font-face {
+  font-family: Sora;
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/sora-latin.woff2') format('woff2');
+}
+
+// Design tokens, aligned with the Shinning Tech Services brand (cream, navy, orange, Sora). Light is the default; the dark theme overrides the same names.
 :root {
   color-scheme: light;
 
-  --bg: #fafaf9;
-  --surface: #ffffff;
-  --surface-muted: #f4f4f2;
-  --border: #e7e5e4;
-  --border-strong: #d6d3d1;
-  --text: #1c1917;
-  --text-muted: #6b6560;
-  --accent: #4f46e5;
-  --accent-soft: #eef2ff;
+  --bg: #f8f4ee;
+  --surface: #fff8ef;
+  --surface-muted: #fff0d9;
+  --border: rgba(16, 32, 56, 0.11);
+  --border-strong: rgba(16, 32, 56, 0.2);
+  --text: #102038;
+  --text-muted: #5d6779;
+  --accent: #c54016;
+  --accent-soft: rgba(241, 90, 41, 0.14);
   --accent-contrast: #ffffff;
   --danger: #dc2626;
   --high: #ef4444;
@@ -22,10 +30,10 @@
   --grade-60: #84cc16;
   --grade-80: #22c55e;
   --grade-100: #16a34a;
-  --shadow: 0 1px 2px rgba(28, 25, 23, 0.05);
-  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  --shadow: 0 1px 2px rgba(16, 32, 56, 0.06);
+  --font-sans: 'Sora', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
   --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
-  --radius: 8px;
+  --radius: 12px;
   --topbar-height: 56px;
   --sidebar-width: 220px;
   --content-width: 1120px;
@@ -34,15 +42,15 @@
 [data-theme='dark'] {
   color-scheme: dark;
 
-  --bg: #0c0a09;
-  --surface: #171412;
-  --surface-muted: #211d1a;
-  --border: #292524;
-  --border-strong: #44403c;
-  --text: #f5f5f4;
-  --text-muted: #a8a29e;
-  --accent: #818cf8;
-  --accent-soft: #1e1b4b;
-  --accent-contrast: #0c0a09;
+  --bg: #0b1424;
+  --surface: #102038;
+  --surface-muted: #16294a;
+  --border: rgba(246, 241, 232, 0.12);
+  --border-strong: rgba(246, 241, 232, 0.24);
+  --text: #f6f1e8;
+  --text-muted: #a9b4c7;
+  --accent: #f7845a;
+  --accent-soft: rgba(241, 90, 41, 0.18);
+  --accent-contrast: #0b1424;
   --shadow: none;
 }

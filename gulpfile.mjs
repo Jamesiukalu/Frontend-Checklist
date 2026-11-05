@@ -434,6 +434,12 @@ export function apiBuild(done) {
   done();
 }
 
+export function copyFonts() {
+  return gulp
+    .src(`${dirs.src}/fonts/*`, {encoding: false})
+    .pipe(gulp.dest(`${dirs.dest}/fonts/`));
+}
+
 export function copy() {
   return gulp
     .src(
@@ -490,7 +496,7 @@ export const build = gulp.series(
   gulp.parallel(compileAllPug, compileAllAuditPug),
   gulp.parallel(compileStyles, compressImages, webpackScripts),
   cdn,
-  gulp.parallel(criticalCss, copy, apiBuild),
+  gulp.parallel(criticalCss, copy, copyFonts, apiBuild),
 );
 
 export default gulp.series(serve, watch);
