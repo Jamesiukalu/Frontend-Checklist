@@ -6,6 +6,12 @@ dialog.c-help.js-ai(aria-labelledby="ai-title")
 
     p.c-help__intro= translation.ai.INTRO
 
+    h3.c-help__subtitle= translation.ai.STEP_INSTALL
+    .c-code
+      pre.c-code__pre#ai-install= translation.ai.INSTALL_CMD
+      button.button.c-code__copy.js-copy(type="button" data-target="ai-install" data-done=translation.ai.COPIED)= translation.ai.COPY
+    p.c-help__intro.c-help__hint= translation.ai.INSTALL_HINT
+
     h3.c-help__subtitle= translation.ai.STEP_1
     .c-code
       pre.c-code__pre#ai-config {

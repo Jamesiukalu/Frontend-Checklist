@@ -185,14 +185,17 @@
   "ai": {
     "TITLE": "Utilisez-le depuis votre assistant IA",
     "INTRO": "Installez une fois le serveur MCP gratuit, puis demandez à votre assistant d'auditer n'importe quelle page. Sans compte ni clé d'API. Node 18+ requis.",
-    "STEP_1": "1. Ajoutez ceci à votre configuration MCP",
+    "STEP_1": "2. Ajoutez ceci à votre configuration MCP",
     "STEP_1_HINT": "VS Code : .vscode/mcp.json (utilisez \"servers\"). Claude Desktop ou Cursor : \"mcpServers\".",
-    "STEP_2": "2. Demandez à votre assistant",
+    "STEP_2": "3. Demandez à votre assistant",
     "PROMPT": "Audite https://example.com et corrige les problèmes de haute priorité.",
     "COPY": "Copier",
     "COPIED": "Copié",
     "SKILL": "Vous préférez une skill Claude Code ou Cursor ? Voir les étapes d'installation sur GitHub.",
     "SKILL_LINK": "Instructions de la skill",
-    "DOCS": "Guide complet"
+    "DOCS": "Guide complet",
+    "STEP_INSTALL": "1. Installez-le",
+    "INSTALL_HINT": "Facultatif : npx le télécharge aussi à la première utilisation, vous pouvez passer directement à l'étape 2.",
+    "INSTALL_CMD": "npm i -g frontend-checklist-mcp"
   }
 }

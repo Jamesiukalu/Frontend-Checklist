@@ -6,7 +6,13 @@ Tools: `audit_page`, `get_checklist_item`, `search_checklist`.
 
 ## Use it
 
-Quickest (once published to npm), no clone needed:
+Install from npm (optional, `npx` also fetches it on first use):
+
+```shell
+npm i -g frontend-checklist-mcp
+```
+
+Then add it to your assistant's config, no clone needed:
 
 ```json
 {
