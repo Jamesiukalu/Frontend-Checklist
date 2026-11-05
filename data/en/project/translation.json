@@ -51,7 +51,9 @@
     "PRIORITY_HIGH": "High priority item",
     "PRIORITY_MEDIUM": "Medium priority item",
     "PRIORITY_LOW": "Low priority item",
-    "OPEN_DESCRIPTION": "Open the description section"
+    "OPEN_DESCRIPTION": "Open the description section",
+    "COFFEE": "Buy me a coffee",
+    "COFFEE_TITLE": "Support this free tool: buy me a coffee"
   },
   "audit": {
     "TITLE": "Audit a live page",

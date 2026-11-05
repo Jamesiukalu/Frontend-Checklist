@@ -51,7 +51,9 @@
     "PRIORITY_HIGH": "Élément de priorité haute",
     "PRIORITY_MEDIUM": "Élément de priorité moyenne",
     "PRIORITY_LOW": "Élément de priorité basse",
-    "OPEN_DESCRIPTION": "Ouvrir la description"
+    "OPEN_DESCRIPTION": "Ouvrir la description",
+    "COFFEE": "Offrez-moi un café",
+    "COFFEE_TITLE": "Soutenez cet outil gratuit : offrez-moi un café"
   },
   "sections": {
     "head": "En-tête (Head)",
