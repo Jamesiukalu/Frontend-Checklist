@@ -65,6 +65,7 @@ Item ids are the same in every language. Join audit `results[].id` with the cata
 
 - Results with `heuristic: true` rely on approximation (reading level, minification, thin content, consent detection and similar). Say "verify manually" and do not treat them as certain faults.
 - It scans one public page, without running JavaScript. It does not measure Core Web Vitals (LCP, CLS, INP), real-device or screen-reader behaviour, content quality, logged-in flows, or the Testing section. Items missing from `results` were not decided; list them as manual review.
+- Every audit call is logged for analytics (audited URL, score, time, source, country, and a salted hash of the caller's IP — never the address itself). Checklist progress is never uploaded.
 - A score is a starting point, not a certification.
 
 ## Output template

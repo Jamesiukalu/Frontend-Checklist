@@ -92,7 +92,7 @@
     "BRAND_URL": "https://www.shinningtechservices.com/",
     "BRAND_HOST": "www.shinningtechservices.com",
     "REPORT_ABOUT_HEADING": "About this report",
-    "REPORT_DISCLAIMER": "This is an automated, point-in-time scan of one public page. It reads the page's HTML, linked CSS/JS, images and response headers. It is a starting point for a review, not a certification, and it does not replace manual testing.",
+    "REPORT_DISCLAIMER": "This is an automated, point-in-time scan of one public page. It reads the page's HTML, linked CSS/JS, images and response headers. It is a starting point for a review, not a certification, and it does not replace manual testing. Each audit run is logged for analytics only: the audited URL, score, time, source (website, API or MCP server), country, and a salted hash of your IP address — never the address itself.",
     "HEURISTIC_BADGE": "verify",
     "HEURISTIC_NOTE": "Items marked “verify” rely on heuristics (for example reading level, minification, thin content or script detection) and can be false positives or negatives. Confirm them manually before acting.",
     "LIMITS_HEADING": "What this scan cannot check",
@@ -142,10 +142,11 @@
     ],
     "TIPS_TITLE": "Good to know",
     "TIPS": [
-      "Your progress is saved in this browser only. Nothing is uploaded.",
+      "Your checklist progress is saved in this browser only and is never uploaded.",
       "The dark/light button remembers your choice.",
       "Use EN / FR in the top bar to switch language.",
-      "AI assistants can run the audit too: see the MCP server and agent skill in the GitHub repository."
+      "AI assistants can run the audit too: see the MCP server and agent skill in the GitHub repository.",
+      "Running an audit logs the audited URL, score and time for analytics."
     ],
     "TRY_AUDIT": "Try the audit"
   },

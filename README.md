@@ -4,7 +4,7 @@ A free front-end quality checklist you can work through by hand, or partly autom
 
 **Live:** https://checklist.shinningtechservices.com · English and French
 
-Built and maintained by [Shinning Tech Services](https://www.shinningtechservices.com/). Free for freelancers, agencies, developers and engineers. No account, no tracking of your progress: it stays in your browser.
+Built and maintained by [Shinning Tech Services](https://www.shinningtechservices.com/). Free for freelancers, agencies, developers and engineers. No account needed — your checklist progress stays in your browser. Audit runs are logged for analytics only (see Privacy below).
 
 ## What you get
 
@@ -13,6 +13,11 @@ Built and maintained by [Shinning Tech Services](https://www.shinningtechservice
 - **Shareable reports:** download or copy Markdown, copy a share link (`/audit?url=…`), or print/save as PDF. Reports state which results are heuristic ("verify") and what the scan cannot check.
 - **Public JSON API:** `GET /api/checklist.en.json` (or `.fr.json`) and `GET /api/audit?url=…`. Rate limit: 10 audits per minute per IP.
 - **AI assistants:** an [agent skill](skills/frontend-checklist-audit/SKILL.md) and an [MCP server](mcp/README.md) so Copilot, Claude or Cursor can audit a URL and fix the failures.
+
+## Privacy
+
+- Your checklist progress (ticked items) is saved in your browser only and is never uploaded.
+- Each audit run is logged for analytics only: the audited URL, score, time, source (website, API or MCP server), country, and a salted hash of your IP address — never the address itself.
 
 ### Install the agent skill
 

@@ -125,7 +125,7 @@
     "BRAND_URL": "https://www.shinningtechservices.com/",
     "BRAND_HOST": "www.shinningtechservices.com",
     "REPORT_ABOUT_HEADING": "À propos de ce rapport",
-    "REPORT_DISCLAIMER": "Il s'agit d'une analyse automatisée, à un instant donné, d'une seule page publique. Elle lit le HTML, les CSS/JS liés, les images et les en-têtes de réponse. C'est un point de départ pour une revue, pas une certification, et elle ne remplace pas les tests manuels.",
+    "REPORT_DISCLAIMER": "Il s'agit d'une analyse automatisée, à un instant donné, d'une seule page publique. Elle lit le HTML, les CSS/JS liés, les images et les en-têtes de réponse. C'est un point de départ pour une revue, pas une certification, et elle ne remplace pas les tests manuels. Chaque audit est enregistré à des fins d'analyse uniquement : l'URL auditée, le score, l'heure, la source (site web, API ou serveur MCP), le pays et une empreinte salée de votre adresse IP — jamais l'adresse elle-même.",
     "HEURISTIC_BADGE": "à vérifier",
     "HEURISTIC_NOTE": "Les éléments marqués « à vérifier » reposent sur des heuristiques (par exemple niveau de lecture, minification, contenu léger ou détection de scripts) et peuvent être de faux positifs ou négatifs. Confirmez-les manuellement avant d'agir.",
     "LIMITS_HEADING": "Ce que cette analyse ne peut pas vérifier",
@@ -175,10 +175,11 @@
     ],
     "TIPS_TITLE": "Bon à savoir",
     "TIPS": [
-      "Votre progression est enregistrée uniquement dans ce navigateur. Rien n'est envoyé.",
+      "La progression de votre checklist est enregistrée uniquement dans ce navigateur et n'est jamais envoyée.",
       "Le bouton clair/sombre mémorise votre choix.",
       "Utilisez EN / FR dans la barre du haut pour changer de langue.",
-      "Les assistants IA peuvent aussi lancer l'audit : voir le serveur MCP et la skill d'agent dans le dépôt GitHub."
+      "Les assistants IA peuvent aussi lancer l'audit : voir le serveur MCP et la skill d'agent dans le dépôt GitHub.",
+      "L'exécution d'un audit enregistre l'URL auditée, le score et l'heure à des fins d'analyse."
     ],
     "TRY_AUDIT": "Essayer l'audit"
   },
