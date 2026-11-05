@@ -58,4 +58,4 @@ The tool is free. If it saves you time you can [buy me a coffee](https://paystac
 
 ## License and credits
 
-Application code: MIT. The checklist content is derived from the [Front-End Checklist](https://github.com/thedaviddias/Front-End-Checklist) by David Dias, used under the MIT License. See [NOTICE.md](NOTICE.md) and [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE) and [NOTICE.md](NOTICE.md).
