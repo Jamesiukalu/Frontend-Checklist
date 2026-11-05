@@ -70,16 +70,24 @@ class Audit {
         .map(r => {
           const item = this.catalog[r.id];
           const detail = r.detail ? ` — ${r.detail}` : '';
+          const verify = r.heuristic ? ` _(${labels.HEURISTIC_BADGE})_` : '';
 
-          return `- [${status === 'pass' ? 'x' : ' '}] **${item.priority}** ${item.title}${detail}`;
+          return `- [${status === 'pass' ? 'x' : ' '}] **${item.priority}** ${item.title}${verify}${detail}`;
         });
+
+    const missing = this.notChecked(data, this.catalog);
+    const total = Object.keys(this.catalog).length;
+    const decided = total - Object.values(missing).flat().length;
 
     return [
       `# ${labels.REPORT_TITLE}`,
       '',
+      `_${labels.BRAND_NAME} — ${labels.BRAND_URL}_`,
+      '',
       `- ${labels.REPORT_PAGE}: ${data.finalUrl}`,
       `- ${labels.REPORT_DATE}: ${new Date().toISOString().slice(0, 10)}`,
       `- ${labels.REPORT_SCORE}: ${data.score.percent}% (${data.score.passed}/${data.score.total})`,
+      `- ${labels.REPORT_COVERAGE}: ${decided} ${labels.REPORT_COVERAGE_OF} ${total}`,
       '',
       `## ${labels.FAILED_HEADING}`,
       '',
@@ -89,7 +97,29 @@ class Audit {
       '',
       ...(rows('pass').length ? rows('pass') : [labels.NONE_PASSED]),
       '',
+      `## ${labels.REPORT_ABOUT_HEADING}`,
+      '',
+      labels.REPORT_DISCLAIMER,
+      '',
+      labels.HEURISTIC_NOTE,
+      '',
+      `### ${labels.LIMITS_HEADING}`,
+      '',
+      ...labels.LIMITS.map(limit => `- ${limit}`),
+      '',
+      `### ${labels.NOT_CHECKED_HEADING}`,
+      '',
+      labels.NOT_CHECKED_INTRO,
+      '',
+      ...Object.entries(missing).map(
+        ([id, items]) => `- ${id}: ${items.length} ${labels.NOT_CHECKED_ITEMS}`,
+      ),
+      '',
+      '---',
+      '',
       `${labels.REPORT_FOOTER} ${window.location.origin}${this.prefix}/audit`,
+      '',
+      `${labels.REPORT_FOOTER_CTA} [${labels.BRAND_NAME}](${labels.BRAND_URL}) — ${labels.BRAND_CTA}`,
       '',
     ].join('\n');
   }
@@ -219,6 +249,9 @@ class Audit {
         ),
         link,
       );
+      if (result.heuristic) {
+        row.append(el('span', 'c-audit__verify', this.labels.HEURISTIC_BADGE));
+      }
       if (result.detail)
         row.append(el('span', 'c-audit__detail', result.detail));
       (result.status === 'pass' ? passedList : failedList).append(row);
@@ -231,7 +264,43 @@ class Audit {
       passedList.append(el('li', 'c-audit__empty', this.labels.NONE_PASSED));
     }
 
+    this.renderNotChecked(data, catalog);
     this.results.hidden = false;
+  }
+
+  // Catalogue items the scan did not decide, grouped by section
+  notChecked(data, catalog) {
+    const decided = new Set(data.results.map(r => r.id));
+    const groups = {};
+
+    Object.values(catalog).forEach(item => {
+      if (!decided.has(item.id)) {
+        (groups[item.section] = groups[item.section] || []).push(item);
+      }
+    });
+
+    return groups;
+  }
+
+  renderNotChecked(data, catalog) {
+    const list = this.results.querySelector('.js-audit-notchecked');
+
+    list.replaceChildren();
+    Object.entries(this.notChecked(data, catalog)).forEach(([id, items]) => {
+      const row = el('li', 'c-audit__item');
+      const link = el('a', 'c-audit__item-title', id);
+
+      link.href = `${this.prefix}/#section-${id}`;
+      row.append(
+        link,
+        el(
+          'span',
+          'c-audit__detail',
+          `${items.length} ${this.labels.NOT_CHECKED_ITEMS}`,
+        ),
+      );
+      list.append(row);
+    });
   }
 
   // Progress is stored per section as [{id}], the same shape the checklist uses

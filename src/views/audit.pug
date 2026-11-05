@@ -20,6 +20,13 @@ block main
       p.c-audit__status.js-audit-status(role="status" aria-live="polite")
 
     section.c-audit-results.js-audit-results(hidden)
+      - var brand = translation.audit
+      a.c-brand(href=brand.BRAND_URL target="_blank" rel="noopener")
+        img.c-brand__logo(src="/img/brand/shinning-tech.jpg" alt="" width="44" height="44")
+        span.c-brand__text
+          strong= brand.BRAND_NAME
+          span= brand.BRAND_TAGLINE + ' · ' + brand.BRAND_HOST
+
       .c-audit__summary
         strong.c-audit__score.js-audit-score
         span.c-audit__counts.js-audit-counts
@@ -37,6 +44,24 @@ block main
       ul.c-audit__list.js-audit-failed
       h2.c-audit__heading= translation.audit.PASSED_HEADING
       ul.c-audit__list.c-audit__list--passed.js-audit-passed
+
+      section.c-audit__about
+        h2.c-audit__heading= brand.REPORT_ABOUT_HEADING
+        p= brand.REPORT_DISCLAIMER
+        p= brand.HEURISTIC_NOTE
+        h3.c-audit__subheading= brand.LIMITS_HEADING
+        ul.c-audit__limits
+          each limit in brand.LIMITS
+            li= limit
+        h3.c-audit__subheading= brand.NOT_CHECKED_HEADING
+        p= brand.NOT_CHECKED_INTRO
+        ul.c-audit__list.c-audit__list--plain.js-audit-notchecked
+
+      a.c-brand.c-brand--cta(href=brand.BRAND_URL target="_blank" rel="noopener")
+        img.c-brand__logo(src="/img/brand/shinning-tech.jpg" alt="" width="44" height="44")
+        span.c-brand__text
+          strong= brand.BRAND_CTA
+          span= brand.BRAND_HOST
 
     p.c-audit__note= translation.audit.NOTE
 

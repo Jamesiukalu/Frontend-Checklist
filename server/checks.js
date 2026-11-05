@@ -551,6 +551,10 @@ const {extraChecks} = require('./checks-extra');
 
 checks.push(...extraChecks);
 
+// Items decided by approximation; the report tells readers to verify them
+const HEURISTIC =
+  /reading-level|plain-language|thin-content|minif|specificity|keyword|console|comments|critical-css|outdated|tracker|consent|captcha|contact|terms|skip|accessible-name|visible-label|identical-links|lazy|prioritize|third-party|secret|srcset|responsive-images|figure|semantic|landmark|bfcache|cdn|source-maps|content-length|heading/;
+
 function runChecks(ctx) {
   const results = [];
   const seen = new Set();
@@ -572,6 +576,7 @@ function runChecks(ctx) {
         id,
         status: outcome.pass ? 'pass' : 'fail',
         detail: outcome.detail || undefined,
+        heuristic: HEURISTIC.test(id) || undefined,
       });
     });
   });

@@ -114,7 +114,31 @@
     "REPORT_PAGE": "Page",
     "REPORT_DATE": "Date",
     "REPORT_SCORE": "Score",
-    "REPORT_FOOTER": "Généré par"
+    "REPORT_FOOTER": "Généré par",
+    "BRAND_NAME": "Shinning Tech Services",
+    "BRAND_TAGLINE": "Sites web, applications web et support en ingénierie",
+    "BRAND_CTA": "Besoin d'aide pour corriger ces points ? Contactez Shinning Tech Services",
+    "BRAND_URL": "https://www.shinningtechservices.com/",
+    "BRAND_HOST": "www.shinningtechservices.com",
+    "REPORT_ABOUT_HEADING": "À propos de ce rapport",
+    "REPORT_DISCLAIMER": "Il s'agit d'une analyse automatisée, à un instant donné, d'une seule page publique. Elle lit le HTML, les CSS/JS liés, les images et les en-têtes de réponse. C'est un point de départ pour une revue, pas une certification, et elle ne remplace pas les tests manuels.",
+    "HEURISTIC_BADGE": "à vérifier",
+    "HEURISTIC_NOTE": "Les éléments marqués « à vérifier » reposent sur des heuristiques (par exemple niveau de lecture, minification, contenu léger ou détection de scripts) et peuvent être de faux positifs ou négatifs. Confirmez-les manuellement avant d'agir.",
+    "LIMITS_HEADING": "Ce que cette analyse ne peut pas vérifier",
+    "LIMITS": [
+      "Les Core Web Vitals (LCP, CLS, INP) et les autres métriques de performance réelles ou en laboratoire. Seuls le temps de réponse du serveur, le poids de la page et les indices de chargement sont vérifiés.",
+      "Les tests sur appareils réels, navigateurs et lecteurs d'écran, ainsi que la qualité visuelle (mise en page, contraste en contexte, animations).",
+      "La qualité, le ton, l'exactitude et les mentions légales du contenu. Seuls des signaux simples comme la longueur et le niveau de lecture sont estimés.",
+      "Les pages protégées par connexion, les formulaires, le paiement et les autres parcours interactifs. Seule la page publique soumise est récupérée, sans exécuter de JavaScript.",
+      "La section Tests de la checklist (tests unitaires, de bout en bout, visuels et de charge se trouvent dans votre code, pas sur la page).",
+      "Une seule page est analysée ; les autres pages du site peuvent différer."
+    ],
+    "NOT_CHECKED_HEADING": "Non vérifié automatiquement",
+    "NOT_CHECKED_INTRO": "Éléments de la checklist que cette analyse n'a pas tranchés. À revoir manuellement :",
+    "NOT_CHECKED_ITEMS": "éléments",
+    "REPORT_COVERAGE": "Couverture",
+    "REPORT_COVERAGE_OF": "sur",
+    "REPORT_FOOTER_CTA": "Préparé avec"
   },
   "nav": {
     "LABEL": "Principal",
