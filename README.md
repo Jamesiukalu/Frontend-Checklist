@@ -58,4 +58,4 @@ The tool is free. If it saves you time you can [buy me a coffee](https://paystac
 
 ## License and credits
 
-MIT. See [LICENSE](LICENSE) and [NOTICE.md](NOTICE.md).
+MIT. See [LICENSE](LICENSE).
