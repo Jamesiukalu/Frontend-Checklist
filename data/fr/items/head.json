@@ -4,7 +4,6 @@
     "title": "Doctype",
     "priority": "High",
     "description": "Le Doctype est HTML5 et figure en haut de toutes vos pages HTML.",
-    "code": "https://gist.github.com/thedaviddias/bccee9f4dfa728830cf38bb83838d2d3.js",
     "documentation": [
       {
         "title": "Determining the character encoding - HTML5 W3C",
@@ -21,7 +20,6 @@
     "title": "Charset",
     "priority": "High",
     "description": "Le charset déclaré (UTF-8) est correctement défini.",
-    "code": "https://gist.github.com/thedaviddias/7074c2b93faf1ad1f0c2792258a9b060.js",
     "tags": [
       "all",
       "Meta tag"
@@ -32,7 +30,6 @@
     "title": "X-UA-Compatible",
     "priority": "Medium",
     "description": "La balise Meta X-UA-Compatible est présente.",
-    "code": "https://gist.github.com/thedaviddias/4f771e7efc07688c090a28ef1121b15e.js",
     "documentation": [
       {
         "title": "Specifying legacy document modes (Internet Explorer)",
@@ -49,7 +46,6 @@
     "title": "Viewport",
     "priority": "High",
     "description": "Le viewport est correctement défini.",
-    "code": "https://gist.github.com/thedaviddias/0e25ffd442512c79af684b5042366a3c.js",
     "tags": [
       "all",
       "Meta tag"
@@ -61,7 +57,6 @@
     "priority": "High",
     "description": "Un titre est défini sur toutes les pages.",
     "detail": "SEO: Google calculates the pixel width of the characters used in the title and cuts off between 472 and 482 pixels. Average character limit would be around 55 characters",
-    "code": "https://gist.github.com/thedaviddias/65d0df3b6e2ebcb0d3c738b40f6ff313.js",
     "documentation": [
       {
         "title": "Title - HTML - MDN",
@@ -84,7 +79,6 @@
     "title": "Description",
     "priority": "High",
     "description": "Une meta description est fournie ; elle est unique et ne dépasse pas 150 caractères.",
-    "code": "https://gist.github.com/thedaviddias/8f3c61ed6cf08b75524d977828337c62.js",
     "documentation": [
       {
         "title": "Meta Description - HTML - MDN",
@@ -102,7 +96,6 @@
     "priority": "Medium",
     "description": "Chaque favicon a été créé et s'affiche correctement.",
     "detail": "If you have only a favicon.ico, put it at the root of your site. Normally you won't need to use any markup. However, it's still good practice to link to it using the example below. Today, PNG format is recommended over .ico format (dimensions: 32x32px).",
-    "code": "https://gist.github.com/thedaviddias/dd4e98c10283d310d24f22dfc49f1aaf.js",
     "documentation": [
       {
         "title": "Favicon Cheat Sheet",
@@ -137,7 +130,6 @@
     "title": "Meta Apple Web App",
     "priority": "Low",
     "description": "Les balises meta Apple sont présentes.",
-    "code": "https://gist.github.com/thedaviddias/4fbbc4c83cd76ebd0d2f18cc1b40f1a9.js",
     "documentation": [
       {
         "title": "Configuring Web Applications",
@@ -158,7 +150,6 @@
     "title": "Vignettes Windows",
     "priority": "Low",
     "description": "Les vignettes Windows sont présentes et associées à des liens.",
-    "code": "https://gist.github.com/thedaviddias/4cc20da1a32d201f8dd46edf47d7fb73.js",
     "documentation": [
       {
         "title": "Browser configuration schema reference",
@@ -175,7 +166,6 @@
     "title": "Canonical",
     "priority": "Medium",
     "description": "Utilisez rel=\"canonical\" pour éviter le contenu dupliqué.",
-    "code": "https://gist.github.com/thedaviddias/832a59506fd93e84d62dce0238b0cb23.js",
     "documentation": [
       {
         "title": "Use canonical URLs - Search Console Help - Google Support",
@@ -196,7 +186,6 @@
     "title": "Attribut de langue",
     "priority": "High",
     "description": "L'attribut <code>lang</code> de votre site est défini et correspond à la langue de la page actuelle.",
-    "code": "",
     "tags": [
       "all",
       "HTML tag"
@@ -207,7 +196,6 @@
     "title": "Attribut de direction",
     "priority": "Medium",
     "description": "Le sens de lecture est défini sur la balise html (il peut également être défini sur une autre balise HTML).",
-    "code": "",
     "tags": [
       "all",
       "HTML tag"
@@ -218,7 +206,6 @@
     "title": "Langue alternative",
     "priority": "Low",
     "description": "La balise de langue de votre site est définie et correspond à la langue de la page actuelle.",
-    "code": "",
     "tags": [
       "all",
       "HTML tag"
@@ -286,7 +273,6 @@
     "priority": "Low",
     "description": "",
     "detail": "All Facebook Open Graph (OG) are tested and no one is missing or with a false information. Images need to be at least 600 x 315 pixels, although 1200 x 630 pixels is recommended. Using og:image:width and og:image:height will specify the image dimensions to the crawler so that it can render the image immediately without having to asynchronously download and process it.",
-    "code": "",
     "documentation": [
       {
         "title": "A Guide to Sharing for Webmasters",

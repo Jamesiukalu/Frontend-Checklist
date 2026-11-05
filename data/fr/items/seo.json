@@ -1773,12 +1773,6 @@
         "url": "https://developers.google.com/search/docs/crawling-indexing/robots/intro"
       }
     ],
-    "tools": [
-      {
-        "title": "MCP LLMS.txt Explorer (`npx -y @thedaviddias/mcp-llms-txt-explorer`)",
-        "url": "https://github.com/thedaviddias/mcp-llms-txt-explorer"
-      }
-    ],
     "tags": [
       "all",
       "seo"
