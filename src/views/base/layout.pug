@@ -34,6 +34,11 @@ html.no-js(lang=translation.SITE_LANGUAGE, dir=translation.SITE_DIRECTION)
         include footer
 
     include help
+    include ai
+
+    button.c-ai-tab.js-ai-open(type="button" title=translation.ui.AI_TITLE)
+      span.c-coffee__icon(aria-hidden="true") ✨
+      span.c-coffee__text= translation.ui.AI
 
     a.c-coffee(href="https://paystack.shop/pay/gs24kq1bgi" target="_blank" rel="noopener noreferrer" title=translation.ui.COFFEE_TITLE)
       span.c-coffee__icon(aria-hidden="true") ☕

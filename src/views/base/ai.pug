@@ -1,0 +1,31 @@
+dialog.c-help.js-ai(aria-labelledby="ai-title")
+  .c-help__inner
+    header.c-help__header
+      h2#ai-title= translation.ai.TITLE
+      button.c-help__close.js-ai-close(type="button" aria-label=translation.help.CLOSE) ×
+
+    p.c-help__intro= translation.ai.INTRO
+
+    h3.c-help__subtitle= translation.ai.STEP_1
+    .c-code
+      pre.c-code__pre#ai-config {
+        |   "mcpServers": {
+        |     "frontend-checklist": {
+        |       "command": "npx",
+        |       "args": ["-y", "frontend-checklist-mcp"]
+        |     }
+        |   }
+        | }
+      button.button.c-code__copy.js-copy(type="button" data-target="ai-config" data-done=translation.ai.COPIED)= translation.ai.COPY
+    p.c-help__intro.c-help__hint= translation.ai.STEP_1_HINT
+
+    h3.c-help__subtitle= translation.ai.STEP_2
+    .c-code
+      pre.c-code__pre#ai-prompt= translation.ai.PROMPT
+      button.button.c-code__copy.js-copy(type="button" data-target="ai-prompt" data-done=translation.ai.COPIED)= translation.ai.COPY
+
+    footer.c-help__footer
+      p.c-help__intro= translation.ai.SKILL
+      a.button.--fill(href="https://github.com/Jamesiukalu/Frontend-Checklist/tree/main/skills/frontend-checklist-audit" target="_blank" rel="noopener noreferrer")= translation.ai.SKILL_LINK
+      |  
+      a.button(href="https://github.com/Jamesiukalu/Frontend-Checklist/tree/main/mcp#readme" target="_blank" rel="noopener noreferrer")= translation.ai.DOCS

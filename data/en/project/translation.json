@@ -53,7 +53,9 @@
     "PRIORITY_LOW": "Low priority item",
     "OPEN_DESCRIPTION": "Open the description section",
     "COFFEE": "Buy me a coffee",
-    "COFFEE_TITLE": "Support this free tool: buy me a coffee"
+    "COFFEE_TITLE": "Support this free tool: buy me a coffee",
+    "AI": "Use with AI",
+    "AI_TITLE": "Run the audit from your AI assistant"
   },
   "audit": {
     "TITLE": "Audit a live page",
@@ -146,5 +148,18 @@
       "AI assistants can run the audit too: see the MCP server and agent skill in the GitHub repository."
     ],
     "TRY_AUDIT": "Try the audit"
+  },
+  "ai": {
+    "TITLE": "Use it from your AI assistant",
+    "INTRO": "Install the free MCP server once, then ask your assistant to audit any page. No account or API key. Needs Node 18+.",
+    "STEP_1": "1. Add this to your MCP config",
+    "STEP_1_HINT": "VS Code: .vscode/mcp.json (use \"servers\"). Claude Desktop or Cursor: \"mcpServers\".",
+    "STEP_2": "2. Ask your assistant",
+    "PROMPT": "Audit https://example.com and fix the high priority issues.",
+    "COPY": "Copy",
+    "COPIED": "Copied",
+    "SKILL": "Prefer a Claude Code or Cursor skill? See the install steps on GitHub.",
+    "SKILL_LINK": "Skill instructions",
+    "DOCS": "Full guide"
   }
 }

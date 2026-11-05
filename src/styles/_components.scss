@@ -812,6 +812,7 @@
   .c-audit__note,
   .c-audit__status,
   .c-help,
+  .c-ai-tab,
   .c-sidebar,
   footer {
     display: none !important;
@@ -847,11 +848,79 @@
   transform: translateY(-50%);
 }
 
+.c-ai-tab {
+  position: fixed;
+  top: calc(50% - 52px);
+  right: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid var(--border-strong);
+  border-right: 0;
+  border-radius: var(--radius) 0 0 var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.8125rem;
+  font-weight: 650;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 18%);
+  transform: translateY(-50%) translateX(calc(100% - 44px));
+  transition: transform 0.2s ease;
+}
+
+.c-ai-tab:hover,
+.c-ai-tab:focus-visible {
+  transform: translateY(-50%);
+}
+
+.c-code {
+  position: relative;
+}
+
+.c-code__pre {
+  margin: 0;
+  padding: 12px 84px 12px 14px;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-muted);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  white-space: pre;
+}
+
+.c-code__copy {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+}
+
+.c-help__hint {
+  margin-top: 6px;
+  font-size: 0.8125rem;
+}
+
 .c-coffee__icon {
   font-size: 1.125rem;
 }
 
 @media (max-width: 600px) {
+  .c-ai-tab {
+    top: auto;
+    bottom: 68px;
+    transform: translateX(calc(100% - 44px));
+  }
+
+  .c-ai-tab:hover,
+  .c-ai-tab:focus-visible {
+    transform: none;
+  }
+
   .c-coffee {
     top: auto;
     bottom: 16px;
@@ -865,6 +934,7 @@
 }
 
 @media print {
+  .c-ai-tab,
   .c-coffee {
     display: none !important;
   }
