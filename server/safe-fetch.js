@@ -2,6 +2,7 @@ const dns = require('node:dns');
 const http = require('node:http');
 const https = require('node:https');
 const net = require('node:net');
+const tls = require('node:tls');
 const zlib = require('node:zlib');
 
 const blocked = new net.BlockList();
@@ -132,6 +133,7 @@ function requestOnce(url, {timeout, maxBytes}) {
   const client = url.protocol === 'https:' ? https : http;
 
   return new Promise((resolve, reject) => {
+    const started = Date.now();
     const req = client.request(
       url,
       {
@@ -146,6 +148,8 @@ function requestOnce(url, {timeout, maxBytes}) {
         },
       },
       res => {
+        const ttfb = Date.now() - started;
+
         decode(res, maxBytes)
           .then(({body, truncated}) =>
             resolve({
@@ -153,6 +157,7 @@ function requestOnce(url, {timeout, maxBytes}) {
               headers: res.headers,
               body: body.toString('utf8'),
               truncated,
+              ttfb,
             }),
           )
           .catch(reject);
@@ -189,4 +194,38 @@ async function safeFetch(
   throw new AuditError('Too many redirects', 'redirects');
 }
 
-module.exports = {AuditError, isBlockedAddress, parseTarget, safeFetch};
+// Which protocol the server negotiates over TLS (h2, http/1.1), via ALPN
+function negotiatedProtocol(hostname) {
+  return new Promise(resolve => {
+    const socket = tls.connect(
+      {
+        host: hostname,
+        port: 443,
+        servername: hostname,
+        ALPNProtocols: ['h2', 'http/1.1'],
+        lookup: pinnedLookup,
+        timeout: 4000,
+      },
+      () => {
+        const protocol = socket.alpnProtocol || null;
+
+        socket.destroy();
+        resolve(protocol);
+      },
+    );
+
+    socket.on('error', () => resolve(null));
+    socket.on('timeout', () => {
+      socket.destroy();
+      resolve(null);
+    });
+  });
+}
+
+module.exports = {
+  AuditError,
+  isBlockedAddress,
+  negotiatedProtocol,
+  parseTarget,
+  safeFetch,
+};

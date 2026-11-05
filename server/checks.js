@@ -547,8 +547,13 @@ const checks = [
   },
 ];
 
+const {extraChecks} = require('./checks-extra');
+
+checks.push(...extraChecks);
+
 function runChecks(ctx) {
   const results = [];
+  const seen = new Set();
 
   checks.forEach(check => {
     let outcome;
@@ -560,6 +565,9 @@ function runChecks(ctx) {
     }
     if (!outcome) return;
     check.ids.forEach(id => {
+      // First check that decides an item wins
+      if (seen.has(id)) return;
+      seen.add(id);
       results.push({
         id,
         status: outcome.pass ? 'pass' : 'fail',

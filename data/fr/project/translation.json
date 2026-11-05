@@ -88,7 +88,7 @@
   },
   "audit": {
     "TITLE": "Auditer une page en ligne",
-    "LEAD": "Collez une URL publique : nous exécutons une soixantaine de vérifications automatiques. Vous obtenez un score, ce qu'il faut corriger, et un clic pour cocher les éléments réussis dans votre checklist.",
+    "LEAD": "Collez une URL publique : nous exécutons environ 200 vérifications automatiques. Vous obtenez un score, ce qu'il faut corriger, et un clic pour cocher les éléments réussis dans votre checklist.",
     "LABEL": "URL de la page",
     "BUTTON": "Lancer l'audit",
     "RUNNING": "Audit en cours…",

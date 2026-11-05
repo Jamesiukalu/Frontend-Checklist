@@ -1,6 +1,7 @@
 const cheerio = require('cheerio');
 const {AuditError, parseTarget, safeFetch} = require('./safe-fetch');
 const {runChecks} = require('./checks');
+const {gatherResources} = require('./resources');
 
 const quiet = promise => promise.catch(() => null);
 
@@ -33,8 +34,14 @@ async function audit(input) {
     quiet(safeFetch(probeUrl.href, {maxBytes: 20000, timeout: 5000})),
   ]);
 
+  const $ = cheerio.load(page.body);
+  const resources = await gatherResources({$, page, origin, sitemap, robots});
+
   const results = runChecks({
-    $: cheerio.load(page.body),
+    $,
+    resources,
+    ttfb: page.ttfb,
+    status: page.status,
     html: page.body,
     headers: page.headers,
     finalUrl: page.url,
