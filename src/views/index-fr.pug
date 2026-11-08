@@ -39,6 +39,11 @@ block main
 
         if _items !== undefined
 
+          //- Counts favicon <img>s so the first two stay eager (the
+          //- audit requires the first images not to be lazy-loaded) while
+          //- the rest are lazy. See label.pug.
+          - var faviconIndex = 0
+
           each section in sections
             +checklist-section({
               dataSection: _items[section[0]],

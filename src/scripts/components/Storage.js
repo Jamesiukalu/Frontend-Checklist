@@ -40,8 +40,6 @@ class Storage {
             storage,
             'visible',
           );
-        } else {
-          console.log('error');
         }
       });
     } else {
@@ -56,8 +54,6 @@ class Storage {
           storage,
           'visible',
         );
-      } else {
-        console.log('error');
       }
     }
   }
@@ -72,8 +68,6 @@ class Storage {
         // Parse the serialized data back into an aray of objects
         storage = JSON.parse(localStorage.getItem(list.sectionName));
       }
-    } else {
-      console.log('error');
     }
 
     if (storage === []) {
@@ -87,8 +81,6 @@ class Storage {
             storage,
             'state',
           );
-        } else {
-          console.log('error');
         }
       });
     } else {
@@ -103,8 +95,6 @@ class Storage {
           storage,
           'state',
         );
-      } else {
-        console.log('error');
       }
     }
   }

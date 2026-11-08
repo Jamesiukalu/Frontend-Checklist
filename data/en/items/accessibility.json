@@ -710,7 +710,7 @@
       },
       {
         "title": "W3C: Understanding SC 3.3.8 Accessible Authentication (Minimum)",
-        "url": "https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html"
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum"
       },
       {
         "title": "MDN: HTML autocomplete attribute",
@@ -956,7 +956,7 @@
     "description": "All focusable or active elements must have a unique ID attribute.",
     "documentation": [
       {
-        "title": "W3C WAI: WCAG Overview",
+        "title": "WCAG 2.2 (W3C Recommendation)",
         "url": "https://www.w3.org/TR/WCAG22/"
       },
       {

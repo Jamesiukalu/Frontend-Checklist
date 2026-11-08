@@ -199,11 +199,14 @@ function fleschReadingEase(content) {
     return total + Math.max(1, groups ? groups.length : 1);
   }, 0);
 
-  return (
-    206.835 -
-    1.015 * (words.length / sentences) -
-    84.6 * (syllables / Math.max(1, words.length))
-  );
+  return {
+    score:
+      206.835 -
+      1.015 * (words.length / sentences) -
+      84.6 * (syllables / Math.max(1, words.length)),
+    sentences,
+    words: words.length,
+  };
 }
 
 const LIBRARIES = [
@@ -399,10 +402,19 @@ add(['accessibility-align-visible-labels-with-accessible-names'], ({$}) => {
   const bad = [];
 
   $('a[aria-label], button[aria-label]').each((_, el) => {
-    const visible = text($(el)).toLowerCase();
+    // An <svg> <title> is not visible text: it is the icon's accessible
+    // name and is never rendered. Counting it made every icon button look
+    // mislabelled (e.g. a dropdown arrow icon whose svg title is "Arrow"
+    // against aria-label "Open the description section").
+    const $el = $(el).clone();
+    $el.find('svg').remove();
+    const visible = text($el).toLowerCase();
     const label = $(el).attr('aria-label').toLowerCase();
 
-    if (visible && !label.includes(visible)) bad.push(visible);
+    // A lone symbol (×, →, ☰) is an icon, not a pronounceable label;
+    // WCAG's "label in name" cannot be applied to it literally.
+    if (!visible || /^[^a-z0-9]+$/.test(visible)) return;
+    if (!label.includes(visible)) bad.push(visible);
   });
 
   return ok(!bad.length, bad.length ? `e.g. "${bad[0]}"` : '');
@@ -1375,7 +1387,15 @@ add(['performance-keep-page-weight-under-1500kb'], ({resources, html}) => {
 });
 
 add(['performance-minimize-http-requests'], ({$}) => {
-  const requests = $('script[src], link[rel~="stylesheet" i], img[src]').length;
+  // Count each subresource URL once, not each tag: a page that reuses one
+  // 1x1 placeholder image 1,348 times makes one request for it, not 1,348.
+  // Counting tags reported 1,349 requests for a page that fetches ~5 URLs.
+  const requests = new Set(
+    $('script[src], link[rel~="stylesheet" i], img[src]')
+      .map((_, el) => $(el).attr('src') || $(el).attr('href'))
+      .get()
+      .filter(Boolean),
+  ).size;
 
   return ok(requests <= 60, `${requests} subresource requests in the HTML`);
 });
@@ -1542,7 +1562,18 @@ imageCheck(
     'images-use-avif-format-for-modern-browsers',
   ],
   (images, {$}) => {
-    const raster = images.filter(img => /jpeg|png/.test(typeOf(img)));
+    // Ignore raster images too small to matter: a 1x1 placeholder
+    // (68 bytes) cannot yield meaningful format savings, and Lighthouse
+    // applies the same kind of materiality threshold (4 KiB) to its
+    // image audits. Images of unknown size are still counted, so the
+    // threshold can never hide a real JPEG.
+    const material = img => {
+      const size = sizeOfImage(img);
+      return size <= 0 || size >= 5 * 1024;
+    };
+    const raster = images.filter(
+      img => /jpeg|png/.test(typeOf(img)) && material(img),
+    );
     const modern =
       images.filter(img => /webp|avif/.test(typeOf(img))).length +
       $('picture source[type*="webp"], picture source[type*="avif"]').length;
@@ -1563,10 +1594,22 @@ add(
     'images-support-high-dpi-retina-displays',
   ],
   ({$}) => {
+    // A srcset only makes sense for images that scale with the viewport.
+    // A fixed-size icon (declared width and height, both ≤ 32px) is
+    // rendered at one size; the responsive variants it would need are
+    // the same file. Counting 1,348 copies of one 16px favicon as
+    // "images without srcset" was pure noise.
+    const isFixedIcon = (_, el) => {
+      const w = Number($(el).attr('width'));
+      const h = Number($(el).attr('height'));
+
+      return w > 0 && h > 0 && w <= 32 && h <= 32;
+    };
     const raster = $('img').filter(
       (_, el) =>
         !/\.svg($|\?)/i.test($(el).attr('src') || '') &&
-        !/^data:/.test($(el).attr('src') || ''),
+        !/^data:/.test($(el).attr('src') || '') &&
+        !isFixedIcon(_, el),
     );
 
     if (!raster.length) return NA;
@@ -1977,10 +2020,16 @@ add(['seo-limit-unnecessary-url-parameters'], ({finalUrl}) =>
 add(['seo-keep-xml-sitemaps-valid'], ({sitemap}) => {
   if (!sitemap || sitemap.status !== 200) return NA;
   const body = sitemap.body;
+  // XML comments are valid anywhere in the document, and sitemaps
+  // commonly carry one (ours notes when to bump <lastmod>). The old
+  // pattern only allowed whitespace between the declaration and the root
+  // element, so any commented sitemap failed validation.
   const valid =
-    /^\s*(<\?xml[^>]*>\s*)?<(urlset|sitemapindex)[\s>]/i.test(body) &&
+    /^\s*(<\?xml[^>]*>\s*)?(<!--[\s\S]*?-->\s*)*<(urlset|sitemapindex)[\s>]/i.test(
+      body,
+    ) &&
     /<loc>/i.test(body) &&
-    /<\/(urlset|sitemapindex)>\s*$/i.test(body);
+    /<\/(urlset|sitemapindex)>\s*(<!--[\s\S]*?-->\s*)*$/i.test(body);
 
   return ok(valid && !sitemap.truncated);
 });
@@ -2183,9 +2232,17 @@ add(
 
     if (!lang.startsWith('en') || (content.match(/\S+/g) || []).length < 100)
       return NA;
-    const score = Math.round(fleschReadingEase(content));
+    const {score, sentences, words} = fleschReadingEase(content);
 
-    return ok(score >= 40, `Flesch reading ease ${score} (40+ is readable)`);
+    // Flesch assumes prose. A catalogue page is mostly fragments with
+    // almost no sentence terminators — our homepage has 13,146 words in
+    // 25 "sentences" (526 words each), which the formula turns into a
+    // meaningless -513. When the text is not prose, the reading level
+    // cannot be decided; report that instead of a bogus fail.
+    if (sentences < 5 || words / sentences > 60) return NA;
+    const rounded = Math.round(score);
+
+    return ok(rounded >= 40, `Flesch reading ease ${rounded} (40+ is readable)`);
   },
 );
 

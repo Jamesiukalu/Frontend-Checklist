@@ -1,3 +1,20 @@
+// Skip link: hidden until keyboard focus, then shown at the top
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100%;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  background: var(--surface);
+  color: var(--text);
+  border: 2px solid var(--accent);
+  border-radius: 0.25rem;
+
+  &:focus {
+    top: 1rem;
+  }
+}
+
 // Tag filter
 .c-tag-filter__title {
   margin-bottom: 12px;
@@ -95,7 +112,8 @@
 
 .c-progress__bar::-webkit-progress-value {
   background: var(--accent);
-  transition: width 200ms;
+  // No width transition here: animating width forces layout on every
+  // progress update, and the audit flags layout-property transitions.
 }
 
 .c-progress__bar::-moz-progress-bar {

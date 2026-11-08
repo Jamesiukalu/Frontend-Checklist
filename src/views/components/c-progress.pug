@@ -1,5 +1,6 @@
 .c-progress
-  progress.c-progress__bar.js-progress(value="0", max="100")
+  - var progressLabel = ((translation.sections && translation.sections[sectionTitle.toLowerCase()]) || sectionTitle) + ' ' + translation.PERCENTAGE_CHECKED
+  progress.c-progress__bar.js-progress(value="0", max="100", aria-label=progressLabel)
   .c-progress__counter
     span.c-progress__label 0 %
     span.c-progress__text &nbsp;#[=(translation.sections && translation.sections[sectionTitle.toLowerCase()]) || sectionTitle] #[=translation.PERCENTAGE_CHECKED]

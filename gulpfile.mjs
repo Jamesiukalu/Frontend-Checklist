@@ -162,6 +162,74 @@ export function compileAllAuditPug() {
   );
 }
 
+// Terms and contact pages share the audit page's one-template pattern;
+// output is /terms, /contact and /fr/terms, /fr/contact
+export function compileTermsPug() {
+  return gulp
+    .src(`${dirs.src}/views/terms.pug`)
+    .pipe(plumber(plumberOptions))
+    .pipe(data(() => loadProjectData(lang)))
+    .pipe(pug({locals: {}, pretty: true}))
+    .pipe(rename({basename: 'index'}))
+    .pipe(
+      gulp.dest(
+        lang === 'en' ? `${dirs.dest}/terms` : `${dirs.dest}/${lang}/terms`,
+      ),
+    )
+    .pipe(browserSync.stream());
+}
+
+export function compileContactPug() {
+  return gulp
+    .src(`${dirs.src}/views/contact.pug`)
+    .pipe(plumber(plumberOptions))
+    .pipe(data(() => loadProjectData(lang)))
+    .pipe(pug({locals: {}, pretty: true}))
+    .pipe(rename({basename: 'index'}))
+    .pipe(
+      gulp.dest(
+        lang === 'en'
+          ? `${dirs.dest}/contact`
+          : `${dirs.dest}/${lang}/contact`,
+      ),
+    )
+    .pipe(browserSync.stream());
+}
+
+export function compileAllTermsPug() {
+  return allStreams(
+    langs.map(l =>
+      gulp
+        .src(`${dirs.src}/views/terms.pug`)
+        .pipe(data(() => loadProjectData(l)))
+        .pipe(pug({locals: {}, pretty: true}))
+        .pipe(rename({basename: 'index'}))
+        .pipe(
+          gulp.dest(
+            l === 'en' ? `${dirs.dest}/terms` : `${dirs.dest}/${l}/terms`,
+          ),
+        ),
+    ),
+  );
+}
+
+export function compileAllContactPug() {
+  return allStreams(
+    langs.map(l =>
+      gulp
+        .src(`${dirs.src}/views/contact.pug`)
+        .pipe(data(() => loadProjectData(l)))
+        .pipe(pug({locals: {}, pretty: true}))
+        .pipe(rename({basename: 'index'}))
+        .pipe(
+          gulp.dest(
+            l === 'en' ? `${dirs.dest}/contact` : `${dirs.dest}/${l}/contact`,
+          ),
+        ),
+    ),
+  );
+}
+
 // ========================================
 // CSS
 // ========================================
@@ -184,11 +252,15 @@ export function compileStyles() {
     .pipe(browserSync.stream());
 }
 
-// Inline the CSS the page needs and load the rest asynchronously
+// Inline the CSS the page needs and keep a normal stylesheet link.
+// preload: 'swap' made Beasties emit an onload handler (tripping the
+// no-inline-JS check) and wrapped the inlined CSS in <noscript> when the
+// source used the preload pattern; preload: false still inlines the
+// critical CSS into a real <style> in <head>.
 const beasties = new Beasties({
   path: dirs.dest,
   publicPath: '/',
-  preload: 'swap',
+  preload: false,
   logLevel: 'warn',
 });
 
@@ -461,11 +533,19 @@ export function watch() {
   gulp.watch(`${dirs.src}/styles/**/*.scss`, compileStyles);
   gulp.watch(
     `${dirs.src}/views/**/*.pug`,
-    gulp.parallel(compilePug, compileAuditPug),
+    gulp.parallel(compilePug, compileAuditPug, compileTermsPug, compileContactPug),
   );
   gulp.watch(
     [`./data/${lang}/items/*.json`, `./data/${lang}/project/*.json`],
-    gulp.series(jsonRebuild, gulp.parallel(compilePug, compileAuditPug)),
+    gulp.series(
+      jsonRebuild,
+      gulp.parallel(
+        compilePug,
+        compileAuditPug,
+        compileTermsPug,
+        compileContactPug,
+      ),
+    ),
   );
   gulp.watch(`${dirs.src}/img/**/*`, compressImages);
   gulp.watch(`${dirs.src}/scripts/**/*.js`, webpackScripts);
@@ -477,6 +557,8 @@ export const dev = gulp.series(
     apiBuild,
     compilePug,
     compileAuditPug,
+    compileTermsPug,
+    compileContactPug,
     compileStyles,
     compressImages,
     webpackScripts,
@@ -487,7 +569,12 @@ export const dev = gulp.series(
 
 export const build = gulp.series(
   gulp.parallel(cleanDist, jsonRebuildAll, modernizrBuild),
-  gulp.parallel(compileAllPug, compileAllAuditPug),
+  gulp.parallel(
+    compileAllPug,
+    compileAllAuditPug,
+    compileAllTermsPug,
+    compileAllContactPug,
+  ),
   gulp.parallel(compileStyles, compressImages, webpackScripts),
   cdn,
   gulp.parallel(criticalCss, copy, apiBuild),

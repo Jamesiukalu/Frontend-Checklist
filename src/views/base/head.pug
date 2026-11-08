@@ -1,14 +1,18 @@
 //- SEO: per-page title, description, canonical URL and hreflang.
-//- `page` is 'checklist' by default (layout.pug) and 'audit' on audit.pug.
+//- `page` is 'checklist' by default (layout.pug), 'audit' on audit.pug,
+//- 'terms' on terms.pug and 'contact' on contact.pug.
 - var isAuditPage = typeof page !== 'undefined' && page === 'audit'
+- var isTermsPage = typeof page !== 'undefined' && page === 'terms'
+- var isContactPage = typeof page !== 'undefined' && page === 'contact'
 //- Home path is '/' in English but '/fr' in French: vercel.json sets
 //- trailingSlash: false, so /fr/ redirects to /fr and must never be a
-//- canonical / hreflang target. Audit paths are slash-free in both languages.
-- var enPath = isAuditPage ? '/audit' : '/'
-- var frPath = isAuditPage ? '/fr/audit' : '/fr'
+//- canonical / hreflang target. Sub-page paths are slash-free in both languages.
+- var pageSlug = isAuditPage ? 'audit' : isTermsPage ? 'terms' : isContactPage ? 'contact' : ''
+- var enPath = pageSlug ? '/' + pageSlug : '/'
+- var frPath = pageSlug ? '/fr/' + pageSlug : '/fr'
 - var canonicalUrl = translation.URL_WEBSITE + (translation.SITE_LANGUAGE === 'en' ? enPath : frPath)
-- var pageTitle = isAuditPage ? translation.AUDIT_SEO_TITLE : translation.SEO_TITLE
-- var pageDescription = isAuditPage ? translation.AUDIT_SEO_DESCRIPTION : translation.SEO_DESCRIPTION
+- var pageTitle = isAuditPage ? translation.AUDIT_SEO_TITLE : isTermsPage ? translation.terms.SEO_TITLE : isContactPage ? translation.contact.SEO_TITLE : translation.SEO_TITLE
+- var pageDescription = isAuditPage ? translation.AUDIT_SEO_DESCRIPTION : isTermsPage ? translation.terms.SEO_DESCRIPTION : isContactPage ? translation.contact.SEO_DESCRIPTION : translation.SEO_DESCRIPTION
 
 <!-- Analytics disabled: no-op so existing gtag() event calls don't throw. Replace with your own GA4 snippet if wanted. -->
 script.
@@ -46,16 +50,11 @@ script.
     document.documentElement.setAttribute('data-theme', theme);
   })();
 
-link(rel="preload" as="style" href="/styles/main.min.css?v=" + ASSET_VERSION onload="this.rel='stylesheet'")
-
-noscript
-  link(rel="stylesheet" href="/styles/main.min.css?v=" + ASSET_VERSION)
-
-script.
-  /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
-  !function(a){"use strict";var b=function(b,c,d){function j(a){if(e.body)return a();setTimeout(function(){j(a)})}function l(){f.addEventListener&&f.removeEventListener("load",l),f.media=d||"all"}var g,e=a.document,f=e.createElement("link");if(c)g=c;else{var h=(e.body||e.getElementsByTagName("head")[0]).childNodes;g=h[h.length-1]}var i=e.styleSheets;f.rel="stylesheet",f.href=b,f.media="only x",j(function(){g.parentNode.insertBefore(f,c?g:g.nextSibling)});var k=function(a){for(var b=f.href,c=i.length;c--;)if(i[c].href===b)return a();setTimeout(function(){k(a)})};return f.addEventListener&&f.addEventListener("load",l),f.onloadcssdefined=k,k(l),f};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
-  /*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
-  !function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(a){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+//- Plain stylesheet link: Beasties inlines the critical CSS from it
+//- (gulpfile: preload: false). The old preload + onload + <noscript>
+//- pattern hid the inlined CSS inside <noscript> (dead code, invisible
+//- to static analysis) and the onload handler tripped the no-inline-JS check.
+link(rel="stylesheet" href="/styles/main.min.css?v=" + ASSET_VERSION)
 
 <!-- Recommended favicon format -->
 link(rel="icon", type="image/png", sizes="32x32", href="/favicon-32x32.png")
