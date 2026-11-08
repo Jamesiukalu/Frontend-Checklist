@@ -1,6 +1,7 @@
 {
     "short_name": "FE Checklist",
     "name": "Front-End Checklist",
+    "description": "Free front-end audit checklist: 400 items, up to 246 automatic checks.",
     "start_url": "/",
     "icons": [
       {

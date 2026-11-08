@@ -1,0 +1,23 @@
+//- Structured data for the tool (WebApplication). Built with JSON.stringify so
+//- quotes in the translated copy can't break the JSON. `pageTitle`,
+//- `pageDescription` and `canonicalUrl` are set in head.pug.
+-
+  var ldData = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Front-End Checklist",
+    "alternateName": "Front-End Audit Checklist",
+    "url": canonicalUrl,
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript",
+    "inLanguage": ["en", "fr"],
+    "isAccessibleForFree": true,
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+    "description": pageDescription,
+    "featureList": "400-item front-end checklist across 13 sections; up to 246 automatic checks; page audit with score; one-click ticking into the checklist; Markdown and PDF export; free MCP server and agent skill",
+    "author": {"@type": "Organization", "name": "Shinning Tech Services", "url": "https://www.shinningtechservices.com/"},
+    "license": "https://github.com/Jamesiukalu/Frontend-Checklist/blob/main/LICENSE",
+    "codeRepository": "https://github.com/Jamesiukalu/Frontend-Checklist"
+  };
+script(type="application/ld+json")!= JSON.stringify(ldData)

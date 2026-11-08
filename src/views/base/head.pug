@@ -1,3 +1,12 @@
+//- SEO: per-page title, description, canonical URL and hreflang.
+//- `page` is 'checklist' by default (layout.pug) and 'audit' on audit.pug.
+- var isAuditPage = typeof page !== 'undefined' && page === 'audit'
+- var langPrefix = translation.SITE_LANGUAGE === 'en' ? '' : '/' + translation.SITE_LANGUAGE
+- var pagePath = isAuditPage ? '/audit' : '/'
+- var canonicalUrl = translation.URL_WEBSITE + langPrefix + pagePath
+- var pageTitle = isAuditPage ? translation.AUDIT_SEO_TITLE : translation.SEO_TITLE
+- var pageDescription = isAuditPage ? translation.AUDIT_SEO_DESCRIPTION : translation.SEO_DESCRIPTION
+
 <!-- Analytics disabled: no-op so existing gtag() event calls don't throw. Replace with your own GA4 snippet if wanted. -->
 script.
   window.gtag = window.gtag || function () {};
@@ -12,10 +21,18 @@ meta(http-equiv="x-ua-compatible", content="ie=edge")
 meta(name='viewport', content='width=device-width, initial-scale=1')
 
 <!-- Document Title -->
-title #[=translation.SITE_NAME] - #[=translation.INDEX_TITLE]
+title= pageTitle
 
 <!-- Meta Description -->
-meta(name='description', content=translation.SITE_DESCRIPTION)
+meta(name='description', content=pageDescription)
+
+<!-- Canonical URL (one per page: the audit page no longer shares the home page's) -->
+link(rel="canonical", href=canonicalUrl)
+
+<!-- Alternate language versions -->
+link(rel="alternate", hreflang="en", href=translation.URL_WEBSITE + pagePath)
+link(rel="alternate", hreflang="fr", href=translation.URL_WEBSITE + '/fr' + pagePath)
+link(rel="alternate", hreflang="x-default", href=translation.URL_WEBSITE + pagePath)
 
 //- Set the theme before first paint to avoid a flash of the wrong theme
 script.
@@ -55,6 +72,7 @@ meta(name="msapplication-TileImage" content="/icons/mstile-144x144.png")
 link(rel="manifest" href="/manifest.json")
 
 include social
+include jsonld
 
 script
   include ../../modernizr-custom.min.js
