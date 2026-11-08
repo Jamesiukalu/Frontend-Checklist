@@ -177,6 +177,27 @@ describe('audit: checks', () => {
     )}</p></main></body></html>`;
 
     expect(run(simple)['seo-write-at-a-clear-reading-level']).to.equal('pass');
+
+    // Short dense prose is scored, not exempted: a ~150-word paragraph in
+    // 4 sentences and five 66-word sentences both fail.
+    const core =
+      'The implementation of comprehensive authentication methodologies necessitates considerable organizational commitment and cross-functional collaboration';
+    const shortDense = `<html lang="en"><body><main><p>${`${core}, ${core}, ${core}. `.repeat(
+      4,
+    )}</p></main></body></html>`;
+
+    expect(run(shortDense)['seo-write-at-a-clear-reading-level']).to.equal(
+      'fail',
+    );
+
+    const longSentence = `${core}, ${core}, ${core}, ${core}, ${core} today. `;
+    const longSentences = `<html lang="en"><body><main><p>${longSentence.repeat(
+      5,
+    )}</p></main></body></html>`;
+
+    expect(
+      run(longSentences)['seo-write-at-a-clear-reading-level'],
+    ).to.equal('fail');
   });
 
   it('ignores svg titles and lone symbols in visible-label matching', () => {
@@ -195,6 +216,29 @@ describe('audit: checks', () => {
 
     expect(
       run(mismatch)['accessibility-align-visible-labels-with-accessible-names'],
+    ).to.equal('fail');
+  });
+
+  it('still matches rendered svg text and non-Latin labels', () => {
+    // Rendered SVG <text> is visible text: a mismatch must still fail
+    // even though svg <title>/<desc> metadata is ignored.
+    const svgText = `<html><body>
+      <button aria-label="Open the menu"><svg aria-hidden="true"><text>Settings</text></svg></button>
+    </body></html>`;
+
+    expect(
+      run(svgText)['accessibility-align-visible-labels-with-accessible-names'],
+    ).to.equal('fail');
+
+    // The symbol-only guard is Unicode-aware: non-Latin labels are real
+    // labels, not icons, so a mismatch must still fail.
+    const nonLatin = `<html><body>
+      <button aria-label="Delete">保存</button>
+      <button aria-label="Delete">Сохранить</button>
+    </body></html>`;
+
+    expect(
+      run(nonLatin)['accessibility-align-visible-labels-with-accessible-names'],
     ).to.equal('fail');
   });
 
@@ -218,6 +262,29 @@ describe('audit: checks', () => {
       run(content.replace('height="600"', 'height="600" srcset="photo-400.jpg 400w"'))[
         'images-implement-responsive-images-with-srcset'
       ],
+    ).to.equal('pass');
+  });
+
+  it('evaluates retina density for fixed-size icons too', () => {
+    // Fixed icons are exempt from srcset (viewport responsiveness), but
+    // not from retina: a 16x16 raster with no 2x source still fails.
+    const iconOnly = `<html><body>
+      ${'<img src="1x1.png" alt="" width="16" height="16">'.repeat(5)}
+    </body></html>`;
+
+    expect(
+      run(iconOnly)['images-support-high-dpi-retina-displays'],
+    ).to.equal('fail');
+    expect(
+      run(iconOnly)['images-implement-responsive-images-with-srcset'],
+    ).to.equal(undefined);
+
+    const withSrcset = `<html><body>
+      <img src="icon.png" alt="" width="16" height="16" srcset="icon-32.png 2x">
+    </body></html>`;
+
+    expect(
+      run(withSrcset)['images-support-high-dpi-retina-displays'],
     ).to.equal('pass');
   });
 

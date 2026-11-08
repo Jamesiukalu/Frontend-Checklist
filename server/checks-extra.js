@@ -181,6 +181,23 @@ const bodyText = $ => {
   return text(clone);
 };
 
+// Prose text for readability scoring: paragraphs outside list items.
+// A catalogue page's item titles and details live in <li>s — fragments,
+// not sentences — so scoring the whole body as prose turns them into a
+// meaningless Flesch score (our homepage: 13,146 words in 25 "sentences").
+// Genuine article prose lives in <p> outside <li>; paragraphs inside
+// nav/header/footer are excluded the same way bodyText excludes them.
+const proseText = $ => {
+  const paras = [];
+
+  $('body p').each((_, el) => {
+    if ($(el).closest('li, nav, header, footer, noscript, svg').length) return;
+    paras.push(text($(el)));
+  });
+
+  return paras.join(' ');
+};
+
 const STOP_WORDS = new Set(
   'the and for are but not you all any can had her was one our out has have this that with from they will would there their what about which when your said each she how use been more than them then these some into only over also very just like such most make made does did get got its let'.split(
     ' ',
@@ -402,18 +419,22 @@ add(['accessibility-align-visible-labels-with-accessible-names'], ({$}) => {
   const bad = [];
 
   $('a[aria-label], button[aria-label]').each((_, el) => {
-    // An <svg> <title> is not visible text: it is the icon's accessible
-    // name and is never rendered. Counting it made every icon button look
-    // mislabelled (e.g. a dropdown arrow icon whose svg title is "Arrow"
-    // against aria-label "Open the description section").
+    // An <svg> <title>/<desc> is not visible text: it is the icon's
+    // accessible name and is never rendered. Counting it made every icon
+    // button look mislabelled (e.g. a dropdown arrow icon whose svg title
+    // is "Arrow" against aria-label "Open the description section").
+    // Only the metadata elements are removed — rendered SVG <text> is
+    // genuine visible text and must still be matched against the label.
     const $el = $(el).clone();
-    $el.find('svg').remove();
+    $el.find('svg title, svg desc').remove();
     const visible = text($el).toLowerCase();
     const label = $(el).attr('aria-label').toLowerCase();
 
     // A lone symbol (×, →, ☰) is an icon, not a pronounceable label;
     // WCAG's "label in name" cannot be applied to it literally.
-    if (!visible || /^[^a-z0-9]+$/.test(visible)) return;
+    // Unicode-aware: skip only when the visible text has no letter or
+    // number at all, so non-Latin labels (e.g. 保存) are still checked.
+    if (!visible || /^[^\p{L}\p{N}]+$/u.test(visible)) return;
     if (!label.includes(visible)) bad.push(visible);
   });
 
@@ -1591,7 +1612,6 @@ add(
   [
     'images-implement-responsive-images-with-srcset',
     'images-use-srcset-for-responsive-images',
-    'images-support-high-dpi-retina-displays',
   ],
   ({$}) => {
     // A srcset only makes sense for images that scale with the viewport.
@@ -1620,6 +1640,25 @@ add(
     );
   },
 );
+
+// Retina density is a separate question from viewport responsiveness and
+// is evaluated on its own: a fixed-size icon still needs a 2x/3x source
+// on high-DPI screens, so fixed icons are NOT exempted here the way they
+// are for srcset. A 16x16 raster with no higher-density source fails.
+add(['images-support-high-dpi-retina-displays'], ({$}) => {
+  const raster = $('img').filter(
+    (_, el) =>
+      !/\.svg($|\?)/i.test($(el).attr('src') || '') &&
+      !/^data:/.test($(el).attr('src') || ''),
+  );
+
+  if (!raster.length) return NA;
+
+  return ok(
+    $('img[srcset], picture source[srcset]').length > 0,
+    `${raster.length} image(s), ${$('img[srcset]').length} with srcset`,
+  );
+});
 
 add(['images-use-picture-with-an-img-fallback'], ({$}) => {
   const pictures = $('picture');
@@ -2228,18 +2267,17 @@ add(
   ],
   ({$}) => {
     const lang = ($('html').attr('lang') || '').toLowerCase();
-    const content = bodyText($);
+    const content = proseText($);
 
     if (!lang.startsWith('en') || (content.match(/\S+/g) || []).length < 100)
       return NA;
-    const {score, sentences, words} = fleschReadingEase(content);
+    const {score} = fleschReadingEase(content);
 
-    // Flesch assumes prose. A catalogue page is mostly fragments with
-    // almost no sentence terminators — our homepage has 13,146 words in
-    // 25 "sentences" (526 words each), which the formula turns into a
-    // meaningless -513. When the text is not prose, the reading level
-    // cannot be decided; report that instead of a bogus fail.
-    if (sentences < 5 || words / sentences > 60) return NA;
+    // Flesch is scored on the prose paragraphs only. There is no
+    // sentence-count guard: once catalogue fragments are excluded, long
+    // sentences are the signal, not noise — dense prose, whether a short
+    // paragraph or five 61-word sentences, is scored and fails when it
+    // is genuinely hard to read.
     const rounded = Math.round(score);
 
     return ok(rounded >= 40, `Flesch reading ease ${rounded} (40+ is readable)`);

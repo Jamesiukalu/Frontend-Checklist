@@ -1,6 +1,8 @@
 - var prefix = translation.SITE_LANGUAGE === 'en' ? '' : '/' + translation.SITE_LANGUAGE
 - var current = page
-- var pagePath = current === 'audit' ? '/audit' : '/'
+//- Language switch targets the same page in the other language, for every
+//- page type (head.pug computes the same enPath/frPath for canonicals).
+- var pagePath = current === 'audit' ? '/audit' : current === 'terms' ? '/terms' : current === 'contact' ? '/contact' : '/'
 
 .s-topbar
   .s-topbar__inner
@@ -16,7 +18,7 @@
         span.s-topbar__help-icon(aria-hidden="true") ?
         span= translation.nav.HELP
       a.s-topbar__link.s-topbar__lang(href=pagePath hreflang="en" lang="en") EN
-      a.s-topbar__link.s-topbar__lang(href='/fr' + (current === 'audit' ? '/audit' : '') hreflang="fr" lang="fr") FR
+      a.s-topbar__link.s-topbar__lang(href='/fr' + (pagePath === '/' ? '' : pagePath) hreflang="fr" lang="fr") FR
       a.s-topbar__link.s-topbar__github(href=translation.URL_GITHUB_ROOT target="_blank" rel="noopener noreferrer") GitHub
       button.theme-toggle.js-theme-toggle(type="button" aria-label=translation.ui.THEME_LABEL title=translation.ui.THEME_TITLE)
         svg.theme-toggle__sun(viewBox="0 0 24 24" width="18" height="18" aria-hidden="true")

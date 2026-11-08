@@ -268,20 +268,27 @@ const minifyPage = html =>
   minifyHtml(html, {collapseWhitespace: true, removeComments: true});
 
 export function criticalCss() {
-  return allStreams([
-    ...langs.map(l =>
-      gulp
-        .src(`${dirs.dest}/${l === 'en' ? '' : `${l}/`}audit/index.html`)
-        .pipe(
-          mapContents(async file =>
-            Buffer.from(
-              await minifyPage(
-                await beasties.process(file.contents.toString()),
-              ),
+  // Inline critical CSS and minify one built HTML file, in place.
+  const processHtml = (src, dest) =>
+    gulp
+      .src(src)
+      .pipe(
+        mapContents(async file =>
+          Buffer.from(
+            await minifyPage(
+              await beasties.process(file.contents.toString()),
             ),
           ),
-        )
-        .pipe(gulp.dest(`${dirs.dest}/${l === 'en' ? '' : `${l}/`}audit`)),
+        ),
+      )
+      .pipe(gulp.dest(dest));
+
+  return allStreams([
+    ...langs.map(l =>
+      processHtml(
+        `${dirs.dest}/${l === 'en' ? '' : `${l}/`}audit/index.html`,
+        `${dirs.dest}/${l === 'en' ? '' : `${l}/`}audit`,
+      ),
     ),
     ...langs.map(l =>
       gulp
@@ -297,6 +304,18 @@ export function criticalCss() {
         )
         .pipe(rename({basename: 'index'}))
         .pipe(gulp.dest(l === 'en' ? dirs.dest : `${dirs.dest}/${l}`)),
+    ),
+    // Terms and Contact pages get the same post-processing as the home
+    // and audit pages — they were compiled but never passed through
+    // criticalCss(), so they shipped without inlined critical CSS and
+    // without HTML minification.
+    ...['terms', 'contact'].flatMap(page =>
+      langs.map(l =>
+        processHtml(
+          `${dirs.dest}/${l === 'en' ? '' : `${l}/`}${page}/index.html`,
+          `${dirs.dest}/${l === 'en' ? '' : `${l}/`}${page}`,
+        ),
+      ),
     ),
   ]);
 }
