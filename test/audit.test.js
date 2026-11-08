@@ -200,6 +200,53 @@ describe('audit: checks', () => {
     ).to.equal('fail');
   });
 
+  it('passes retina when a favicon has a real 1x/2x srcset', () => {
+    // The homepage favicons declare the 16px Google favicon as 1x and
+    // the 32px one as 2x — two genuinely different assets, not the same
+    // file listed twice.
+    const favicon = `<html><body>
+      <img src="1x1.png" alt="" width="16" height="16"
+        srcset="https://www.google.com/s2/favicons?domain_url=https://example.com&amp;sz=16 1x, https://www.google.com/s2/favicons?domain_url=https://example.com&amp;sz=32 2x">
+    </body></html>`;
+
+    expect(
+      run(favicon)['images-support-high-dpi-retina-displays'],
+    ).to.equal('pass');
+  });
+
+  it('fails the DOM-size and page-weight budgets when a page is huge', () => {
+    // The old homepage: 18,703 elements and ~1.9 MB. The new one renders
+    // one section up front (~1,200 elements, ~160 KB), so both pass.
+    const huge = `<html><body>${'<div><span>x</span></div>'.repeat(1600)}</body></html>`;
+
+    expect(run(huge)['performance-reduce-dom-size-and-complexity']).to.equal(
+      'fail',
+    );
+    expect(run(good)['performance-reduce-dom-size-and-complexity']).to.equal(
+      'pass',
+    );
+
+    const heavy = runWith(good, {
+      resources: {
+        js: [{headers: {}, body: 'x'.repeat(2 * 1024 * 1024)}],
+        css: [],
+        images: [],
+        fonts: [],
+      },
+    });
+
+    expect(heavy['performance-keep-page-weight-under-1500kb']).to.equal(
+      'fail',
+    );
+    const light = runWith(good, {
+      resources: {js: [], css: [], images: [], fonts: []},
+    });
+
+    expect(light['performance-keep-page-weight-under-1500kb']).to.equal(
+      'pass',
+    );
+  });
+
   it('ignores svg titles and lone symbols in visible-label matching', () => {
     const icons = `<html><body>
       <button aria-label="Open the description section"><svg aria-hidden="true"><title>Arrow</title></svg></button>

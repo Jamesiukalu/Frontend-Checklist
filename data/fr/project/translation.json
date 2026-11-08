@@ -228,5 +228,9 @@
     "X_TEXT": "Envoyez un message à @jamesiukalu sur X.",
     "GITHUB_TEXT": "Signalez un bug ou proposez une vérification dans le dépôt GitHub.",
     "SITE_TEXT": "Shinning Tech Services — développement web et mobile, design produit et gestion de produit."
-  }
+  },
+  "LOADING_SECTION": "Chargement de la section…",
+  "SECTION_LOAD_FAILED": "Impossible de charger cette section. Réessayer.",
+  "SECTION_RETRY": "Réessayer",
+  "NOSCRIPT_NOTE": "Cette liste charge chaque section avec JavaScript. Activez JavaScript pour utiliser les 400 éléments."
 }

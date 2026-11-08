@@ -1,0 +1,14 @@
+//- Renders one checklist section as a standalone HTML fragment, fetched
+//- on demand by the section loader (see src/scripts/components/SectionLoader.js).
+//- Locals: sectionKey ('seo'), sectionTitle ('SEO'), sectionIndex (8),
+//- plus the usual _project.json data (_items, translation, introductions).
+//- listSectionId is pre-sized so the mixin assigns the same
+//- data-section-id the section would have on the full page.
+include mixins/mixins
+
+-
+  var listSectionId = [];
+  for (var k = 0; k < sectionIndex; k++) listSectionId.push('0');
+  var faviconIndex = 0;
+
++checklist-section({dataSection: _items[sectionKey], sectionTitle: sectionTitle})

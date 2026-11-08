@@ -1,3 +1,5 @@
+import Utils from '../Utils';
+
 let instance = null;
 /**
  *
@@ -84,8 +86,28 @@ class Filter {
         e => {
           e.preventDefault();
 
-          instance.selectBy(e.target.getAttribute(dataName));
-          instance.addFilter(e.target.getAttribute(dataName), name);
+          const tag = e.target.getAttribute(dataName);
+          // Filtering only makes sense across all 400 items: if some
+          // sections are still shells, fetch them first, then filter.
+          const unloaded = document.querySelectorAll(
+            '.js-section[data-loaded="false"]',
+          ).length;
+          if (tag !== 'all' && unloaded > 0) {
+            // Loading the rest of the catalogue takes a moment; show it
+            // on the button that was clicked.
+            e.target.setAttribute('aria-busy', 'true');
+            new Utils()
+              .requestLoadAll()
+              .then(() => {
+                e.target.removeAttribute('aria-busy');
+                instance.selectBy(tag);
+                instance.addFilter(tag, name);
+              });
+            return;
+          }
+
+          instance.selectBy(tag);
+          instance.addFilter(tag, name);
         },
         false,
       );

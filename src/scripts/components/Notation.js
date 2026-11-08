@@ -1,4 +1,7 @@
 let instance = null;
+
+// Module-level cache: the frozen singleton instance cannot gain fields.
+let metaCache;
 /**
  *
  *
@@ -18,11 +21,51 @@ class Notation {
     return instance;
   }
 
+  /** Parsed #js-checklist-meta JSON, or null when the page has none. */
+  checklistMeta() {
+    if (metaCache !== undefined) return metaCache;
+    const el = document.getElementById('js-checklist-meta');
+    if (!el) {
+      metaCache = null;
+      return metaCache;
+    }
+    try {
+      metaCache = JSON.parse(el.textContent);
+    } catch {
+      metaCache = null;
+    }
+
+    return metaCache;
+  }
+
+  /** Saved checked-item ids for one section (never throws). */
+  storedItems(sectionName) {
+    try {
+      const stored = JSON.parse(localStorage.getItem(sectionName) || '[]');
+      return Array.isArray(stored) ? stored : [];
+    } catch {
+      return [];
+    }
+  }
+
   updatePriority() {
-    this.priority.forEach((el, i) => {
-      const checkedCounter = document.querySelectorAll(
-        `[data-item-priority=${el}][data-item-check='true']`,
-      ).length;
+    const meta = this.checklistMeta();
+    this.priority.forEach(el => {
+      let checkedCounter;
+      if (meta && meta.total > 0) {
+        // Count from localStorage + the priority map, so sections that
+        // have not been loaded yet still count towards the header totals.
+        checkedCounter = 0;
+        Object.keys(meta.sections).forEach(name => {
+          this.storedItems(name).forEach(saved => {
+            if (meta.priorityById[saved.id] === el) checkedCounter += 1;
+          });
+        });
+      } else {
+        checkedCounter = document.querySelectorAll(
+          `[data-item-priority=${el}][data-item-check='true']`,
+        ).length;
+      }
       const number = document.querySelectorAll(`.js-detail-${el}`);
       number[0].querySelectorAll('.js-notation-checked')[0].innerHTML =
         checkedCounter;
@@ -36,12 +79,21 @@ class Notation {
    * @memberof Notation
    */
   readPriority(priorityId) {
-    this.items.forEach((el, i) => {
-      const currentPriority = el.getAttribute('data-item-priority');
-      if (this.priority.indexOf(currentPriority) === -1) {
-        this.priority.push(currentPriority);
-      }
-    });
+    const meta = this.checklistMeta();
+    if (meta && meta.total > 0) {
+      // Every priority in the catalogue, not just the ones in the DOM —
+      // only the first section is rendered on first paint. Mutate the
+      // array in place: the frozen instance cannot reassign the field.
+      const all = [...new Set(Object.values(meta.priorityById))];
+      this.priority.splice(0, this.priority.length, ...all);
+    } else {
+      this.items.forEach((el, i) => {
+        const currentPriority = el.getAttribute('data-item-priority');
+        if (this.priority.indexOf(currentPriority) === -1) {
+          this.priority.push(currentPriority);
+        }
+      });
+    }
     instance.updatePriority();
   }
 
@@ -51,12 +103,26 @@ class Notation {
    * @memberof Notation
    */
   updateNotation() {
-    const items = this.main.querySelectorAll('.js-item').length;
-    const mainCount = this.main.querySelectorAll(
-      '[data-item-check="true"]',
-    ).length;
+    const meta = this.checklistMeta();
+    let items;
+    let mainCount;
+    if (meta && meta.total > 0) {
+      // Total and checked counts from metadata + localStorage, so the
+      // letter grade is right even while most sections are still shells.
+      items = meta.total;
+      mainCount = 0;
+      Object.keys(meta.sections).forEach(name => {
+        mainCount += Math.min(
+          this.storedItems(name).length,
+          meta.sections[name],
+        );
+      });
+    } else {
+      items = this.main.querySelectorAll('.js-item').length;
+      mainCount = this.main.querySelectorAll('[data-item-check="true"]').length;
+    }
 
-    const getPercent = parseInt((mainCount / items) * 100, 10);
+    const getPercent = items ? parseInt((mainCount / items) * 100, 10) : 0;
 
     const notation = document.getElementById('js-notation');
     const notationLetter =

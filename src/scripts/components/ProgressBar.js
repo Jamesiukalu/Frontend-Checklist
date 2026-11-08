@@ -23,6 +23,11 @@ class ProgressBar {
    * @memberof ProgressBar
    */
   allItemsCounter(el) {
+    // Shells carry their item count as data-section-count because their
+    // items are not in the DOM yet; loaded sections count from the DOM.
+    const declared = Number(el.getAttribute('data-section-count'));
+    if (declared > 0) return declared;
+
     const nbrItems = el.querySelectorAll('.js-item').length;
 
     return nbrItems;

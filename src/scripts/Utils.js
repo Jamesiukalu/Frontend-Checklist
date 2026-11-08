@@ -37,6 +37,49 @@ class Utils {
     };
   }
 
+  /**
+   * Ask the section loader (if present) to fetch one section. Resolves
+   * when the section is in the DOM, or after a timeout so a missing
+   * loader can never hang the UI.
+   */
+  requestSectionLoad(sectionName) {
+    return new Promise(resolve => {
+      let done = false;
+      const finish = () => {
+        if (done) return;
+        done = true;
+        document.removeEventListener('section-loaded', onLoaded);
+        resolve();
+      };
+      const onLoaded = e => {
+        if (e.detail && e.detail.section === sectionName) finish();
+      };
+      document.addEventListener('section-loaded', onLoaded);
+      document.dispatchEvent(
+        new CustomEvent('section-load-request', {
+          detail: {section: sectionName},
+        }),
+      );
+      setTimeout(finish, 8000);
+    });
+  }
+
+  /** Ask the section loader to fetch every section still unloaded. */
+  requestLoadAll() {
+    return new Promise(resolve => {
+      let done = false;
+      const finish = () => {
+        if (done) return;
+        done = true;
+        document.removeEventListener('sections-loaded-all', finish);
+        resolve();
+      };
+      document.addEventListener('sections-loaded-all', finish);
+      document.dispatchEvent(new CustomEvent('sections-load-all-request'));
+      setTimeout(finish, 10000);
+    });
+  }
+
   visibityEl(container, el, status) {
     const tags = container.querySelectorAll(el)[0];
 

@@ -5,6 +5,7 @@ import Checkboxes from './Checkboxes';
 import Notation from './Notation';
 import Tools from './Tools';
 import Report from './Report';
+import SectionLoader from './SectionLoader';
 import Ui from './Ui';
 
 let instance = null;
@@ -33,6 +34,7 @@ class Init {
     this.toolsInit();
     this.reportInit();
     this.uiInit();
+    this.sectionLoaderInit();
 
     return instance;
   }
@@ -125,6 +127,16 @@ class Init {
    */
   uiInit() {
     new Ui().enableUi();
+  }
+
+  /**
+   * Start loading checklist sections on demand (only the first section
+   * is rendered into the initial HTML).
+   *
+   * @memberof Init
+   */
+  sectionLoaderInit() {
+    new SectionLoader().init();
   }
 }
 

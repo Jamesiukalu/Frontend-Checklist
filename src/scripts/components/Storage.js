@@ -124,6 +124,12 @@ class Storage {
   readItems(el, i, sections) {
     const sectionName = el.getAttribute('data-section');
 
+    // A section that has not been loaded yet has no items in the DOM.
+    // Filtering its saved ids against that empty list would delete
+    // the reader's progress on first paint, so skip it entirely —
+    // the section loader shows its stored progress instead.
+    if (el.getAttribute('data-loaded') === 'false') return;
+
     if (
       localStorage.getItem(sectionName) !== null ||
       localStorage.getItem(sectionName) === undefined

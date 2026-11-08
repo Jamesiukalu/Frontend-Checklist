@@ -19,6 +19,7 @@ import Beasties from 'beasties';
 import {Transform} from 'node:stream';
 
 import pug from 'gulp-pug';
+import pugRenderer from 'pug';
 import data from 'gulp-data';
 import {minify as minifyHtml} from 'html-minifier-terser';
 
@@ -228,6 +229,49 @@ export function compileAllContactPug() {
         ),
     ),
   );
+}
+
+// Sections, in display order — must match src/views/index-en.pug and
+// src/views/index-fr.pug. Each section is also compiled to a standalone
+// HTML fragment (dist/sections/<lang>/<section>.html) so the homepage can
+// load sections on demand instead of rendering all 400 items up front.
+const SECTIONS = [
+  ['head', 'Head'],
+  ['html', 'HTML'],
+  ['webfonts', 'Webfonts'],
+  ['css', 'CSS'],
+  ['javascript', 'JavaScript'],
+  ['images', 'Images'],
+  ['accessibility', 'Accessibility'],
+  ['performance', 'Performance'],
+  ['seo', 'SEO'],
+  ['security', 'Security'],
+  ['privacy', 'Privacy'],
+  ['testing', 'Testing'],
+  ['i18n', 'i18n'],
+];
+
+export async function compileSectionFragments() {
+  for (const l of langs) {
+    const data = loadProjectData(l);
+    for (const [sectionIndex, [sectionKey, sectionTitle]] of SECTIONS.entries()) {
+      const html = pugRenderer.renderFile(
+        `${dirs.src}/views/section-fragment.pug`,
+        {
+          ...data,
+          sectionKey,
+          sectionTitle,
+          sectionIndex,
+        },
+      );
+      const outDir = `${dirs.dest}/sections/${l}`;
+      fs.mkdirSync(outDir, {recursive: true});
+      fs.writeFileSync(
+        `${outDir}/${sectionKey}.html`,
+        await minifyPage(html),
+      );
+    }
+  }
 }
 
 // ========================================
@@ -552,7 +596,13 @@ export function watch() {
   gulp.watch(`${dirs.src}/styles/**/*.scss`, compileStyles);
   gulp.watch(
     `${dirs.src}/views/**/*.pug`,
-    gulp.parallel(compilePug, compileAuditPug, compileTermsPug, compileContactPug),
+    gulp.parallel(
+      compilePug,
+      compileAuditPug,
+      compileTermsPug,
+      compileContactPug,
+      compileSectionFragments,
+    ),
   );
   gulp.watch(
     [`./data/${lang}/items/*.json`, `./data/${lang}/project/*.json`],
@@ -578,6 +628,7 @@ export const dev = gulp.series(
     compileAuditPug,
     compileTermsPug,
     compileContactPug,
+    compileSectionFragments,
     compileStyles,
     compressImages,
     webpackScripts,
@@ -593,6 +644,7 @@ export const build = gulp.series(
     compileAllAuditPug,
     compileAllTermsPug,
     compileAllContactPug,
+    compileSectionFragments,
   ),
   gulp.parallel(compileStyles, compressImages, webpackScripts),
   cdn,

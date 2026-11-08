@@ -128,9 +128,13 @@ class Checkboxes {
       instance.uncheckItem(list);
     }
   }
-  enableCheckbox() {
-    const allCheckboxes = document.querySelectorAll('input[type=checkbox]');
+  enableCheckbox(root) {
+    const scope = root || document;
+    const allCheckboxes = scope.querySelectorAll('input[type=checkbox]');
     allCheckboxes.forEach(el => {
+      // Sections loaded later re-run this; never bind the same box twice.
+      if (el.dataset.checkboxBound === 'true') return;
+      el.dataset.checkboxBound = 'true';
       // Add a click event listener on all checkboxes
       el.addEventListener('click', () => instance.checkboxDetection(el));
     });

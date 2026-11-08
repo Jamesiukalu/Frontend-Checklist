@@ -33,6 +33,28 @@ class Dropdown {
     const el = options;
 
     const section = new Utils().getClosest(el.btn, '.js-section');
+    // A shell section has no items in the DOM yet: fetch them first,
+    // then run the same action on the loaded section.
+    if (
+      section.getAttribute('data-loaded') === 'false' &&
+      !section.querySelectorAll('.js-item').length
+    ) {
+      new Utils()
+        .requestSectionLoad(section.getAttribute('data-section'))
+        .then(() => {
+          const loaded = document.querySelector(
+            `.js-section[data-section="${section.getAttribute('data-section')}"]`,
+          );
+          if (!loaded) return;
+          const selector = el.btn.classList.contains('js-collapse-all')
+            ? '.js-collapse-all'
+            : '.js-expand-all';
+          const freshBtn = loaded.querySelector(selector);
+          if (freshBtn) instance.allDropdown({btn: freshBtn});
+        })
+        .catch(() => {});
+      return;
+    }
     const eachItem = section.querySelectorAll(
       '.js-item[data-item-check="false"]',
     );
@@ -133,6 +155,9 @@ class Dropdown {
    */
   enableDropdown(dropdownButtons) {
     dropdownButtons.forEach(btn => {
+      // Sections loaded later re-run this; never bind the same button twice.
+      if (btn.dataset.dropdownBound === 'true') return;
+      btn.dataset.dropdownBound = 'true';
       btn.addEventListener(
         'click',
         e => {
