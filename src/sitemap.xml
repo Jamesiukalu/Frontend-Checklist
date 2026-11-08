@@ -11,6 +11,42 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://checklist.shinningtechservices.com/"/>
   </url>
   <url>
+    <loc>https://checklist.shinningtechservices.com/terms</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://checklist.shinningtechservices.com/terms"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://checklist.shinningtechservices.com/fr/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://checklist.shinningtechservices.com/terms"/>
+  </url>
+  <url>
+    <loc>https://checklist.shinningtechservices.com/fr/terms</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://checklist.shinningtechservices.com/terms"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://checklist.shinningtechservices.com/fr/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://checklist.shinningtechservices.com/terms"/>
+  </url>
+  <url>
+    <loc>https://checklist.shinningtechservices.com/contact</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://checklist.shinningtechservices.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://checklist.shinningtechservices.com/fr/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://checklist.shinningtechservices.com/contact"/>
+  </url>
+  <url>
+    <loc>https://checklist.shinningtechservices.com/fr/contact</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://checklist.shinningtechservices.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://checklist.shinningtechservices.com/fr/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://checklist.shinningtechservices.com/contact"/>
+  </url>
+  <url>
     <loc>https://checklist.shinningtechservices.com/audit</loc>
     <lastmod>2026-11-08</lastmod>
     <changefreq>monthly</changefreq>

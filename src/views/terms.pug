@@ -1,0 +1,23 @@
+extends base/layout
+
+block vars
+  - listSections = []
+  - var page = 'terms'
+
+block main
+  .s-audit
+    header.s-audit__hero
+      h1.s-audit__title= translation.terms.TITLE
+      p.s-audit__lead= translation.terms.INTRO
+
+    section.c-audit
+      h2.c-audit__heading= translation.terms.USE_TITLE
+      p= translation.terms.USE_TEXT
+      h2.c-audit__heading= translation.terms.LOGGING_TITLE
+      p= translation.terms.LOGGING_TEXT
+      h2.c-audit__heading= translation.terms.OPEN_TITLE
+      p= translation.terms.OPEN_TEXT
+      h2.c-audit__heading= translation.terms.CONTACT_TITLE
+      p
+        | #{translation.terms.CONTACT_TEXT} 
+        a(href=(translation.SITE_LANGUAGE === 'en' ? '' : '/' + translation.SITE_LANGUAGE) + '/contact')= translation.FOOTER_CONTACT

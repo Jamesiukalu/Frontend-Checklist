@@ -35,6 +35,27 @@ class Tools {
    */
   checkUncheckAll(btn, state) {
     const list = new Utils().variableList(btn);
+    // A shell section has no items in the DOM yet: fetch them first,
+    // then run the same action on the loaded section.
+    if (
+      list.section.getAttribute('data-loaded') === 'false' &&
+      !list.section.querySelectorAll('.js-item').length
+    ) {
+      new Utils()
+        .requestSectionLoad(list.sectionName)
+        .then(() => {
+          const loaded = document.querySelector(
+            `.js-section[data-section="${list.sectionName}"]`,
+          );
+          if (!loaded) return;
+          const freshBtn = loaded.querySelector(
+            state === 'true' ? '.js-check-all' : '.js-uncheck-all',
+          );
+          if (freshBtn) instance.checkUncheckAll(freshBtn, state);
+        })
+        .catch(() => {});
+      return;
+    }
     const checklistItem = list.section.querySelectorAll('.js-item');
 
     checklistItem.forEach(el => {
@@ -112,40 +133,41 @@ class Tools {
     }
   }
 
-  enableTools() {
-    // Check all checkboxes
-    this.checkAllButton.forEach(btn => {
-      btn.addEventListener('click', () => {
-        instance.checkUncheckAll(btn, 'true');
+  enableTools(root) {
+    // Sections loaded later re-run this with their own root; never bind
+    // the same button twice. Without a root, bind the whole document.
+    const scope = root || document;
+    const bind = (selector, handler) => {
+      scope.querySelectorAll(selector).forEach(btn => {
+        if (btn.dataset.toolsBound === 'true') return;
+        btn.dataset.toolsBound = 'true';
+        btn.addEventListener('click', () => handler(btn));
       });
+    };
+
+    // Check all checkboxes
+    bind('.js-check-all', btn => {
+      instance.checkUncheckAll(btn, 'true');
     });
 
     // Uncheck all checkboxes
-    this.uncheckAllButton.forEach(btn => {
-      btn.addEventListener('click', () => {
-        instance.checkUncheckAll(btn, 'false');
-      });
+    bind('.js-uncheck-all', btn => {
+      instance.checkUncheckAll(btn, 'false');
     });
 
     // Collapse all dropdowns
-    this.collapseAllButton.forEach(btn => {
-      btn.addEventListener('click', () => {
-        new Dropdown().allDropdown({btn});
-      });
+    bind('.js-collapse-all', btn => {
+      new Dropdown().allDropdown({btn});
     });
 
     // Expand all dropdowns
-    this.expandAllButton.forEach(btn => {
-      btn.addEventListener('click', () => {
-        new Dropdown().allDropdown({btn});
-      });
+    bind('.js-expand-all', btn => {
+      new Dropdown().allDropdown({btn});
     });
 
     // Hide section
-    this.hideSectionButton.forEach(btn => {
-      btn.addEventListener('click', () => {
-        instance.hideShow(btn);
-      });
+    bind('.js-hide-section', btn => {
+      instance.hideShow(btn);
     });
   }
 }

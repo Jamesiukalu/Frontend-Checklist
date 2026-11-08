@@ -31,18 +31,63 @@ block main
 
     .s-content
 
-      //- _items is in the JSON injected in the view with gulp-data (called _project.json)
       .s-main__section.s-main__filter
         include components/c-tag-filter
 
+      //- _items is in the JSON injected in the view with gulp-data (called _project.json)
       .s-main__section.s-main__checklist
 
         if _items !== undefined
 
-          each section in sections
-            +checklist-section({
-              dataSection: _items[section[0]],
-              sectionTitle: section[1]
-            })
+          //- Small metadata block the client script uses to show correct
+          //- progress for sections that have not been loaded yet: per-section
+          //- item counts, the catalogue total, and each item's priority
+          //- (so checked counts by priority can be computed from
+          //- localStorage without the section's DOM). ~11 KB, not the
+          //- catalogue itself — item text is fetched per section, on demand.
+          -
+            var checklistMeta = {total: 0, sections: {}, priorityById: {}};
+            Object.keys(_items).forEach(function (key) {
+              checklistMeta.sections[key] = _items[key].length;
+              checklistMeta.total += _items[key].length;
+              _items[key].forEach(function (item) {
+                checklistMeta.priorityById[item.id || ''] = (item.priority || '').toLowerCase();
+              });
+            });
+          script#js-checklist-meta(type="application/json")!= JSON.stringify(checklistMeta)
+
+          noscript
+            p= translation.NOSCRIPT_NOTE
+
+          //- Counts favicon <img>s so the first two stay eager (the
+          //- audit requires the first images not to be lazy-loaded) while
+          //- the rest are lazy. See label.pug.
+          - var faviconIndex = 0
+
+          //- Only the first section is rendered into the initial HTML.
+          //- The other sections are lightweight shells (header, progress
+          //- bar and tools, no items) whose items are fetched as HTML
+          //- fragments when the reader scrolls to them, opens them from
+          //- the sidebar, or filters — so the first load genuinely
+          //- carries one section, not all 400 items.
+          each section, i in sections
+            if i === 0
+              +checklist-section({
+                dataSection: _items[section[0]],
+                sectionTitle: section[1]
+              })
+            else
+              - listSectionId.push('0')
+              - var sectionTitle = section[1]
+              - var anchor = section[1].toLowerCase()
+              section.s-checklist.js-section(class="s-checklist__" + anchor, data-section=anchor, data-section-id=listSectionId.length - 1, data-section-count=_items[section[0]].length, data-loaded="false", id="section-" + anchor)
+                .s-checklist__inner
+                  .s-checklist__header
+                    .s-checklist__title
+                      h2.s-checklist__header__title= (translation.sections && translation.sections[anchor]) || section[1]
+                      include components/c-progress
+                    include components/c-tools
+                  .s-checklist__body.js-checklist-body(data-body-visibility="visible", aria-hidden="false")
+                    p.c-checklist__loading= translation.LOADING_SECTION
 
       include components/c-report

@@ -7,7 +7,7 @@
   "SEO_TITLE": "Front-End Audit Checklist — 400 Checks for Quality Websites",
   "SEO_DESCRIPTION": "Free front-end audit checklist and website QA checklist: 400 items in 13 sections, with up to 246 automatic checks scoring any public URL. No account needed.",
   "AUDIT_SEO_TITLE": "Audit a Live Page — Front-End Audit Checklist",
-  "AUDIT_SEO_DESCRIPTION": "Paste a public URL to run up to 246 automatic checks from the 400-item front-end audit checklist — get a score, fix what matters, and tick passing items into your checklist.",
+  "AUDIT_SEO_DESCRIPTION": "Paste a URL to run up to 246 automatic checks from the 400-item front-end audit checklist — get a score, fix what matters, and tick passing items into your checklist.",
   "SITE_LANGUAGE": "en",
   "SITE_DIRECTION": "ltr",
   "URL_GITHUB_ROOT": "https://github.com/Jamesiukalu/Frontend-Checklist",
@@ -169,5 +169,35 @@
     "STEP_INSTALL": "1. Install it",
     "INSTALL_HINT": "Optional: npx also fetches it on first use, so you can skip straight to step 2.",
     "INSTALL_CMD": "npm i -g frontend-checklist-mcp"
-  }
+  },
+  "SKIP_LINK": "Skip to main content",
+  "FOOTER_TERMS": "Terms",
+  "FOOTER_CONTACT": "Contact",
+  "terms": {
+    "SEO_TITLE": "Terms of Use — Front-End Checklist",
+    "SEO_DESCRIPTION": "Terms of use for the Front-End Checklist, a free open-source audit tool for shipping quality websites.",
+    "TITLE": "Terms of use",
+    "INTRO": "The Front-End Checklist is a free, open-source tool (MIT licence) for auditing web pages against 400 front-end checks. These terms are short on purpose.",
+    "USE_TITLE": "Using the tool",
+    "USE_TEXT": "You may use the checklist and the audit for any purpose, including commercial work. The tool is provided as-is, without warranty of any kind. Audit results are automated checks — a score is a starting point for your own judgement, not a guarantee that a page is accessible, fast, or correct.",
+    "LOGGING_TITLE": "What we log",
+    "LOGGING_TEXT": "When you run an audit, we log the audited URL, the score, the time, the source (web, API, or MCP), and the country, plus a salted hash of your IP address — never the address itself. Your checklist progress stays in your browser and is never sent to us.",
+    "OPEN_TITLE": "Open source",
+    "OPEN_TEXT": "The code is MIT-licensed and public on GitHub. You may reuse, modify, and redistribute it under the terms of the licence.",
+    "CONTACT_TITLE": "Questions",
+    "CONTACT_TEXT": "See the contact page for how to reach us."
+  },
+  "contact": {
+    "SEO_TITLE": "Contact — Front-End Checklist",
+    "SEO_DESCRIPTION": "How to reach the people behind the Front-End Checklist.",
+    "TITLE": "Contact",
+    "INTRO": "The Front-End Checklist is a small project by Shinning Tech Services. The fastest way to reach us is on X or GitHub.",
+    "X_TEXT": "Message @jamesiukalu on X.",
+    "GITHUB_TEXT": "Report a bug or suggest a check in the GitHub repository.",
+    "SITE_TEXT": "Shinning Tech Services — web and mobile app development, product design, and product management."
+  },
+  "LOADING_SECTION": "Loading section…",
+  "SECTION_LOAD_FAILED": "Couldn’t load this section. Try again.",
+  "SECTION_RETRY": "Try again",
+  "NOSCRIPT_NOTE": "This checklist loads each section with JavaScript. Turn JavaScript on to use all 400 items."
 }

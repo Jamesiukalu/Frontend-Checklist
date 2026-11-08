@@ -93,4 +93,271 @@ describe('audit: checks', () => {
     expect(r['accessibility-maintain-logical-heading-order']).to.equal('fail');
     expect(r['images-provide-meaningful-alt-text-for-images']).to.equal('fail');
   });
+
+  // Same harness, but with the extra context (resources, sitemap) that
+  // some checks need. A check that returns NA is absent from the map.
+  const runWith = (html, extra = {}) =>
+    Object.fromEntries(
+      runChecks({
+        $: cheerio.load(html),
+        html,
+        headers: {},
+        finalUrl: 'https://example.com/',
+        redirects: [],
+        ...extra,
+      }).map(r => [r.id, r.status]),
+    );
+
+  it('counts each subresource URL once for the request budget', () => {
+    // One placeholder image reused 1,348 times is one request, not 1,348.
+    const reused = `<html><head><link rel="stylesheet" href="a.css"></head><body>
+      <script src="a.js"></script>
+      ${'<img src="1x1.png" alt="">'.repeat(10)}</body></html>`;
+
+    expect(run(reused)['performance-minimize-http-requests']).to.equal('pass');
+
+    const many = `<html><body>${Array.from(
+      {length: 61},
+      (_, i) => `<img src="img${i}.png" alt="">`,
+    ).join('')}</body></html>`;
+
+    expect(run(many)['performance-minimize-http-requests']).to.equal('fail');
+  });
+
+  it('accepts a sitemap with an XML comment before the root element', () => {
+    const commented = `<?xml version="1.0" encoding="UTF-8"?>
+<!-- Bump <lastmod> when a page's content changes. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>https://example.com/</loc><lastmod>2026-11-08</lastmod></url>
+</urlset>`;
+
+    expect(
+      runWith(good, {sitemap: {status: 200, body: commented}})[
+        'seo-keep-xml-sitemaps-valid'
+      ],
+    ).to.equal('pass');
+    expect(
+      runWith(good, {
+        sitemap: {
+          status: 200,
+          body: '<urlset><url><lastmod>2026-11-08</lastmod></url></urlset>',
+        },
+      })['seo-keep-xml-sitemaps-valid'],
+    ).to.equal('fail');
+  });
+
+  it('treats non-prose as undecidable for reading ease, not unreadable', () => {
+    // A catalogue of fragments: many words, almost no sentence ends.
+    const fragments =
+      '<html lang="en"><body><main>' +
+      Array.from({length: 40}, () => 'checklist item title description tool').join(
+        ' ',
+      ) +
+      '</main></body></html>';
+    const fragmentRun = run(fragments);
+
+    expect(fragmentRun['seo-write-at-a-clear-reading-level']).to.equal(
+      undefined,
+    );
+    expect(fragmentRun['accessibility-write-in-plain-language']).to.equal(
+      undefined,
+    );
+
+    // Dense real prose still fails; simple prose still passes.
+    const denseSentence =
+      'The implementation of comprehensive authentication methodologies necessitates considerable organizational commitment and cross-functional collaboration. ';
+    const dense = `<html lang="en"><body><main><p>${denseSentence.repeat(
+      10,
+    )}</p></main></body></html>`;
+
+    expect(run(dense)['seo-write-at-a-clear-reading-level']).to.equal('fail');
+
+    const simple = `<html lang="en"><body><main><p>${'The cat sat on the mat. The dog ran to the park. We had a good day. '.repeat(
+      10,
+    )}</p></main></body></html>`;
+
+    expect(run(simple)['seo-write-at-a-clear-reading-level']).to.equal('pass');
+
+    // Short dense prose is scored, not exempted: a ~150-word paragraph in
+    // 4 sentences and five 66-word sentences both fail.
+    const core =
+      'The implementation of comprehensive authentication methodologies necessitates considerable organizational commitment and cross-functional collaboration';
+    const shortDense = `<html lang="en"><body><main><p>${`${core}, ${core}, ${core}. `.repeat(
+      4,
+    )}</p></main></body></html>`;
+
+    expect(run(shortDense)['seo-write-at-a-clear-reading-level']).to.equal(
+      'fail',
+    );
+
+    const longSentence = `${core}, ${core}, ${core}, ${core}, ${core} today. `;
+    const longSentences = `<html lang="en"><body><main><p>${longSentence.repeat(
+      5,
+    )}</p></main></body></html>`;
+
+    expect(
+      run(longSentences)['seo-write-at-a-clear-reading-level'],
+    ).to.equal('fail');
+  });
+
+  it('passes retina when a favicon has a real 1x/2x srcset', () => {
+    // The homepage favicons declare the 16px Google favicon as 1x and
+    // the 32px one as 2x — two genuinely different assets, not the same
+    // file listed twice.
+    const favicon = `<html><body>
+      <img src="1x1.png" alt="" width="16" height="16"
+        srcset="https://www.google.com/s2/favicons?domain_url=https://example.com&amp;sz=16 1x, https://www.google.com/s2/favicons?domain_url=https://example.com&amp;sz=32 2x">
+    </body></html>`;
+
+    expect(
+      run(favicon)['images-support-high-dpi-retina-displays'],
+    ).to.equal('pass');
+  });
+
+  it('fails the DOM-size and page-weight budgets when a page is huge', () => {
+    // The old homepage: 18,703 elements and ~1.9 MB. The new one renders
+    // one section up front (~1,200 elements, ~160 KB), so both pass.
+    const huge = `<html><body>${'<div><span>x</span></div>'.repeat(1600)}</body></html>`;
+
+    expect(run(huge)['performance-reduce-dom-size-and-complexity']).to.equal(
+      'fail',
+    );
+    expect(run(good)['performance-reduce-dom-size-and-complexity']).to.equal(
+      'pass',
+    );
+
+    const heavy = runWith(good, {
+      resources: {
+        js: [{headers: {}, body: 'x'.repeat(2 * 1024 * 1024)}],
+        css: [],
+        images: [],
+        fonts: [],
+      },
+    });
+
+    expect(heavy['performance-keep-page-weight-under-1500kb']).to.equal(
+      'fail',
+    );
+    const light = runWith(good, {
+      resources: {js: [], css: [], images: [], fonts: []},
+    });
+
+    expect(light['performance-keep-page-weight-under-1500kb']).to.equal(
+      'pass',
+    );
+  });
+
+  it('ignores svg titles and lone symbols in visible-label matching', () => {
+    const icons = `<html><body>
+      <button aria-label="Open the description section"><svg aria-hidden="true"><title>Arrow</title></svg></button>
+      <button aria-label="Close help">×</button>
+    </body></html>`;
+
+    expect(
+      run(icons)['accessibility-align-visible-labels-with-accessible-names'],
+    ).to.equal('pass');
+
+    const mismatch = `<html><body>
+      <button aria-label="Open the menu">Settings</button>
+    </body></html>`;
+
+    expect(
+      run(mismatch)['accessibility-align-visible-labels-with-accessible-names'],
+    ).to.equal('fail');
+  });
+
+  it('still matches rendered svg text and non-Latin labels', () => {
+    // Rendered SVG <text> is visible text: a mismatch must still fail
+    // even though svg <title>/<desc> metadata is ignored.
+    const svgText = `<html><body>
+      <button aria-label="Open the menu"><svg aria-hidden="true"><text>Settings</text></svg></button>
+    </body></html>`;
+
+    expect(
+      run(svgText)['accessibility-align-visible-labels-with-accessible-names'],
+    ).to.equal('fail');
+
+    // The symbol-only guard is Unicode-aware: non-Latin labels are real
+    // labels, not icons, so a mismatch must still fail.
+    const nonLatin = `<html><body>
+      <button aria-label="Delete">保存</button>
+      <button aria-label="Delete">Сохранить</button>
+    </body></html>`;
+
+    expect(
+      run(nonLatin)['accessibility-align-visible-labels-with-accessible-names'],
+    ).to.equal('fail');
+  });
+
+  it('ignores fixed-size icons for srcset, not content images', () => {
+    const iconOnly = `<html><body>
+      ${'<img src="1x1.png" alt="" width="16" height="16">'.repeat(5)}
+    </body></html>`;
+
+    expect(
+      run(iconOnly)['images-implement-responsive-images-with-srcset'],
+    ).to.equal(undefined);
+
+    const content = `<html><body>
+      <img src="photo.jpg" alt="" width="800" height="600">
+    </body></html>`;
+
+    expect(
+      run(content)['images-implement-responsive-images-with-srcset'],
+    ).to.equal('fail');
+    expect(
+      run(content.replace('height="600"', 'height="600" srcset="photo-400.jpg 400w"'))[
+        'images-implement-responsive-images-with-srcset'
+      ],
+    ).to.equal('pass');
+  });
+
+  it('evaluates retina density for fixed-size icons too', () => {
+    // Fixed icons are exempt from srcset (viewport responsiveness), but
+    // not from retina: a 16x16 raster with no 2x source still fails.
+    const iconOnly = `<html><body>
+      ${'<img src="1x1.png" alt="" width="16" height="16">'.repeat(5)}
+    </body></html>`;
+
+    expect(
+      run(iconOnly)['images-support-high-dpi-retina-displays'],
+    ).to.equal('fail');
+    expect(
+      run(iconOnly)['images-implement-responsive-images-with-srcset'],
+    ).to.equal(undefined);
+
+    const withSrcset = `<html><body>
+      <img src="icon.png" alt="" width="16" height="16" srcset="icon-32.png 2x">
+    </body></html>`;
+
+    expect(
+      run(withSrcset)['images-support-high-dpi-retina-displays'],
+    ).to.equal('pass');
+  });
+
+  it('ignores tiny raster images for modern image formats', () => {
+    const tiny = {
+      resources: {
+        images: [
+          {headers: {'content-type': 'image/png', 'content-length': '68'}},
+        ],
+      },
+    };
+
+    expect(
+      runWith(good, tiny)['images-use-modern-image-formats-webp-avif'],
+    ).to.equal(undefined);
+
+    const large = {
+      resources: {
+        images: [
+          {headers: {'content-type': 'image/jpeg', 'content-length': '120000'}},
+        ],
+      },
+    };
+
+    expect(
+      runWith(good, large)['images-use-modern-image-formats-webp-avif'],
+    ).to.equal('fail');
+  });
 });

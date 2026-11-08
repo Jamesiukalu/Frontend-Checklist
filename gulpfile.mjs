@@ -19,6 +19,7 @@ import Beasties from 'beasties';
 import {Transform} from 'node:stream';
 
 import pug from 'gulp-pug';
+import pugRenderer from 'pug';
 import data from 'gulp-data';
 import {minify as minifyHtml} from 'html-minifier-terser';
 
@@ -162,6 +163,117 @@ export function compileAllAuditPug() {
   );
 }
 
+// Terms and contact pages share the audit page's one-template pattern;
+// output is /terms, /contact and /fr/terms, /fr/contact
+export function compileTermsPug() {
+  return gulp
+    .src(`${dirs.src}/views/terms.pug`)
+    .pipe(plumber(plumberOptions))
+    .pipe(data(() => loadProjectData(lang)))
+    .pipe(pug({locals: {}, pretty: true}))
+    .pipe(rename({basename: 'index'}))
+    .pipe(
+      gulp.dest(
+        lang === 'en' ? `${dirs.dest}/terms` : `${dirs.dest}/${lang}/terms`,
+      ),
+    )
+    .pipe(browserSync.stream());
+}
+
+export function compileContactPug() {
+  return gulp
+    .src(`${dirs.src}/views/contact.pug`)
+    .pipe(plumber(plumberOptions))
+    .pipe(data(() => loadProjectData(lang)))
+    .pipe(pug({locals: {}, pretty: true}))
+    .pipe(rename({basename: 'index'}))
+    .pipe(
+      gulp.dest(
+        lang === 'en'
+          ? `${dirs.dest}/contact`
+          : `${dirs.dest}/${lang}/contact`,
+      ),
+    )
+    .pipe(browserSync.stream());
+}
+
+export function compileAllTermsPug() {
+  return allStreams(
+    langs.map(l =>
+      gulp
+        .src(`${dirs.src}/views/terms.pug`)
+        .pipe(data(() => loadProjectData(l)))
+        .pipe(pug({locals: {}, pretty: true}))
+        .pipe(rename({basename: 'index'}))
+        .pipe(
+          gulp.dest(
+            l === 'en' ? `${dirs.dest}/terms` : `${dirs.dest}/${l}/terms`,
+          ),
+        ),
+    ),
+  );
+}
+
+export function compileAllContactPug() {
+  return allStreams(
+    langs.map(l =>
+      gulp
+        .src(`${dirs.src}/views/contact.pug`)
+        .pipe(data(() => loadProjectData(l)))
+        .pipe(pug({locals: {}, pretty: true}))
+        .pipe(rename({basename: 'index'}))
+        .pipe(
+          gulp.dest(
+            l === 'en' ? `${dirs.dest}/contact` : `${dirs.dest}/${l}/contact`,
+          ),
+        ),
+    ),
+  );
+}
+
+// Sections, in display order — must match src/views/index-en.pug and
+// src/views/index-fr.pug. Each section is also compiled to a standalone
+// HTML fragment (dist/sections/<lang>/<section>.html) so the homepage can
+// load sections on demand instead of rendering all 400 items up front.
+const SECTIONS = [
+  ['head', 'Head'],
+  ['html', 'HTML'],
+  ['webfonts', 'Webfonts'],
+  ['css', 'CSS'],
+  ['javascript', 'JavaScript'],
+  ['images', 'Images'],
+  ['accessibility', 'Accessibility'],
+  ['performance', 'Performance'],
+  ['seo', 'SEO'],
+  ['security', 'Security'],
+  ['privacy', 'Privacy'],
+  ['testing', 'Testing'],
+  ['i18n', 'i18n'],
+];
+
+export async function compileSectionFragments() {
+  for (const l of langs) {
+    const data = loadProjectData(l);
+    for (const [sectionIndex, [sectionKey, sectionTitle]] of SECTIONS.entries()) {
+      const html = pugRenderer.renderFile(
+        `${dirs.src}/views/section-fragment.pug`,
+        {
+          ...data,
+          sectionKey,
+          sectionTitle,
+          sectionIndex,
+        },
+      );
+      const outDir = `${dirs.dest}/sections/${l}`;
+      fs.mkdirSync(outDir, {recursive: true});
+      fs.writeFileSync(
+        `${outDir}/${sectionKey}.html`,
+        await minifyPage(html),
+      );
+    }
+  }
+}
+
 // ========================================
 // CSS
 // ========================================
@@ -184,11 +296,15 @@ export function compileStyles() {
     .pipe(browserSync.stream());
 }
 
-// Inline the CSS the page needs and load the rest asynchronously
+// Inline the CSS the page needs and keep a normal stylesheet link.
+// preload: 'swap' made Beasties emit an onload handler (tripping the
+// no-inline-JS check) and wrapped the inlined CSS in <noscript> when the
+// source used the preload pattern; preload: false still inlines the
+// critical CSS into a real <style> in <head>.
 const beasties = new Beasties({
   path: dirs.dest,
   publicPath: '/',
-  preload: 'swap',
+  preload: false,
   logLevel: 'warn',
 });
 
@@ -196,20 +312,27 @@ const minifyPage = html =>
   minifyHtml(html, {collapseWhitespace: true, removeComments: true});
 
 export function criticalCss() {
-  return allStreams([
-    ...langs.map(l =>
-      gulp
-        .src(`${dirs.dest}/${l === 'en' ? '' : `${l}/`}audit/index.html`)
-        .pipe(
-          mapContents(async file =>
-            Buffer.from(
-              await minifyPage(
-                await beasties.process(file.contents.toString()),
-              ),
+  // Inline critical CSS and minify one built HTML file, in place.
+  const processHtml = (src, dest) =>
+    gulp
+      .src(src)
+      .pipe(
+        mapContents(async file =>
+          Buffer.from(
+            await minifyPage(
+              await beasties.process(file.contents.toString()),
             ),
           ),
-        )
-        .pipe(gulp.dest(`${dirs.dest}/${l === 'en' ? '' : `${l}/`}audit`)),
+        ),
+      )
+      .pipe(gulp.dest(dest));
+
+  return allStreams([
+    ...langs.map(l =>
+      processHtml(
+        `${dirs.dest}/${l === 'en' ? '' : `${l}/`}audit/index.html`,
+        `${dirs.dest}/${l === 'en' ? '' : `${l}/`}audit`,
+      ),
     ),
     ...langs.map(l =>
       gulp
@@ -225,6 +348,18 @@ export function criticalCss() {
         )
         .pipe(rename({basename: 'index'}))
         .pipe(gulp.dest(l === 'en' ? dirs.dest : `${dirs.dest}/${l}`)),
+    ),
+    // Terms and Contact pages get the same post-processing as the home
+    // and audit pages — they were compiled but never passed through
+    // criticalCss(), so they shipped without inlined critical CSS and
+    // without HTML minification.
+    ...['terms', 'contact'].flatMap(page =>
+      langs.map(l =>
+        processHtml(
+          `${dirs.dest}/${l === 'en' ? '' : `${l}/`}${page}/index.html`,
+          `${dirs.dest}/${l === 'en' ? '' : `${l}/`}${page}`,
+        ),
+      ),
     ),
   ]);
 }
@@ -461,11 +596,25 @@ export function watch() {
   gulp.watch(`${dirs.src}/styles/**/*.scss`, compileStyles);
   gulp.watch(
     `${dirs.src}/views/**/*.pug`,
-    gulp.parallel(compilePug, compileAuditPug),
+    gulp.parallel(
+      compilePug,
+      compileAuditPug,
+      compileTermsPug,
+      compileContactPug,
+      compileSectionFragments,
+    ),
   );
   gulp.watch(
     [`./data/${lang}/items/*.json`, `./data/${lang}/project/*.json`],
-    gulp.series(jsonRebuild, gulp.parallel(compilePug, compileAuditPug)),
+    gulp.series(
+      jsonRebuild,
+      gulp.parallel(
+        compilePug,
+        compileAuditPug,
+        compileTermsPug,
+        compileContactPug,
+      ),
+    ),
   );
   gulp.watch(`${dirs.src}/img/**/*`, compressImages);
   gulp.watch(`${dirs.src}/scripts/**/*.js`, webpackScripts);
@@ -477,6 +626,9 @@ export const dev = gulp.series(
     apiBuild,
     compilePug,
     compileAuditPug,
+    compileTermsPug,
+    compileContactPug,
+    compileSectionFragments,
     compileStyles,
     compressImages,
     webpackScripts,
@@ -487,7 +639,13 @@ export const dev = gulp.series(
 
 export const build = gulp.series(
   gulp.parallel(cleanDist, jsonRebuildAll, modernizrBuild),
-  gulp.parallel(compileAllPug, compileAllAuditPug),
+  gulp.parallel(
+    compileAllPug,
+    compileAllAuditPug,
+    compileAllTermsPug,
+    compileAllContactPug,
+    compileSectionFragments,
+  ),
   gulp.parallel(compileStyles, compressImages, webpackScripts),
   cdn,
   gulp.parallel(criticalCss, copy, apiBuild),

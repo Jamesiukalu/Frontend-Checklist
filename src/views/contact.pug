@@ -1,0 +1,23 @@
+extends base/layout
+
+block vars
+  - listSections = []
+  - var page = 'contact'
+
+block main
+  .s-audit
+    header.s-audit__hero
+      h1.s-audit__title= translation.contact.TITLE
+      p.s-audit__lead= translation.contact.INTRO
+
+    section.c-audit
+      ul.c-audit__list.c-audit__list--plain
+        li
+          a(href="https://x.com/jamesiukalu" target="_blank" rel="noopener noreferrer") @jamesiukalu
+          |  — #{translation.contact.X_TEXT}
+        li
+          a(href=translation.URL_GITHUB_REPO target="_blank" rel="noopener noreferrer") GitHub
+          |  — #{translation.contact.GITHUB_TEXT}
+        li
+          a(href="https://www.shinningtechservices.com" target="_blank" rel="noopener noreferrer") Shinning Tech Services
+          |  — #{translation.contact.SITE_TEXT}

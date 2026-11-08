@@ -213,7 +213,7 @@
     "tools": [
       {
         "title": "Chrome DevTools Performance panel",
-        "url": "https://developer.chrome.com/docs/devtools/performance"
+        "url": "https://developer.chrome.com/docs/devtools/performance/"
       },
       {
         "title": "FastDOM library",

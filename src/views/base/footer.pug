@@ -1,2 +1,3 @@
 footer.s-footer
-  p This is provided by #[a(href='https://www.shinningtechservices.com' target='_blank', rel="nofollow noopener noreferrer") Shinning Tech Services] — #[a(href='https://x.com/jamesiukalu', title='Shinning Tech Services on X' target='_blank', rel="nofollow noopener noreferrer") 𝕏 @jamesiukalu].
+  - var footerLangPrefix = translation.SITE_LANGUAGE === 'en' ? '' : '/' + translation.SITE_LANGUAGE
+  p This is provided by #[a(href='https://www.shinningtechservices.com' target='_blank', rel="nofollow noopener noreferrer") Shinning Tech Services] — #[a(href='https://x.com/jamesiukalu', title='Shinning Tech Services on X' target='_blank', rel="nofollow noopener noreferrer") 𝕏 @jamesiukalu]. #[a(href=footerLangPrefix + '/terms')= translation.FOOTER_TERMS] · #[a(href=footerLangPrefix + '/contact')= translation.FOOTER_CONTACT]

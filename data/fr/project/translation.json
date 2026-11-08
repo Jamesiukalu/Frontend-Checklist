@@ -5,9 +5,9 @@
   "SITE_TAGLINE": "Une checklist d'audit front-end gratuite — 400 éléments, 13 sections et jusqu'à 246 vérifications automatiques pour chaque page publiée.",
   "SITE_DESCRIPTION": "Checklist d'audit front-end et de QA gratuite : 400 éléments en 13 sections et jusqu'à 246 vérifications automatiques pour noter n'importe quelle URL publique. Aucun compte requis.",
   "SEO_TITLE": "Checklist d'audit front-end — 400 vérifications",
-  "SEO_DESCRIPTION": "Checklist d'audit front-end et de QA gratuite : 400 éléments en 13 sections et jusqu'à 246 vérifications automatiques pour noter n'importe quelle URL publique. Aucun compte requis.",
+  "SEO_DESCRIPTION": "Checklist d'audit front-end et QA gratuite : 400 éléments en 13 sections, jusqu'à 246 vérifications automatiques pour noter une URL publique. Aucun compte requis.",
   "AUDIT_SEO_TITLE": "Auditer une page en ligne — Checklist d'audit front-end",
-  "AUDIT_SEO_DESCRIPTION": "Collez une URL publique et lancez jusqu'à 246 vérifications automatiques issues de la checklist de 400 éléments. Obtenez un score, corrigez l'essentiel et cochez les éléments réussis.",
+  "AUDIT_SEO_DESCRIPTION": "Collez une URL publique et lancez jusqu'à 246 vérifications automatiques de la checklist de 400 éléments. Obtenez un score et corrigez l'essentiel.",
   "SITE_LANGUAGE": "fr",
   "SITE_DIRECTION": "ltr",
   "URL_GITHUB_ROOT": "https://github.com/Jamesiukalu/Frontend-Checklist",
@@ -202,5 +202,35 @@
     "STEP_INSTALL": "1. Installez-le",
     "INSTALL_HINT": "Facultatif : npx le télécharge aussi à la première utilisation, vous pouvez passer directement à l'étape 2.",
     "INSTALL_CMD": "npm i -g frontend-checklist-mcp"
-  }
+  },
+  "SKIP_LINK": "Aller au contenu principal",
+  "FOOTER_TERMS": "Conditions",
+  "FOOTER_CONTACT": "Contact",
+  "terms": {
+    "SEO_TITLE": "Conditions d'utilisation — Front-End Checklist",
+    "SEO_DESCRIPTION": "Conditions d'utilisation de la Front-End Checklist, un outil d'audit gratuit et open source pour livrer des sites de qualité.",
+    "TITLE": "Conditions d'utilisation",
+    "INTRO": "La Front-End Checklist est un outil gratuit et open source (licence MIT) pour auditer les pages web selon 400 vérifications front-end. Ces conditions sont volontairement courtes.",
+    "USE_TITLE": "Utilisation de l'outil",
+    "USE_TEXT": "Vous pouvez utiliser la checklist et l'audit à toute fin, y compris commerciale. L'outil est fourni tel quel, sans garantie d'aucune sorte. Les résultats d'audit sont des vérifications automatisées — un score est un point de départ pour votre propre jugement, pas une garantie qu'une page est accessible, rapide ou correcte.",
+    "LOGGING_TITLE": "Ce que nous enregistrons",
+    "LOGGING_TEXT": "Lorsque vous lancez un audit, nous enregistrons l'URL auditée, le score, l'heure, la source (web, API ou MCP) et le pays, ainsi qu'une empreinte salée de votre adresse IP — jamais l'adresse elle-même. Votre progression dans la checklist reste dans votre navigateur et ne nous est jamais envoyée.",
+    "OPEN_TITLE": "Open source",
+    "OPEN_TEXT": "Le code est sous licence MIT et public sur GitHub. Vous pouvez le réutiliser, le modifier et le redistribuer selon les termes de la licence.",
+    "CONTACT_TITLE": "Questions",
+    "CONTACT_TEXT": "Consultez la page contact pour savoir comment nous joindre."
+  },
+  "contact": {
+    "SEO_TITLE": "Contact — Front-End Checklist",
+    "SEO_DESCRIPTION": "Comment joindre les personnes derrière la Front-End Checklist.",
+    "TITLE": "Contact",
+    "INTRO": "La Front-End Checklist est un petit projet de Shinning Tech Services. Le moyen le plus rapide de nous joindre est X ou GitHub.",
+    "X_TEXT": "Envoyez un message à @jamesiukalu sur X.",
+    "GITHUB_TEXT": "Signalez un bug ou proposez une vérification dans le dépôt GitHub.",
+    "SITE_TEXT": "Shinning Tech Services — développement web et mobile, design produit et gestion de produit."
+  },
+  "LOADING_SECTION": "Chargement de la section…",
+  "SECTION_LOAD_FAILED": "Impossible de charger cette section. Réessayer.",
+  "SECTION_RETRY": "Réessayer",
+  "NOSCRIPT_NOTE": "Cette liste charge chaque section avec JavaScript. Activez JavaScript pour utiliser les 400 éléments."
 }

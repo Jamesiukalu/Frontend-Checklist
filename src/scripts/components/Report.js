@@ -1,3 +1,5 @@
+import Utils from '../Utils';
+
 let instance = null;
 /**
  *
@@ -74,6 +76,17 @@ class Report {
 
   print() {
     document.querySelector('.js-print').addEventListener('click', () => {
+      // Print the whole checklist, not just the loaded sections.
+      const unloaded = document.querySelectorAll(
+        '.js-section[data-loaded="false"]',
+      ).length;
+      if (unloaded > 0) {
+        new Utils().requestLoadAll().then(() => {
+          window.print();
+        });
+        return;
+      }
+
       window.print();
       gtag('event', 'generate-reports', {
         event_category: 'Click',

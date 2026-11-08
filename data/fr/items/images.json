@@ -16,7 +16,7 @@
     ],
     "tools": [
       {
-        "title": "axe DevTools",
+        "title": "axe",
         "url": "https://www.deque.com/axe/"
       },
       {
@@ -633,7 +633,7 @@
         "url": "https://validator.w3.org/"
       },
       {
-        "title": "axe DevTools",
+        "title": "axe",
         "url": "https://www.deque.com/axe/"
       }
     ],
@@ -729,7 +729,7 @@
     "description": "Les petites images et les icônes utilisent des sprites ou du SVG pour réduire le nombre de requêtes HTTP.",
     "documentation": [
       {
-        "title": "MDN: Responsive images",
+        "title": "MDN: HTMLImageElement.srcset",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/srcset"
       },
       {

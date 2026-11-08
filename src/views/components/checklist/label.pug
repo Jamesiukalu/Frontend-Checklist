@@ -18,30 +18,33 @@
 
       if item.documentation
         .c-checklist__documentation
-          h4= translation.SECTION_DOCUMENTATION
+          h3= translation.SECTION_DOCUMENTATION
           ul.documentation__list
             each documentation, i in item.documentation
               li
                 if documentation.url && documentation.title
-                  img.c-checklist__favicon(src="/img/icons/1x1.png" data-src=`https://www.google.com/s2/favicons?domain_url=${documentation.url}`, alt="")
+                  - var _fi = faviconIndex++
+                  img.c-checklist__favicon(src="/img/icons/1x1.png" srcset=`https://www.google.com/s2/favicons?domain_url=${documentation.url}&sz=16 1x, https://www.google.com/s2/favicons?domain_url=${documentation.url}&sz=32 2x` data-src=`https://www.google.com/s2/favicons?domain_url=${documentation.url}&sz=32`, alt="", width="16", height="16", loading=_fi < 2 ? undefined : "lazy")
                   a(href=`${documentation.url}`, target="_blank", rel="noopener noreferrer")= documentation.title
 
       if item.tools
         .c-checklist__tools
-          h4= translation.SECTION_TOOL
+          h3= translation.SECTION_TOOL
           ul.documentation__list
             each tool, i in item.tools
               li
-                img.c-checklist__favicon(src="/img/icons/1x1.png" data-src=`https://www.google.com/s2/favicons?domain_url=${tool.url}`, alt="")
+                - var _fi = faviconIndex++
+                img.c-checklist__favicon(src="/img/icons/1x1.png" srcset=`https://www.google.com/s2/favicons?domain_url=${tool.url}&sz=16 1x, https://www.google.com/s2/favicons?domain_url=${tool.url}&sz=32 2x` data-src=`https://www.google.com/s2/favicons?domain_url=${tool.url}&sz=32`, alt="", width="16", height="16", loading=_fi < 2 ? undefined : "lazy")
                 a(href=`${tool.url}`, target="_blank", rel="noopener noreferrer")= tool.title
 
       if item.video
         .c-checklist__video
-          h4= translation.SECTION_VIDEO
+          h3= translation.SECTION_VIDEO
           ul.video__list
             each video, i in item.video
               li
-                img.c-checklist__favicon(src="/img/icons/1x1.png" data-src=`https://www.google.com/s2/favicons?domain_url=${video.url}`, alt="")
+                - var _fi = faviconIndex++
+                img.c-checklist__favicon(src="/img/icons/1x1.png" srcset=`https://www.google.com/s2/favicons?domain_url=${video.url}&sz=16 1x, https://www.google.com/s2/favicons?domain_url=${video.url}&sz=32 2x` data-src=`https://www.google.com/s2/favicons?domain_url=${video.url}&sz=32`, alt="", width="16", height="16", loading=_fi < 2 ? undefined : "lazy")
                 a(href=`${video.url}`, target="_blank", rel="noopener noreferrer")= video.title
 
   .c-tags
