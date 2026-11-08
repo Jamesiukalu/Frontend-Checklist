@@ -1,9 +1,12 @@
 //- SEO: per-page title, description, canonical URL and hreflang.
 //- `page` is 'checklist' by default (layout.pug) and 'audit' on audit.pug.
 - var isAuditPage = typeof page !== 'undefined' && page === 'audit'
-- var langPrefix = translation.SITE_LANGUAGE === 'en' ? '' : '/' + translation.SITE_LANGUAGE
-- var pagePath = isAuditPage ? '/audit' : '/'
-- var canonicalUrl = translation.URL_WEBSITE + langPrefix + pagePath
+//- Home path is '/' in English but '/fr' in French: vercel.json sets
+//- trailingSlash: false, so /fr/ redirects to /fr and must never be a
+//- canonical / hreflang target. Audit paths are slash-free in both languages.
+- var enPath = isAuditPage ? '/audit' : '/'
+- var frPath = isAuditPage ? '/fr/audit' : '/fr'
+- var canonicalUrl = translation.URL_WEBSITE + (translation.SITE_LANGUAGE === 'en' ? enPath : frPath)
 - var pageTitle = isAuditPage ? translation.AUDIT_SEO_TITLE : translation.SEO_TITLE
 - var pageDescription = isAuditPage ? translation.AUDIT_SEO_DESCRIPTION : translation.SEO_DESCRIPTION
 
@@ -30,9 +33,9 @@ meta(name='description', content=pageDescription)
 link(rel="canonical", href=canonicalUrl)
 
 <!-- Alternate language versions -->
-link(rel="alternate", hreflang="en", href=translation.URL_WEBSITE + pagePath)
-link(rel="alternate", hreflang="fr", href=translation.URL_WEBSITE + '/fr' + pagePath)
-link(rel="alternate", hreflang="x-default", href=translation.URL_WEBSITE + pagePath)
+link(rel="alternate", hreflang="en", href=translation.URL_WEBSITE + enPath)
+link(rel="alternate", hreflang="fr", href=translation.URL_WEBSITE + frPath)
+link(rel="alternate", hreflang="x-default", href=translation.URL_WEBSITE + enPath)
 
 //- Set the theme before first paint to avoid a flash of the wrong theme
 script.

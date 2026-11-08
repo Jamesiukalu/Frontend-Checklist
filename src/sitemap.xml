@@ -7,7 +7,7 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://checklist.shinningtechservices.com/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://checklist.shinningtechservices.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://checklist.shinningtechservices.com/fr"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://checklist.shinningtechservices.com/"/>
   </url>
   <url>
@@ -20,12 +20,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://checklist.shinningtechservices.com/audit"/>
   </url>
   <url>
-    <loc>https://checklist.shinningtechservices.com/fr/</loc>
+    <loc>https://checklist.shinningtechservices.com/fr</loc>
     <lastmod>2026-11-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://checklist.shinningtechservices.com/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://checklist.shinningtechservices.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://checklist.shinningtechservices.com/fr"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://checklist.shinningtechservices.com/"/>
   </url>
   <url>
