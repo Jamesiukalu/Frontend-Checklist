@@ -96,13 +96,11 @@ class Filter {
             // Loading the rest of the catalogue takes a moment; show it
             // on the button that was clicked.
             e.target.setAttribute('aria-busy', 'true');
-            new Utils()
-              .requestLoadAll()
-              .then(() => {
-                e.target.removeAttribute('aria-busy');
-                instance.selectBy(tag);
-                instance.addFilter(tag, name);
-              });
+            new Utils().requestLoadAll().then(() => {
+              e.target.removeAttribute('aria-busy');
+              instance.selectBy(tag);
+              instance.addFilter(tag, name);
+            });
             return;
           }
 
