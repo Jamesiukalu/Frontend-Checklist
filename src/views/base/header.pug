@@ -3,15 +3,19 @@
 //- Language switch targets the same page in the other language, for every
 //- page type (head.pug computes the same enPath/frPath for canonicals).
 - var pagePath = current === 'audit' ? '/audit' : current === 'terms' ? '/terms' : current === 'contact' ? '/contact' : '/'
+//- Home link is '/' in English but '/fr' in French: vercel.json sets
+//- trailingSlash: false, so '/fr/' 308-redirects to '/fr' (same reason
+//- head.pug never uses it as a canonical). Link to the final URL directly.
+- var homePath = prefix || '/'
 
 .s-topbar
   .s-topbar__inner
-    a.s-topbar__brand(href=prefix + '/')= translation.SITE_NAME
+    a.s-topbar__brand(href=homePath)= translation.SITE_NAME
 
     nav.s-topbar__nav(aria-label=translation.nav.LABEL)
-      a.s-topbar__link(href=prefix + '/' aria-current=current === 'checklist' ? 'page' : false)= translation.nav.CHECKLIST
+      a.s-topbar__link(href=homePath aria-current=current === 'checklist' ? 'page' : false)= translation.nav.CHECKLIST
       a.s-topbar__link(href=prefix + '/audit' aria-current=current === 'audit' ? 'page' : false)= translation.nav.AUDIT
-      a.s-topbar__link(href=prefix + '/#report')= translation.nav.REPORT
+      a.s-topbar__link(href=homePath + '#report')= translation.nav.REPORT
 
     .s-topbar__actions
       button.s-topbar__link.s-topbar__help.js-help-open(type="button" aria-haspopup="dialog")
